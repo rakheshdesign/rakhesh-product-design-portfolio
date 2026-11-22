@@ -299,7 +299,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
 .gbar i{display:block;height:100%;border-radius:99px;transform-origin:left}
 .sl.on .gbar i{animation:gx 1s cubic-bezier(.2,.7,.2,1) .35s both}
 @keyframes gx{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-.tz{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(24px,4vw,56px);align-items:center;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:28px;padding:clamp(22px,3.4vw,48px);box-shadow:var(--e3);transition:border-color .35s,transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.tz{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(24px,4vw,56px);align-items:center;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:28px;padding:clamp(22px,3.4vw,48px);box-shadow:var(--e3);transition:border-color .35s,transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
 .tz:hover,.tz:focus-visible{border-color:var(--acc);transform:translateY(-4px)}
 .tz:focus-visible{outline:2px solid var(--acc);outline-offset:4px}
 .tz-l{display:flex;flex-direction:column;gap:22px;min-width:0}
@@ -310,18 +310,21 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
 .tz:hover .btn svg{transform:translateX(6px)}
 .tz:hover .btn{background:var(--fill);color:var(--fillink)}
 .tz-r{display:flex;flex-direction:column;gap:14px;min-width:0}
-.tz-st{display:grid}
-.tz-st .gimg{aspect-ratio:16/10}
-.tz-d{display:flex;gap:8px}
-.tz-d .seg{flex:1;height:4px;border-radius:99px;background:var(--line);display:block}
-.tz-d .seg i{height:100%}
-.tz-p{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) minmax(0,1.3fr);gap:12px;margin-top:6px}
-.tz-p>span{display:block;aspect-ratio:4/3;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--card2)}
+.gcmp{min-width:0;display:grid;grid-template-columns:minmax(0,1fr) 26px minmax(0,1fr) 26px minmax(0,1fr);gap:6px;align-items:stretch}
+.garr{display:flex;align-items:center;justify-content:center;color:var(--ink3)}
+.tz .gimg{aspect-ratio:16/11}
+.tz .gmeta{padding:12px 14px 14px;gap:6px}
+.tz .gbig{font-size:clamp(22px,2vw,28px)}
+.tz .gbar i{animation:gx linear both;animation-timeline:view();animation-range:entry 10% entry 90%}
+.tz-p{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px;align-items:stretch;margin-top:2px}
+.tz-p>span{box-sizing:border-box;display:block;flex:none;width:96px;height:72px;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:var(--card2)}
 .tz-p img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
 .tz:hover .tz-p img{transform:scale(1.06)}
-.tz-p .tz-more{aspect-ratio:auto;display:flex;flex-direction:column;justify-content:center;gap:8px;padding:14px;color:var(--acc);border-style:dashed}
+.tz-p .tz-more{flex:1 1 200px;width:auto;height:72px;display:flex;flex-direction:column;justify-content:center;gap:4px;padding:0 16px;color:var(--acc);border-style:dashed}
 .tz-p .tz-more b{font-family:'Space Grotesk',system-ui,sans-serif;font-size:15px;color:var(--ink);line-height:1.3}
-@media (max-width:900px){.tz{grid-template-columns:minmax(0,1fr)}.tz-p{grid-template-columns:repeat(2,minmax(0,1fr))}.tz-p .tz-more{grid-column:1/-1;aspect-ratio:auto;flex-direction:row;align-items:center}}
+@media (max-width:900px){.tz{grid-template-columns:minmax(0,1fr)}.tz-p .tz-more{flex:1 1 100%;width:auto;height:auto;aspect-ratio:auto;padding:12px 16px;flex-direction:row;align-items:center}}
+@media (max-width:480px){.tz-p>span{width:calc((100% - 30px)/4);height:auto;aspect-ratio:4/3}}
+@media (max-width:760px){.tz .gcmp{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;padding-bottom:8px}.tz .gcmp .gc{flex:none;width:72%;scroll-snap-align:center}.tz .garr{display:none}}
 /* mechanical section */
 .sheet{position:relative;border:1.5px solid var(--ink3);border-radius:8px;background:var(--card);box-shadow:var(--e2);padding:14px}
 .sheet-in{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(260px,1fr);border:1px solid var(--line);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:28px 28px}
@@ -824,19 +827,19 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
 <section id="craft" style="position: relative; background: var(--bg2); border-top: 1px solid var(--line2); border-bottom: 1px solid var(--line2); overflow: hidden">
   <div class="aur" aria-hidden="true" style="position: absolute; right: -8%; top: 0; width: 50%; height: 90%; background: radial-gradient(closest-side, var(--glow2), transparent); pointer-events: none"></div>
   <div class="wrap" style="position: relative; padding-top: 112px; padding-bottom: 112px">
-    <div class="apbox {{vw.cad}}" ref="{{cadRef}}" onMouseEnter="{{cadIn}}" onMouseLeave="{{cadOut}}" onFocus="{{cadIn}}" onBlur="{{cadOut}}" style="--per: 2.8s">
+    <div>
       <a href="/mechanical-design" class="tz reveal" data-cur="Open" aria-label="Open Beyond Product Design: generative design studies, 3D printing and gallery">
         <div class="tz-l">
           <span class="kick" style="color: var(--acc)">Chapter 07 · Beyond Product Design</span>
-          <h2 class="h2" style="font-size: clamp(32px,4.2vw,60px)">Before AI, I let the solver <span class="em">cut the metal.</span></h2>
+          <h2 class="h2" style="font-size: clamp(30px,3.3vw,48px)">Before AI, I let the solver <span class="em">cut the metal.</span></h2>
           <p style="margin: 0; font-size: 19px; line-height: 1.55; color: var(--ink2); max-width: 520px">Same brake pedal, same load, less than half the mass in simulation. Found by generative design in Fusion 360.</p>
           <div class="tz-n"><b>−59%</b><span>pedal mass, standard to generative</span></div>
           <span class="btn btn-p" style="align-self: flex-start">Open the full story<svg aria-hidden="true" width="20" height="20" viewBox="0 0 256 256" fill="currentColor" ><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg></span>
         </div>
         <div class="tz-r">
-          <div class="tz-st">
+          <div class="gcmp">
             <sc-for list="{{tz}}" as="c" hint-placeholder-count="3">
-              <div class="sl {{c.cls}}" aria-hidden="{{c.hidden}}">
+              <div style="display: contents">
                 <div class="gc {{c.hi}}">
                   <div class="gimg"><img src="{{c.img}}" alt="{{c.alt}}" decoding="async"></div>
                   <div class="gmeta">
@@ -845,10 +848,10 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
                     <div class="gbar"><i style="width: {{c.w}}; background: {{c.fill}}"></i></div>
                   </div>
                 </div>
+                <div class="garr" style="visibility: {{c.arr}}" aria-hidden="true"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 256 256" fill="currentColor"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg></div>
               </div>
             </sc-for>
           </div>
-          <div class="tz-d" aria-hidden="true"><sc-for list="{{tz}}" as="c" hint-placeholder-count="3"><span class="seg {{c.segCls}}"><i></i></span></sc-for></div>
         </div>
         <div class="tz-p" aria-hidden="true"><span><img src="/img/14cee5dbf05d.webp" alt="" loading="lazy" decoding="async"></span><span><img src="/img/2f762014bf5c.webp" alt="" loading="lazy" decoding="async"></span><span><img src="/img/2daa6b4482ab.webp" alt="" loading="lazy" decoding="async"></span><span><img src="/img/6b32f74b6197.webp" alt="" loading="lazy" decoding="async"></span><span class="tz-more"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 256 256" fill="currentColor" ><path d="M223.68,66.15,135.68,18h0a15.88,15.88,0,0,0-15.36,0l-88,48.17a16,16,0,0,0-8.32,14v95.64a16,16,0,0,0,8.32,14l88,48.17a15.88,15.88,0,0,0,15.36,0l88-48.17a16,16,0,0,0,8.32-14V80.18A16,16,0,0,0,223.68,66.15ZM128,32h0l80.34,44L128,120,47.66,76ZM40,90l80,43.78v85.79L40,175.82Zm96,129.57V133.82L216,90v85.78Z"></path></svg><b>Generative studies, 3D prints, CAD gallery</b></span></div>
       </a>
@@ -912,7 +915,7 @@ class Component extends DCLogic {
     super(props);
     this.state = { theme: 'light', hero: 0, show: 0, dec: 0, mk: 0, lvl: 0, cad: 0, paused: false, clock: '--:--', vis: {}, curLab: '', curHov: false };
     this.ap = {};
-    var cfg = { hero: [1, 60], show: [8, 70], dec: [5, 50], mk: [6, 28], lvl: [4, 36], cad: [3, 28] };
+    var cfg = { hero: [1, 60], show: [8, 70], dec: [5, 50], mk: [6, 28], lvl: [4, 36] };
     for (var k in cfg) { this.ap[k] = { n: cfg[k][0], per: cfg[k][1], e: 0, hov: false, el: null, vis: false }; }
     this.cel = []; this.cval = []; this.cdone = []; this.frame = 0;
     this.mx = -200; this.my = -200; this.dx = -200; this.dy = -200; this.rx = -200; this.ry = -200;
@@ -1124,8 +1127,7 @@ var range = [
       { k: 'Generative', img: '/img/f9adf6355d19.webp', alt: 'Generative brake pedal, a lattice of thin struts', big: '56 g', chip: '\u221259%', w: '41%', fill: 'var(--acc)' }
     ];
     var tz = TZ.map(function (c, i) {
-      var on = i === s.cad;
-      return { k: c.k, img: c.img, alt: c.alt, big: c.big, w: c.w, fill: c.fill, chip: c.chip || '', dchip: c.chip ? 'inline-flex' : 'none', hi: i === 2 ? 'hi' : '', cls: on ? 'on' : '', hidden: !on, segCls: segOf('cad', i) };
+      return { k: c.k, img: c.img, alt: c.alt, big: c.big, w: c.w, fill: c.fill, chip: c.chip || '', dchip: c.chip ? 'inline-flex' : 'none', hi: i === 2 ? 'hi' : '', arr: i < 2 ? 'visible' : 'hidden' };
     });
 
     // ---- Beyond
