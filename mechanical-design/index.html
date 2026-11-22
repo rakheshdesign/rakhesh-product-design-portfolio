@@ -23,7 +23,7 @@
 <meta property="og:image" content="https://rakhesh-design.vercel.app/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Rakhesh Karnati, Product Designer. I solve for users, aligned to strategy and business outcomes.">
+<meta property="og:image:alt" content="Rakhesh Karnati, Product Designer. I design AI and enterprise products that earn trust.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mechanical Design — Rakhesh Karnati">
 <meta name="twitter:description" content="Mechanical design for automotive and aerospace: generative design studies in Fusion 360 (brake pedal -59% mass, triple clamp -52% in simulation), 3D printing and a CAD gallery.">
@@ -34,8 +34,73 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Beyond Product Design — generative design, 3D printing and CAD", "author": {"@type": "Person", "name": "Rakhesh Karnati"}, "url": "https://rakhesh-design.vercel.app/mechanical-design", "about": "Generative design studies in Fusion 360, 3D printing and CAD."}</script>
 </head>
 <body>
-<noscript><main style="font-family:system-ui,sans-serif;max-width:720px;margin:40px auto;padding:0 20px;line-height:1.6"><h1>Beyond Product Design</h1><p>Generative design studies in Fusion 360 (brake pedal, triple clamp, swing arm), 3D printing and a CAD gallery.</p><p><a href="/">Home</a></p><p>This site needs JavaScript to display its interactive case studies.</p><p><a href="mailto:rakhesh.design@gmail.com">rakhesh.design@gmail.com</a></p></main></noscript>
-<x-dc>
+<noscript><div style="font-family:system-ui,sans-serif;max-width:860px;margin:24px auto;padding:0 20px;line-height:1.6"> <header><a href="/">RK .</a><a href="/">Home</a><nav aria-label="Page sections"><a href="#generative">Generative design</a><a href="#method">Method</a><a href="#print">3D printing</a><a href="#gallery">Gallery</a></nav>
+<a href="mailto:rakhesh.design@gmail.com">Say hello</a></header>
+<main><section>Mechanical Design Engineer <h1>The other half of the craft: things you can hold.</h1>
+<p>Mechanical design for automotive and aerospace. I model it, simulate it, make it, and take away what the part does not need.</p>
+Automotive Aerospace Parametric CAD Fusion 360 3D printing <b>−59%</b>
+Brake pedal mass, generative vs standard (simulation) <b>−52%</b>
+Triple clamp mass, generative vs standard (simulation) <b>3</b>
+Parts taken from a standard design to a generative one <a href="#generative">See the generative studies</a><a href="#gallery">Jump to the gallery</a></section>
+<section>Generative design · Fusion 360 <h3>Before AI tools, I let the solver find the shape.</h3>
+<p>Generative design in Fusion 360 showed me where a part carried no load. I removed that material, kept the strength, and checked it in simulation. Less metal, less weight, less fuel spent carrying it.</p>
+<h4>Brake pedal</h4>
+Titanium 6Al-4V · 2,000 N load Standard 138 g Safety factor 1.54 Optimized −25% 104 g Safety factor 1.54 Generative −59% 56 g Safety factor 1.5 <p>From an academic project, simulated in Fusion 360. Masses and safety factors come from the study’s validation tables.</p>
+<h4>Triple clamp</h4>
+Inconel 625 · 2,000 N torsion, 1,000 N tension and compression Standard 2,509 g Safety factor 2 (min) Optimized −26% 1,851 g Safety factor 2 (min) Generative −52% 1,197 g Safety factor 2 <p>From an academic project, simulated in Fusion 360. Masses and safety factors come from the study’s validation tables.</p>
+<h4>Motorcycle swing arm</h4>
+Load-path study Standard Starting part The part as designed. Analysis Load path Red carries the load. Blue can go. Generative Material kept Only where the load flows. <p>Simulation study in Fusion 360. Red marks material that carries the load, blue marks material the part can lose. Mass figures are not shown here.</p>
+<b>Less material</b>
+Metal stays only where the load flows. <b>Lighter parts</b>
+Down 59% (pedal) and 52% (clamp) in simulation. <b>Less fuel</b>
+Less self-weight to carry means lower running cost in a vehicle.</section>
+<section>Method <h2>Same part, same loads, less metal.</h2>
+<b>Start from a real part</b>
+Take an existing, finished component as the baseline. <b>Set the loads and limits</b>
+The same loads, materials and constraints for every version. <b>Remove what carries no load</b>
+Shape optimization first, then generative design, with stiffness and weight as the goals. <b>Check it in simulation</b>
+Safety factor and displacement, compared with the original. <p><strong>The trade-off.</strong>
+Lighter parts flex more, so I checked displacement as well as strength. Brake pedal: 2.93 mm to 3.75 mm. Triple clamp: 0.047 mm to 0.76 mm. Shapes this complex are hard to machine, which is why 3D printing is the natural next step.</p>
+</section>
+<section>3D printing <h3>Turned ideas into reality.</h3>
+<figure><figcaption>V8 engine model</figcaption>
+</figure>
+<figure><figcaption>Infinite cubes, mid-print</figcaption>
+</figure>
+<figure><figcaption>Radial engine prototype</figcaption>
+</figure>
+<figure><figcaption>Robotic arm parts</figcaption>
+</figure>
+<figure><figcaption>V8 pistons and rods</figcaption>
+</figure>
+<figure><figcaption>VBIT block model</figcaption>
+</figure>
+<figure><figcaption>3DP keychains</figcaption>
+</figure>
+</section>
+<section>Gallery · CAD <h3>From the screen to the bench.</h3>
+<figure><figcaption>Supercar concept, rendered</figcaption>
+</figure>
+<figure><figcaption>Caster assembly</figcaption>
+</figure>
+<figure><figcaption>Mountain bike, full model</figcaption>
+</figure>
+<figure><figcaption>Arduino UNO, modelled next to the real board</figcaption>
+</figure>
+<figure><figcaption>Shape optimization study</figcaption>
+</figure>
+<figure><figcaption>Human form, Fusion 360 Form</figcaption>
+</figure>
+</section>
+<section><h3>Same habit in product design: make it, test it, fix it.</h3>
+<p>See how that plays out on screens, across markets.</p>
+<a href="/work">See the product work</a><a href="/">Back to home</a></section>
+</main>
+<footer>Let’s talk <h2>Got a problem where a confusing screen costs someone something?</h2>
+<a href="mailto:rakhesh.design@gmail.com">rakhesh.design@gmail.com</a><a href="/work/manage-credit-limit">Read the flagship case</a>Navigate <a href="/work">Work</a><a href="/#impact">Impact</a><a href="/#global">Global</a><a href="/#ai">AI products</a><a href="#top">Beyond Product Design</a>Elsewhere <a href="https://www.behance.net/rakheshkarnati">Behance</a><a href="https://rakheshkarnati.framer.website">Framer portfolio</a><a href="mailto:rakhesh.design@gmail.com">Email</a>Availability Open to new opportunities India and global 02:02 IST Back to top <a href="#top"></a><p>Confidential details are withheld. Targets are labelled as targets. Concept work is labelled as concept. © 2026 Rakhesh Karnati.</p>
+</footer>
+<p>The interactive parts of this site need JavaScript. Everything above is the same content in plain text.</p></div></noscript>
+<x-dc><template>
 <helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
@@ -352,8 +417,8 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
 .mpanel .mi[aria-current=page]{background:var(--card2);color:var(--acc);font-weight:600}
 .mpanel .mk{display:block;padding:14px 16px 6px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);font-weight:600}
 .mpanel .mrow{display:grid;grid-template-columns:1fr 1fr;gap:2px}
-@media (max-width:1000px){.mnav{display:block}.hnav,.hpills{display:none!important}.hbar{flex-wrap:nowrap!important;border-radius:999px!important;padding:8px 8px 8px 20px!important;gap:6px!important}.hbar>div:last-child{margin-left:auto}.mpanel{top:76px}}
-@media (min-width:700px) and (max-width:1000px){.mpanel{left:auto;width:min(420px,calc(100vw - 40px));right:20px}}
+@media (max-width:1100px){.mnav{display:block}.hnav,.hpills{display:none!important}.hbar{flex-wrap:nowrap!important;border-radius:999px!important;padding:8px 8px 8px 20px!important;gap:6px!important}.hbar>div:last-child{margin-left:auto}.mpanel{top:76px}}
+@media (min-width:700px) and (max-width:1100px){.mpanel{left:auto;width:min(420px,calc(100vw - 40px));right:20px}}
 @media (max-width:640px){.hbar .btn span,.hbar .hclock{display:none!important}.hbar .btn{padding:0!important;width:44px;justify-content:center}.hbar{padding-left:16px!important}}
 /*dev*/
 .amx{--acc:#006FCF;--ok:#0B7A4B;--warn:#9A5B00;--bad:#C8102E;--ink:#17191C;--ink2:#53565A;--ink3:#6C7075;--line:#D3D8DE;--line2:#E4E7EB;--card:#FFFFFF;--card2:#F4F6F8;--bg:#F2F2F7;--elev:#FFFFFF;--btn:#006FCF;--btnink:#FFFFFF;--fill:#006FCF;--fillink:#FFFFFF;--hl:#E8F1FB;--navy:#00175A;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Inter,system-ui,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;letter-spacing:-.01em;text-align:left}
@@ -451,10 +516,10 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
     </div>
     <nav aria-label="Page sections" class="hnav" style="display: flex; flex-wrap: wrap; gap: 2px"><a href="#generative" class="pill" style="text-decoration: none; font-size: 15px; font-weight: 500; padding: 11px 14px; border-radius: 999px">Generative design</a><a href="#method" class="pill" style="text-decoration: none; font-size: 15px; font-weight: 500; padding: 11px 14px; border-radius: 999px">Method</a><a href="#print" class="pill" style="text-decoration: none; font-size: 15px; font-weight: 500; padding: 11px 14px; border-radius: 999px">3D printing</a><a href="#gallery" class="pill" style="text-decoration: none; font-size: 15px; font-weight: 500; padding: 11px 14px; border-radius: 999px">Gallery</a></nav>
     <div style="display: flex; align-items: center; gap: 8px">
-      <span class="tipw"><button type="button" class="ib" onClick="{{toggleMotion}}" aria-pressed="{{motionPressed}}" aria-label="{{motionTipT}}"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 256 256" fill="currentColor"><path d="{{motionIcon}}"></path></svg></button><span class="tipc" role="tooltip"><b>{{motionTipT}}</b>{{motionTipD}}</span></span>
+      
       <button type="button" class="ib" onClick="{{toggleTheme}}" aria-label="{{themeLabel}}" title="{{themeLabel}}"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 256 256" fill="currentColor"><path d="{{themeIcon}}"></path></svg></button>
       <a href="mailto:rakhesh.design@gmail.com" aria-label="Say hello" class="btn btn-p" style="min-height: 44px; padding: 0 20px; font-size: 15px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><path d="{{ic.mail}}"></path></svg><span>Say hello</span></a>
-      <details class="mnav"><summary class="ib" aria-label="Open menu"><svg class="mo" aria-hidden="true" width="22" height="22" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path></svg><svg class="mc" aria-hidden="true" width="22" height="22" viewBox="0 0 256 256" fill="currentColor"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg></summary><nav class="mpanel" aria-label="Site menu"><a href="/" class="mi" onClick="{{closeMenu}}">Home</a><a href="/work" class="mi" onClick="{{closeMenu}}">All work</a><span class="mk">On this page</span><div class="mrow"><a href="#generative" class="mi" onClick="{{closeMenu}}">Generative design</a><a href="#method" class="mi" onClick="{{closeMenu}}">Method</a><a href="#print" class="mi" onClick="{{closeMenu}}">3D printing</a><a href="#gallery" class="mi" onClick="{{closeMenu}}">Gallery</a></div><span class="mk">American Express</span><a href="/work/manage-credit-limit" class="mi" onClick="{{closeMenu}}">Manage Credit Limit</a><a href="/work/digital-charge-verification" class="mi" onClick="{{closeMenu}}">Digital Charge Verification</a><a href="/work/financial-relief-program" class="mi" onClick="{{closeMenu}}">Financial Relief Program</a><a href="/work/canada-experience-gap" class="mi" onClick="{{closeMenu}}">Canada Experience Gap</a><a href="/work/financial-verification" class="mi" onClick="{{closeMenu}}">Financial Verification</a><a href="/work/plan-it-promo-pricing" class="mi" onClick="{{closeMenu}}">Plan It® Promo Pricing</a><a href="/work/payments-mexico" class="mi" onClick="{{closeMenu}}">International Payments, Mexico</a><a href="/work/localization-automation" class="mi" onClick="{{closeMenu}}">Localization Automation</a><span class="mk">AI builds</span><a href="/work/sourcx" class="mi" onClick="{{closeMenu}}">SourcX</a><a href="/work/shubhviva" class="mi" onClick="{{closeMenu}}">ShubhViva</a><a href="/work/gravity-deck" class="mi" onClick="{{closeMenu}}">Gravity</a><span class="mk">More</span><a href="/mechanical-design" class="mi" aria-current="page" onClick="{{closeMenu}}">Beyond Product Design</a><span class="mk">Say hello</span><a href="mailto:rakhesh.design@gmail.com" class="mi" onClick="{{closeMenu}}">rakhesh.design@gmail.com</a></nav></details>
+      <details class="mnav"><summary class="ib" aria-label="Open menu"><svg class="mo" aria-hidden="true" width="22" height="22" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path></svg><svg class="mc" aria-hidden="true" width="22" height="22" viewBox="0 0 256 256" fill="currentColor"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg></summary><nav class="mpanel" aria-label="Site menu"><a href="/" class="mi" onClick="{{closeMenu}}">Home</a><a href="/work" class="mi" onClick="{{closeMenu}}">All work</a><span class="mk">On this page</span><div class="mrow"><a href="#generative" class="mi" onClick="{{closeMenu}}">Generative design</a><a href="#method" class="mi" onClick="{{closeMenu}}">Method</a><a href="#print" class="mi" onClick="{{closeMenu}}">3D printing</a><a href="#gallery" class="mi" onClick="{{closeMenu}}">Gallery</a></div><span class="mk">American Express</span><a href="/work/manage-credit-limit" class="mi" onClick="{{closeMenu}}">Manage Credit Limit</a><a href="/work/digital-charge-verification" class="mi" onClick="{{closeMenu}}">Digital Charge Verification</a><a href="/work/financial-relief-program" class="mi" onClick="{{closeMenu}}">Financial Relief Program</a><a href="/work/canada-experience-gap" class="mi" onClick="{{closeMenu}}">Canada Experience Gap</a><a href="/work/financial-verification" class="mi" onClick="{{closeMenu}}">Financial Verification</a><a href="/work/plan-it-promo-pricing" class="mi" onClick="{{closeMenu}}">Plan It® Promo Pricing</a><a href="/work/payments-mexico" class="mi" onClick="{{closeMenu}}">International Payments, Mexico</a><span class="mk">AI builds</span><a href="/work/sourcx" class="mi" onClick="{{closeMenu}}">SourcX</a><a href="/work/shubhviva" class="mi" onClick="{{closeMenu}}">ShubhViva</a><a href="/work/gravity-deck" class="mi" onClick="{{closeMenu}}">Gravity</a><span class="mk">Innovation proposal</span><a href="/work/localization-automation" class="mi" onClick="{{closeMenu}}">Localization Automation</a><span class="mk">More</span><a href="/mechanical-design" class="mi" aria-current="page" onClick="{{closeMenu}}">Beyond Product Design</a><span class="mk">Say hello</span><a href="mailto:rakhesh.design@gmail.com" class="mi" onClick="{{closeMenu}}">rakhesh.design@gmail.com</a></nav></details>
     </div>
   </div>
 </header>
@@ -583,7 +648,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
       <span class="kick">Let’s talk</span>
       <h2 class="h2 hd" style="font-size: clamp(31px,6vw, 96px); max-width: 1100px">Got a problem where a confusing screen <span class="em">costs someone something?</span></h2>
       <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center">
-        <a href="mailto:rakhesh.design@gmail.com" class="btn btn-p" data-cur="Email" style="min-height: 56px; font-size: 18px; padding: 0 30px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 256 256" fill="currentColor"><path d="{{ic.mail}}"></path></svg>rakhesh.design@gmail.com</a>
+        <a href="mailto:rakhesh.design@gmail.com" class="btn btn-p" data-cur="Email" style="min-height: 56px; font-size: clamp(14px,4.4vw, 18px); padding: 0 clamp(16px, 5vw, 30px); max-width: 100%; box-sizing: border-box; overflow-wrap: anywhere"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 256 256" fill="currentColor"><path d="{{ic.mail}}"></path></svg>rakhesh.design@gmail.com</a>
         <a href="/work/manage-credit-limit" class="btn btn-s" style="min-height: 56px">Read the flagship case</a>
       </div>
     </div>
@@ -603,7 +668,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
 </footer>
 
 </div>
-</x-dc>
+</template></x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":6200}}'>
 class Component extends DCLogic {
   constructor(props) {
@@ -619,6 +684,7 @@ class Component extends DCLogic {
     this.autoTick = this.autoTick.bind(this);
   }
   componentDidMount() {
+    try { document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a'); var h = a && a.getAttribute('href'); if (!h || h.charAt(0) !== '#') return; var id = h.slice(1); var t = id ? document.getElementById(id) : document.body; if (!t) return; e.preventDefault(); var rm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches; /*hashScroll*/ t.scrollIntoView({ behavior: rm ? 'auto' : 'smooth', block: 'start' }); try { history.replaceState(null, '', '#' + id); } catch (x) {} }); } catch (x) {}
     try {
       document.addEventListener('click', function (e) {
         var t = e.target && e.target.closest ? e.target : null; if (!t) return;
