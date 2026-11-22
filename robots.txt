@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rakhesh-karnati.vercel.app/sitemap.xml
+Sitemap: https://rakhesh-design.vercel.app/sitemap.xml
