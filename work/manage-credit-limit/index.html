@@ -269,6 +269,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
 <section id="tldr" aria-label="The 60-second version" style="padding-bottom: 96px">
   <div class="wrap" style="display: flex; flex-direction: column; gap: 28px">
     <span class="kick">The 60-second version</span>
+    <div role="note" style="display: flex; gap: 12px; align-items: flex-start; padding: 14px 18px; border: 1px solid var(--line); border-left: 4px solid var(--acc); border-radius: 14px; background: var(--card2); max-width: 760px; text-align: left"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 256 256" fill="currentColor" style="flex: none; color: var(--acc); margin-top: 2px"><path d="M208,80H176V56a48,48,0,0,0-96,0V80H48A16,16,0,0,0,32,96V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V96A16,16,0,0,0,208,80ZM96,56a32,32,0,0,1,64,0V80H96ZM208,208H48V96H208V208Zm-68-56a12,12,0,1,1-12-12A12,12,0,0,1,140,152Z"></path></svg><p style="margin: 0; font-size: 15px; line-height: 1.5; color: var(--ink2)"><strong style="color: var(--ink)">Illustrative designs.</strong> Real American Express screens are confidential, so these recreate the flow and decisions without revealing them.</p></div>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 18px">
       <sc-for list="{{tldr}}" as="t" hint-placeholder-count="3">
         <div class="reveal"><div class="card lift" style="padding: 30px; display: flex; flex-direction: column; gap: 12px; height: 100%; box-sizing: border-box">
@@ -429,7 +430,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
             </div>
           </sc-for>
         </div>
-        <span style="font-size: 12px; color: var(--ink3)">Recreated flow · illustrative data</span>
+        <span style="font-size: 12px; color: var(--ink3)">Illustrative design · real Amex screens are confidential</span>
       </div>
     </div>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 18px">
@@ -511,7 +512,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
             </div>
           </sc-for>
         </div>
-        <span style="font-size: 12px; color: var(--ink3); text-align: center">Recreated screens · illustrative data. The increase version is concept work.</span>
+        <span style="font-size: 12px; color: var(--ink3); text-align: center">Illustrative designs · real Amex screens are confidential. The increase version is concept work.</span>
       </div>
       <div style="flex: 1 1 min(400px, 100%); min-width: 0; display: flex; flex-direction: column; gap: 16px">
         <sc-for list="{{rlOutcomes}}" as="o" hint-placeholder-count="4">
@@ -601,13 +602,13 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
       <a href="/work" class="btn btn-s" style="min-height: 56px">All work</a>
       <a href="mailto:rakhesh.design@gmail.com" class="btn btn-p" data-cur="Email" style="min-height: 56px; font-size: 18px; padding: 0 30px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 256 256" fill="currentColor"><path d="{{ic.mail}}"></path></svg>rakhesh.design@gmail.com</a>
     </div>
-    <p style="margin: 24px 0 0; font-size: 13px; color: var(--ink3); max-width: 760px; border-top: 1px solid var(--line); padding-top: 24px">Product visuals are recreations with illustrative data. Results come from team efforts across Product, Engineering, Content, Risk and market teams. Concept work is labelled as concept.</p>
+    <p style="margin: 24px 0 0; font-size: 13px; color: var(--ink3); max-width: 760px; border-top: 1px solid var(--line); padding-top: 24px">Product visuals are illustrative designs because the real Amex screens are confidential. Results come from team efforts across Product, Engineering, Content, Risk and market teams. Concept work is labelled as concept.</p>
   </div>
 </footer>
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":11326}}'>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":11429}}'>
 class Component extends DCLogic {
   constructor(props) {
     super(props);
