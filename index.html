@@ -302,7 +302,7 @@ Concept <h3>Confirm-before-act for agents</h3>
 </section>
 </main>
 <footer>Let’s talk <h2>Got a problem where a confusing screen costs someone something?</h2>
-<a href="mailto:rakhesh.design@gmail.com">rakhesh.design@gmail.com</a><a href="/work/manage-credit-limit">Read the flagship case</a>Navigate <a href="#work">Work</a><a href="#flagships">Flagships</a><a href="#impact">Impact</a><a href="#global">Global</a><a href="#proposal">Proposal</a><a href="#ai">AI products</a><a href="#leadership">Leadership</a><a href="#about">About</a><a href="/mechanical-design">Beyond Product Design</a>Elsewhere <a href="https://www.behance.net/rakheshkarnati">Behance</a><a href="https://rakheshkarnati.framer.website">Framer portfolio</a><a href="mailto:rakhesh.design@gmail.com">Email</a><a href="mailto:rakhesh.design@gmail.com?subject=R%C3%A9sum%C3%A9%20request">Request résumé</a>Availability Open to new opportunities India and global 02:02 IST Back to top <a href="#top"></a><p>Confidential details are withheld. Targets are labelled as targets. Concept work is labelled as concept. © 2026 Rakhesh Karnati.</p>
+<a href="mailto:rakhesh.design@gmail.com">rakhesh.design@gmail.com</a><a href="/work/manage-credit-limit">Read the flagship case</a>Navigate <a href="#work">Work</a><a href="#flagships">Flagships</a><a href="#impact">Impact</a><a href="#global">Global</a><a href="#proposal">Proposal</a><a href="#ai">AI products</a><a href="#leadership">Leadership</a><a href="#about">About</a><a href="/mechanical-design">Beyond Product Design</a>Elsewhere <a href="https://www.behance.net/rakheshkarnati">Behance</a><a href="https://rakheshkarnati.framer.website">Framer portfolio</a><a href="mailto:rakhesh.design@gmail.com">Email</a><a href="mailto:rakhesh.design@gmail.com?subject=R%C3%A9sum%C3%A9%20request">Request résumé</a>Availability Open to new opportunities India and global 02:14 IST Back to top <a href="#top"></a><p>Confidential details are withheld. Targets are labelled as targets. Concept work is labelled as concept. © 2026 Rakhesh Karnati.</p>
 </footer>
 <p>The interactive parts of this site need JavaScript. Everything above is the same content in plain text.</p></div></noscript>
 <x-dc><template>
@@ -704,8 +704,8 @@ footer a.pill{display:inline-flex;align-items:center;transition:color .25s,trans
 footer a.pill:hover,footer a.pill:focus-visible{background:none!important;color:var(--acc);text-decoration-color:var(--acc)!important;transform:translateX(4px)}
 footer a.pill:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
 @media (prefers-reduced-motion:reduce){footer a.pill:hover,footer a.pill:focus-visible{transform:none}}
-#projects>.reveal .pgrid{padding:clamp(20px,2.4vw,32px)!important;gap:clamp(20px,3vw,44px)!important;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr)}
-#projects>.reveal:nth-child(even) .pgrid{grid-template-columns:minmax(0,1fr) minmax(0,1.7fr)}
+#projects>.reveal .pgrid{padding:clamp(20px,2.4vw,32px)!important;gap:clamp(20px,3vw,44px)!important}
+@media (min-width:761px){#projects>.reveal .pgrid{grid-template-columns:minmax(0,1.9fr) minmax(0,1fr)!important}#projects>.reveal:nth-child(even) .pgrid{grid-template-columns:minmax(0,1fr) minmax(0,1.9fr)!important}}
 #projects .pl{gap:14px!important}
 #projects .pf{padding-top:16px}
 #projects .pnum{font-size:clamp(34px,11vw,160px)}
@@ -726,8 +726,9 @@ footer a.pill:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
 #projects .wbw.mini .wb-h{font-size:18px}#projects .wbw.mini .ios-big{font-size:clamp(21px, calc(21px + (100vw - 390px) * 0.00864), 28px)}
 #projects .wbw.mini .wb-row{min-height:37px;padding:8px 13px;font-size:12.5px}
 #projects .wbw.mini .wb-cta{min-height:38px;font-size:13px}
-@media (min-width:901px) and (min-height:760px){
-  #projects>.reveal{animation:none;top:calc(96px + var(--stk)*14px)}
+@media (min-width:901px) and (min-height:520px){
+  #projects>.reveal{animation:none;position:sticky;top:calc(88px + var(--stk)*14px)}
+  #projects>.reveal:nth-child(1){--stk:0}#projects>.reveal:nth-child(2){--stk:1}#projects>.reveal:nth-child(3){--stk:2}#projects>.reveal:nth-child(4){--stk:3}#projects>.reveal:nth-child(5){--stk:4}#projects>.reveal:nth-child(6){--stk:5}#projects>.reveal:nth-child(7){--stk:6}
   #projects>.reveal .pgrid{transform-origin:50% 0;transform:scale(var(--s,1));will-change:transform;box-shadow:0 -14px 34px -20px rgba(16,19,24,.4),var(--e3)}
   #projects>.reveal .pgrid::after{content:'';position:absolute;inset:0;border-radius:inherit;background:var(--bg);opacity:var(--f,0);pointer-events:none;z-index:5}
   #projects.nostk>.reveal{position:static}
@@ -1427,17 +1428,17 @@ class Component extends DCLogic {
   }
   componentDidMount() {
     /*stack*/ try { (function () {
-      var box = null, ws = [], queued = false, mq = window.matchMedia('(min-width: 901px) and (min-height: 760px)'), rmq = window.matchMedia('(prefers-reduced-motion: reduce)');
+      var box = null, ws = [], queued = false, mq = window.matchMedia('(min-width: 901px) and (min-height: 520px)'), rmq = window.matchMedia('(prefers-reduced-motion: reduce)');
       function clear() { ws.forEach(function (w) { var a = w.firstElementChild; if (a) { a.style.removeProperty('--s'); a.style.removeProperty('--f'); } }); }
       function calc() {
         queued = false; if (!ws.length) return;
         if (!mq.matches) { box.classList.remove('nostk'); clear(); return; }
-        var vh = window.innerHeight, fit = ws.every(function (w) { return w.offsetHeight < vh - 150; });
+        var vh = window.innerHeight, fit = ws.every(function (w) { return w.offsetHeight < vh - 104; });
         box.classList.toggle('nostk', !fit);
         if (!fit || rmq.matches) { clear(); return; }
         var c = ws.map(function (w, k) {
           if (!k) return 0;
-          var st = parseFloat(getComputedStyle(w).top) || 96, h = w.offsetHeight + 22;
+          var st = parseFloat(getComputedStyle(w).top) || 88, h = w.offsetHeight + 22;
           return Math.min(1, Math.max(0, 1 - (w.getBoundingClientRect().top - st) / h));
         });
         for (var i = 0; i < ws.length; i++) {
