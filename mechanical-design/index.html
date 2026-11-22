@@ -1,0 +1,929 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Mechanical Design — Generative design, 3D printing, CAD | Rakhesh Karnati</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Mechanical design for automotive and aerospace: generative design studies in Fusion 360 (brake pedal -59% mass, triple clamp -52% in simulation), 3D printing and a CAD gallery.">
+<meta name="author" content="Rakhesh Karnati">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#07090D" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F7F9FC" media="(prefers-color-scheme: light)">
+<link rel="canonical" href="https://rakhesh-design.vercel.app/mechanical-design">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Rakhesh Karnati">
+<meta property="og:title" content="Mechanical Design — Rakhesh Karnati">
+<meta property="og:description" content="Mechanical design for automotive and aerospace: generative design studies in Fusion 360 (brake pedal -59% mass, triple clamp -52% in simulation), 3D printing and a CAD gallery.">
+<meta property="og:url" content="https://rakhesh-design.vercel.app/mechanical-design">
+<meta property="og:image" content="https://rakhesh-design.vercel.app/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Rakhesh Karnati, Product Designer. I solve for users, aligned to strategy and business outcomes.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mechanical Design — Rakhesh Karnati">
+<meta name="twitter:description" content="Mechanical design for automotive and aerospace: generative design studies in Fusion 360 (brake pedal -59% mass, triple clamp -52% in simulation), 3D printing and a CAD gallery.">
+<meta name="twitter:image" content="https://rakhesh-design.vercel.app/og.png">
+<script src="/vendor/react.production.min.js"></script>
+<script src="/vendor/react-dom.production.min.js"></script>
+<script src="/support.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Mechanical Design — generative design, 3D printing and CAD", "author": {"@type": "Person", "name": "Rakhesh Karnati"}, "url": "https://rakhesh-design.vercel.app/mechanical-design", "about": "Generative design studies in Fusion 360, 3D printing and CAD."}</script>
+</head>
+<body>
+<noscript><main style="font-family:system-ui,sans-serif;max-width:720px;margin:40px auto;padding:0 20px;line-height:1.6"><h1>Mechanical Design</h1><p>Generative design studies in Fusion 360 (brake pedal, triple clamp, swing arm), 3D printing and a CAD gallery.</p><p><a href="/">Home</a></p><p>This site needs JavaScript to display its interactive case studies.</p><p><a href="mailto:rakhesh.design@gmail.com">rakhesh.design@gmail.com</a></p></main></noscript>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F7F9FC}
+.th{--bg:#F7F9FC;--bg2:#EEF2F7;--card:#FFFFFF;--card2:#F1F4F8;--elev:#FFFFFF;--ink:#101318;--ink2:#44505F;--ink3:#5B6879;--line:#D9E0E8;--line2:#E4E9F0;--acc:#0F7A4D;--fill:#0B8450;--fillink:#FFFFFF;--acc2:#4B54D6;--warn:#8A5F00;--bad:#C22F2F;--btn:#101318;--btnink:#F7F9FC;--navbg:rgba(255,255,255,.8);--glow:rgba(34,201,131,.2);--glow2:rgba(94,103,230,.14);--grid:rgba(16,19,24,.055);--e1:0 1px 2px rgba(16,19,24,.06),0 1px 1px rgba(16,19,24,.04);--e2:0 2px 4px rgba(16,19,24,.05),0 12px 26px -10px rgba(16,19,24,.14);--e3:0 4px 8px rgba(16,19,24,.06),0 30px 64px -22px rgba(16,19,24,.26)}
+.th[data-theme="dark"]{--bg:#07090D;--bg2:#0B0F16;--card:#0F131B;--card2:#151A22;--elev:#141A2E;--ink:#F5F7FA;--ink2:#A9B4C3;--ink3:#8491A3;--line:#1F2733;--line2:#1A212C;--acc:#66F5B2;--fill:#0B8450;--fillink:#FFFFFF;--acc2:#9E9EFF;--warn:#F5C451;--bad:#FF7B7B;--btn:#F5F7FA;--btnink:#07090D;--navbg:rgba(15,19,27,.72);--glow:rgba(102,245,178,.14);--glow2:rgba(158,158,255,.14);--grid:rgba(245,247,250,.045);--e1:0 1px 0 rgba(255,255,255,.04) inset,0 1px 2px rgba(0,0,0,.5);--e2:0 1px 0 rgba(255,255,255,.06) inset,0 14px 30px -12px rgba(0,0,0,.75);--e3:0 1px 0 rgba(255,255,255,.07) inset,0 34px 72px -26px rgba(0,0,0,.9),0 0 0 1px rgba(102,245,178,.05)}
+a{color:var(--ink)}
+::selection{background:#66F5B2;color:#07090D}
+.wrap{max-width:1360px;margin:0 auto;padding-left:40px;padding-right:40px}
+.disp{font-family:'Space Grotesk',system-ui,sans-serif;font-weight:600;letter-spacing:-0.02em;font-kerning:normal;text-rendering:optimizeLegibility}
+.h2{margin:0;font-family:'Space Grotesk',system-ui,sans-serif;font-weight:600;font-size:clamp(30px,4.4vw,64px);line-height:1.08;letter-spacing:-0.025em;text-wrap:balance;font-kerning:normal;text-rendering:optimizeLegibility}
+.em{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:0;color:var(--acc)}
+.gt{background:linear-gradient(100deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.kick{font-family:'Space Grotesk',system-ui,sans-serif;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3)}
+.lead{font-size:19px;line-height:1.6;color:var(--ink2)}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--btn);color:var(--btnink);padding:12px 18px;border-radius:12px;font-weight:600;text-decoration:none}
+.skip:focus{top:12px}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes lineUp{from{transform:translateY(112%)}to{transform:none}}
+@keyframes pop{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:none}}
+@keyframes reveal{from{opacity:0;transform:translateY(48px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes hdIn{from{opacity:0;transform:translateY(34px);clip-path:inset(0 0 100% 0)}to{opacity:1;transform:none;clip-path:inset(-20% -5% -20% -5%)}}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes growY{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes typing{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes caret{0%,100%{opacity:1}50%{opacity:0}}
+@keyframes strikeIn{from{text-decoration-color:transparent}to{text-decoration-color:var(--acc)}}
+@keyframes fillbar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes slideL{from{transform:translateX(10%)}to{transform:translateX(-34%)}}
+@keyframes slideR{from{transform:translateX(-34%)}to{transform:translateX(10%)}}
+@keyframes wd{from{opacity:.16}to{opacity:1}}
+@keyframes aurora{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(4%,-6%) scale(1.12)}}
+@keyframes travel{from{left:0;opacity:0}15%{opacity:1}85%{opacity:1}to{left:calc(100% - 8px);opacity:0}}
+@keyframes drawS{from{stroke-dashoffset:var(--len,600)}to{stroke-dashoffset:0}}
+@keyframes sheen{from{transform:translateX(-120%)}to{transform:translateX(220%)}}
+@keyframes glowIn{from{box-shadow:0 0 0 0 transparent}to{box-shadow:0 0 0 1px var(--acc),0 0 40px -6px var(--glow)}}
+.rise{animation:rise 1s cubic-bezier(.2,.7,.2,1) both}
+.d1{animation-delay:.1s}.d2{animation-delay:.25s}.d3{animation-delay:.4s}.d4{animation-delay:.6s}
+.mask{display:block;overflow:hidden;padding:0 .04em .14em;margin-bottom:-.14em}
+.mask>span{display:block;animation:lineUp 1.1s cubic-bezier(.2,.8,.2,1) both}
+.mask.m2>span{animation-delay:.12s}.mask.m3>span{animation-delay:.24s}
+.spin{animation:spin 24s linear infinite}
+.floaty{animation:floaty 6s ease-in-out infinite}
+.pulse{animation:pulse 1.8s ease-in-out infinite}
+.aur{animation:aurora 16s ease-in-out infinite}
+.sl{grid-area:1/1;opacity:0;visibility:hidden;transition:opacity .55s ease,visibility .55s}
+.sl.on{opacity:1;visibility:visible}
+.sl.on .type{animation:typing 1.3s steps(22) .3s both}
+.sl.on .r1{animation:pop .6s cubic-bezier(.2,.7,.2,1) 1.7s both}
+.sl.on .r2{animation:pop .6s cubic-bezier(.2,.7,.2,1) 2.3s both}
+.sl.on .r3{animation:pop .6s cubic-bezier(.2,.7,.2,1) 2.9s both}
+.sl.on .x{animation:strikeIn .5s ease 1.9s both}
+.sl.on .in1{animation:pop .7s cubic-bezier(.2,.7,.2,1) .15s both}
+.sl.on .in2{animation:pop .7s cubic-bezier(.2,.7,.2,1) .45s both}
+.sl.on .in3{animation:pop .7s cubic-bezier(.2,.7,.2,1) .75s both}
+.x{text-decoration:line-through;text-decoration-color:var(--acc);text-decoration-thickness:3px;text-decoration-skip-ink:none}
+.caret{display:inline-block;width:3px;height:.9em;background:var(--acc);margin-left:4px;vertical-align:-.08em;animation:caret 1s step-end infinite}
+.seg{position:relative;overflow:hidden}
+.seg i{position:absolute;left:0;bottom:0;height:3px;width:100%;background:var(--fill);transform:scaleX(0);transform-origin:left;display:block}
+.seg.on i{animation:fillbar var(--per,6s) linear both}
+.seg.done i{transform:scaleX(1)}
+.gp .seg.on i{animation-play-state:paused}
+.noview .seg.on i{animation:none;transform:scaleX(0)}
+.mfw{opacity:1}
+.bar{transform-origin:left}
+.sweep{position:relative;overflow:hidden}
+.sweep::after{content:"";position:absolute;top:0;bottom:0;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.18),transparent);transform:translateX(-120%);pointer-events:none}
+.on .sweep::after,.sweep.go::after{animation:sheen 1.6s ease .4s 1 both}
+@supports (animation-timeline: view()){
+.reveal{animation:reveal linear both;animation-timeline:view();animation-range:entry 0% entry 55%}
+.hd{animation:hdIn linear both;animation-timeline:view();animation-range:entry 0% entry 60%}
+.bar{animation:grow linear both;animation-timeline:view();animation-range:entry 10% cover 40%}
+.bary{transform-origin:bottom;animation:growY linear both;animation-timeline:view();animation-range:entry 10% cover 40%}
+.readbar{transform-origin:left;animation:grow linear both;animation-timeline:scroll(root)}
+.slideL{animation:slideL linear both;animation-timeline:view();animation-range:entry 0% exit 100%}
+.slideR{animation:slideR linear both;animation-timeline:view();animation-range:entry 0% exit 100%}
+.mf{view-timeline-name:--mf}
+.mfw{animation:wd linear both;animation-timeline:--mf;animation-range:cover calc(26% + var(--i) * 0.7%) cover calc(36% + var(--i) * 0.7%)}
+.stag{animation:reveal linear both;animation-timeline:view();animation-range:entry calc(var(--i,0) * 4%) entry calc(46% + var(--i,0) * 4%)}
+.draw{stroke-dasharray:var(--len,600);animation:drawS linear both;animation-timeline:view();animation-range:entry 10% cover 50%}
+}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:var(--e2)}
+.lift{transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s ease,border-color .3s ease}
+.lift:hover{transform:translateY(-4px);box-shadow:var(--e3);border-color:var(--acc)}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 24px;border-radius:999px;font-family:'Space Grotesk',system-ui,sans-serif;font-size:16px;font-weight:600;text-decoration:none;border:1px solid transparent;transition:background .25s,color .25s,border-color .25s,transform .25s,box-shadow .25s}
+.btn-p{background:var(--btn);color:var(--btnink)}
+.btn-p:hover{background:var(--fill);color:var(--fillink);box-shadow:0 10px 30px -8px var(--glow);transform:translateY(-2px)}
+.btn-s{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-s:hover{background:var(--card2);color:var(--ink);border-color:var(--acc)}
+.pill{transition:background .25s,color .25s,border-color .25s}
+.pill:hover{background:var(--card2);color:var(--ink)}
+.ib{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .25s,border-color .25s,color .25s}
+.ib:hover{background:var(--card2);border-color:var(--acc);color:var(--acc)}
+.chip{font-family:inherit;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .25s}
+.chip:hover{border-color:var(--acc)}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:var(--e1);transition:background .35s,border-color .35s,transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.tile:hover{background:var(--elev);border-color:var(--acc);transform:translateY(-4px);box-shadow:var(--e3)}
+.tile-ic{transition:color .35s,transform .45s cubic-bezier(.2,.7,.2,1),background .35s}
+.tile:hover .tile-ic{color:var(--fillink);background:var(--fill);transform:rotate(-8deg) scale(1.06)}
+.tr{transition:background .4s,border-color .4s,box-shadow .4s}
+.tr.on{background:var(--elev);border-color:var(--acc);box-shadow:var(--e3)}
+.nd{background:var(--card2);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:8px;position:relative}
+.nd.hi{background:var(--elev);border-color:var(--acc);box-shadow:0 0 0 1px var(--acc),0 18px 44px -18px var(--glow)}
+.cn{position:relative;height:2px;background:var(--line);align-self:center;min-width:24px;flex:0 0 28px;border-radius:2px}
+.cn::after{content:"";position:absolute;right:-1px;top:-4px;width:8px;height:8px;border-top:2px solid var(--acc);border-right:2px solid var(--acc);transform:rotate(45deg)}
+.cn b{position:absolute;top:-2px;left:0;width:8px;height:6px;border-radius:3px;background:var(--fill);animation:travel 2.4s ease-in-out infinite}
+.tr.on .cn b{animation-duration:1.4s}
+.grid-bg{background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse at 50% 30%,#000 30%,transparent 80%);mask-image:radial-gradient(ellipse at 50% 30%,#000 30%,transparent 80%)}
+.noise{position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.05;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");mix-blend-mode:overlay}
+.cur{position:fixed;left:0;top:0;pointer-events:none;z-index:60;display:none}
+.cd .in{width:8px;height:8px;margin:-4px 0 0 -4px;border-radius:50%;background:#FFFFFF;transition:opacity .2s,transform .3s}
+.cd.lab .in{opacity:0;transform:scale(0)}
+.cr,.cd{mix-blend-mode:difference}
+.cr .in{width:38px;height:38px;margin:-19px 0 0 -19px;border-radius:50%;border:1.5px solid #FFFFFF;transition:width .35s cubic-bezier(.2,.7,.2,1),height .35s cubic-bezier(.2,.7,.2,1),margin .35s cubic-bezier(.2,.7,.2,1),opacity .2s,background .3s}
+.cr.hov .in{width:64px;height:64px;margin:-32px 0 0 -32px;background:#FFFFFF}
+.cr.lab .in{opacity:0}
+.cb .in{width:104px;height:104px;margin:-52px 0 0 -52px;border-radius:50%;background:#66F5B2;color:#07090D;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',system-ui,sans-serif;font-size:14px;font-weight:600;transform:scale(0);transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.cb.lab .in{transform:scale(1)}
+@media (hover:hover) and (pointer:fine){.cur{display:block}.curroot,.curroot a,.curroot button,.curroot label{cursor:none}}
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.cv{width:2px;height:20px;background:var(--line);align-self:center;position:relative;flex:none}
+.cv::after{content:"";position:absolute;bottom:-1px;left:-3px;width:8px;height:8px;border-bottom:2px solid var(--acc);border-right:2px solid var(--acc);transform:rotate(45deg)}
+@keyframes chipSel{from{background:transparent}to{background:var(--fill);color:var(--fillink)}}
+.sl.on .pick{animation:chipSel .4s ease 3.9s both}
+.gp .aur,.gp .spin,.gp .pulse,.gp .cn b,.gp .floaty{animation-play-state:paused}
+@media (max-width:1000px){.flow{grid-template-columns:1fr!important}.cn{display:none}.ltr{grid-template-columns:1fr!important}}
+@media (max-width:900px){.wrap{padding-left:20px;padding-right:20px}}
+@media (max-width:900px){.hbar{border-radius:28px!important;padding-left:16px!important}.hnav{display:none!important}.mask{white-space:normal}}
+@media (max-width:520px){.hbar .btn span,.hclock{display:none}}
+
+/* illustrations */
+.il{width:100%;height:auto;display:block}
+.il .ln{fill:none;stroke:var(--ink3);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.il .ac{fill:none;stroke:var(--acc);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.il .dash{fill:none;stroke:var(--acc);stroke-width:1.6;stroke-dasharray:4 5;stroke-linecap:round}
+.il .fc{fill:var(--card2);stroke:var(--line);stroke-width:1.5}
+.il .fb{fill:var(--line)}
+.il .fa{fill:var(--acc)}
+.il .fs{fill:var(--fill)}
+.il .note{fill:var(--card);stroke:var(--line);stroke-width:1.5}
+.il .tx{fill:var(--ink2);font:600 10.5px 'Space Grotesk',system-ui,sans-serif;letter-spacing:.04em}
+@keyframes scan{0%,100%{transform:translateX(-66px)}50%{transform:translateX(52px)}}
+@keyframes ilPulse{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes ilBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@keyframes ilStep{0%,12%{opacity:.25}30%,100%{opacity:1}}
+@keyframes pinRing{0%{transform:scale(.8);opacity:.8}100%{transform:scale(1.9);opacity:0}}
+.il .scan{animation:scan 5.5s ease-in-out infinite}
+.il .pls{animation:ilPulse 2.4s ease-in-out infinite}
+.il .bob{animation:ilBob 3s ease-in-out infinite}
+.il .st1,.il .st2,.il .st3{animation:ilStep 6s ease-in-out infinite}
+.il .st2{animation-delay:1.2s}.il .st3{animation-delay:2.4s}
+.il .orbit{transform-origin:130px 130px;animation:spin 70s linear infinite}
+.il .orbit .nn{transform-box:fill-box;transform-origin:center;animation:spin 70s linear infinite reverse}
+.gp .il .scan,.gp .il .pls,.gp .il .bob,.gp .il .st1,.gp .il .st2,.gp .il .st3,.gp .il .orbit,.gp .il .orbit .nn,.gp .pin::after{animation-play-state:paused}
+.hw{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:18px}
+.hwc{display:flex;flex-direction:column;gap:14px;height:100%;box-sizing:border-box}
+.hwc .ilb{background:var(--bg2);border:1px solid var(--line2);border-radius:16px;padding:10px}
+.aichip{align-self:flex-start;display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);font-size:15px;line-height:1.35;border:1px solid var(--line);background:var(--card);border-radius:18px;padding:10px 16px 10px 10px;box-shadow:var(--e1);transition:border-color .3s,transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .3s}
+.aichip strong{display:block;font-weight:600}
+.aichip span:nth-child(2){color:var(--ink2)}
+.aichip .aic{width:36px;height:36px;border-radius:12px;background:var(--fill);color:var(--fillink);display:flex;align-items:center;justify-content:center;flex:none}
+.aichip:hover{border-color:var(--acc);transform:translateY(-2px);box-shadow:var(--e3)}
+/* world map */
+.wmap{position:relative;width:100%;max-width:1100px;margin:0 auto}
+.wmap svg{display:block;width:100%;height:auto}
+.wmap path{fill:none;stroke:var(--line);stroke-width:4.6;stroke-linecap:round}
+.pin{position:absolute;transform:translate(-50%,-50%);display:flex;align-items:center;gap:7px;padding:4px 11px 4px 5px;border-radius:999px;background:var(--card);border:1px solid var(--acc);font-size:12px;font-weight:700;letter-spacing:.05em;color:var(--ink);box-shadow:var(--e2)}
+.pin::after{content:"";position:absolute;inset:-1px;border-radius:inherit;border:1.5px solid var(--acc);animation:pinRing 2.8s ease-out infinite}
+.pin .fl{font-size:17px}
+@media (max-width:700px){.pin{padding:2px;gap:0}.pin b{display:none}.pin .fl{font-size:12px}}
+.flr{display:inline-flex;align-items:center}
+.flr .fl{font-size:16px;margin-left:-3px;box-shadow:0 0 0 2px var(--bg)}
+.flr .fl:first-child{margin-left:0}
+.fl{display:inline-block;flex:none;width:1.5em;height:1.125em;border-radius:3px;background-size:cover;background-position:center;box-shadow:0 0 0 1px var(--line);vertical-align:-.2em}.fl.rd{width:1.25em;height:1.25em;border-radius:50%}
+.fl-US{background-image:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 id=%22flag-icons-us%22 viewBox=%220 0 640 480%22%3E  %3Cpath fill=%22%23bd3d44%22 d=%22M0 0h640v480H0%22/%3E  %3Cpath stroke=%22%23fff%22 stroke-width=%2237%22 d=%22M0 55.3h640M0 129h640M0 203h640M0 277h640M0 351h640M0 425h640%22/%3E  %3Cpath fill=%22%23192f5d%22 d=%22M0 0h364.8v258.5H0%22/%3E  %3Cmarker id=%22us-a%22 markerHeight=%2230%22 markerWidth=%2230%22%3E    %3Cpath fill=%22%23fff%22 d=%22m14 0 9 27L0 10h28L5 27z%22/%3E  %3C/marker%3E  %3Cpath fill=%22none%22 marker-mid=%22url(%23us-a)%22 d=%22m0 0 16 11h61 61 61 61 60L47 37h61 61 60 61L16 63h61 61 61 61 60L47 89h61 61 60 61L16 115h61 61 61 61 60L47 141h61 61 60 61L16 166h61 61 61 61 60L47 192h61 61 60 61L16 218h61 61 61 61 60z%22/%3E%3C/svg%3E")}
+.fl-UK{background-image:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 id=%22flag-icons-gb%22 viewBox=%220 0 640 480%22%3E  %3Cpath fill=%22%23012169%22 d=%22M0 0h640v480H0z%22/%3E  %3Cpath fill=%22%23FFF%22 d=%22m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0z%22/%3E  %3Cpath fill=%22%23C8102E%22 d=%22m424 281 216 159v40L369 281zm-184 20 6 35L54 480H0zM640 0v3L391 191l2-44L590 0zM0 0l239 176h-60L0 42z%22/%3E  %3Cpath fill=%22%23FFF%22 d=%22M241 0v480h160V0zM0 160v160h640V160z%22/%3E  %3Cpath fill=%22%23C8102E%22 d=%22M0 193v96h640v-96zM273 0v480h96V0z%22/%3E%3C/svg%3E")}
+.fl-AU{background-image:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 id=%22flag-icons-au%22 viewBox=%220 0 640 480%22%3E  %3Cpath fill=%22%2300008B%22 d=%22M0 0h640v480H0z%22/%3E  %3Cpath fill=%22%23fff%22 d=%22m37.5 0 122 90.5L281 0h39v31l-120 89.5 120 89V240h-40l-120-89.5L40.5 240H0v-30l119.5-89L0 32V0z%22/%3E  %3Cpath fill=%22red%22 d=%22M212 140.5 320 220v20l-135.5-99.5zm-92 10 3 17.5-96 72H0zM320 0v1.5l-124.5 94 1-22L295 0zM0 0l119.5 88h-30L0 21z%22/%3E  %3Cpath fill=%22%23fff%22 d=%22M120.5 0v240h80V0zM0 80v80h320V80z%22/%3E  %3Cpath fill=%22red%22 d=%22M0 96.5v48h320v-48zM136.5 0v240h48V0z%22/%3E  %3Cpath fill=%22%23fff%22 d=%22m527 396.7-20.5 2.6 2.2 20.5-14.8-14.4-14.7 14.5 2-20.5-20.5-2.4 17.3-11.2-10.9-17.5 19.6 6.5 6.9-19.5 7.1 19.4 19.5-6.7-10.7 17.6zm-3.7-117.2 2.7-13-9.8-9 13.2-1.5 5.5-12.1 5.5 12.1 13.2 1.5-9.8 9 2.7 13-11.6-6.6zm-104.1-60-20.3 2.2 1.8 20.3-14.4-14.5-14.8 14.1 2.4-20.3-20.2-2.7 17.3-10.8-10.5-17.5 19.3 6.8L387 178l6.7 19.3 19.4-6.3-10.9 17.3 17.1 11.2ZM623 186.7l-20.9 2.7 2.3 20.9-15.1-14.7-15 14.8 2.1-21-20.9-2.4 17.7-11.5-11.1-17.9 20 6.7 7-19.8 7.2 19.8 19.9-6.9-11 18zm-96.1-83.5-20.7 2.3 1.9 20.8-14.7-14.8-15.1 14.4 2.4-20.7-20.7-2.8 17.7-11L467 73.5l19.7 6.9 7.3-19.5 6.8 19.7 19.8-6.5-11.1 17.6zM234 385.7l-45.8 5.4 4.6 45.9-32.8-32.4-33 32.2 4.9-45.9-45.8-5.8 38.9-24.8-24-39.4 43.6 15 15.8-43.4 15.5 43.5 43.7-14.7-24.3 39.2 38.8 25.1Z%22/%3E%3C/svg%3E")}
+.fl-MX{background-image:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 640 480%22%3E%3Cpath fill=%22%23006847%22 d=%22M0 0h213.3v480H0z%22/%3E%3Cpath fill=%22%23fff%22 d=%22M213.3 0h213.4v480H213.3z%22/%3E%3Cpath fill=%22%23ce1126%22 d=%22M426.7 0H640v480H426.7z%22/%3E%3Ccircle cx=%22320%22 cy=%22240%22 r=%2262%22 fill=%22none%22 stroke=%22%236b8e23%22 stroke-width=%2216%22 stroke-dasharray=%2240 14%22/%3E%3Cellipse cx=%22320%22 cy=%22232%22 rx=%2234%22 ry=%2226%22 fill=%22%238a5a2b%22/%3E%3Cpath d=%22M270 292q50 22 100 0%22 fill=%22none%22 stroke=%22%23006847%22 stroke-width=%2212%22 stroke-linecap=%22round%22/%3E%3C/svg%3E")}
+.fl-CA{background-image:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 id=%22flag-icons-ca%22 viewBox=%220 0 640 480%22%3E  %3Cpath fill=%22%23fff%22 d=%22M150.1 0h339.7v480H150z%22/%3E  %3Cpath fill=%22%23d52b1e%22 d=%22M-19.7 0h169.8v480H-19.7zm509.5 0h169.8v480H489.9zM201 232l-13.3 4.4 61.4 54c4.7 13.7-1.6 17.8-5.6 25l66.6-8.4-1.6 67 13.9-.3-3.1-66.6 66.7 8c-4.1-8.7-7.8-13.3-4-27.2l61.3-51-10.7-4c-8.8-6.8 3.8-32.6 5.6-48.9 0 0-35.7 12.3-38 5.8l-9.2-17.5-32.6 35.8c-3.5.9-5-.5-5.9-3.5l15-74.8-23.8 13.4q-3.2 1.3-5.2-2.2l-23-46-23.6 47.8q-2.8 2.5-5 .7L264 130.8l13.7 74.1c-1.1 3-3.7 3.8-6.7 2.2l-31.2-35.3c-4 6.5-6.8 17.1-12.2 19.5s-23.5-4.5-35.6-7c4.2 14.8 17 39.6 9 47.7%22/%3E%3C/svg%3E")}
+.fl-HK{background-image:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 id=%22flag-icons-hk%22 viewBox=%220 0 640 480%22%3E  %3Cpath fill=%22%23EC1B2E%22 d=%22M0 0h640v480H0%22/%3E  %3Cpath id=%22hk-a%22 fill=%22%23fff%22 d=%22M346.3 103.1C267 98 230.6 201.9 305.6 240.3c-26-22.4-20.6-55.3-10.1-72.4l1.9 1.1c-13.8 23.5-11.2 52.7 11.1 71-12.7-12.3-9.5-39 12.1-48.9s23.6-39.3 16.4-49.1q-14.7-25.6 9.3-38.9M307.9 164l-4.7 7.4-1.8-8.6-8.6-2.3 7.8-4.3-.6-8.9 6.5 6.1 8.3-3.3-3.7 8.1 5.6 6.8z%22/%3E  %3Cuse xlink:href=%22%23hk-a%22 transform=%22rotate(72 312.5 243.5)%22/%3E  %3Cuse xlink:href=%22%23hk-a%22 transform=%22rotate(144 312.5 243.5)%22/%3E  %3Cuse xlink:href=%22%23hk-a%22 transform=%22rotate(216 312.5 243.5)%22/%3E  %3Cuse xlink:href=%22%23hk-a%22 transform=%22rotate(288 312.5 243.5)%22/%3E%3C/svg%3E")}
+/* industries tracker */
+.trk{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;position:relative}
+.ts{position:relative;padding-top:64px;min-width:0;display:flex;flex-direction:column}
+.ts .tile{flex:1}
+.tn{position:absolute;left:0;top:0;width:48px;height:48px;border-radius:50%;background:var(--card);border:1.5px solid var(--line);color:var(--ink2);display:flex;align-items:center;justify-content:center;z-index:2;transition:transform .45s cubic-bezier(.2,.7,.2,1),background .3s,color .3s,border-color .3s}
+.ts:hover .tn{transform:scale(1.1) rotate(-6deg);border-color:var(--acc);color:var(--acc)}
+.tl{position:absolute;left:48px;top:23px;height:2px;width:calc(100% + 18px - 48px);background:var(--line);border-radius:2px;z-index:1}
+.tl i{position:absolute;inset:0;background:var(--fill);border-radius:2px;transform-origin:right}
+.tl b{position:absolute;top:-3px;left:0;width:8px;height:8px;border-radius:50%;background:var(--acc);animation:trkDot 2.6s ease-in-out infinite;box-shadow:0 0 0 4px var(--glow)}
+.ts.now .tn{background:var(--fill);color:var(--fillink);border-color:var(--acc)}
+.ts.now .tn::after{content:"";position:absolute;inset:-7px;border-radius:50%;border:2px solid var(--acc);animation:trkRing 2.2s ease-out infinite}
+.ts.now .tile{border-color:var(--acc);box-shadow:0 0 0 1px var(--acc),0 22px 50px -22px var(--glow)}
+.nowb{position:absolute;left:62px;top:11px;z-index:2;display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--acc);border:1px solid var(--acc);border-radius:999px;padding:4px 12px;background:var(--card)}
+.nowb::before{content:"";display:block;width:8px;height:8px;border-radius:50%;background:var(--acc);animation:trkBlink 1.4s ease-in-out infinite}
+.ts:last-child .tl{display:none}
+.ts .yr{position:absolute;left:62px;top:11px;z-index:2;display:inline-flex;align-items:center;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);border:1px solid var(--line);border-radius:999px;padding:4px 12px;background:var(--card)}
+.ts.now .yr{display:none}
+@keyframes trkRing{0%{transform:scale(.82);opacity:.9}100%{transform:scale(1.35);opacity:0}}
+@keyframes trkBlink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}
+@keyframes trkDot{0%{left:calc(100% - 8px);opacity:0}15%{opacity:1}85%{opacity:1}100%{left:0;opacity:0}}
+@keyframes trkFill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes trkFillY{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes trkPop{from{transform:scale(.5);opacity:0}to{transform:scale(1);opacity:1}}
+@supports (animation-timeline: view()){
+.tl i{animation:trkFill linear both;animation-timeline:view();animation-range:entry calc(var(--i,0) * 6%) entry calc(70% + var(--i,0) * 6%)}
+.tn{animation:trkPop linear both;animation-timeline:view();animation-range:entry calc(var(--i,0) * 5%) entry calc(40% + var(--i,0) * 5%)}
+}
+@media (max-width:900px){
+.trk{grid-template-columns:1fr;gap:18px}
+.ts{padding-top:0;padding-left:68px}
+.ts .tile{flex:none;height:auto!important}
+.tl{left:23px;top:48px;width:2px;height:calc(100% + 18px - 48px)}
+.tl i{transform-origin:bottom}
+.tl b{top:0;left:-3px;animation-name:trkDotY}
+.nowb,.ts .yr{position:static;margin-bottom:10px;align-self:flex-start}
+}
+@keyframes trkDotY{0%{top:calc(100% - 8px);opacity:0}15%{opacity:1}85%{opacity:1}100%{top:0;opacity:0}}
+@supports (animation-timeline: view()){@media (max-width:900px){.tl i{animation-name:trkFillY}}}
+
+/* chapter 07 v2 */
+.gcmp{min-width:0;display:grid;grid-template-columns:minmax(0,1fr) 30px minmax(0,1fr) 30px minmax(0,1fr);gap:8px;align-items:stretch}
+.gc{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.gc.hi{border-color:var(--acc);box-shadow:var(--e3)}
+.gimg{background:#EEF1F4;aspect-ratio:4/3;display:flex}
+.gimg img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;display:block}
+.gmeta{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px}
+.gtop{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:28px}
+.gk{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3)}
+.gc.hi .gk{color:var(--acc)}
+.gchip{display:inline-flex;font-size:13px;font-weight:700;border-radius:999px;padding:3px 10px;background:var(--fill);color:var(--fillink)}
+.gbig{font-family:'Space Grotesk',system-ui,sans-serif;font-weight:700;font-size:clamp(24px,2.6vw,32px);line-height:1.1;color:var(--ink)}
+.gbar{height:10px;border-radius:99px;background:var(--line2);overflow:hidden}
+.gbar i{display:block;height:100%;border-radius:99px;transform-origin:left}
+.sl.on .gbar i{animation:gx 1s cubic-bezier(.2,.7,.2,1) .35s both}
+@keyframes gx{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.gnote{font-size:14px;color:var(--ink2);line-height:1.45}
+.garr{display:flex;align-items:center;justify-content:center;color:var(--ink3)}
+.gwhy{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:14px}
+.gwhy>div{display:flex;gap:14px;align-items:flex-start;padding:18px;border:1px solid var(--line);border-radius:16px;background:var(--card)}
+.gwhy .wi{flex:none;width:44px;height:44px;border-radius:12px;background:var(--card2);color:var(--acc);display:flex;align-items:center;justify-content:center}
+.gwhy b{display:block;font-family:'Space Grotesk',system-ui,sans-serif;font-size:18px;color:var(--ink);margin-bottom:2px}
+.gwhy span.t{font-size:15px;color:var(--ink2);line-height:1.45}
+.pstrip{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 14px;scrollbar-width:thin;scrollbar-color:var(--line) transparent;-webkit-overflow-scrolling:touch}
+.pstrip figure{margin:0;flex:none;scroll-snap-align:start;display:flex;flex-direction:column;gap:8px}
+.gbtn{display:block;padding:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card2);cursor:zoom-in;position:relative;font:inherit}
+.gbtn img{display:block;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.gbtn:hover img{transform:scale(1.04)}
+.gbtn:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.pstrip .gbtn img{height:270px;width:auto}
+.pstrip figcaption,.gal figcaption{font-size:14px;color:var(--ink2)}
+.gal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 16px}
+.gal figure{margin:0;display:flex;flex-direction:column;gap:8px;min-width:0}
+.gal .gbtn{aspect-ratio:4/3;width:100%}
+.gal .gbtn img{width:100%;height:100%;object-fit:cover}
+.gal .gbtn.ct{background:#fff}.gal .gbtn.ct img{object-fit:contain;mix-blend-mode:multiply}
+@media (max-width:900px){.gal{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.gal{grid-template-columns:minmax(0,1fr)}}
+.sbtn{flex:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:border-color .25s,background .25s}
+.sbtn:hover{border-color:var(--acc);background:var(--card2)}
+.lbx{position:fixed;inset:0;z-index:300;background:rgba(7,9,13,.92);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px;cursor:zoom-out}
+.lbx img{max-width:min(1100px,100%);max-height:78vh;border-radius:12px;background:#fff;object-fit:contain}
+.lbx p{margin:0;color:#E6EAF0;font-size:16px;font-family:Inter,system-ui,sans-serif}
+.lbx button{position:absolute;top:18px;right:18px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer}
+@media (max-width:760px){
+  .gcmp{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;padding-bottom:10px;margin:0 -4px;padding-left:4px;padding-right:4px}
+  .gcmp .gc{flex:none;width:76%;scroll-snap-align:center}
+  .garr{display:none}
+  .pstrip .gbtn img{height:210px}
+}
+/* mechanical design page */
+.mdstats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:14px;max-width:960px}
+.mdstats>div{border:1px solid var(--line);background:var(--card);border-radius:18px;padding:20px 22px;display:flex;flex-direction:column;gap:6px;box-shadow:var(--e1)}
+.mdstats b{font-family:'Space Grotesk',system-ui,sans-serif;font-size:clamp(34px,4vw,52px);line-height:1;color:var(--acc);font-weight:700}
+.mdstats span{font-size:15px;color:var(--ink2);line-height:1.45}
+.mdsteps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:16px;counter-reset:st}
+.mdsteps>div>div,.mdsteps>div{min-width:0}
+.mdsteps>div{display:flex;flex-direction:column;gap:10px;border:1px solid var(--line);background:var(--card);border-radius:20px;padding:24px;height:100%;box-sizing:border-box}
+.mdsteps .wi{width:52px;height:52px;border-radius:14px;background:var(--card2);color:var(--acc);display:flex;align-items:center;justify-content:center}
+.mdsteps b{font-family:'Space Grotesk',system-ui,sans-serif;font-size:clamp(18px, calc(18px + (100vw - 390px) * 0.00247), 20px);color:var(--ink);line-height:1.2}
+.mdsteps span:not(.wi){font-size:15px;color:var(--ink2);line-height:1.5}
+/* mechanical section */
+.sheet{position:relative;border:1.5px solid var(--ink3);border-radius:8px;background:var(--card);box-shadow:var(--e2);padding:14px}
+.sheet-in{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(260px,1fr);border:1px solid var(--line);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:28px 28px}
+.sheet-dr{padding:28px;border-right:1px solid var(--line)}
+.crn{position:absolute;width:14px;height:14px;border:2px solid var(--acc);transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.ca{left:-1px;top:-1px;border-right:0;border-bottom:0;border-top-left-radius:8px}.cb{right:-1px;top:-1px;border-left:0;border-bottom:0;border-top-right-radius:8px}.cc{left:-1px;bottom:-1px;border-right:0;border-top:0;border-bottom-left-radius:8px}.cd{right:-1px;bottom:-1px;border-left:0;border-top:0;border-bottom-right-radius:8px}
+.sheet:hover .ca{transform:translate(-4px,-4px)}.sheet:hover .cb{transform:translate(4px,-4px)}.sheet:hover .cc{transform:translate(-4px,4px)}.sheet:hover .cd{transform:translate(4px,4px)}
+.tb{margin:0;display:flex;flex-direction:column;background:var(--card)}
+.tb>div{display:grid;grid-template-columns:104px 1fr;border-bottom:1px solid var(--line);flex:1}
+.tb>div:last-child{border-bottom:0}
+.tb dt{padding:14px;border-right:1px solid var(--line);font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--ink3);display:flex;align-items:center}
+.tb dd{margin:0;padding:14px;font-size:16px;color:var(--ink);display:flex;align-items:center}
+.plate{position:relative;aspect-ratio:4/3;border:1px solid var(--line);border-radius:10px;background-color:var(--card);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:22px 22px;display:flex;align-items:center;justify-content:center;overflow:hidden;transition:border-color .3s,transform .45s cubic-bezier(.2,.7,.2,1)}
+.plate:before,.plate:after{content:"";position:absolute;width:16px;height:16px;border:2px solid var(--acc)}
+.plate:before{left:10px;top:10px;border-right:0;border-bottom:0}.plate:after{right:10px;bottom:10px;border-left:0;border-top:0}
+.plate svg{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.plate:hover{border-color:var(--acc);transform:translateY(-4px)}.plate:hover svg{transform:rotate(-10deg) scale(1.12)}
+.plt{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;gap:2px;padding:12px 16px;background:var(--card);border-top:1px solid var(--line)}
+@media (max-width:900px){.sheet-in{grid-template-columns:1fr}.sheet-dr{border-right:0;border-bottom:1px solid var(--line);padding:18px}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:5px 12px;color:var(--ink2);background:var(--card)}
+.tag.ok{color:var(--acc);border-color:var(--acc)}
+.mnav{display:none;position:relative}
+.mnav>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.mnav>summary::-webkit-details-marker{display:none}
+.mnav .mc{display:none}.mnav[open] .mc{display:block}.mnav[open] .mo{display:none}
+.mpanel{position:fixed;left:12px;right:12px;top:78px;max-height:calc(100dvh - 92px);overflow:auto;overscroll-behavior:contain;background:var(--elev);border:1px solid var(--line);border-radius:24px;box-shadow:var(--e3);padding:12px;display:flex;flex-direction:column;gap:2px;z-index:60}
+.mpanel .mi{display:flex;align-items:center;gap:12px;min-height:48px;padding:0 16px;border-radius:14px;text-decoration:none;font-size:17px;font-weight:500;color:var(--ink)}
+.mpanel .mi:hover,.mpanel .mi:focus-visible{background:var(--card2)}
+.mpanel .mi[aria-current=page]{background:var(--card2);color:var(--acc);font-weight:600}
+.mpanel .mk{display:block;padding:14px 16px 6px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);font-weight:600}
+.mpanel .mrow{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+@media (max-width:1000px){.mnav{display:block}.hnav,.hpills{display:none!important}.hbar{flex-wrap:nowrap!important;border-radius:999px!important;padding:8px 8px 8px 20px!important;gap:6px!important}.hbar>div:last-child{margin-left:auto}.mpanel{top:76px}}
+@media (min-width:700px) and (max-width:1000px){.mpanel{left:auto;width:min(420px,calc(100vw - 40px));right:20px}}
+@media (max-width:640px){.hbar .btn span,.hbar .hclock{display:none!important}.hbar .btn{padding:0!important;width:44px;justify-content:center}.hbar{padding-left:16px!important}}
+/*dev*/
+.amx{--acc:#006FCF;--ok:#0B7A4B;--warn:#9A5B00;--bad:#C8102E;--ink:#17191C;--ink2:#53565A;--ink3:#6C7075;--line:#D3D8DE;--line2:#E4E7EB;--card:#FFFFFF;--card2:#F4F6F8;--bg:#F2F2F7;--elev:#FFFFFF;--btn:#006FCF;--btnink:#FFFFFF;--fill:#006FCF;--fillink:#FFFFFF;--hl:#E8F1FB;--navy:#00175A;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Inter,system-ui,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;letter-spacing:-.01em;text-align:left}
+.ios{width:min(316px,100%);margin:0 auto;border-radius:54px;padding:11px;background:#101317;box-shadow:0 0 0 1.5px #3A4049,var(--e3);box-sizing:border-box}
+.ios-s{position:relative;border-radius:43px;background:var(--bg);min-height:612px;overflow:hidden;box-sizing:border-box;display:flex;flex-direction:column}
+.ios-di{position:absolute;left:50%;top:11px;transform:translateX(-50%);width:90px;height:27px;border-radius:15px;background:#000;z-index:3}
+.ios-st{position:absolute;left:0;right:0;top:0;height:52px;display:flex;align-items:center;justify-content:space-between;padding:6px 22px 0 32px;font-size:15px;font-weight:600;z-index:2;color:#17191C}
+.ios-st svg{display:block}
+.ios-w{display:grid;flex:1;padding-top:52px}
+.ios-p{display:flex;flex-direction:column;gap:12px;padding:0 16px 30px;min-width:0}
+.ios-nb{display:flex;align-items:center;min-height:40px;color:var(--acc);font-size:17px;margin:0 -4px}
+.ios-lt{margin:0;font-size:28px;line-height:1.14;font-weight:700;letter-spacing:.2px;color:var(--ink)}
+.ios-sub{font-size:15px;line-height:1.4;color:var(--ink2)}
+.ios-big{font-size:40px;line-height:1.1;font-weight:700;letter-spacing:-.02em}
+.ios-ban{border-radius:12px;padding:12px 14px;font-size:15px;font-weight:600;line-height:1.35;background:var(--card);box-shadow:inset 4px 0 0 currentColor}
+.ios-prog{display:flex;gap:4px}.ios-prog span{flex:1;height:4px;border-radius:2px}
+.ios-grp{display:flex;flex-direction:column;border-radius:12px;background:var(--card);overflow:hidden}
+.ios-row{display:flex;justify-content:space-between;align-items:center;gap:10px;min-height:44px;padding:11px 16px;font-size:17px;line-height:1.25;border-top:.5px solid var(--line)}
+.ios-row:first-child{border-top:0}
+.ios-row span:last-child{text-align:right;flex:none;max-width:55%}
+.ios-cols{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ios-col{border-radius:12px;padding:12px;background:var(--card);display:flex;flex-direction:column;gap:6px;font-size:13px}
+.ios-chip{align-self:flex-start;font-size:13px;font-weight:600;border-radius:999px;padding:5px 12px;background:var(--hl);color:var(--acc)}
+.ios-cta{display:flex;align-items:center;justify-content:center;min-height:50px;border-radius:14px;background:var(--btn);color:var(--btnink);font-size:17px;font-weight:600;margin-top:auto}
+.ios-hi{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);width:120px;height:5px;border-radius:3px;background:#17191C;z-index:3}
+.stgw{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.9fr);gap:36px;align-items:center}
+@media (max-width:1000px){.stgw{grid-template-columns:1fr}}
+.wbw{width:100%;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 0 0 1px var(--line),var(--e3);box-sizing:border-box}
+.wbb{display:flex;align-items:center;gap:8px;height:42px;padding:0 14px;background:#ECEDEF;border-bottom:1px solid #D6D8DC}
+.wbb i{width:12px;height:12px;border-radius:50%;display:block;flex:none}
+.wbb .u{flex:1;max-width:420px;margin:0 auto;text-align:center;font-size:12px;color:#5B5F66;background:#fff;border-radius:7px;padding:5px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wbh{display:flex;align-items:center;gap:24px;height:54px;padding:0 32px;background:var(--navy);color:#fff;font-size:14px;overflow:hidden;white-space:nowrap}
+.wbh b{font-weight:700;letter-spacing:.02em;font-size:15px}
+.wbh span{opacity:.75}.wbh span.on{opacity:1;box-shadow:0 3px 0 #fff;padding:6px 0}
+.wbg{display:grid;background:#F7F8FA;min-height:470px}
+.wbp{display:flex;flex-direction:column;gap:16px;padding:32px 40px 36px;min-width:0}
+.wb-h{margin:0;font-size:30px;line-height:1.15;font-weight:600;color:var(--ink)}
+.wb-sub{font-size:16px;line-height:1.5;color:var(--ink2);max-width:560px}
+.wb-ban{border-radius:6px;padding:14px 18px;font-size:15px;font-weight:600;background:var(--card);box-shadow:inset 4px 0 0 currentColor,0 0 0 1px var(--line2)}
+.wb-grp{flex-direction:column;border-radius:8px;background:#fff;box-shadow:0 0 0 1px var(--line)}
+.wb-row{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:54px;padding:14px 20px;font-size:16px;border-top:1px solid var(--line2)}
+.wb-row:first-child{border-top:0}
+.wb-row span:last-child{font-weight:600;text-align:right;flex:none}
+.wb-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.wb-col{border-radius:8px;padding:20px;background:#fff;display:flex;flex-direction:column;gap:8px;font-size:14px;box-shadow:0 0 0 1px var(--line)}
+.wb-cta{align-self:flex-start;display:flex;align-items:center;min-height:48px;padding:0 30px;border-radius:4px;background:var(--btn);color:var(--btnink);font-weight:600;font-size:16px}
+@media (max-width:700px){.wbp{padding:22px 18px 26px}.wbh{gap:14px;padding:0 16px}.wb-cols{grid-template-columns:1fr}.wb-h{font-size:24px}}
+
+.ios.mini{width:min(272px,100%);border-radius:46px;padding:9px}
+.ios.mini .ios-s{min-height:500px;border-radius:38px}
+.ios.mini .ios-di{width:68px;height:21px;top:10px}
+.ios.mini .ios-st{height:44px;font-size:12px;padding:5px 16px 0 22px}.ios.mini .ios-st>span:last-child{transform:scale(.78);transform-origin:right center}.ios.mini .ios-st>span:first-child{font-size:12px}
+.ios.mini .ios-w{padding-top:44px}
+.ios.mini .ios-p{padding:0 14px 26px;gap:10px}
+.ios.mini .ios-lt{font-size:23px}
+.ios.mini .ios-big{font-size:32px}
+.ios.mini .ios-row{font-size:15px;min-height:40px;padding:9px 14px}
+.ios.mini .ios-cta{min-height:46px;font-size:16px}
+.ios.mini .ios-nb{font-size:16px;min-height:34px}
+.wbw.mini .wbb{height:34px}.wbw.mini .wbh{height:44px;padding:0 20px;font-size:12px;gap:16px}
+.wbw.mini .wbg{min-height:380px}.wbw.mini .wbp{padding:22px 24px 26px;gap:12px}
+.wbw.mini .wb-h{font-size:22px}.wbw.mini .ios-big{font-size:34px}
+.wbw.mini .wb-row{min-height:46px;padding:11px 16px;font-size:15px}
+.wbw.mini .wb-cta{min-height:44px;font-size:15px}
+.ufv{display:flex;flex-direction:column;width:min(300px,100%);margin:0 auto}
+.ufv>div{position:relative;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:var(--card);font-size:14px;box-shadow:var(--e1)}
+.ufv>div b{color:var(--acc);font-weight:700;font-size:13px}
+.ufv>div+div{margin-top:20px}
+.ufv>div+div:before{content:"";position:absolute;left:50%;top:-20px;height:20px;width:2px;background:var(--line)}
+.ufv>div+div:after{content:"";position:absolute;left:calc(50% - 3px);top:-20px;width:8px;height:8px;border-radius:50%;background:var(--acc);animation:ufdy2 1.9s ease-in-out infinite}
+@keyframes ufdy2{0%{top:-20px;opacity:0}25%{opacity:1}75%{opacity:1}100%{top:-2px;opacity:0}}
+.ufv .ufcta{justify-content:center;background:var(--fill);border-color:var(--fill);color:var(--fillink);font-weight:600}
+/*tip*/.tipw{position:relative;display:inline-flex}
+.tipc{position:absolute;top:calc(100% + 12px);right:0;z-index:60;width:max-content;max-width:min(250px,calc(100vw - 32px));padding:12px 14px;border-radius:14px;background:var(--btn);color:var(--btnink);font-size:13px;line-height:1.45;font-weight:400;text-align:left;box-shadow:var(--e3);opacity:0;visibility:hidden;transform:translateY(-4px);transition:opacity .2s,transform .2s,visibility .2s;pointer-events:none}
+.tipc::before{content:"";position:absolute;top:-5px;right:17px;width:10px;height:10px;background:inherit;transform:rotate(45deg);border-radius:2px}
+.tipc b{display:block;font-weight:600;margin-bottom:2px}
+.tipw:hover .tipc,.tipw:focus-within .tipc{opacity:1;visibility:visible;transform:none}
+</style>
+</helmet>
+
+<div class="th curroot {{gpCls}}" data-theme="{{theme}}" onMouseMove="{{onMove}}" onMouseLeave="{{onOut}}" style="background: var(--bg); color: var(--ink); font-family: 'Inter', system-ui, sans-serif; font-size: 17px; line-height: 1.6; overflow-x: clip; transition: background .4s ease, color .4s ease">
+
+<a class="skip" href="#main">Skip to content</a>
+<div class="noise" aria-hidden="true"></div>
+<div class="cur cd {{crLab}}" ref="{{setDot}}" aria-hidden="true"><div class="in"></div></div>
+<div class="cur cr {{crHov}} {{crLab}}" ref="{{setRing}}" aria-hidden="true"><div class="in"></div></div>
+<div class="cur cb {{crLab}}" ref="{{setBubble}}" aria-hidden="true"><div class="in">{{curLabel}}</div></div>
+<div aria-hidden="true" style="position: fixed; left: 0; top: 0; right: 0; height: 3px; z-index: 40"><div class="readbar" style="height: 100%; background: var(--fill); transform-origin: left"></div></div>
+
+<!-- HEADER -->
+<header class="wrap" style="position: sticky; top: 0; z-index: 30; padding-top: 14px">
+  <div class="hbar" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; background: var(--navbg); backdrop-filter: blur(18px) saturate(1.4); -webkit-backdrop-filter: blur(18px) saturate(1.4); border: 1px solid var(--line); border-radius: 999px; padding: 8px 8px 8px 24px; box-shadow: var(--e2)">
+    <div style="display: flex; align-items: center; gap: 18px">
+      <a href="/" class="disp" aria-label="Rakhesh Karnati, home" style="text-decoration: none; font-size: clamp(19px,calc(19px + (100vw - 390px) * 0.0037), 22px); font-weight: 700">RK<span style="color: var(--acc)">.</span></a><span class="hpills" style="display: flex; align-items: center; gap: 2px"><a href="/" class="pill" style="text-decoration: none; font-size: 15px; font-weight: 500; padding: 11px 14px; border-radius: 999px; display: inline-flex; align-items: center; gap: 8px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 256 256" fill="currentColor" ><path d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z"></path></svg>Home</a></span>
+    </div>
+    <nav aria-label="Page sections" class="hnav" style="display: flex; flex-wrap: wrap; gap: 2px"><a href="#generative" class="pill" style="text-decoration: none; font-size: 15px; font-weight: 500; padding: 11px 14px; border-radius: 999px">Generative design</a><a href="#method" class="pill" style="text-decoration: none; font-size: 15px; font-weight: 500; padding: 11px 14px; border-radius: 999px">Method</a><a href="#print" class="pill" style="text-decoration: none; font-size: 15px; font-weight: 500; padding: 11px 14px; border-radius: 999px">3D printing</a><a href="#gallery" class="pill" style="text-decoration: none; font-size: 15px; font-weight: 500; padding: 11px 14px; border-radius: 999px">Gallery</a></nav>
+    <div style="display: flex; align-items: center; gap: 8px">
+      <span class="tipw"><button type="button" class="ib" onClick="{{toggleMotion}}" aria-pressed="{{motionPressed}}" aria-label="{{motionTipT}}"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 256 256" fill="currentColor"><path d="{{motionIcon}}"></path></svg></button><span class="tipc" role="tooltip"><b>{{motionTipT}}</b>{{motionTipD}}</span></span>
+      <button type="button" class="ib" onClick="{{toggleTheme}}" aria-label="{{themeLabel}}" title="{{themeLabel}}"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 256 256" fill="currentColor"><path d="{{themeIcon}}"></path></svg></button>
+      <a href="mailto:rakhesh.design@gmail.com" aria-label="Say hello" class="btn btn-p" style="min-height: 44px; padding: 0 20px; font-size: 15px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><path d="{{ic.mail}}"></path></svg><span>Say hello</span></a>
+      <details class="mnav"><summary class="ib" aria-label="Open menu"><svg class="mo" aria-hidden="true" width="22" height="22" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path></svg><svg class="mc" aria-hidden="true" width="22" height="22" viewBox="0 0 256 256" fill="currentColor"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg></summary><nav class="mpanel" aria-label="Site menu"><a href="/" class="mi" onClick="{{closeMenu}}">Home</a><a href="/work" class="mi" onClick="{{closeMenu}}">All work</a><span class="mk">On this page</span><div class="mrow"><a href="#generative" class="mi" onClick="{{closeMenu}}">Generative design</a><a href="#method" class="mi" onClick="{{closeMenu}}">Method</a><a href="#print" class="mi" onClick="{{closeMenu}}">3D printing</a><a href="#gallery" class="mi" onClick="{{closeMenu}}">Gallery</a></div><span class="mk">American Express</span><a href="/work/manage-credit-limit" class="mi" onClick="{{closeMenu}}">Manage Credit Limit</a><a href="/work/digital-charge-verification" class="mi" onClick="{{closeMenu}}">Digital Charge Verification</a><a href="/work/financial-relief-program" class="mi" onClick="{{closeMenu}}">Financial Relief Program</a><a href="/work/canada-experience-gap" class="mi" onClick="{{closeMenu}}">Canada Experience Gap</a><a href="/work/financial-verification" class="mi" onClick="{{closeMenu}}">Financial Verification</a><a href="/work/plan-it-promo-pricing" class="mi" onClick="{{closeMenu}}">Plan It® Promo Pricing</a><a href="/work/payments-mexico" class="mi" onClick="{{closeMenu}}">International Payments, Mexico</a><a href="/work/localization-automation" class="mi" onClick="{{closeMenu}}">Localization Automation</a><span class="mk">AI builds</span><a href="/work/sourcx" class="mi" onClick="{{closeMenu}}">SourcX</a><a href="/work/shubhviva" class="mi" onClick="{{closeMenu}}">ShubhViva</a><a href="/work/gravity-deck" class="mi" onClick="{{closeMenu}}">Gravity</a><span class="mk">Beyond screens</span><a href="/mechanical-design" class="mi" aria-current="page" onClick="{{closeMenu}}">Mechanical Design</a><span class="mk">Say hello</span><a href="mailto:rakhesh.design@gmail.com" class="mi" onClick="{{closeMenu}}">rakhesh.design@gmail.com</a></nav></details>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<section id="top" style="position: relative">
+  <div class="aur" aria-hidden="true" style="position: absolute; left: -10%; top: -6%; width: 55%; height: 80%; background: radial-gradient(closest-side, var(--glow), transparent); pointer-events: none"></div>
+  <div class="grid-bg" aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none"></div>
+  <div class="wrap" style="position: relative; padding-top: 72px; padding-bottom: 80px; display: flex; flex-direction: column; gap: 32px">
+    <div class="rise d1" style="display: flex; flex-wrap: wrap; gap: 10px"><span style="display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500; border: 1px solid var(--line); background: var(--card); box-shadow: var(--e1); border-radius: 999px; padding: 8px 16px"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 256 256" fill="currentColor" style="color: var(--acc)"><path d="M223.68,66.15,135.68,18h0a15.88,15.88,0,0,0-15.36,0l-88,48.17a16,16,0,0,0-8.32,14v95.64a16,16,0,0,0,8.32,14l88,48.17a15.88,15.88,0,0,0,15.36,0l88-48.17a16,16,0,0,0,8.32-14V80.18A16,16,0,0,0,223.68,66.15ZM128,32h0l80.34,44L128,120,47.66,76ZM40,90l80,43.78v85.79L40,175.82Zm96,129.57V133.82L216,90v85.78Z"></path></svg>Mechanical Design Engineer</span></div>
+    <h1 class="disp" style="margin: 0; max-width: 1000px; font-size: clamp(34px,5.2vw, 78px); line-height: 1.05; letter-spacing: -0.03em; font-weight: 600">The other half of the craft: things you can <span class="em">hold.</span></h1>
+    <p class="lead" style="margin: 0; max-width: 700px">Mechanical design for automotive and aerospace. I model it, simulate it, make it, and take away what the part does not need.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 8px"><span class="tag">Automotive</span><span class="tag">Aerospace</span><span class="tag">Parametric CAD</span><span class="tag">Fusion 360</span><span class="tag">3D printing</span></div>
+    <div class="mdstats">
+      <div><b>−59%</b><span>Brake pedal mass, generative vs standard (simulation)</span></div>
+      <div><b>−52%</b><span>Triple clamp mass, generative vs standard (simulation)</span></div>
+      <div><b>3</b><span>Parts taken from a standard design to a generative one</span></div>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 12px"><a href="#generative" class="btn btn-p">See the generative studies<svg aria-hidden="true" width="20" height="20" viewBox="0 0 256 256" fill="currentColor"><path d="{{ic.arrowDown}}"></path></svg></a><a href="#gallery" class="btn btn-s">Jump to the gallery</a></div>
+  </div>
+</section>
+
+<section id="generative" style="position: relative">
+  <div class="wrap" style="padding-top: 96px; padding-bottom: 96px; display: flex; flex-direction: column; gap: 40px">
+<div class="apbox {{vw.cad}}" ref="{{cadRef}}" onMouseEnter="{{cadIn}}" onMouseLeave="{{cadOut}}" onFocus="{{cadIn}}" onBlur="{{cadOut}}" style="--per: 6s; display: flex; flex-direction: column; gap: 22px">
+      <div class="reveal" style="max-width: 780px; display: flex; flex-direction: column; gap: 12px">
+        <span class="kick" style="color: var(--acc)">Generative design · Fusion 360</span>
+        <h3 class="disp" style="margin: 0; font-size: clamp(30px,3.6vw, 48px); line-height: 1.1">Before AI tools, I let the solver <span class="em">find the shape.</span></h3>
+        <p style="margin: 0; font-size: 18px; line-height: 1.55; color: var(--ink2)">Generative design in Fusion 360 showed me where a part carried no load. I removed that material, kept the strength, and checked it in simulation. Less metal, less weight, less fuel spent carrying it.</p>
+      </div>
+
+      <div role="tablist" aria-label="Generative design studies" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(190px, 100%), 1fr)); gap: 8px">
+        <sc-for list="{{gparts}}" as="g" hint-placeholder-count="3">
+          <button type="button" role="tab" aria-selected="{{g.sel}}" onClick="{{g.pick}}" class="chip seg {{g.segCls}}" style="text-align: left; min-height: 64px; padding: 10px 14px 12px; border-radius: 14px; border: 1px solid {{g.bd}}; background: {{g.bgc}}; color: var(--ink); display: flex; flex-direction: column; gap: 2px; font-family: inherit"><span style="font-size: 12px; color: var(--ink3); font-weight: 600">{{g.n}}</span><span style="font-size: 15px; font-weight: 600; line-height: 1.25; font-family: 'Space Grotesk', system-ui, sans-serif">{{g.short}}</span><i></i></button>
+        </sc-for>
+      </div>
+
+      <div class="card reveal" style="padding: clamp(14px, 2.4vw, 28px); display: grid; grid-template-columns: minmax(0, 1fr); box-shadow: var(--e3); position: relative; overflow: hidden">
+        <sc-for list="{{gparts}}" as="g" hint-placeholder-count="3">
+          <div class="sl {{g.cls}}" role="tabpanel" aria-hidden="{{g.hidden}}" style="display: flex; flex-direction: column; gap: 16px; position: relative">
+            <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 18px"><h4 class="disp" style="margin: 0; font-size: clamp(22px,2.4vw, 28px)">{{g.title}}</h4><span style="font-size: 14px; color: var(--ink3)">{{g.sub}}</span></div>
+            <div class="gcmp">
+              <sc-for list="{{g.cards}}" as="c" hint-placeholder-count="3">
+                <div style="display: contents">
+                  <div class="gc {{c.cls}}">
+                    <div class="gimg"><img src="{{c.img}}" alt="{{c.alt}}" decoding="async"></div>
+                    <div class="gmeta">
+                      <div class="gtop"><span class="gk">{{c.k}}</span><span class="gchip" style="display: {{c.dchip}}">{{c.chip}}</span></div>
+                      <div class="gbig">{{c.big}}</div>
+                      <div class="gbar" style="display: {{c.dbar}}"><i style="width: {{c.w}}; background: {{c.fill}}"></i></div>
+                      <span class="gnote">{{c.note}}</span>
+                    </div>
+                  </div>
+                  <div class="garr" style="visibility: {{c.arr}}" aria-hidden="true"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 256 256" fill="currentColor" ><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg></div>
+                </div>
+              </sc-for>
+            </div>
+            <p style="margin: 0; font-size: 13px; color: var(--ink3)">{{g.foot}}</p>
+          </div>
+        </sc-for>
+      </div>
+
+      <div class="gwhy reveal">
+        <div><span class="wi"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 256 256" fill="currentColor" ><path d="M223.68,66.15,135.68,18h0a15.88,15.88,0,0,0-15.36,0l-88,48.17a16,16,0,0,0-8.32,14v95.64a16,16,0,0,0,8.32,14l88,48.17a15.88,15.88,0,0,0,15.36,0l88-48.17a16,16,0,0,0,8.32-14V80.18A16,16,0,0,0,223.68,66.15ZM128,32h0l80.34,44L128,120,47.66,76ZM40,90l80,43.78v85.79L40,175.82Zm96,129.57V133.82L216,90v85.78Z"></path></svg></span><div><b>Less material</b><span class="t">Metal stays only where the load flows.</span></div></div>
+        <div><span class="wi"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 256 256" fill="currentColor" ><path d="M221.28,34.75a64,64,0,0,0-90.49,0L60.69,104A15.9,15.9,0,0,0,56,115.31v73.38L26.34,218.34a8,8,0,0,0,11.32,11.32L67.32,200H140.7A15.92,15.92,0,0,0,152,195.32l0,0,69.23-70A64,64,0,0,0,221.28,34.75ZM142.07,46.06A48,48,0,0,1,211.79,112H155.33l34.35-34.34a8,8,0,0,0-11.32-11.32L120,124.69V67.87ZM72,115.35l32-31.67v57l-32,32ZM140.7,184H83.32l56-56h56.74Z"></path></svg></span><div><b>Lighter parts</b><span class="t">Down 59% (pedal) and 52% (clamp) in simulation.</span></div></div>
+        <div><span class="wi"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 256 256" fill="currentColor" ><path d="M241,69.66,221.66,50.34a8,8,0,0,0-11.32,11.32L229.66,81A8,8,0,0,1,232,86.63V168a8,8,0,0,1-16,0V128a24,24,0,0,0-24-24H176V56a24,24,0,0,0-24-24H72A24,24,0,0,0,48,56V208H32a8,8,0,0,0,0,16H192a8,8,0,0,0,0-16H176V120h16a8,8,0,0,1,8,8v40a24,24,0,0,0,48,0V86.63A23.85,23.85,0,0,0,241,69.66ZM64,208V56a8,8,0,0,1,8-8h80a8,8,0,0,1,8,8V208Zm80-96a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h48A8,8,0,0,1,144,112Z"></path></svg></span><div><b>Less fuel</b><span class="t">Less self-weight to carry means lower running cost in a vehicle.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="method" style="position: relative; background: var(--bg2); border-top: 1px solid var(--line2); border-bottom: 1px solid var(--line2)">
+  <div class="wrap" style="padding-top: 96px; padding-bottom: 96px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 780px"><span class="kick" style="color: var(--acc)">Method</span><h2 class="h2 hd" style="font-size: clamp(28px,3.6vw,48px)">Same part, same loads, <span class="em">less metal.</span></h2></div>
+    <div class="mdsteps">
+      <div class="reveal"><span class="wi"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 256 256" fill="currentColor" ><path d="M223.68,66.15,135.68,18h0a15.88,15.88,0,0,0-15.36,0l-88,48.17a16,16,0,0,0-8.32,14v95.64a16,16,0,0,0,8.32,14l88,48.17a15.88,15.88,0,0,0,15.36,0l88-48.17a16,16,0,0,0,8.32-14V80.18A16,16,0,0,0,223.68,66.15ZM128,32h0l80.34,44L128,120,47.66,76ZM40,90l80,43.78v85.79L40,175.82Zm96,129.57V133.82L216,90v85.78Z"></path></svg></span><b>Start from a real part</b><span>Take an existing, finished component as the baseline.</span></div>
+      <div class="reveal"><span class="wi"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 256 256" fill="currentColor" ><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm109.94-52.79a8,8,0,0,0-3.89-5.4l-29.83-17-.12-33.62a8,8,0,0,0-2.83-6.08,111.91,111.91,0,0,0-36.72-20.67,8,8,0,0,0-6.46.59L128,41.85,97.88,25a8,8,0,0,0-6.47-.6A112.1,112.1,0,0,0,54.73,45.15a8,8,0,0,0-2.83,6.07l-.15,33.65-29.83,17a8,8,0,0,0-3.89,5.4,106.47,106.47,0,0,0,0,41.56,8,8,0,0,0,3.89,5.4l29.83,17,.12,33.62a8,8,0,0,0,2.83,6.08,111.91,111.91,0,0,0,36.72,20.67,8,8,0,0,0,6.46-.59L128,214.15,158.12,231a7.91,7.91,0,0,0,3.9,1,8.09,8.09,0,0,0,2.57-.42,112.1,112.1,0,0,0,36.68-20.73,8,8,0,0,0,2.83-6.07l.15-33.65,29.83-17a8,8,0,0,0,3.89-5.4A106.47,106.47,0,0,0,237.94,107.21Zm-15,34.91-28.57,16.25a8,8,0,0,0-3,3c-.58,1-1.19,2.06-1.81,3.06a7.94,7.94,0,0,0-1.22,4.21l-.15,32.25a95.89,95.89,0,0,1-25.37,14.3L134,199.13a8,8,0,0,0-3.91-1h-.19c-1.21,0-2.43,0-3.64,0a8.08,8.08,0,0,0-4.1,1l-28.84,16.1A96,96,0,0,1,67.88,201l-.11-32.2a8,8,0,0,0-1.22-4.22c-.62-1-1.23-2-1.8-3.06a8.09,8.09,0,0,0-3-3.06l-28.6-16.29a90.49,90.49,0,0,1,0-28.26L61.67,97.63a8,8,0,0,0,3-3c.58-1,1.19-2.06,1.81-3.06a7.94,7.94,0,0,0,1.22-4.21l.15-32.25a95.89,95.89,0,0,1,25.37-14.3L122,56.87a8,8,0,0,0,4.1,1c1.21,0,2.43,0,3.64,0a8.08,8.08,0,0,0,4.1-1l28.84-16.1A96,96,0,0,1,188.12,55l.11,32.2a8,8,0,0,0,1.22,4.22c.62,1,1.23,2,1.8,3.06a8.09,8.09,0,0,0,3,3.06l28.6,16.29A90.49,90.49,0,0,1,222.9,142.12Z"></path></svg></span><b>Set the loads and limits</b><span>The same loads, materials and constraints for every version.</span></div>
+      <div class="reveal"><span class="wi"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 256 256" fill="currentColor" ><path d="M221.28,34.75a64,64,0,0,0-90.49,0L60.69,104A15.9,15.9,0,0,0,56,115.31v73.38L26.34,218.34a8,8,0,0,0,11.32,11.32L67.32,200H140.7A15.92,15.92,0,0,0,152,195.32l0,0,69.23-70A64,64,0,0,0,221.28,34.75ZM142.07,46.06A48,48,0,0,1,211.79,112H155.33l34.35-34.34a8,8,0,0,0-11.32-11.32L120,124.69V67.87ZM72,115.35l32-31.67v57l-32,32ZM140.7,184H83.32l56-56h56.74Z"></path></svg></span><b>Remove what carries no load</b><span>Shape optimization first, then generative design, with stiffness and weight as the goals.</span></div>
+      <div class="reveal"><span class="wi"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 256 256" fill="currentColor" ><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path></svg></span><b>Check it in simulation</b><span>Safety factor and displacement, compared with the original.</span></div>
+    </div>
+    <div class="reveal" role="note" style="display: flex; gap: 14px; align-items: flex-start; padding: 18px 22px; border: 1px solid var(--line); border-left: 4px solid var(--acc); border-radius: 14px; background: var(--card2); max-width: 860px"><span style="flex: none; color: var(--acc); margin-top: 2px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 256 256" fill="currentColor" ><path d="M236.8,188.09,149.35,36.22h0a24.76,24.76,0,0,0-42.7,0L19.2,188.09a23.51,23.51,0,0,0,0,23.72A24.35,24.35,0,0,0,40.55,224h174.9a24.35,24.35,0,0,0,21.33-12.19A23.51,23.51,0,0,0,236.8,188.09ZM222.93,203.8a8.5,8.5,0,0,1-7.48,4.2H40.55a8.5,8.5,0,0,1-7.48-4.2,7.59,7.59,0,0,1,0-7.72L120.52,44.21a8.75,8.75,0,0,1,15,0l87.45,151.87A7.59,7.59,0,0,1,222.93,203.8ZM120,144V104a8,8,0,0,1,16,0v40a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,180Z"></path></svg></span><p style="margin: 0; font-size: 16px; line-height: 1.55; color: var(--ink2)"><strong style="color: var(--ink)">The trade-off.</strong> Lighter parts flex more, so I checked displacement as well as strength. Brake pedal: 2.93 mm to 3.75 mm. Triple clamp: 0.047 mm to 0.76 mm. Shapes this complex are hard to machine, which is why 3D printing is the natural next step.</p></div>
+  </div>
+</section>
+
+<section id="print" style="position: relative">
+  <div class="wrap" style="padding-top: 96px; padding-bottom: 96px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 18px">
+      <div class="reveal" style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px">
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <span class="kick" style="color: var(--acc)">3D printing</span>
+          <h3 class="disp" style="margin: 0; font-size: clamp(30px,3.6vw, 48px); line-height: 1.1">Turned ideas into <span class="em">reality.</span></h3>
+        </div>
+        <div style="display: flex; gap: 8px; flex: none"><button type="button" class="sbtn" data-sc="pstrip" data-dir="prev" aria-label="Scroll photos left"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 256 256" fill="currentColor" ><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg></button><button type="button" class="sbtn" data-sc="pstrip" data-dir="next" aria-label="Scroll photos right"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 256 256" fill="currentColor" ><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg></button></div>
+      </div>
+      <div class="pstrip" id="pstrip" tabindex="0" aria-label="3D printed models"><figure><button type="button" class="gbtn" data-lb aria-label="Open photo: V8 engine model"><img src="/img/14cee5dbf05d.webp" width="720" height="410" alt="V8 engine model" loading="lazy" decoding="async"></button><figcaption>V8 engine model</figcaption></figure><figure><button type="button" class="gbtn" data-lb aria-label="Open photo: Infinite cubes, mid-print"><img src="/img/2f762014bf5c.webp" width="946" height="920" alt="Infinite cubes, mid-print" loading="lazy" decoding="async"></button><figcaption>Infinite cubes, mid-print</figcaption></figure><figure><button type="button" class="gbtn" data-lb aria-label="Open photo: Radial engine prototype"><img src="/img/9b1c0d5cd108.webp" width="960" height="546" alt="Radial engine prototype" loading="lazy" decoding="async"></button><figcaption>Radial engine prototype</figcaption></figure><figure><button type="button" class="gbtn" data-lb aria-label="Open photo: Robotic arm parts"><img src="/img/40686ddab761.webp" width="960" height="454" alt="Robotic arm parts" loading="lazy" decoding="async"></button><figcaption>Robotic arm parts</figcaption></figure><figure><button type="button" class="gbtn" data-lb aria-label="Open photo: V8 pistons and rods"><img src="/img/4be124b76eb3.webp" width="960" height="640" alt="V8 pistons and rods" loading="lazy" decoding="async"></button><figcaption>V8 pistons and rods</figcaption></figure><figure><button type="button" class="gbtn" data-lb aria-label="Open photo: VBIT block model"><img src="/img/452fd19190ee.webp" width="960" height="839" alt="VBIT block model" loading="lazy" decoding="async"></button><figcaption>VBIT block model</figcaption></figure><figure><button type="button" class="gbtn" data-lb aria-label="Open photo: 3DP keychains"><img src="/img/5d8d14684ef9.webp" width="960" height="743" alt="3DP keychains" loading="lazy" decoding="async"></button><figcaption>3DP keychains</figcaption></figure></div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" style="position: relative; background: var(--bg2); border-top: 1px solid var(--line2); border-bottom: 1px solid var(--line2)">
+  <div class="wrap" style="padding-top: 96px; padding-bottom: 96px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 18px">
+      <div class="reveal" style="display: flex; flex-direction: column; gap: 10px"><span class="kick">Gallery · CAD</span><h3 class="disp" style="margin: 0; font-size: clamp(26px,3vw, 38px); line-height: 1.15">From the screen to the bench.</h3></div>
+      <div class="gal"><figure><button type="button" class="gbtn" data-lb aria-label="Open photo: Supercar concept, rendered"><img src="/img/2daa6b4482ab.webp" width="960" height="540" alt="Supercar concept, rendered" loading="lazy" decoding="async"></button><figcaption>Supercar concept, rendered</figcaption></figure><figure><button type="button" class="gbtn ct" data-lb aria-label="Open photo: Caster assembly"><img src="/img/e8a56a61303d.webp" width="800" height="946" alt="Caster assembly" loading="lazy" decoding="async"></button><figcaption>Caster assembly</figcaption></figure><figure><button type="button" class="gbtn" data-lb aria-label="Open photo: Mountain bike, full model"><img src="/img/ff96dcdfbb0d.webp" width="850" height="481" alt="Mountain bike, full model" loading="lazy" decoding="async"></button><figcaption>Mountain bike, full model</figcaption></figure><figure><button type="button" class="gbtn" data-lb aria-label="Open photo: Arduino UNO, modelled next to the real board"><img src="/img/9e79b3750868.webp" width="960" height="454" alt="Arduino UNO, modelled next to the real board" loading="lazy" decoding="async"></button><figcaption>Arduino UNO, modelled next to the real board</figcaption></figure><figure><button type="button" class="gbtn ct" data-lb aria-label="Open photo: Shape optimization study"><img src="/img/dbc5a4d769cd.webp" width="960" height="563" alt="Shape optimization study" loading="lazy" decoding="async"></button><figcaption>Shape optimization study</figcaption></figure><figure><button type="button" class="gbtn ct" data-lb aria-label="Open photo: Human form, Fusion 360 Form"><img src="/img/c8d52385c988.webp" width="960" height="711" alt="Human form, Fusion 360 Form" loading="lazy" decoding="async"></button><figcaption>Human form, Fusion 360 Form</figcaption></figure></div>
+    </div>
+  </div>
+</section>
+
+<section id="next" style="position: relative">
+  <div class="wrap" style="padding-top: 96px; padding-bottom: 96px; display: flex; flex-direction: column; gap: 40px">
+<div class="reveal" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; padding: clamp(22px,3vw,36px); border: 1px solid var(--line); border-radius: 24px; background: var(--card); box-shadow: var(--e2)">
+      <div style="display: flex; flex-direction: column; gap: 6px; max-width: 640px"><h3 class="disp" style="margin: 0; font-size: clamp(24px,2.6vw,34px); line-height: 1.15">Same habit in product design: <span class="em">make it, test it, fix it.</span></h3><p style="margin: 0; color: var(--ink2); font-size: 17px">See how that plays out on screens, across markets.</p></div>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px"><a href="/work" class="btn btn-p">See the product work<svg aria-hidden="true" width="20" height="20" viewBox="0 0 256 256" fill="currentColor"><path d="{{ic.arrowRight}}"></path></svg></a><a href="/" class="btn btn-s">Back to home</a></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer style="position: relative; overflow: hidden; background: var(--bg2); border-top: 1px solid var(--line)">
+  <div class="aur" aria-hidden="true" style="position: absolute; left: 20%; top: -20%; width: 60%; height: 90%; background: radial-gradient(closest-side, var(--glow), transparent); pointer-events: none"></div>
+  <div class="wrap" style="position: relative; padding-top: 104px; padding-bottom: 40px; display: flex; flex-direction: column; gap: 64px">
+    <div style="display: flex; flex-direction: column; gap: 26px">
+      <span class="kick">Let’s talk</span>
+      <h2 class="h2 hd" style="font-size: clamp(31px,6vw, 96px); max-width: 1100px">Got a problem where a confusing screen <span class="em">costs someone something?</span></h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center">
+        <a href="mailto:rakhesh.design@gmail.com" class="btn btn-p" data-cur="Email" style="min-height: 56px; font-size: 18px; padding: 0 30px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 256 256" fill="currentColor"><path d="{{ic.mail}}"></path></svg>rakhesh.design@gmail.com</a>
+        <a href="/work/manage-credit-limit" class="btn btn-s" style="min-height: 56px">Read the flagship case</a>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 32px; border-top: 1px solid var(--line); padding-top: 36px">
+      <div style="display: flex; flex-direction: column; gap: 4px"><span class="kick" style="margin-bottom: 8px">Navigate</span>
+        <a href="/work" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">Work</a><a href="/#impact" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">Impact</a><a href="/#global" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">Global</a><a href="/#ai" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">AI products</a><a href="#top" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">Mechanical Design</a></div>
+      <div style="display: flex; flex-direction: column; gap: 4px"><span class="kick" style="margin-bottom: 8px">Elsewhere</span>
+        <a href="https://www.behance.net/rakheshkarnati" target="_blank" rel="noopener" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">Behance</a><a href="https://rakheshkarnati.framer.website" target="_blank" rel="noopener" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">Framer portfolio</a><a href="mailto:rakhesh.design@gmail.com" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">Email</a></div>
+      <div style="display: flex; flex-direction: column; gap: 8px"><span class="kick" style="margin-bottom: 8px">Availability</span>
+        <span style="display: flex; align-items: center; gap: 8px"><span class="pulse" style="width: 8px; height: 8px; border-radius: 50%; background: var(--fill)"></span>Open to new opportunities</span><span style="color: var(--ink2)">India and global</span>
+        <span style="display: flex; align-items: center; gap: 8px; color: var(--ink2)"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><path d="{{ic.clock}}"></path></svg>{{clock}} IST</span></div>
+      <div style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start"><span class="kick">Back to top</span>
+        <a href="#top" class="ib" aria-label="Back to top" style="text-decoration: none"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 256 256" fill="currentColor"><path d="{{ic.arrowUp}}"></path></svg></a></div>
+    </div>
+    <p style="margin: 0; font-size: 13px; color: var(--ink3); max-width: 760px">Confidential details are withheld. Targets are labelled as targets. Concept work is labelled as concept. © 2026 Rakhesh Karnati.</p>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":6200}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { theme: 'light', hero: 0, show: 0, dec: 0, mk: 0, lvl: 0, cad: 0, paused: false, clock: '--:--', vis: {}, curLab: '', curHov: false };
+    this.ap = {};
+    var cfg = { hero: [1, 60], show: [8, 70], dec: [5, 50], mk: [6, 28], lvl: [4, 36], cad: [3, 60] };
+    for (var k in cfg) { this.ap[k] = { n: cfg[k][0], per: cfg[k][1], e: 0, hov: false, el: null, vis: false }; }
+    this.cel = []; this.cval = []; this.cdone = []; this.frame = 0;
+    this.mx = -200; this.my = -200; this.dx = -200; this.dy = -200; this.rx = -200; this.ry = -200;
+    this.dotEl = null; this.ringEl = null; this.bubbleEl = null;
+    this.tick = this.tick.bind(this);
+    this.autoTick = this.autoTick.bind(this);
+  }
+  componentDidMount() {
+    try {
+      document.addEventListener('click', function (e) {
+        var t = e.target && e.target.closest ? e.target : null; if (!t) return;
+        var sb = t.closest('[data-sc]');
+        if (sb) { var st = document.getElementById(sb.getAttribute('data-sc')); if (st) st.scrollBy({ left: (sb.getAttribute('data-dir') === 'prev' ? -1 : 1) * st.clientWidth * 0.8, behavior: 'smooth' }); return; }
+        var lb = t.closest('[data-lb]');
+        if (lb) { var im = lb.querySelector('img'); if (!im) return; var o = document.createElement('div'); o.className = 'lbx'; o.setAttribute('role', 'dialog'); o.setAttribute('aria-modal', 'true'); o.setAttribute('aria-label', 'Photo viewer'); o.innerHTML = '<img alt=""><p></p><button type="button" aria-label="Close photo"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 256 256" fill="currentColor"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg></button>'; var oi = o.querySelector('img'); oi.src = im.currentSrc || im.src; oi.alt = im.alt || ''; o.querySelector('p').textContent = im.alt || ''; document.body.appendChild(o); var cb = o.querySelector('button'); if (cb && cb.focus) cb.focus(); return; }
+        var lx = t.closest('.lbx'); if (lx) lx.remove();
+      });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { var lx = document.querySelector('.lbx'); if (lx) lx.remove(); } });
+    } catch (e) {}
+    try { document.addEventListener('click', function (e) { var d = document.querySelector('details.mnav[open]'); if (d && !d.contains(e.target)) d.removeAttribute('open'); }); document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { var d = document.querySelector('details.mnav[open]'); if (d) d.removeAttribute('open'); } }); } catch (x) {}
+    var self = this;
+    try {
+      var saved = localStorage.getItem('rk-theme');
+      if (saved === 'dark' || saved === 'light') { this.setState({ theme: saved }); }
+      else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) { this.setState({ theme: 'dark' }); }
+    } catch (e) {}
+    try { if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) { this.reduced = true; this.setState({ paused: true }); } } catch (e) {}
+    this.updateClock();
+    this.t1 = setInterval(this.autoTick, 100);
+    this.t2 = setInterval(function () { self.updateClock(); }, 20000);
+    this.raf = requestAnimationFrame(this.tick);
+    setTimeout(function () { self.autoTick(); self.checkCounts(); }, 200);
+  }
+  componentWillUnmount() { clearInterval(this.t1); clearInterval(this.t2); cancelAnimationFrame(this.raf); }
+  updateClock() {
+    var t = '--:--';
+    try { t = new Date().toLocaleTimeString('en-GB', { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit' }); } catch (e) {}
+    if (t !== this.state.clock) this.setState({ clock: t });
+  }
+  autoTick() {
+    var self = this, ch = {}, any = false;
+    var vh = window.innerHeight || 800;
+    Object.keys(this.ap).forEach(function (k) {
+      var w = self.ap[k], v = false;
+      if (w.el && w.el.getBoundingClientRect) { var r = w.el.getBoundingClientRect(); v = r.bottom > vh * 0.12 && r.top < vh * 0.88; }
+      if (v !== w.vis) { w.vis = v; w.e = 0; ch[k] = v; any = true; }
+      if (!v || self.state.paused) return;
+      w.e++;
+      if (w.e >= w.per) { w.e = 0; var u = {}; u[k] = (self.state[k] + 1) % w.n; self.setState(u); }
+    });
+    if (any) this.setState({ vis: Object.assign({}, this.state.vis, ch) });
+  }
+  checkCounts() {
+    var vh = window.innerHeight || 800;
+    for (var i = 0; i < this.cel.length; i++) {
+      var el = this.cel[i];
+      if (!el || this.cdone[i] || !el.getBoundingClientRect) continue;
+      var r = el.getBoundingClientRect();
+      if (r.top < vh * 0.92 && r.bottom > 0) { this.cdone[i] = true; this.runCount(i); }
+    }
+  }
+  runCount(i) {
+    var self = this, el = this.cel[i], to = this.cto[i];
+    if (!el) return;
+    if (this.reduced || this.state.paused) { this.cval[i] = to; el.textContent = String(to); return; }
+    var t0 = performance.now(), dur = 1500;
+    var step = function (now) {
+      var p = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+      var v = Math.round(to * e);
+      self.cval[i] = v;
+      if (self.cel[i]) self.cel[i].textContent = String(v);
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+  tick() {
+    this.dx += (this.mx - this.dx) * 0.55; this.dy += (this.my - this.dy) * 0.55;
+    this.rx += (this.mx - this.rx) * 0.16; this.ry += (this.my - this.ry) * 0.16;
+    if (this.dotEl) this.dotEl.style.transform = 'translate(' + this.dx + 'px,' + this.dy + 'px)';
+    if (this.ringEl) this.ringEl.style.transform = 'translate(' + this.rx + 'px,' + this.ry + 'px)';
+    if (this.bubbleEl) this.bubbleEl.style.transform = 'translate(' + this.rx + 'px,' + this.ry + 'px)';
+    this.frame++;
+    if (this.frame % 8 === 0) this.checkCounts();
+    this.raf = requestAnimationFrame(this.tick);
+  }
+  renderVals() {
+    var s = this.state, self = this;
+    var dark = s.theme === 'dark';
+    var ic = {"arrowRight": "M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z", "arrowLeft": "M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z", "arrowDown": "M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z", "upRight": "M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z", "arrowUp": "M205.66,117.66a8,8,0,0,1-11.32,0L136,59.31V216a8,8,0,0,1-16,0V59.31L61.66,117.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0l72,72A8,8,0,0,1,205.66,117.66Z", "moon": "M233.54,142.23a8,8,0,0,0-8-2,88.08,88.08,0,0,1-109.8-109.8,8,8,0,0,0-10-10,104.84,104.84,0,0,0-52.91,37A104,104,0,0,0,136,224a103.09,103.09,0,0,0,62.52-20.88,104.84,104.84,0,0,0,37-52.91A8,8,0,0,0,233.54,142.23ZM188.9,190.34A88,88,0,0,1,65.66,67.11a89,89,0,0,1,31.4-26A106,106,0,0,0,96,56,104.11,104.11,0,0,0,200,160a106,106,0,0,0,14.92-1.06A89,89,0,0,1,188.9,190.34Z", "sun": "M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z", "medal": "M216,96A88,88,0,1,0,72,163.83V240a8,8,0,0,0,11.58,7.16L128,225l44.43,22.21A8.07,8.07,0,0,0,176,248a8,8,0,0,0,8-8V163.83A87.85,87.85,0,0,0,216,96ZM56,96a72,72,0,1,1,72,72A72.08,72.08,0,0,1,56,96ZM168,227.06l-36.43-18.21a8,8,0,0,0-7.16,0L88,227.06V174.37a87.89,87.89,0,0,0,80,0ZM128,152A56,56,0,1,0,72,96,56.06,56.06,0,0,0,128,152Zm0-96A40,40,0,1,1,88,96,40,40,0,0,1,128,56Z", "sparkle": "M197.58,129.06,146,110l-19-51.62a15.92,15.92,0,0,0-29.88,0L78,110l-51.62,19a15.92,15.92,0,0,0,0,29.88L78,178l19,51.62a15.92,15.92,0,0,0,29.88,0L146,178l51.62-19a15.92,15.92,0,0,0,0-29.88ZM137,164.22a8,8,0,0,0-4.74,4.74L112,223.85,91.78,169A8,8,0,0,0,87,164.22L32.15,144,87,123.78A8,8,0,0,0,91.78,119L112,64.15,132.22,119a8,8,0,0,0,4.74,4.74L191.85,144ZM144,40a8,8,0,0,1,8-8h16V16a8,8,0,0,1,16,0V32h16a8,8,0,0,1,0,16H184V64a8,8,0,0,1-16,0V48H152A8,8,0,0,1,144,40ZM248,88a8,8,0,0,1-8,8h-8v8a8,8,0,0,1-16,0V96h-8a8,8,0,0,1,0-16h8V72a8,8,0,0,1,16,0v8h8A8,8,0,0,1,248,88Z", "mail": "M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z", "layers": "M230.91,172A8,8,0,0,1,228,182.91l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,36,169.09l92,53.65,92-53.65A8,8,0,0,1,230.91,172ZM220,121.09l-92,53.65L36,121.09A8,8,0,0,0,28,134.91l96,56a8,8,0,0,0,8.06,0l96-56A8,8,0,1,0,220,121.09ZM24,80a8,8,0,0,1,4-6.91l96-56a8,8,0,0,1,8.06,0l96,56a8,8,0,0,1,0,13.82l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,24,80Zm23.88,0L128,126.74,208.12,80,128,33.26Z", "bug": "M144,92a12,12,0,1,1,12,12A12,12,0,0,1,144,92ZM100,80a12,12,0,1,0,12,12A12,12,0,0,0,100,80Zm116,64A87.76,87.76,0,0,1,213,167l22.24,9.72A8,8,0,0,1,232,192a7.89,7.89,0,0,1-3.2-.67L207.38,182a88,88,0,0,1-158.76,0L27.2,191.33A7.89,7.89,0,0,1,24,192a8,8,0,0,1-3.2-15.33L43,167A87.76,87.76,0,0,1,40,144v-8H16a8,8,0,0,1,0-16H40v-8a87.76,87.76,0,0,1,3-23L20.8,79.33a8,8,0,1,1,6.4-14.66L48.62,74a88,88,0,0,1,158.76,0l21.42-9.36a8,8,0,0,1,6.4,14.66L213,89.05a87.76,87.76,0,0,1,3,23v8h24a8,8,0,0,1,0,16H216ZM56,120H200v-8a72,72,0,0,0-144,0Zm64,95.54V136H56v8A72.08,72.08,0,0,0,120,215.54ZM200,144v-8H136v79.54A72.08,72.08,0,0,0,200,144Z", "crit": "M128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z", "workshop": "M216,40H136V24a8,8,0,0,0-16,0V40H40A16,16,0,0,0,24,56V176a16,16,0,0,0,16,16H79.36L57.75,219a8,8,0,0,0,12.5,10l29.59-37h56.32l29.59,37a8,8,0,1,0,12.5-10l-21.61-27H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,136H40V56H216V176ZM104,120v24a8,8,0,0,1-16,0V120a8,8,0,0,1,16,0Zm32-16v40a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm32-16v56a8,8,0,0,1-16,0V88a8,8,0,0,1,16,0Z", "idea": "M176,232a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,232Zm40-128a87.55,87.55,0,0,1-33.64,69.21A16.24,16.24,0,0,0,176,186v6a16,16,0,0,1-16,16H96a16,16,0,0,1-16-16v-6a16,16,0,0,0-6.23-12.66A87.59,87.59,0,0,1,40,104.49C39.74,56.83,78.26,17.14,125.88,16A88,88,0,0,1,216,104Zm-16,0a72,72,0,0,0-73.74-72c-39,.92-70.47,33.39-70.26,72.39a71.65,71.65,0,0,0,27.64,56.3A32,32,0,0,1,96,186v6h64v-6a32.15,32.15,0,0,1,12.47-25.35A71.65,71.65,0,0,0,200,104Zm-16.11-9.34a57.6,57.6,0,0,0-46.56-46.55,8,8,0,0,0-2.66,15.78c16.57,2.79,30.63,16.85,33.44,33.45A8,8,0,0,0,176,104a9,9,0,0,0,1.35-.11A8,8,0,0,0,183.89,94.66Z", "devices": "M224,72H208V64a24,24,0,0,0-24-24H40A24,24,0,0,0,16,64v96a24,24,0,0,0,24,24H152v8a24,24,0,0,0,24,24h48a24,24,0,0,0,24-24V96A24,24,0,0,0,224,72ZM40,168a8,8,0,0,1-8-8V64a8,8,0,0,1,8-8H184a8,8,0,0,1,8,8v8H176a24,24,0,0,0-24,24v72Zm192,24a8,8,0,0,1-8,8H176a8,8,0,0,1-8-8V96a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8Zm-96,16a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h40A8,8,0,0,1,136,208Zm80-96a8,8,0,0,1-8,8H192a8,8,0,0,1,0-16h16A8,8,0,0,1,216,112Z", "a11y": "M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216ZM112,80a16,16,0,1,1,16,16A16,16,0,0,1,112,80Zm72,32a8,8,0,0,1-8,8H136v13.58l30.66,46a8,8,0,0,1-13.32,8.88l-25.34-38-25.34,38a8,8,0,1,1-13.32-8.88l30.66-46V120H80a8,8,0,0,1,0-16h96A8,8,0,0,1,184,112Z", "mentor": "M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H53.39a8,8,0,0,0,7.23-4.57,48,48,0,0,1,86.76,0,8,8,0,0,0,7.23,4.57H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM80,144a24,24,0,1,1,24,24A24,24,0,0,1,80,144Zm136,56H159.43a64.39,64.39,0,0,0-28.83-26.16,40,40,0,1,0-53.2,0A64.39,64.39,0,0,0,48.57,200H40V56H216ZM56,96V80a8,8,0,0,1,8-8H192a8,8,0,0,1,8,8v96a8,8,0,0,1-8,8H176a8,8,0,0,1,0-16h8V88H72v8a8,8,0,0,1-16,0Z", "robot": "M200,48H136V16a8,8,0,0,0-16,0V48H56A32,32,0,0,0,24,80V192a32,32,0,0,0,32,32H200a32,32,0,0,0,32-32V80A32,32,0,0,0,200,48Zm16,144a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V80A16,16,0,0,1,56,64H200a16,16,0,0,1,16,16Zm-52-56H92a28,28,0,0,0,0,56h72a28,28,0,0,0,0-56Zm-24,16v24H116V152ZM80,164a12,12,0,0,1,12-12h8v24H92A12,12,0,0,1,80,164Zm84,12h-8V152h8a12,12,0,0,1,0,24ZM72,108a12,12,0,1,1,12,12A12,12,0,0,1,72,108Zm88,0a12,12,0,1,1,12,12A12,12,0,0,1,160,108Z", "shield": "M208,40H48A16,16,0,0,0,32,56v56c0,52.72,25.52,84.67,46.93,102.19,23.06,18.86,46,25.26,47,25.53a8,8,0,0,0,4.2,0c1-.27,23.91-6.67,47-25.53C198.48,196.67,224,164.72,224,112V56A16,16,0,0,0,208,40Zm0,72c0,37.07-13.66,67.16-40.6,89.42A129.3,129.3,0,0,1,128,223.62a128.25,128.25,0,0,1-38.92-21.81C61.82,179.51,48,149.3,48,112l0-56,160,0ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z", "pause": "M200,32H160a16,16,0,0,0-16,16V208a16,16,0,0,0,16,16h40a16,16,0,0,0,16-16V48A16,16,0,0,0,200,32Zm0,176H160V48h40ZM96,32H56A16,16,0,0,0,40,48V208a16,16,0,0,0,16,16H96a16,16,0,0,0,16-16V48A16,16,0,0,0,96,32Zm0,176H56V48H96Z", "play": "M232.4,114.49,88.32,26.35a16,16,0,0,0-16.2-.3A15.86,15.86,0,0,0,64,39.87V216.13A15.94,15.94,0,0,0,80,232a16.07,16.07,0,0,0,8.36-2.35L232.4,141.51a15.81,15.81,0,0,0,0-27ZM80,215.94V40l143.83,88Z", "cube": "M223.68,66.15,135.68,18h0a15.88,15.88,0,0,0-15.36,0l-88,48.17a16,16,0,0,0-8.32,14v95.64a16,16,0,0,0,8.32,14l88,48.17a15.88,15.88,0,0,0,15.36,0l88-48.17a16,16,0,0,0,8.32-14V80.18A16,16,0,0,0,223.68,66.15ZM128,32h0l80.34,44L128,120,47.66,76ZM40,90l80,43.78v85.79L40,175.82Zm96,129.57V133.82L216,90v85.78Z", "plane": "M185.33,114.21l29.14-27.42.17-.17a32,32,0,0,0-45.26-45.26c0,.06-.11.11-.17.17L141.79,70.67l-83-30.2a8,8,0,0,0-8.39,1.86l-24,24a8,8,0,0,0,1.22,12.31l63.89,42.59L76.69,136H56a8,8,0,0,0-5.65,2.34l-24,24A8,8,0,0,0,29,175.42l36.82,14.73,14.7,36.75.06.16a8,8,0,0,0,13.18,2.47l23.87-23.88A8,8,0,0,0,120,200V179.31l14.76-14.76,42.59,63.89a8,8,0,0,0,12.31,1.22l24-24a8,8,0,0,0,1.86-8.39Zm-.07,97.23-42.59-63.88A8,8,0,0,0,136.8,144c-.27,0-.53,0-.79,0a8,8,0,0,0-5.66,2.35l-24,24A8,8,0,0,0,104,176v20.69L90.93,209.76,79.43,181A8,8,0,0,0,75,176.57l-28.74-11.5L59.32,152H80a8,8,0,0,0,5.66-2.34l24-24a8,8,0,0,0-1.22-12.32L44.56,70.74l13.5-13.49,83.22,30.26a8,8,0,0,0,8.56-2L180.78,52.6A16,16,0,0,1,203.4,75.23l-32.87,30.93a8,8,0,0,0-2,8.56l30.26,83.22Z", "car": "M240,112H211.31L168,68.69A15.86,15.86,0,0,0,156.69,64H44.28A16,16,0,0,0,31,71.12L1.34,115.56A8.07,8.07,0,0,0,0,120v48a16,16,0,0,0,16,16H33a32,32,0,0,0,62,0h66a32,32,0,0,0,62,0h17a16,16,0,0,0,16-16V128A16,16,0,0,0,240,112ZM44.28,80H156.69l32,32H23ZM64,192a16,16,0,1,1,16-16A16,16,0,0,1,64,192Zm128,0a16,16,0,1,1,16-16A16,16,0,0,1,192,192Zm48-24H223a32,32,0,0,0-62,0H95a32,32,0,0,0-62,0H16V128H240Z", "printer": "M214.67,72H200V40a8,8,0,0,0-8-8H64a8,8,0,0,0-8,8V72H41.33C27.36,72,16,82.77,16,96v80a8,8,0,0,0,8,8H56v32a8,8,0,0,0,8,8H192a8,8,0,0,0,8-8V184h32a8,8,0,0,0,8-8V96C240,82.77,228.64,72,214.67,72ZM72,48H184V72H72ZM184,208H72V160H184Zm40-40H200V152a8,8,0,0,0-8-8H64a8,8,0,0,0-8,8v16H32V96c0-4.41,4.19-8,9.33-8H214.67c5.14,0,9.33,3.59,9.33,8Zm-24-52a12,12,0,1,1-12-12A12,12,0,0,1,200,116Z", "ruler": "M235.32,73.37,182.63,20.69a16,16,0,0,0-22.63,0L20.68,160a16,16,0,0,0,0,22.63l52.69,52.68a16,16,0,0,0,22.63,0L235.32,96A16,16,0,0,0,235.32,73.37ZM84.68,224,32,171.31l32-32,26.34,26.35a8,8,0,0,0,11.32-11.32L75.31,128,96,107.31l26.34,26.35a8,8,0,0,0,11.32-11.32L107.31,96,128,75.31l26.34,26.35a8,8,0,0,0,11.32-11.32L139.31,64l32-32L224,84.69Z", "gear": "M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm109.94-52.79a8,8,0,0,0-3.89-5.4l-29.83-17-.12-33.62a8,8,0,0,0-2.83-6.08,111.91,111.91,0,0,0-36.72-20.67,8,8,0,0,0-6.46.59L128,41.85,97.88,25a8,8,0,0,0-6.47-.6A112.1,112.1,0,0,0,54.73,45.15a8,8,0,0,0-2.83,6.07l-.15,33.65-29.83,17a8,8,0,0,0-3.89,5.4,106.47,106.47,0,0,0,0,41.56,8,8,0,0,0,3.89,5.4l29.83,17,.12,33.62a8,8,0,0,0,2.83,6.08,111.91,111.91,0,0,0,36.72,20.67,8,8,0,0,0,6.46-.59L128,214.15,158.12,231a7.91,7.91,0,0,0,3.9,1,8.09,8.09,0,0,0,2.57-.42,112.1,112.1,0,0,0,36.68-20.73,8,8,0,0,0,2.83-6.07l.15-33.65,29.83-17a8,8,0,0,0,3.89-5.4A106.47,106.47,0,0,0,237.94,107.21Zm-15,34.91-28.57,16.25a8,8,0,0,0-3,3c-.58,1-1.19,2.06-1.81,3.06a7.94,7.94,0,0,0-1.22,4.21l-.15,32.25a95.89,95.89,0,0,1-25.37,14.3L134,199.13a8,8,0,0,0-3.91-1h-.19c-1.21,0-2.43,0-3.64,0a8.08,8.08,0,0,0-4.1,1l-28.84,16.1A96,96,0,0,1,67.88,201l-.11-32.2a8,8,0,0,0-1.22-4.22c-.62-1-1.23-2-1.8-3.06a8.09,8.09,0,0,0-3-3.06l-28.6-16.29a90.49,90.49,0,0,1,0-28.26L61.67,97.63a8,8,0,0,0,3-3c.58-1,1.19-2.06,1.81-3.06a7.94,7.94,0,0,0,1.22-4.21l.15-32.25a95.89,95.89,0,0,1,25.37-14.3L122,56.87a8,8,0,0,0,4.1,1c1.21,0,2.43,0,3.64,0a8.08,8.08,0,0,0,4.1-1l28.84-16.1A96,96,0,0,1,188.12,55l.11,32.2a8,8,0,0,0,1.22,4.22c.62,1,1.23,2,1.8,3.06a8.09,8.09,0,0,0,3,3.06l28.6,16.29A90.49,90.49,0,0,1,222.9,142.12Z", "compass": "M215.12,123.64a8,8,0,1,0-14.24-7.28,79.58,79.58,0,0,1-33.08,33.5l-16.58-37.32A40,40,0,0,0,136,40.8V24a8,8,0,0,0-16,0V40.8a40,40,0,0,0-15.22,71.74L56.69,220.75a8,8,0,1,0,14.62,6.5l25.14-56.56A95.48,95.48,0,0,0,128,176a99.13,99.13,0,0,0,31.6-5.21l25.09,56.46a8,8,0,0,0,14.62-6.5l-25-56.25A95.81,95.81,0,0,0,215.12,123.64ZM128,56a24,24,0,1,1-24,24A24,24,0,0,1,128,56Zm0,104a79.52,79.52,0,0,1-25-4l16.42-36.94a39.81,39.81,0,0,0,17.2,0l16.48,37.06A83.21,83.21,0,0,1,128,160Z", "cycle": "M224,48V96a8,8,0,0,1-8,8H168a8,8,0,0,1,0-16h28.69L182.06,73.37a79.56,79.56,0,0,0-56.13-23.43h-.45A79.52,79.52,0,0,0,69.59,72.71,8,8,0,0,1,58.41,61.27a96,96,0,0,1,135,.79L208,76.69V48a8,8,0,0,1,16,0ZM186.41,183.29a80,80,0,0,1-112.47-.66L59.31,168H88a8,8,0,0,0,0-16H40a8,8,0,0,0-8,8v48a8,8,0,0,0,16,0V179.31l14.63,14.63A95.43,95.43,0,0,0,130,222.06h.53a95.36,95.36,0,0,0,67.07-27.33,8,8,0,0,0-11.18-11.44Z", "check": "M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z", "caret": "M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z", "clock": "M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z", "warn": "M236.8,188.09,149.35,36.22h0a24.76,24.76,0,0,0-42.7,0L19.2,188.09a23.51,23.51,0,0,0,0,23.72A24.35,24.35,0,0,0,40.55,224h174.9a24.35,24.35,0,0,0,21.33-12.19A23.51,23.51,0,0,0,236.8,188.09ZM222.93,203.8a8.5,8.5,0,0,1-7.48,4.2H40.55a8.5,8.5,0,0,1-7.48-4.2,7.59,7.59,0,0,1,0-7.72L120.52,44.21a8.75,8.75,0,0,1,15,0l87.45,151.87A7.59,7.59,0,0,1,222.93,203.8ZM120,144V104a8,8,0,0,1,16,0v40a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,180Z", "flow": "M245.66,74.34l-32-32a8,8,0,0,0-11.32,11.32L220.69,72H208c-49.33,0-61.05,28.12-71.38,52.92-9.38,22.51-16.92,40.59-49.48,42.84a40,40,0,1,0,.1,16c43.26-2.65,54.34-29.15,64.14-52.69C161.41,107,169.33,88,208,88h12.69l-18.35,18.34a8,8,0,0,0,11.32,11.32l32-32A8,8,0,0,0,245.66,74.34ZM48,200a24,24,0,1,1,24-24A24,24,0,0,1,48,200Z", "target": "M221.87,83.16A104.1,104.1,0,1,1,195.67,49l22.67-22.68a8,8,0,0,1,11.32,11.32l-96,96a8,8,0,0,1-11.32-11.32l27.72-27.72a40,40,0,1,0,17.87,31.09,8,8,0,1,1,16-.9,56,56,0,1,1-22.38-41.65L184.3,60.39a87.88,87.88,0,1,0,23.13,29.67,8,8,0,0,1,14.44-6.9Z", "branch": "M232,64a32,32,0,1,0-40,31v17a8,8,0,0,1-8,8H96a23.84,23.84,0,0,0-8,1.38V95a32,32,0,1,0-16,0v66a32,32,0,1,0,16,0V144a8,8,0,0,1,8-8h88a24,24,0,0,0,24-24V95A32.06,32.06,0,0,0,232,64ZM64,64A16,16,0,1,1,80,80,16,16,0,0,1,64,64ZM96,192a16,16,0,1,1-16-16A16,16,0,0,1,96,192ZM200,80a16,16,0,1,1,16-16A16,16,0,0,1,200,80Z", "globe": "M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,16a87.5,87.5,0,0,1,48,14.28V74L153.83,99.74,122.36,104l-.31-.22L102.38,90.92A16,16,0,0,0,79.87,95.1L58.93,126.4a16,16,0,0,0-2.7,8.81L56,171.44l-3.27,2.15A88,88,0,0,1,128,40ZM62.29,186.47l2.52-1.65A16,16,0,0,0,72,171.53l.21-36.23L93.17,104a3.62,3.62,0,0,0,.32.22l19.67,12.87a15.94,15.94,0,0,0,11.35,2.77L156,115.59a16,16,0,0,0,10-5.41l22.17-25.76A16,16,0,0,0,192,74V67.67A87.87,87.87,0,0,1,211.77,155l-16.14-14.76a16,16,0,0,0-16.93-3l-30.46,12.65a16.08,16.08,0,0,0-9.68,12.45l-2.39,16.19a16,16,0,0,0,11.77,17.81L169.4,202l2.36,2.37A87.88,87.88,0,0,1,62.29,186.47ZM185,195l-4.3-4.31a16,16,0,0,0-7.26-4.18L152,180.85l2.39-16.19L184.84,152,205,170.48A88.43,88.43,0,0,1,185,195Z", "bank": "M24,104H48v64H32a8,8,0,0,0,0,16H224a8,8,0,0,0,0-16H208V104h24a8,8,0,0,0,4.19-14.81l-104-64a8,8,0,0,0-8.38,0l-104,64A8,8,0,0,0,24,104Zm40,0H96v64H64Zm80,0v64H112V104Zm48,64H160V104h32ZM128,41.39,203.74,88H52.26ZM248,208a8,8,0,0,1-8,8H16a8,8,0,0,1,0-16H240A8,8,0,0,1,248,208Z", "heart": "M72,144H32a8,8,0,0,1,0-16H67.72l13.62-20.44a8,8,0,0,1,13.32,0l25.34,38,9.34-14A8,8,0,0,1,136,128h24a8,8,0,0,1,0,16H140.28l-13.62,20.44a8,8,0,0,1-13.32,0L88,126.42l-9.34,14A8,8,0,0,1,72,144ZM178,40c-20.65,0-38.73,8.88-50,23.89C116.73,48.88,98.65,40,78,40a62.07,62.07,0,0,0-62,62c0,.75,0,1.5,0,2.25a8,8,0,1,0,16-.5c0-.58,0-1.17,0-1.75A46.06,46.06,0,0,1,78,56c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46c0,53.61-77.76,102.15-96,112.8-10.83-6.31-42.63-26-66.68-52.21a8,8,0,1,0-11.8,10.82c31.17,34,72.93,56.68,74.69,57.63a8,8,0,0,0,7.58,0C136.21,228.66,240,172,240,102A62.07,62.07,0,0,0,178,40Z", "leaf": "M223.45,40.07a8,8,0,0,0-7.52-7.52C139.8,28.08,78.82,51,52.82,94a87.09,87.09,0,0,0-12.76,49c.57,15.92,5.21,32,13.79,47.85l-19.51,19.5a8,8,0,0,0,11.32,11.32l19.5-19.51C81,210.73,97.09,215.37,113,215.94q1.67.06,3.33.06A86.93,86.93,0,0,0,162,203.18C205,177.18,227.93,116.21,223.45,40.07ZM153.75,189.5c-22.75,13.78-49.68,14-76.71.77l88.63-88.62a8,8,0,0,0-11.32-11.32L65.73,179c-13.19-27-13-54,.77-76.71,22.09-36.47,74.6-56.44,141.31-54.06C210.2,114.89,190.22,167.41,153.75,189.5Z", "mega": "M248,120a48.05,48.05,0,0,0-48-48H160.2c-2.91-.17-53.62-3.74-101.91-44.24A16,16,0,0,0,32,40V200a16,16,0,0,0,26.29,12.25c37.77-31.68,77-40.76,93.71-43.3v31.72A16,16,0,0,0,159.12,214l11,7.33A16,16,0,0,0,194.5,212l11.77-44.36A48.07,48.07,0,0,0,248,120ZM48,199.93V40h0c42.81,35.91,86.63,45,104,47.24v65.48C134.65,155,90.84,164.07,48,199.93Zm131,8,0,.11-11-7.33V168h21.6ZM200,152H168V88h32a32,32,0,1,1,0,64Z"};
+
+    // ---- Autoplay helpers
+    var vals = {};
+    Object.keys(this.ap).forEach(function (k) {
+      vals[k + 'Ref'] = function (el) { self.ap[k].el = el; };
+      vals[k + 'In'] = function () { self.ap[k].hov = true; };
+      vals[k + 'Out'] = function () { self.ap[k].hov = false; };
+    });
+    var vw = {};
+    Object.keys(this.ap).forEach(function (k) { vw[k] = s.vis[k] ? '' : 'noview'; });
+    var pickFn = function (k, i) { return function () { self.ap[k].e = 0; var u = {}; u[k] = i; self.setState(u); }; };
+    var segOf = function (k, i) { return i === s[k] ? 'on' : (i < s[k] ? 'done' : ''); };
+
+var range = [
+      { i: 0, cls: 'now', badge: 'Now · since 2024', badgeCls: 'nowb', icp: ic.bank, t: 'Fintech', org: 'American Express', aud: 'Consumer · B2C', yrs: '2024 – now', lineCls: '' },
+      { i: 1, cls: '', badge: '2022 – 2024', badgeCls: 'yr', icp: ic.heart, t: 'HealthTech', org: 'Saveo HealthTech', aud: 'B2B + B2C', yrs: '2022 – 2024', lineCls: '' },
+      { i: 2, cls: '', badge: '2021 – 2022', badgeCls: 'yr', icp: ic.leaf, t: 'Herbal & consumer e-commerce', org: 'Bommu Herbals', aud: 'Consumer · B2C', yrs: '2021 – 2022', lineCls: '' },
+      { i: 3, cls: '', badge: '2020 – 2021', badgeCls: 'yr', icp: ic.mega, t: 'Advertising & marketing', org: 'Strategic Innovative Ads', aud: 'Client work', yrs: '2020 – 2021', lineCls: '' }
+    ];
+    // ---- Hero briefs
+    var SC = [
+      { label: 'Canada · Credit limit', ask: 'Bump my limit by 5k.', reads: 'Set the limit to $5,000.', really: 'Raise it by $5,000, to $15,000.', move: 'A calculated message shows current, change and new limit. Validated in Rapid Lab.', stat: 'Validated', statLabel: 'users asked for it on increases too' }
+    ];
+    var scns = SC.map(function (x, i) {
+      var on = i === s.hero;
+      return Object.assign({}, x, { cls: on ? 'on' : '', hidden: !on, sel: on, segCls: segOf('hero', i), pick: pickFn('hero', i) });
+    });
+
+    // ---- Manifesto
+    var MF = 'Four industries. 10+ markets. One question under all of it: does the person understand what happens next?';
+    var emph = { industries: 1, question: 1, understand: 1 };
+    var words = MF.split(' ').map(function (w, i) {
+      var key = w.replace(/[^a-z]/gi, '').toLowerCase();
+      return { t: w, i: i, style: emph[key] ? 'font-family: \'Instrument Serif\', Georgia, serif; font-style: italic; font-weight: 400; letter-spacing: 0; color: var(--acc)' : '' };
+    });
+
+    // ---- Impact
+    var MT = [
+      { tag: 'Manage Credit Limit', pre: '+', to: 44, suf: '%', label: 'mobile completion, US and international' },
+      { tag: 'Manage Credit Limit', pre: '', to: 2, suf: '×', label: 'better than web, on mobile' },
+      { tag: 'Financial Relief', pre: '+', to: 13, suf: '%', label: 'enrollment conversion after launch' },
+      { tag: 'Financial Verification', pre: '~', to: 15, suf: ' min', label: 'to a usable higher limit, for eligible instant approvals' },
+      { tag: 'Global reach', pre: '', to: 10, suf: '+ markets', label: 'on one credit-limit foundation' },
+      { tag: 'Saveo · HealthTech', pre: '~', to: 20, suf: '%', label: 'incremental revenue from generic medicine recommendations' },
+      { tag: 'Saveo · HealthTech', pre: '−', to: 30, suf: '%', label: 'onboarding friction after redesigning value communication' },
+      { tag: 'Localization · target', pre: '', to: 80, suf: '%', label: 'less designer dependency on localization. A target, not yet a result' }
+    ];
+    this.cto = MT.map(function (m) { return m.to; });
+    var metrics = MT.map(function (m, i) {
+      return Object.assign({}, m, { i: i, full: m.pre + m.to + m.suf + ' ' + m.label, setRef: function (el) { if (el) { self.cel[i] = el; el.textContent = String(self.cdone[i] ? (self.cval[i] != null ? self.cval[i] : m.to) : 0); } } });
+    });
+    var mkBars = [['UK', 85, '85%'], ['MX', 75, '75%'], ['HK', 67, '67%'], ['US', 63, '63%'], ['CA', 33, '33%'], ['AU', 8.7, '8.7%']].map(function (b) { return { code: b[0], w: b[1], v: b[2] }; });
+    var fv = [100, 76, 47, 30, 27, 21, 13, 7, 6];
+    var funnel = fv.map(function (v, i) {
+      var hi = i === 2;
+      return { v: v, s: String(i + 1), bg: hi ? 'var(--warn)' : 'var(--fill)', tc: hi ? 'var(--warn)' : 'var(--ink2)' };
+    });
+
+    // ---- Work showreel
+    var fr = 'https://rakheshkarnati.framer.website/projects/';
+    var CS = [
+      { short: 'Manage Credit Limit', dev: 'ios', call: 'Keep the landing page, backed by a production test.', href: '/work/manage-credit-limit', local: true, meta: 'Lead Designer · Mobile · 10+ markets', title: 'Manage Credit Limit', ask: 'Remove the landing page. It looks like friction.', real: 'The page was teaching people. A 50% production test: removing it cost ~6% completion and added ~5% support calls.', metric: '+44%', metricLabel: 'completion · 2× better than web · 85% in the UK', scr: { head: 'Manage Credit Limit', big: '$10,000', rows: [{ a: 'How it works', b: '›' }, { a: 'Key account details', b: '›' }, { a: 'Request history', b: '›' }], cta: 'Request an increase' } },
+      { short: 'Digital Charge Verification', dev: 'ios', call: 'Soft tone, simple choices, careful words.', href: '/work/digital-charge-verification', local: true, meta: 'Fraud · Mobile', title: 'Digital Charge Verification', ask: 'Get Card Members to confirm their recent transactions.', real: 'A scared person skims for “me or fraud”. Calm wording mattered as much as the screens.', metric: '4 → 3', metricLabel: 'alert entry points to three outcomes', scr: { head: 'Recent transactions', big: 'Was this you?', rows: [{ a: 'Coffee shop', b: 'Me' }, { a: 'Online store', b: 'Not me' }, { a: 'Transfer', b: 'Not sure' }], cta: 'Review 3 charges' } },
+      { short: 'Financial Relief', dev: 'web', call: 'Target the worst friction, even if that means removing a screen.', href: '/work/financial-relief-program', local: true, meta: 'Relief · Web', title: 'Financial Relief Program', ask: 'Redesign the whole enrollment journey, on a budget for part of it.', real: 'Spend where the funnel bleeds. The biggest win was deleting a screen nobody needed.', metric: '+13%', metricLabel: 'enrollment conversion · plans page +14.9%', scr: { head: 'Choose your plan', big: 'Two plans, side by side', rows: [{ a: 'Plan A', b: 'Lower payment' }, { a: 'Plan B', b: 'Shorter term' }], cta: 'Enroll' } },
+      { short: 'Canada Experience Gap', dev: 'ios', call: 'Show the math. Do not ask people to do it.', href: '/work/canada-experience-gap', local: true, meta: 'Canada · Mobile', title: 'Canada Experience Gap', ask: 'Fix the copy so people stop lowering their limit by mistake.', real: 'A mental-model clash, not a copy problem. In Rapid Lab, a calculated message ended the mental math.', metric: 'Validated', metricLabel: 'in Rapid Lab · users asked for the increase version too', scr: { head: 'Confirm your new limit', big: '$5,000', rows: [{ a: 'Current limit', b: '$10,000' }, { a: 'Decrease', b: '−$5,000' }, { a: 'New limit', b: '$5,000' }], hasChip: true, chip: 'Calculated for you', cta: 'Yes, lower my limit' } },
+      { short: 'Financial Verification', dev: 'web', call: 'Recommend Connect to Bank. Keep upload as the fallback.', href: '/work/financial-verification', local: true, meta: 'Underwriting · Web · US + intl', title: 'Financial Verification', ask: 'Customers must upload bank statements before a limit increase.', real: 'People needed a faster way to prove income. Connect to Bank leads; upload stays as the fallback.', metric: '~15 min', metricLabel: 'to use a higher limit, for eligible instant approvals', scr: { head: 'Verify your income', big: 'Connect to Bank', rows: [{ a: 'Recommended', b: 'Fastest' }, { a: 'Upload statements', b: 'Fallback' }], cta: 'Connect' } },
+      { short: 'Plan It® Promo Pricing', dev: 'ios', call: 'Build a system: market strings as variables.', href: '/work/plan-it-promo-pricing', local: true, meta: 'Lending · Mobile · 5 markets', title: 'Plan It® Promo Pricing', ask: 'Design promotional pricing for more international markets.', real: 'It needed a system, not more screens. Localization variables turned each new market into a small change.', metric: '4 markets', metricLabel: 'plus Mexico mobile and the payment path', scr: { head: 'Plan It®', big: 'Market terms', rows: [{ a: 'Currency', b: 'Variable' }, { a: 'Promo copy', b: 'Variable' }, { a: 'Legal notes', b: 'Variable' }], cta: 'Choose a plan' } },
+      { short: 'Payments, Mexico', dev: 'ios', call: 'Let the disclaimers change with each selection.', href: '/work/payments-mexico', local: true, meta: 'Payments · Mobile · Mexico', title: 'International Payments, Mexico', ask: 'Move an outdated payment flow to the modern pattern.', real: 'Compliance needed disclaimers at the right moment, so they now change with each selection.', metric: 'Dynamic', metricLabel: 'disclaimers that follow each selection', scr: { head: 'Pago internacional', big: 'Total a pagar', rows: [{ a: 'Tipo de cambio', b: '—' }, { a: 'Comisión', b: '—' }, { a: 'Aviso legal', b: 'Visible' }], cta: 'Continuar' } },
+      { short: 'Localization Automation', dev: 'flow', call: 'Make market strings Figma Variables, linked to Applanga.', href: '/work/localization-automation', local: true, meta: 'Proposal · EDR vertical · Design ops', title: 'Localization Automation', ask: 'Enable more international markets without more copy and paste.', real: 'Strings became Figma Variables linked to Applanga. Approved copy reaches the designs in one click.', metric: '~80%', metricLabel: 'less copy-paste grunt work · my estimate', scr: { head: 'Localization', big: '1 click', rows: [{ a: 'Applanga strings', b: 'Approved' }, { a: 'Global Strings plugin', b: 'Synced' }, { a: 'Figma Variables', b: 'Linked' }, { a: 'Market designs', b: 'Updated' }], cta: 'One click to sync' } }
+    ];
+    var cases = CS.map(function (c, i) {
+      var on = i === s.show;
+      return Object.assign({}, c, { isIos: c.dev === 'ios', isWeb: c.dev === 'web', isFlow: c.dev === 'flow', devW: c.dev === 'web' ? '480px' : '300px', n: '0' + (i + 1), cls: on ? 'on' : '', hidden: !on, sel: on, segCls: segOf('show', i), bd: on ? 'var(--acc)' : 'var(--line)', bgc: on ? 'var(--elev)' : 'var(--card)', pick: pickFn('show', i), target: '_self', tab: on ? 0 : -1, cta: 'View project' });
+    });
+    var saveo = [
+      { meta: 'Saveo · Recommendations', title: 'Generic medicine recommendations', d: 'Surfaced equivalent generics where they fit, inside the ordering flow.', metric: '~20%', ml: 'incremental revenue' },
+      { meta: 'Saveo · Onboarding', title: 'Explaining value at onboarding', d: 'Redesigned how the product explains its value to new users.', metric: '−30%', ml: 'onboarding friction' }
+    ];
+
+    // ---- Decisions
+    var loop = [
+      { n: '01', t: 'Observe', d: 'Funnel data, UAT and Rapid Lab findings, competitor teardown, and what market teams know.' },
+      { n: '02', t: 'Reflect', d: 'Competing hypotheses, emotion and journey maps, affinity synthesis with Product, Risk and Business.' },
+      { n: '03', t: 'Make', d: 'Several directions, AI-assisted MVPs, critiques, then production tests and post-launch reads.' }
+    ];
+    var D = [
+      { t: 'Show the math', p: 'Canada Experience Gap', status: 'Validated in Rapid Lab', href: '/work/canada-experience-gap', context: 'People typed a top-up. The system read a lower total.', tension: 'People typed a top-up. The system read a lower total.', options: 'More copy, separate paths, a picker, or a calculated message.', call: 'Show the math. Do not ask people to do it.', metric: 'No mental math', result: 'Rapid Lab users also asked for it on increases.' },
+      { t: 'The words are the product', p: 'Digital Charge Verification', status: 'Validated with users', href: '/work/digital-charge-verification', tension: 'A scared person skims for “me or fraud”.', options: 'Urgent alerts, or calm, guided steps.', call: 'Soft tone, simple choices, careful words.', metric: 'Calm', result: 'A direction chosen with users, then refined with Compliance.' },
+      { t: 'Spend where it hurts', p: 'Financial Relief Program', status: 'Shipped · measured', href: '/work/financial-relief-program', tension: 'Budget for part of a nine-step journey.', options: 'Touch every step lightly, or fix the worst friction.', call: 'Target the worst friction, even if that means removing a screen.', metric: '+13%', result: 'enrollment conversion. Plans page converted 14.9% better.' },
+      { t: 'Recommend, don’t remove', p: 'Financial Verification', status: 'Shipped', href: '/work/financial-verification', tension: 'Document upload was slow and error-prone.', options: 'Replace upload, or lead with a faster path.', call: 'Recommend Connect to Bank. Keep upload as the fallback.', metric: '~15 min', result: 'to a usable higher limit, for eligible instant approvals.' },
+      { t: 'One ask per screen', p: 'Manage Credit Limit · Australia', status: 'Shipped', href: '/work/manage-credit-limit', tension: 'A full financial profile, in one flow.', options: 'Dense screens, sections, or one ask per screen.', call: 'One ask per screen, with live progress.', metric: '1 ask', result: 'per screen, with status updates during long waits.' }
+    ];
+    var decisions = D.map(function (d, i) { return Object.assign({}, d, { n: '0' + (i + 1), cls: i === s.dec ? 'on' : '', segCls: '' }); });
+
+    // ---- Global
+    var M = [
+      { code: 'US', name: 'United States', lang: 'en', langLabel: 'EN', title: 'Manage Credit Limit', current: 'Current credit limit', amount: '$10,000', row1: 'How it works', row2: 'Key account details', row3: 'Request history', cta: 'Request an increase', stat: '63%', statLabel: 'completion', flex: 'The landing page stayed, backed by a production test.' },
+      { code: 'UK', name: 'United Kingdom', lang: 'en-GB', langLabel: 'EN', title: 'Manage your credit limit', current: 'Current credit limit', amount: '£10,000', row1: 'Increase limit', row2: 'Decrease limit', row3: 'Move available credit', cta: 'Continue', stat: '85%', statLabel: 'completion · top market', flex: 'Four capabilities in one connected journey.' },
+      { code: 'AU', name: 'Australia', lang: 'en-AU', langLabel: 'EN', title: 'Manage credit limit', current: 'Current credit limit', amount: 'A$10,000', row1: 'Income', row2: 'Expenses', row3: 'Assets & liabilities', cta: 'Next · 1 of 6', stat: '1 ask', statLabel: 'per screen, with progress', flex: 'A full financial profile, one question at a time.' },
+      { code: 'MX', name: 'México', lang: 'es-MX', langLabel: 'ES', title: 'Administra tu límite de crédito', current: 'Límite de crédito actual', amount: '$100,000', row1: 'Cómo funciona', row2: 'Aumentar límite', row3: 'Disminuir límite', cta: 'Solicitar aumento', stat: '75%', statLabel: 'completion', flex: 'A local launch on the global pattern.' },
+      { code: 'CA', name: 'Canada', lang: 'fr-CA', langLabel: 'FR', title: 'Gérer votre limite de crédit', current: 'Limite de crédit actuelle', amount: '10 000 $', row1: 'Augmenter la limite', row2: 'Réduire la limite', row3: 'Transférer le crédit disponible', cta: 'Continuer', stat: 'EN/FR', statLabel: '4 journeys, VQA in both', flex: 'Bilingual copy and four line-management paths.' },
+      { code: 'HK', name: 'Hong Kong', lang: 'zh-Hant-HK', langLabel: '中文', title: '管理信用額度', current: '現有信用額度', amount: 'HK$80,000', row1: '運作方式', row2: '主要帳戶資料', row3: '申請紀錄', cta: '申請提高額度', stat: '67%', statLabel: 'completion', flex: 'English and Chinese without breaking the pattern.' }
+    ];
+    var mkt = [
+      { i: 0, code: 'UK', lang: 'EN', name: 'United Kingdom', stat: '85%', label: 'completion' },
+      { i: 1, code: 'MX', lang: 'ES', name: 'México', stat: '75%', label: 'completion' },
+      { i: 2, code: 'HK', lang: '中文', name: 'Hong Kong', stat: '67%', label: 'completion' },
+      { i: 3, code: 'US', lang: 'EN', name: 'United States', stat: '63%', label: 'completion' },
+      { i: 4, code: 'CA', lang: 'EN/FR', name: 'Canada', stat: '4', label: 'journeys, VQA in both' },
+      { i: 5, code: 'AU', lang: 'EN', name: 'Australia', stat: '1 ask', label: 'per screen' }
+    ];
+    var markets = M.map(function (m, i) {
+      var on = i === s.mk;
+      return Object.assign({}, m, { cls: on ? 'on' : '', hidden: !on, sel: on, segCls: segOf('mk', i), bd: on ? 'var(--acc)' : 'var(--line)', bgc: on ? 'var(--elev)' : 'var(--card)', pick: pickFn('mk', i) });
+    });
+    var L = [
+      { t: 'Pure translation', d: 'Same layout and logic, every string translated and checked by language owners. Right where product and rules are identical.', aLabel: 'EN', a: 'Request an increase', bLabel: 'FR', b: 'Demander une augmentation', bLang: 'fr', where: 'Canada copy rollout and VQA in English and French' },
+      { t: 'Partial localization', d: 'The structure stays. Currency, number formats, entry points and legal notes adapt to the market.', aLabel: 'US', a: '$10,000', bLabel: 'CA · FR', b: '10 000 $', bLang: 'fr-CA', where: 'Hong Kong and Mexico entry points under Card Management' },
+      { t: 'Full localization', d: 'The flow itself changes to fit local rules: what is verified, how deep, and how decisions route.', aLabel: 'US', a: 'Annual income · 1 field', bLabel: 'AU', b: 'Full financial profile · 6 steps', bLang: 'en-AU', where: 'Australia’s progressive verification journey' },
+      { t: 'Localized co-creation', d: 'Market teams and stakeholders shape copy, rules and promotions with design, fed through one variable system.', aLabel: 'Before', a: 'Copy pasted into each screen', bLabel: 'Now', b: 'Market strings as variables', bLang: 'en', where: 'Plan It across UK, AU, CA, JP and MX' }
+    ];
+    var levels = L.map(function (l, i) {
+      var on = i === s.lvl;
+      return Object.assign({}, l, { n: '0' + (i + 1), segCls: segOf('lvl', i) === 'on' ? 'on' : '', bgc: on ? 'var(--elev)' : 'transparent', pick: pickFn('lvl', i) });
+    });
+
+    // ---- CAD
+    var GR = 'var(--ink3)', GM = 'var(--ink2)', GA = 'var(--acc)';
+    var GP = [
+      { short: 'Brake pedal', title: 'Brake pedal', sub: 'Titanium 6Al-4V · 2,000 N load',
+        foot: 'From an academic project, simulated in Fusion 360. Masses and safety factors come from the study\u2019s validation tables.',
+        cards: [
+          { k: 'Standard', img: 'data:image/webp;base64,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', alt: 'Standard brake pedal, a plain solid blade', big: '138 g', w: '100%', fill: GR, note: 'Safety factor 1.54' },
+          { k: 'Optimized', img: '/img/b31108b53e7f.webp', alt: 'Shape-optimized brake pedal with cut-out windows', big: '104 g', chip: '\u221225%', w: '75%', fill: GM, note: 'Safety factor 1.54' },
+          { k: 'Generative', img: '/img/f9adf6355d19.webp', alt: 'Generative brake pedal, a lattice of thin struts', big: '56 g', chip: '\u221259%', w: '41%', fill: GA, note: 'Safety factor 1.5' }
+        ] },
+      { short: 'Triple clamp', title: 'Triple clamp', sub: 'Inconel 625 · 2,000 N torsion, 1,000 N tension and compression',
+        foot: 'From an academic project, simulated in Fusion 360. Masses and safety factors come from the study\u2019s validation tables.',
+        cards: [
+          { k: 'Standard', img: '/img/728275b1c79f.webp', alt: 'Standard triple clamp, a solid block with two bores', big: '2,509 g', w: '100%', fill: GR, note: 'Safety factor 2 (min)' },
+          { k: 'Optimized', img: '/img/7b741954d7e1.webp', alt: 'Shape-optimized triple clamp with a pocket cut into the side', big: '1,851 g', chip: '\u221226%', w: '74%', fill: GM, note: 'Safety factor 2 (min)' },
+          { k: 'Generative', img: '/img/9a430fa9ef16.webp', alt: 'Generative triple clamp, bores joined by thin struts', big: '1,197 g', chip: '\u221252%', w: '48%', fill: GA, note: 'Safety factor 2' }
+        ] },
+      { short: 'Swing arm', title: 'Motorcycle swing arm', sub: 'Load-path study',
+        foot: 'Simulation study in Fusion 360. Red marks material that carries the load, blue marks material the part can lose. Mass figures are not shown here.',
+        cards: [
+          { k: 'Standard', img: '/img/167f8fc054ef.webp', alt: 'Standard swing arm, a solid forked part', big: 'Starting part', dbar: 'none', note: 'The part as designed.' },
+          { k: 'Analysis', img: '/img/bc5d58211ec0.webp', alt: 'Load path simulation, red where the load flows and blue where it does not', big: 'Load path', dbar: 'none', note: 'Red carries the load. Blue can go.' },
+          { k: 'Generative', img: '/img/6b32f74b6197.webp', alt: 'Generative swing arm, an organic lattice of struts', big: 'Material kept', dbar: 'none', note: 'Only where the load flows.' }
+        ] }
+    ];
+    var gparts = GP.map(function (g, i) {
+      var on = i === s.cad;
+      return { n: '0' + (i + 1), short: g.short, title: g.title, sub: g.sub, foot: g.foot, sel: on, bd: on ? 'var(--acc)' : 'var(--line)', bgc: on ? 'var(--elev)' : 'transparent', segCls: segOf('cad', i), cls: on ? 'on' : '', hidden: !on, pick: pickFn('cad', i),
+        cards: g.cards.map(function (c, j) { return { k: c.k, img: c.img, alt: c.alt, big: c.big, w: c.w || '0%', fill: c.fill || GR, note: c.note, chip: c.chip || '', dchip: c.chip ? 'inline-flex' : 'none', dbar: c.dbar || 'block', cls: j === 2 ? 'hi' : '', arr: j === 2 ? 'hidden' : 'visible' }; }) };
+    });
+
+    // ---- Beyond
+    var beyond = [
+      { icon: ic.layers, t: 'DLS v7 upliftments', d: 'Moved Canada, Mexico payments and bank verification onto the latest design system.' },
+      { icon: ic.bug, t: 'Bug bashes', d: 'Ran DLS and NDL bug bashes so quality ships as designed.' },
+      { icon: ic.crit, t: 'Design critiques', d: 'Took Financial Relief, Australia and fraud explorations through crits, from many options to two or three.' },
+      { icon: ic.workshop, t: 'Workshops', d: 'Financial Relief and fraud-verification workshops with Product, Business and Risk.' },
+      { icon: ic.idea, t: 'Ideathons and growth', d: 'Lending Ideathon and a Growth Hack, testing bets beyond the roadmap.' },
+      { icon: ic.devices, t: 'Adaptive layouts', d: 'Breakpoint-proof comparison layouts; exploring foldable screens and motion.' },
+      { icon: ic.a11y, t: 'Accessibility', d: 'Journeys that pass accessibility checks and still follow global patterns.' },
+      { icon: ic.mentor, t: 'Mentoring and contributions', d: 'Coached designers on Auto Layout, Variables and conditionals; proposed components and a domain library.' },
+      { icon: ic.medal, t: 'Design System Ambassador', d: 'The link between product designers and the system team.' }
+    ].map(function (b, i) { return Object.assign({}, b, { i: i % 3 }); });
+
+    // ---- AI
+    var nexts = [
+      { tag: 'Requested by users', t: 'The incremental calculated message', d: 'Rapid Lab users asked for the same calculated message when raising a limit, not only when lowering it. Designing it next.' },
+      { tag: 'Target', t: 'Localization at scale', d: 'Move toward the 80% target with the variable system, then measure the designer time it frees.' },
+      { tag: 'Concept', t: 'Confirm-before-act for agents', d: 'Carry show-the-math into agentic interfaces: interpret the request, show the consequence, ask for a clear yes.' }
+    ];
+
+    return Object.assign(vals, {
+      theme: s.theme,
+      themeIcon: dark ? ic.sun : ic.moon,
+      themeLabel: dark ? 'Switch to light theme' : 'Switch to dark theme',
+      closeMenu: function () { try { var d = document.querySelector('details.mnav'); if (d) d.removeAttribute('open'); } catch (x) {} },
+      toggleTheme: function () {
+        var next = s.theme === 'dark' ? 'light' : 'dark';
+        self.setState({ theme: next });
+        try { localStorage.setItem('rk-theme', next); } catch (e) {}
+      },
+      gpCls: s.paused ? 'gp' : '',
+      motionIcon: s.paused ? ic.play : ic.pause,
+      motionLabel: 'Pause animations',
+      motionPressed: s.paused,
+      motionTipT: s.paused ? 'Resume motion' : 'Pause motion',
+      motionTipD: s.paused ? 'Carousels, counters and demos are frozen. Press to play them again.' : 'Stops auto-playing carousels, counters and animated demos. Press again to resume.',
+      toggleMotion: function () { self.setState({ paused: !self.state.paused }); },
+      clock: s.clock,
+      ic: ic, vw: vw,
+      setDot: function (el) { self.dotEl = el; },
+      setRing: function (el) { self.ringEl = el; },
+      setBubble: function (el) { self.bubbleEl = el; },
+      onMove: function (e) {
+        self.mx = e.clientX; self.my = e.clientY;
+        var t = e.target, lab = '', hov = false;
+        if (t && t.closest) {
+          var d = t.closest('[data-cur]');
+          if (d) lab = d.getAttribute('data-cur') || '';
+          hov = !!t.closest('a,button,input,label');
+        }
+        if (lab !== self.state.curLab || hov !== self.state.curHov) self.setState({ curLab: lab, curHov: hov });
+      },
+      onOut: function () { self.mx = -200; self.my = -200; },
+      crLab: s.curLab ? 'lab' : '',
+      crHov: (s.curHov && !s.curLab) ? 'hov' : '',
+      curLabel: s.curLab,
+      scns: scns, words: words, metrics: metrics, mkBars: mkBars, funnel: funnel,
+      range: range, mkt: mkt, cases: cases, saveo: saveo, showNum: '0' + (s.show + 1) + ' / 08',
+      showPrev: function () { self.ap.show.e = 0; self.setState({ show: (s.show + 7) % 8 }); },
+      showNext: function () { self.ap.show.e = 0; self.setState({ show: (s.show + 1) % 8 }); },
+      loop: loop, decisions: decisions,
+      markets: markets, act: M[s.mk], levels: levels,
+      gparts: gparts,
+      beyond: beyond, nexts: nexts
+    });
+  }
+}
+</script>
+</body>
+</html>
