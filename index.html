@@ -67,7 +67,7 @@ a{color:var(--ink)}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
 @keyframes typing{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
 @keyframes caret{0%,100%{opacity:1}50%{opacity:0}}
-@keyframes strikeIn{from{background-size:0% 3px}to{background-size:100% 3px}}
+@keyframes strikeIn{from{text-decoration-color:transparent}to{text-decoration-color:var(--acc)}}
 @keyframes fillbar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @keyframes slideL{from{transform:translateX(10%)}to{transform:translateX(-34%)}}
 @keyframes slideR{from{transform:translateX(-34%)}to{transform:translateX(10%)}}
@@ -96,7 +96,7 @@ a{color:var(--ink)}
 .sl.on .in1{animation:pop .7s cubic-bezier(.2,.7,.2,1) .15s both}
 .sl.on .in2{animation:pop .7s cubic-bezier(.2,.7,.2,1) .45s both}
 .sl.on .in3{animation:pop .7s cubic-bezier(.2,.7,.2,1) .75s both}
-.x{background:linear-gradient(var(--acc),var(--acc)) no-repeat 0 56%/100% 3px}
+.x{text-decoration:line-through;text-decoration-color:var(--acc);text-decoration-thickness:3px;text-decoration-skip-ink:none}
 .caret{display:inline-block;width:3px;height:.9em;background:var(--acc);margin-left:4px;vertical-align:-.08em;animation:caret 1s step-end infinite}
 .seg{position:relative;overflow:hidden}
 .seg i{position:absolute;left:0;bottom:0;height:3px;width:100%;background:var(--fill);transform:scaleX(0);transform-origin:left;display:block}
@@ -171,6 +171,56 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
 @media (max-width:900px){.hbar{border-radius:28px!important;padding-left:16px!important}.hnav{display:none!important}.mask{white-space:normal}}
 @media (max-width:520px){.hbar .btn span,.hclock{display:none}}
 
+/* illustrations */
+.il{width:100%;height:auto;display:block}
+.il .ln{fill:none;stroke:var(--ink3);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.il .ac{fill:none;stroke:var(--acc);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.il .dash{fill:none;stroke:var(--acc);stroke-width:1.6;stroke-dasharray:4 5;stroke-linecap:round}
+.il .fc{fill:var(--card2);stroke:var(--line);stroke-width:1.5}
+.il .fb{fill:var(--line)}
+.il .fa{fill:var(--acc)}
+.il .fs{fill:var(--fill)}
+.il .note{fill:var(--card);stroke:var(--line);stroke-width:1.5}
+.il .tx{fill:var(--ink2);font:600 10.5px 'Space Grotesk',system-ui,sans-serif;letter-spacing:.04em}
+@keyframes scan{0%,100%{transform:translateX(-66px)}50%{transform:translateX(52px)}}
+@keyframes ilPulse{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes ilBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@keyframes ilStep{0%,12%{opacity:.25}30%,100%{opacity:1}}
+@keyframes pinRing{0%{transform:scale(.8);opacity:.8}100%{transform:scale(1.9);opacity:0}}
+.il .scan{animation:scan 5.5s ease-in-out infinite}
+.il .pls{animation:ilPulse 2.4s ease-in-out infinite}
+.il .bob{animation:ilBob 3s ease-in-out infinite}
+.il .st1,.il .st2,.il .st3{animation:ilStep 6s ease-in-out infinite}
+.il .st2{animation-delay:1.2s}.il .st3{animation-delay:2.4s}
+.il .orbit{transform-origin:130px 130px;animation:spin 70s linear infinite}
+.il .orbit .nn{transform-box:fill-box;transform-origin:center;animation:spin 70s linear infinite reverse}
+.gp .il .scan,.gp .il .pls,.gp .il .bob,.gp .il .st1,.gp .il .st2,.gp .il .st3,.gp .il .orbit,.gp .il .orbit .nn,.gp .pin::after{animation-play-state:paused}
+.hw{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:18px}
+.hwc{display:flex;flex-direction:column;gap:14px;height:100%;box-sizing:border-box}
+.hwc .ilb{background:var(--bg2);border:1px solid var(--line2);border-radius:16px;padding:10px}
+.aichip{align-self:flex-start;display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);font-size:15px;line-height:1.35;border:1px solid var(--line);background:var(--card);border-radius:18px;padding:10px 16px 10px 10px;box-shadow:var(--e1);transition:border-color .3s,transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .3s}
+.aichip strong{display:block;font-weight:600}
+.aichip span:nth-child(2){color:var(--ink2)}
+.aichip .aic{width:36px;height:36px;border-radius:12px;background:var(--fill);color:var(--fillink);display:flex;align-items:center;justify-content:center;flex:none}
+.aichip:hover{border-color:var(--acc);transform:translateY(-2px);box-shadow:var(--e3)}
+/* world map */
+.wmap{position:relative;width:100%;max-width:1100px;margin:0 auto}
+.wmap svg{display:block;width:100%;height:auto}
+.wmap path{fill:none;stroke:var(--line);stroke-width:4.6;stroke-linecap:round}
+.pin{position:absolute;transform:translate(-50%,-50%);display:flex;align-items:center;gap:7px;padding:4px 11px 4px 5px;border-radius:999px;background:var(--card);border:1px solid var(--acc);font-size:12px;font-weight:700;letter-spacing:.05em;color:var(--ink);box-shadow:var(--e2)}
+.pin::after{content:"";position:absolute;inset:-1px;border-radius:inherit;border:1.5px solid var(--acc);animation:pinRing 2.8s ease-out infinite}
+.pin .fl{font-size:17px}
+@media (max-width:700px){.pin{padding:2px;gap:0}.pin b{display:none}.pin .fl{font-size:12px}}
+.flr{display:inline-flex;align-items:center}
+.flr .fl{font-size:16px;margin-left:-3px;box-shadow:0 0 0 2px var(--bg)}
+.flr .fl:first-child{margin-left:0}
+.fl{display:inline-block;flex:none;width:1.5em;height:1.125em;border-radius:3px;background-size:cover;background-position:center;box-shadow:0 0 0 1px var(--line);vertical-align:-.2em}.fl.rd{width:1.25em;height:1.25em;border-radius:50%}
+.fl-US{background-image:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 id=%22flag-icons-us%22 viewBox=%220 0 640 480%22%3E  %3Cpath fill=%22%23bd3d44%22 d=%22M0 0h640v480H0%22/%3E  %3Cpath stroke=%22%23fff%22 stroke-width=%2237%22 d=%22M0 55.3h640M0 129h640M0 203h640M0 277h640M0 351h640M0 425h640%22/%3E  %3Cpath fill=%22%23192f5d%22 d=%22M0 0h364.8v258.5H0%22/%3E  %3Cmarker id=%22us-a%22 markerHeight=%2230%22 markerWidth=%2230%22%3E    %3Cpath fill=%22%23fff%22 d=%22m14 0 9 27L0 10h28L5 27z%22/%3E  %3C/marker%3E  %3Cpath fill=%22none%22 marker-mid=%22url(%23us-a)%22 d=%22m0 0 16 11h61 61 61 61 60L47 37h61 61 60 61L16 63h61 61 61 61 60L47 89h61 61 60 61L16 115h61 61 61 61 60L47 141h61 61 60 61L16 166h61 61 61 61 60L47 192h61 61 60 61L16 218h61 61 61 61 60z%22/%3E%3C/svg%3E")}
+.fl-UK{background-image:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 id=%22flag-icons-gb%22 viewBox=%220 0 640 480%22%3E  %3Cpath fill=%22%23012169%22 d=%22M0 0h640v480H0z%22/%3E  %3Cpath fill=%22%23FFF%22 d=%22m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0z%22/%3E  %3Cpath fill=%22%23C8102E%22 d=%22m424 281 216 159v40L369 281zm-184 20 6 35L54 480H0zM640 0v3L391 191l2-44L590 0zM0 0l239 176h-60L0 42z%22/%3E  %3Cpath fill=%22%23FFF%22 d=%22M241 0v480h160V0zM0 160v160h640V160z%22/%3E  %3Cpath fill=%22%23C8102E%22 d=%22M0 193v96h640v-96zM273 0v480h96V0z%22/%3E%3C/svg%3E")}
+.fl-AU{background-image:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 id=%22flag-icons-au%22 viewBox=%220 0 640 480%22%3E  %3Cpath fill=%22%2300008B%22 d=%22M0 0h640v480H0z%22/%3E  %3Cpath fill=%22%23fff%22 d=%22m37.5 0 122 90.5L281 0h39v31l-120 89.5 120 89V240h-40l-120-89.5L40.5 240H0v-30l119.5-89L0 32V0z%22/%3E  %3Cpath fill=%22red%22 d=%22M212 140.5 320 220v20l-135.5-99.5zm-92 10 3 17.5-96 72H0zM320 0v1.5l-124.5 94 1-22L295 0zM0 0l119.5 88h-30L0 21z%22/%3E  %3Cpath fill=%22%23fff%22 d=%22M120.5 0v240h80V0zM0 80v80h320V80z%22/%3E  %3Cpath fill=%22red%22 d=%22M0 96.5v48h320v-48zM136.5 0v240h48V0z%22/%3E  %3Cpath fill=%22%23fff%22 d=%22m527 396.7-20.5 2.6 2.2 20.5-14.8-14.4-14.7 14.5 2-20.5-20.5-2.4 17.3-11.2-10.9-17.5 19.6 6.5 6.9-19.5 7.1 19.4 19.5-6.7-10.7 17.6zm-3.7-117.2 2.7-13-9.8-9 13.2-1.5 5.5-12.1 5.5 12.1 13.2 1.5-9.8 9 2.7 13-11.6-6.6zm-104.1-60-20.3 2.2 1.8 20.3-14.4-14.5-14.8 14.1 2.4-20.3-20.2-2.7 17.3-10.8-10.5-17.5 19.3 6.8L387 178l6.7 19.3 19.4-6.3-10.9 17.3 17.1 11.2ZM623 186.7l-20.9 2.7 2.3 20.9-15.1-14.7-15 14.8 2.1-21-20.9-2.4 17.7-11.5-11.1-17.9 20 6.7 7-19.8 7.2 19.8 19.9-6.9-11 18zm-96.1-83.5-20.7 2.3 1.9 20.8-14.7-14.8-15.1 14.4 2.4-20.7-20.7-2.8 17.7-11L467 73.5l19.7 6.9 7.3-19.5 6.8 19.7 19.8-6.5-11.1 17.6zM234 385.7l-45.8 5.4 4.6 45.9-32.8-32.4-33 32.2 4.9-45.9-45.8-5.8 38.9-24.8-24-39.4 43.6 15 15.8-43.4 15.5 43.5 43.7-14.7-24.3 39.2 38.8 25.1Z%22/%3E%3C/svg%3E")}
+.fl-MX{background-image:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 640 480%22%3E%3Cpath fill=%22%23006847%22 d=%22M0 0h213.3v480H0z%22/%3E%3Cpath fill=%22%23fff%22 d=%22M213.3 0h213.4v480H213.3z%22/%3E%3Cpath fill=%22%23ce1126%22 d=%22M426.7 0H640v480H426.7z%22/%3E%3Ccircle cx=%22320%22 cy=%22240%22 r=%2262%22 fill=%22none%22 stroke=%22%236b8e23%22 stroke-width=%2216%22 stroke-dasharray=%2240 14%22/%3E%3Cellipse cx=%22320%22 cy=%22232%22 rx=%2234%22 ry=%2226%22 fill=%22%238a5a2b%22/%3E%3Cpath d=%22M270 292q50 22 100 0%22 fill=%22none%22 stroke=%22%23006847%22 stroke-width=%2212%22 stroke-linecap=%22round%22/%3E%3C/svg%3E")}
+.fl-CA{background-image:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 id=%22flag-icons-ca%22 viewBox=%220 0 640 480%22%3E  %3Cpath fill=%22%23fff%22 d=%22M150.1 0h339.7v480H150z%22/%3E  %3Cpath fill=%22%23d52b1e%22 d=%22M-19.7 0h169.8v480H-19.7zm509.5 0h169.8v480H489.9zM201 232l-13.3 4.4 61.4 54c4.7 13.7-1.6 17.8-5.6 25l66.6-8.4-1.6 67 13.9-.3-3.1-66.6 66.7 8c-4.1-8.7-7.8-13.3-4-27.2l61.3-51-10.7-4c-8.8-6.8 3.8-32.6 5.6-48.9 0 0-35.7 12.3-38 5.8l-9.2-17.5-32.6 35.8c-3.5.9-5-.5-5.9-3.5l15-74.8-23.8 13.4q-3.2 1.3-5.2-2.2l-23-46-23.6 47.8q-2.8 2.5-5 .7L264 130.8l13.7 74.1c-1.1 3-3.7 3.8-6.7 2.2l-31.2-35.3c-4 6.5-6.8 17.1-12.2 19.5s-23.5-4.5-35.6-7c4.2 14.8 17 39.6 9 47.7%22/%3E%3C/svg%3E")}
+.fl-HK{background-image:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 id=%22flag-icons-hk%22 viewBox=%220 0 640 480%22%3E  %3Cpath fill=%22%23EC1B2E%22 d=%22M0 0h640v480H0%22/%3E  %3Cpath id=%22hk-a%22 fill=%22%23fff%22 d=%22M346.3 103.1C267 98 230.6 201.9 305.6 240.3c-26-22.4-20.6-55.3-10.1-72.4l1.9 1.1c-13.8 23.5-11.2 52.7 11.1 71-12.7-12.3-9.5-39 12.1-48.9s23.6-39.3 16.4-49.1q-14.7-25.6 9.3-38.9M307.9 164l-4.7 7.4-1.8-8.6-8.6-2.3 7.8-4.3-.6-8.9 6.5 6.1 8.3-3.3-3.7 8.1 5.6 6.8z%22/%3E  %3Cuse xlink:href=%22%23hk-a%22 transform=%22rotate(72 312.5 243.5)%22/%3E  %3Cuse xlink:href=%22%23hk-a%22 transform=%22rotate(144 312.5 243.5)%22/%3E  %3Cuse xlink:href=%22%23hk-a%22 transform=%22rotate(216 312.5 243.5)%22/%3E  %3Cuse xlink:href=%22%23hk-a%22 transform=%22rotate(288 312.5 243.5)%22/%3E%3C/svg%3E")}
 /* industries tracker */
 .trk{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;position:relative}
 .ts{position:relative;padding-top:64px;min-width:0;display:flex;flex-direction:column}
@@ -178,7 +228,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
 .tn{position:absolute;left:0;top:0;width:48px;height:48px;border-radius:50%;background:var(--card);border:1.5px solid var(--line);color:var(--ink2);display:flex;align-items:center;justify-content:center;z-index:2;transition:transform .45s cubic-bezier(.2,.7,.2,1),background .3s,color .3s,border-color .3s}
 .ts:hover .tn{transform:scale(1.1) rotate(-6deg);border-color:var(--acc);color:var(--acc)}
 .tl{position:absolute;left:48px;top:23px;height:2px;width:calc(100% + 18px - 48px);background:var(--line);border-radius:2px;z-index:1}
-.tl i{position:absolute;inset:0;background:var(--fill);border-radius:2px;transform-origin:left}
+.tl i{position:absolute;inset:0;background:var(--fill);border-radius:2px;transform-origin:right}
 .tl b{position:absolute;top:-3px;left:0;width:8px;height:8px;border-radius:50%;background:var(--acc);animation:trkDot 2.6s ease-in-out infinite;box-shadow:0 0 0 4px var(--glow)}
 .ts.now .tn{background:var(--fill);color:var(--fillink);border-color:var(--acc)}
 .ts.now .tn::after{content:"";position:absolute;inset:-7px;border-radius:50%;border:2px solid var(--acc);animation:trkRing 2.2s ease-out infinite}
@@ -190,7 +240,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
 .ts.now .yr{display:none}
 @keyframes trkRing{0%{transform:scale(.82);opacity:.9}100%{transform:scale(1.35);opacity:0}}
 @keyframes trkBlink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}
-@keyframes trkDot{0%{left:0;opacity:0}15%{opacity:1}85%{opacity:1}100%{left:calc(100% - 8px);opacity:0}}
+@keyframes trkDot{0%{left:calc(100% - 8px);opacity:0}15%{opacity:1}85%{opacity:1}100%{left:0;opacity:0}}
 @keyframes trkFill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @keyframes trkFillY{from{transform:scaleY(0)}to{transform:scaleY(1)}}
 @keyframes trkPop{from{transform:scale(.5);opacity:0}to{transform:scale(1);opacity:1}}
@@ -203,12 +253,32 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
 .ts{padding-top:0;padding-left:68px}
 .ts .tile{flex:none;height:auto!important}
 .tl{left:23px;top:48px;width:2px;height:calc(100% + 18px - 48px)}
-.tl i{transform-origin:top}
+.tl i{transform-origin:bottom}
 .tl b{top:0;left:-3px;animation-name:trkDotY}
 .nowb,.ts .yr{position:static;margin-bottom:10px;align-self:flex-start}
 }
-@keyframes trkDotY{0%{top:0;opacity:0}15%{opacity:1}85%{opacity:1}100%{top:calc(100% - 8px);opacity:0}}
+@keyframes trkDotY{0%{top:calc(100% - 8px);opacity:0}15%{opacity:1}85%{opacity:1}100%{top:0;opacity:0}}
 @supports (animation-timeline: view()){@media (max-width:900px){.tl i{animation-name:trkFillY}}}
+
+/* mechanical section */
+.sheet{position:relative;border:1.5px solid var(--ink3);border-radius:8px;background:var(--card);box-shadow:var(--e2);padding:14px}
+.sheet-in{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(260px,1fr);border:1px solid var(--line);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:28px 28px}
+.sheet-dr{padding:28px;border-right:1px solid var(--line)}
+.crn{position:absolute;width:14px;height:14px;border:2px solid var(--acc);transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.ca{left:-1px;top:-1px;border-right:0;border-bottom:0;border-top-left-radius:8px}.cb{right:-1px;top:-1px;border-left:0;border-bottom:0;border-top-right-radius:8px}.cc{left:-1px;bottom:-1px;border-right:0;border-top:0;border-bottom-left-radius:8px}.cd{right:-1px;bottom:-1px;border-left:0;border-top:0;border-bottom-right-radius:8px}
+.sheet:hover .ca{transform:translate(-4px,-4px)}.sheet:hover .cb{transform:translate(4px,-4px)}.sheet:hover .cc{transform:translate(-4px,4px)}.sheet:hover .cd{transform:translate(4px,4px)}
+.tb{margin:0;display:flex;flex-direction:column;background:var(--card)}
+.tb>div{display:grid;grid-template-columns:104px 1fr;border-bottom:1px solid var(--line);flex:1}
+.tb>div:last-child{border-bottom:0}
+.tb dt{padding:14px;border-right:1px solid var(--line);font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--ink3);display:flex;align-items:center}
+.tb dd{margin:0;padding:14px;font-size:16px;color:var(--ink);display:flex;align-items:center}
+.plate{position:relative;aspect-ratio:4/3;border:1px solid var(--line);border-radius:10px;background-color:var(--card);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:22px 22px;display:flex;align-items:center;justify-content:center;overflow:hidden;transition:border-color .3s,transform .45s cubic-bezier(.2,.7,.2,1)}
+.plate:before,.plate:after{content:"";position:absolute;width:16px;height:16px;border:2px solid var(--acc)}
+.plate:before{left:10px;top:10px;border-right:0;border-bottom:0}.plate:after{right:10px;bottom:10px;border-left:0;border-top:0}
+.plate svg{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.plate:hover{border-color:var(--acc);transform:translateY(-4px)}.plate:hover svg{transform:rotate(-10deg) scale(1.12)}
+.plt{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;gap:2px;padding:12px 16px;background:var(--card);border-top:1px solid var(--line)}
+@media (max-width:900px){.sheet-in{grid-template-columns:1fr}.sheet-dr{border-right:0;border-bottom:1px solid var(--line);padding:18px}}
 @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
 .tag{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:5px 12px;color:var(--ink2);background:var(--card)}
 .tag.ok{color:var(--acc);border-color:var(--acc)}
@@ -225,6 +295,11 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
 @media (max-width:1000px){.mnav{display:block}.hnav,.hpills{display:none!important}.hbar{flex-wrap:nowrap!important;border-radius:999px!important;padding:8px 8px 8px 20px!important;gap:6px!important}.hbar>div:last-child{margin-left:auto}.mpanel{top:76px}}
 @media (min-width:700px) and (max-width:1000px){.mpanel{left:auto;width:min(420px,calc(100vw - 40px));right:20px}}
 @media (max-width:640px){.hbar .btn span,.hbar .hclock{display:none!important}.hbar .btn{padding:0!important;width:44px;justify-content:center}.hbar{padding-left:16px!important}}
+/*tip*/.tipw{position:relative;display:inline-flex}
+.tipc{position:absolute;top:calc(100% + 12px);right:0;z-index:60;width:max-content;max-width:min(250px,calc(100vw - 32px));padding:12px 14px;border-radius:14px;background:var(--btn);color:var(--btnink);font-size:13px;line-height:1.45;font-weight:400;text-align:left;box-shadow:var(--e3);opacity:0;visibility:hidden;transform:translateY(-4px);transition:opacity .2s,transform .2s,visibility .2s;pointer-events:none}
+.tipc::before{content:"";position:absolute;top:-5px;right:17px;width:10px;height:10px;background:inherit;transform:rotate(45deg);border-radius:2px}
+.tipc b{display:block;font-weight:600;margin-bottom:2px}
+.tipw:hover .tipc,.tipw:focus-within .tipc{opacity:1;visibility:visible;transform:none}
 </style>
 </helmet>
 
@@ -247,16 +322,16 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
     <nav aria-label="Primary" class="hnav" style="display: flex; flex-wrap: wrap; gap: 2px">
       <a href="/work" class="pill" style="text-decoration: none; font-size: 15px; font-weight: 500; padding: 11px 14px; border-radius: 999px">Work</a>
       <a href="#impact" class="pill" style="text-decoration: none; font-size: 15px; font-weight: 500; padding: 11px 14px; border-radius: 999px">Impact</a>
-      <a href="#decisions" class="pill" style="text-decoration: none; font-size: 15px; font-weight: 500; padding: 11px 14px; border-radius: 999px">Decisions</a>
+      
       <a href="#global" class="pill" style="text-decoration: none; font-size: 15px; font-weight: 500; padding: 11px 14px; border-radius: 999px">Global</a>
       <a href="#craft" class="pill" style="text-decoration: none; font-size: 15px; font-weight: 500; padding: 11px 14px; border-radius: 999px">CAD</a>
       <a href="#ai" class="pill" style="text-decoration: none; font-size: 15px; font-weight: 500; padding: 11px 14px; border-radius: 999px">AI</a>
     </nav>
     <div style="display: flex; align-items: center; gap: 8px">
-      <button type="button" class="ib" onClick="{{toggleMotion}}" aria-pressed="{{motionPressed}}" aria-label="{{motionLabel}}" title="{{motionLabel}}"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 256 256" fill="currentColor"><path d="{{motionIcon}}"></path></svg></button>
+      <span class="tipw"><button type="button" class="ib" onClick="{{toggleMotion}}" aria-pressed="{{motionPressed}}" aria-label="{{motionTipT}}"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 256 256" fill="currentColor"><path d="{{motionIcon}}"></path></svg></button><span class="tipc" role="tooltip"><b>{{motionTipT}}</b>{{motionTipD}}</span></span>
       <button type="button" class="ib" onClick="{{toggleTheme}}" aria-label="{{themeLabel}}" title="{{themeLabel}}"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 256 256" fill="currentColor"><path d="{{themeIcon}}"></path></svg></button>
       <a href="mailto:rakhesh.design@gmail.com" aria-label="Say hello" class="btn btn-p" style="min-height: 44px; padding: 0 20px; font-size: 15px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><path d="{{ic.mail}}"></path></svg><span>Say hello</span></a>
-      <details class="mnav"><summary class="ib" aria-label="Open menu"><svg class="mo" aria-hidden="true" width="22" height="22" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path></svg><svg class="mc" aria-hidden="true" width="22" height="22" viewBox="0 0 256 256" fill="currentColor"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg></summary><nav class="mpanel" aria-label="Site menu"><a href="/" class="mi" aria-current="page" onClick="{{closeMenu}}">Home</a><a href="/work" class="mi" onClick="{{closeMenu}}">All work</a><span class="mk">On this page</span><div class="mrow"><a href="#impact" class="mi" onClick="{{closeMenu}}">Impact</a><a href="#decisions" class="mi" onClick="{{closeMenu}}">Decisions</a><a href="#global" class="mi" onClick="{{closeMenu}}">Global</a><a href="#craft" class="mi" onClick="{{closeMenu}}">CAD</a><a href="#ai" class="mi" onClick="{{closeMenu}}">AI</a></div><span class="mk">American Express</span><a href="/work/manage-credit-limit" class="mi" onClick="{{closeMenu}}">Manage Credit Limit</a><a href="/work/digital-charge-verification" class="mi" onClick="{{closeMenu}}">Digital Charge Verification</a><a href="/work/financial-relief-program" class="mi" onClick="{{closeMenu}}">Financial Relief Program</a><a href="/work/canada-experience-gap" class="mi" onClick="{{closeMenu}}">Canada Experience Gap</a><a href="/work/financial-verification" class="mi" onClick="{{closeMenu}}">Financial Verification</a><a href="/work/plan-it-promo-pricing" class="mi" onClick="{{closeMenu}}">Plan It® Promo Pricing</a><a href="/work/payments-mexico" class="mi" onClick="{{closeMenu}}">International Payments, Mexico</a><a href="/work/localization-automation" class="mi" onClick="{{closeMenu}}">Localization Automation</a><span class="mk">AI builds</span><a href="/work/sourcx" class="mi" onClick="{{closeMenu}}">SourcX</a><a href="/work/shubhviva" class="mi" onClick="{{closeMenu}}">ShubhViva</a><a href="/work/gravity-deck" class="mi" onClick="{{closeMenu}}">Gravity</a><span class="mk">Say hello</span><a href="mailto:rakhesh.design@gmail.com" class="mi" onClick="{{closeMenu}}">rakhesh.design@gmail.com</a></nav></details>
+      <details class="mnav"><summary class="ib" aria-label="Open menu"><svg class="mo" aria-hidden="true" width="22" height="22" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path></svg><svg class="mc" aria-hidden="true" width="22" height="22" viewBox="0 0 256 256" fill="currentColor"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg></summary><nav class="mpanel" aria-label="Site menu"><a href="/" class="mi" aria-current="page" onClick="{{closeMenu}}">Home</a><a href="/work" class="mi" onClick="{{closeMenu}}">All work</a><span class="mk">On this page</span><div class="mrow"><a href="#impact" class="mi" onClick="{{closeMenu}}">Impact</a><a href="#global" class="mi" onClick="{{closeMenu}}">Global</a><a href="#ai" class="mi" onClick="{{closeMenu}}">AI</a><a href="#craft" class="mi" onClick="{{closeMenu}}">CAD</a></div><span class="mk">American Express</span><a href="/work/manage-credit-limit" class="mi" onClick="{{closeMenu}}">Manage Credit Limit</a><a href="/work/digital-charge-verification" class="mi" onClick="{{closeMenu}}">Digital Charge Verification</a><a href="/work/financial-relief-program" class="mi" onClick="{{closeMenu}}">Financial Relief Program</a><a href="/work/canada-experience-gap" class="mi" onClick="{{closeMenu}}">Canada Experience Gap</a><a href="/work/financial-verification" class="mi" onClick="{{closeMenu}}">Financial Verification</a><a href="/work/plan-it-promo-pricing" class="mi" onClick="{{closeMenu}}">Plan It® Promo Pricing</a><a href="/work/payments-mexico" class="mi" onClick="{{closeMenu}}">International Payments, Mexico</a><a href="/work/localization-automation" class="mi" onClick="{{closeMenu}}">Localization Automation</a><span class="mk">AI builds</span><a href="/work/sourcx" class="mi" onClick="{{closeMenu}}">SourcX</a><a href="/work/shubhviva" class="mi" onClick="{{closeMenu}}">ShubhViva</a><a href="/work/gravity-deck" class="mi" onClick="{{closeMenu}}">Gravity</a><span class="mk">Say hello</span><a href="mailto:rakhesh.design@gmail.com" class="mi" onClick="{{closeMenu}}">rakhesh.design@gmail.com</a></nav></details>
     </div>
   </div>
 </header>
@@ -283,8 +358,9 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
         <a href="/work" class="btn btn-p" data-cur="Open">See all work<svg aria-hidden="true" width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><path d="{{ic.arrowRight}}"></path></svg></a>
         <a href="/work/manage-credit-limit" class="btn btn-s" data-cur="Open">Read the flagship case<svg aria-hidden="true" width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><path d="{{ic.upRight}}"></path></svg></a>
       </div>
+      <a href="#ai" class="rise d4 aichip" data-cur="Open"><span class="aic"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><path d="{{ic.sparkle}}"></path></svg></span><span><strong>Also building AI products</strong> SourcX, ShubhViva, Gravity</span><svg aria-hidden="true" width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><path d="{{ic.arrowRight}}"></path></svg></a>
       <dl class="rise d4" style="margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(120px, 100%), 1fr)); gap: 12px; max-width: 620px">
-        <div style="border-top: 2px solid var(--fill); padding-top: 12px"><dt class="kick" style="font-size: 12px">Markets</dt><dd class="disp" style="margin: 4px 0 0; font-size: clamp(23px,calc(23px + (100vw - 390px) * 0.00864), 30px)">6</dd></div>
+        <div style="border-top: 2px solid var(--fill); padding-top: 12px"><dt class="kick" style="font-size: 12px">Markets</dt><dd class="disp" style="margin: 4px 0 0; font-size: clamp(23px,calc(23px + (100vw - 390px) * 0.00864), 30px); display: flex; align-items: center; gap: 10px">6<span class="flr" aria-hidden="true"><i class="fl rd fl-US"></i><i class="fl rd fl-UK"></i><i class="fl rd fl-MX"></i><i class="fl rd fl-CA"></i><i class="fl rd fl-HK"></i><i class="fl rd fl-AU"></i></span></dd></div>
         <div style="border-top: 2px solid var(--fill); padding-top: 12px"><dt class="kick" style="font-size: 12px">Mobile completion</dt><dd class="disp" style="margin: 4px 0 0; font-size: clamp(23px,calc(23px + (100vw - 390px) * 0.00864), 30px)">+44%</dd></div>
         <div style="border-top: 2px solid var(--fill); padding-top: 12px"><dt class="kick" style="font-size: 12px">Industries</dt><dd class="disp" style="margin: 4px 0 0; font-size: clamp(23px,calc(23px + (100vw - 390px) * 0.00864), 30px)">4</dd></div>
         <div style="border-top: 2px solid var(--fill); padding-top: 12px"><dt class="kick" style="font-size: 12px">Audiences</dt><dd class="disp" style="margin: 4px 0 0; font-size: clamp(20px,calc(20px + (100vw - 390px) * 0.00741), 26px); line-height: 1.4; white-space: nowrap">B2B + B2C</dd></div>
@@ -294,12 +370,8 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
     <!-- Meant / Heard stage -->
     <div class="apbox {{vw.hero}}" ref="{{heroRef}}" onMouseEnter="{{heroIn}}" onMouseLeave="{{heroOut}}" onFocus="{{heroIn}}" onBlur="{{heroOut}}" style="flex: 1 1 min(460px, 100%); min-width: 0; max-width: 600px; --per: 6s">
       <div class="card rise d2" style="padding: 22px; box-shadow: var(--e3)">
-        <div role="tablist" aria-label="Three briefs" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px">
-          <sc-for list="{{scns}}" as="sc" hint-placeholder-count="3">
-            <button type="button" role="tab" aria-selected="{{sc.sel}}" onClick="{{sc.pick}}" class="chip seg {{sc.segCls}}" style="min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--line); background: var(--card2); color: var(--ink); font-size: 14px; font-weight: 500; font-family: 'Space Grotesk', system-ui, sans-serif">{{sc.label}}<i></i></button>
-          </sc-for>
-        </div>
-        <div style="display: grid; min-height: 400px">
+        <span class="kick" style="display: block; margin-bottom: 18px; font-size: 12px">Meant ≠ heard · Canada credit limit</span>
+        <div style="display: grid">
           <sc-for list="{{scns}}" as="sc" hint-placeholder-count="3">
             <div class="sl {{sc.cls}}" aria-hidden="{{sc.hidden}}" style="display: flex; flex-direction: column; gap: 16px">
               <div style="background: var(--bg2); border: 1px solid var(--line2); border-radius: 18px; padding: 18px">
@@ -386,31 +458,11 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
   </div>
 </section>
 
-<!-- MARQUEE -->
-<section aria-hidden="true" style="overflow: hidden; padding: 24px 0 8px; border-top: 1px solid var(--line2); border-bottom: 1px solid var(--line2); background: var(--bg2)">
-  <div class="slideL disp" style="white-space: nowrap; font-size: clamp(34px,6.4vw, 96px); line-height: 1.2; color: var(--ink)">Product design · Fintech · HealthTech · E-commerce · Advertising · B2B · B2C · Localization · CAD · 3D printing · </div>
-  <div class="slideR disp gt" style="white-space: nowrap; font-size: clamp(34px,6.4vw, 96px); line-height: 1.2">Meant ≠ heard · Clear beats clever · Test it · Ship it · Measure it · </div>
-</section>
-
-<!-- MANIFESTO -->
-<section aria-label="What drives my work" class="mf" style="height: 210vh; position: relative">
-  <div style="position: sticky; top: 0; height: 100vh; display: flex; align-items: center">
-    <div class="wrap" style="display: flex; flex-direction: column; gap: 28px">
-      <span class="kick">Chapter 02 · What drives the work</span>
-      <p class="disp" style="margin: 0; font-size: clamp(32px,4.4vw, 66px); line-height: 1.1; letter-spacing: -0.025em; max-width: 1200px; text-wrap: balance">
-        <sc-for list="{{words}}" as="w" hint-placeholder-count="30"><span class="mfw" style="--i: {{w.i}}; {{w.style}}">{{w.t}} </span></sc-for>
-      </p>
-    </div>
-  </div>
-</section>
-
-
-<!-- WORK SHOWREEL -->
 <!-- RANGE -->
 <section id="range" style="position: relative">
   <div class="wrap" style="padding-top: 96px; padding-bottom: 96px; display: flex; flex-direction: column; gap: 40px">
     <div style="display: flex; flex-direction: column; gap: 14px">
-      <span class="kick">Chapter 03 · Range</span>
+      <span class="kick">Chapter 02 · Range</span>
       <h2 class="h2 hd" style="max-width: 860px">Four industries. <span class="em">Business and consumer.</span></h2>
     </div>
     <div class="trk" role="list" aria-label="Industries, in order">
@@ -422,7 +474,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
           <a href="/work#beyond" class="tile" data-cur="Explore" style="display: flex; flex-direction: column; gap: 14px; height: 100%; box-sizing: border-box; text-decoration: none; color: var(--ink)">
             <h3 class="disp" style="margin: 0; font-size: clamp(20px,calc(20px + (100vw - 390px) * 0.00741), 26px); line-height: 1.15">{{r.t}}</h3>
             <span style="font-size: 15px; color: var(--ink2)">{{r.org}}</span>
-            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto"><span class="tag ok">{{r.aud}}</span><span class="tag">{{r.yrs}}</span></div>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto"><span class="tag ok">{{r.aud}}</span></div>
           </a>
         </div>
       </sc-for>
@@ -434,7 +486,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
   <div class="wrap" style="padding-top: 112px; padding-bottom: 112px; display: flex; flex-direction: column; gap: 36px">
     <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
       <div style="display: flex; flex-direction: column; gap: 16px">
-        <span class="kick">Chapter 04 · Spotlight</span>
+        <span class="kick">Chapter 03 · Spotlight</span>
         <h2 class="h2 hd" style="max-width: 820px">Eight projects, and what was <span class="em">really</span> being asked.</h2>
       </div>
       <div style="display: flex; align-items: center; gap: 8px">
@@ -453,22 +505,16 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
         </sc-for>
       </div>
 
-      <div class="card" style="padding: 36px; display: grid; box-shadow: var(--e3); position: relative; overflow: hidden">
+      <div class="card" style="padding: 28px; display: grid; box-shadow: var(--e3); position: relative; overflow: hidden">
         <div class="aur" aria-hidden="true" style="position: absolute; right: -10%; top: -20%; width: 50%; height: 70%; background: radial-gradient(closest-side, var(--glow), transparent); pointer-events: none"></div>
         <sc-for list="{{cases}}" as="c" hint-placeholder-count="7">
-          <div class="sl {{c.cls}}" role="tabpanel" aria-hidden="{{c.hidden}}" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center; position: relative">
-            <div style="flex: 1 1 min(440px, 100%); min-width: 0; display: flex; flex-direction: column; gap: 22px">
+          <div class="sl {{c.cls}}" role="tabpanel" aria-hidden="{{c.hidden}}" style="display: flex; flex-wrap: wrap; gap: 28px; align-items: center; position: relative">
+            <div style="flex: 1 1 min(440px, 100%); min-width: 0; display: flex; flex-direction: column; gap: 14px">
               <span class="kick in1">{{c.meta}}</span>
-              <h3 class="disp in1" style="margin: 0; font-size: clamp(34px,3.6vw, 52px); line-height: 1.08; letter-spacing: -0.025em">{{c.title}}</h3>
-              <div class="in2" style="display: flex; flex-direction: column; gap: 6px">
-                <span class="kick" style="font-size: 12px">The brief</span>
-                <p style="margin: 0; font-size: clamp(18px,calc(18px + (100vw - 390px) * 0.00247), 20px); line-height: 1.4"><span class="x" style="color: var(--ink3)">{{c.ask}}</span></p>
-              </div>
-              <div class="r2" style="display: flex; flex-direction: column; gap: 6px">
-                <span class="kick" style="font-size: 12px; color: var(--acc)">The real problem</span>
-                <p style="margin: 0; font-size: 19px; line-height: 1.5; color: var(--ink)">{{c.real}}</p>
-              </div>
-              <div class="r3" style="display: flex; flex-wrap: wrap; align-items: center; gap: 22px; border-top: 1px dashed var(--line); padding-top: 20px">
+              <h3 class="disp in1" style="margin: 0; font-size: clamp(30px,3.2vw, 44px); line-height: 1.08; letter-spacing: -0.025em">{{c.title}}</h3>
+              <p class="r2" style="margin: 0; font-size: 17px; line-height: 1.5; color: var(--ink)"><strong style="color: var(--acc)">The real problem.</strong> {{c.real}}</p>
+              <p class="r2" style="margin: 0; font-size: 17px; line-height: 1.5; color: var(--ink)"><strong style="color: var(--acc)">The call.</strong> {{c.call}}</p>
+              <div class="r3" style="display: flex; flex-wrap: wrap; align-items: center; gap: 22px; border-top: 1px dashed var(--line); padding-top: 16px">
                 <div style="display: flex; flex-direction: column"><span class="disp" style="font-size: clamp(30px,calc(30px + (100vw - 390px) * 0.02222), 48px); line-height: 1.1; color: var(--acc)">{{c.metric}}</span><span style="font-size: 14px; color: var(--ink3); max-width: 300px">{{c.metricLabel}}</span></div>
                 <a href="{{c.href}}" target="{{c.target}}" rel="noopener" tabindex="{{c.tab}}" class="btn btn-s" data-cur="Open" style="margin-left: auto">{{c.cta}}<svg aria-hidden="true" width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><path d="{{ic.upRight}}"></path></svg></a>
               </div>
@@ -484,7 +530,6 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
                 <sc-if value="{{c.scr.hasChip}}" hint-placeholder-val="{{ false }}"><div style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--acc); background: var(--card2); border: 1px solid var(--acc); border-radius: 12px; padding: 10px 12px"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 256 256" fill="currentColor"><path d="{{ic.check}}"></path></svg>{{c.scr.chip}}</div></sc-if>
                 <div class="sweep" style="background: var(--fill); color: var(--fillink); text-align: center; font-weight: 600; border-radius: 999px; padding: 14px; font-size: 15px">{{c.scr.cta}}</div>
               </div>
-              <span style="font-size: 12px; color: var(--ink3)">Illustrative design · real Amex screens are confidential</span>
             </div>
           </div>
         </sc-for>
@@ -506,214 +551,39 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
   </div>
 </section>
 
-<!-- DECISIONS -->
-<section id="decisions" style="position: relative; background: var(--bg2); border-top: 1px solid var(--line2); border-bottom: 1px solid var(--line2)">
-  <div class="grid-bg" aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none"></div>
-  <div class="wrap" style="position: relative; padding-top: 112px; padding-bottom: 112px; display: flex; flex-direction: column; gap: 44px">
-    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
-      <div style="display: flex; flex-direction: column; gap: 16px">
-        <span class="kick">Chapter 05 · Decisions</span>
-        <h2 class="h2 hd" style="max-width: 860px">Five calls, <span class="em">crisp.</span></h2>
-        <p class="lead" style="margin: 0; max-width: 620px">Tension, options, the call, the result. They light up in turn.</p>
-      </div>
-    </div>
-
-    <!-- EDT loop -->
-    <div class="card reveal" style="padding: 26px 30px; display: flex; flex-wrap: wrap; align-items: center; gap: 22px">
-      <div style="display: flex; align-items: center; gap: 10px; flex: 0 1 auto"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 256 256" fill="currentColor" class="spin" style="color: var(--acc)"><path d="{{ic.cycle}}"></path></svg><h3 class="disp" style="margin: 0; font-size: clamp(19px,calc(19px + (100vw - 390px) * 0.0037), 22px)">How I work: Observe, Reflect, Make, repeat</h3></div>
-      <div style="flex: 1 1 min(560px, 100%); min-width: 0; display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px">
-        <sc-for list="{{loop}}" as="l" hint-placeholder-count="3">
-          <div class="nd" style="flex: 1 1 min(200px, 100%); min-width: 0"><span class="kick" style="font-size: 12px; color: var(--acc)">{{l.n}} · {{l.t}}</span><span style="font-size: 14px; color: var(--ink2); line-height: 1.5">{{l.d}}</span></div>
-        </sc-for>
-      </div>
-    </div>
-
-    <div class="apbox {{vw.dec}}" ref="{{decRef}}" onMouseEnter="{{decIn}}" onMouseLeave="{{decOut}}" onFocus="{{decIn}}" onBlur="{{decOut}}" style="display: flex; flex-direction: column; gap: 16px; --per: 5s">
-      <sc-for list="{{decisions}}" as="d" hint-placeholder-count="5">
-        <div class="reveal">
-          <article class="tr card seg {{d.cls}} {{d.segCls}}" style="padding: 26px; display: flex; flex-direction: column; gap: 18px; position: relative">
-            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px">
-              <span class="disp" style="font-size: 15px; color: var(--fillink); background: var(--fill); border-radius: 10px; padding: 4px 10px">{{d.n}}</span>
-              <h3 class="disp" style="margin: 0; font-size: clamp(24px,2.4vw, 32px); line-height: 1.15">{{d.t}}</h3>
-              <span style="font-size: 14px; color: var(--ink3)">{{d.p}}</span>
-              <span style="margin-left: auto; display: flex; align-items: center; gap: 10px"><span style="font-size: 13px; font-weight: 600; color: var(--acc); border: 1px solid var(--acc); border-radius: 999px; padding: 4px 12px">{{d.status}}</span><a href="{{d.href}}" class="pill" data-cur="Open" style="text-decoration: none; font-size: 14px; font-weight: 600; padding: 8px 12px; border-radius: 999px; border: 1px solid var(--line); color: var(--ink)">Case</a></span>
-            </div>
-            <div class="flow" style="display: grid; grid-template-columns: 1fr 28px 1fr 28px 1.15fr 28px 1.15fr; gap: 8px; align-items: stretch">
-              <div class="nd"><span class="kick" style="font-size: 12px">Tension</span><span style="font-size: 15px; color: var(--ink2); line-height: 1.5">{{d.tension}}</span></div>
-              <div class="cn"><b></b></div>
-              <div class="nd"><span class="kick" style="font-size: 12px">Options</span><span style="font-size: 15px; color: var(--ink2); line-height: 1.5">{{d.options}}</span></div>
-              <div class="cn"><b></b></div>
-              <div class="nd hi"><span class="kick" style="font-size: 12px; color: var(--acc)">The call</span><span style="font-size: 15px; color: var(--ink); line-height: 1.5">{{d.call}}</span></div>
-              <div class="cn"><b></b></div>
-              <div class="nd"><span class="kick" style="font-size: 12px">Result</span><span class="disp" style="font-size: clamp(26px,calc(26px + (100vw - 390px) * 0.00988), 34px); line-height: 1.1; color: var(--acc)">{{d.metric}}</span><span style="font-size: 14px; color: var(--ink2); line-height: 1.5">{{d.result}}</span></div>
-            </div>
-            <i></i>
-          </article>
-        </div>
-      </sc-for>
-    </div>
-  </div>
-</section>
-
 <!-- GLOBAL -->
 <section id="global" style="position: relative">
-  <div class="wrap" style="padding-top: 112px; padding-bottom: 112px; display: flex; flex-direction: column; gap: 56px">
+  <div class="wrap" style="padding-top: 112px; padding-bottom: 112px; display: flex; flex-direction: column; gap: 40px">
     <div style="display: flex; flex-direction: column; gap: 16px">
-      <span class="kick">Chapter 06 · Global</span>
+      <span class="kick">Chapter 04 · Global</span>
       <h2 class="h2 hd" style="max-width: 900px">Six markets. The same words, <span class="em">different meanings.</span></h2>
     </div>
-
-    <div class="apbox {{vw.mk}}" ref="{{mkRef}}" onMouseEnter="{{mkIn}}" onMouseLeave="{{mkOut}}" onFocus="{{mkIn}}" onBlur="{{mkOut}}" style="--per: 2.8s; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
-      <div style="flex: 0 0 300px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 12px">
-        <div style="width: 290px; box-sizing: border-box; border-radius: 40px; border: 1px solid var(--line); background: var(--bg); box-shadow: var(--e3); padding: 18px 16px 22px; display: grid; min-height: 470px">
-          <sc-for list="{{markets}}" as="m" hint-placeholder-count="6">
-            <div class="sl {{m.cls}}" lang="{{m.lang}}" aria-hidden="{{m.hidden}}" style="display: flex; flex-direction: column; gap: 12px">
-              <div style="height: 5px; width: 64px; border-radius: 3px; background: var(--line); margin: 0 auto"></div>
-              <div class="disp" style="font-size: 19px; line-height: 1.25; margin-top: 8px">{{m.title}}</div>
-              <div style="font-size: 13px; color: var(--ink3)">{{m.current}}</div>
-              <div class="disp" style="font-size: clamp(22px,calc(22px + (100vw - 390px) * 0.01728), 36px); line-height: 1.1">{{m.amount}}</div>
-              <div style="display: flex; flex-direction: column; gap: 8px">
-                <div style="padding: 13px 14px; background: var(--card2); border: 1px solid var(--line2); border-radius: 14px; font-size: 14px">{{m.row1}}</div>
-                <div style="padding: 13px 14px; background: var(--card2); border: 1px solid var(--line2); border-radius: 14px; font-size: 14px">{{m.row2}}</div>
-                <div style="padding: 13px 14px; background: var(--card2); border: 1px solid var(--line2); border-radius: 14px; font-size: 14px">{{m.row3}}</div>
-              </div>
-              <div style="margin-top: auto; background: var(--fill); color: var(--fillink); text-align: center; font-weight: 600; border-radius: 999px; padding: 14px; font-size: 15px">{{m.cta}}</div>
-            </div>
-          </sc-for>
-        </div>
-        <span style="font-size: 12px; color: var(--ink3)">Illustrative designs · real Amex screens are confidential</span>
-      </div>
-      <div style="flex: 1 1 min(460px, 100%); min-width: 0; display: flex; flex-direction: column; gap: 24px">
-        <div role="tablist" aria-label="Markets" style="display: flex; flex-wrap: wrap; gap: 8px">
-          <sc-for list="{{markets}}" as="m" hint-placeholder-count="6">
-            <button type="button" role="tab" aria-selected="{{m.sel}}" onClick="{{m.pick}}" class="chip seg {{m.segCls}}" style="min-height: 44px; min-width: 64px; padding: 0 18px; border-radius: 999px; border: 1px solid {{m.bd}}; background: {{m.bgc}}; color: var(--ink); font-size: 15px; font-weight: 600; font-family: 'Space Grotesk', system-ui, sans-serif">{{m.code}}<i></i></button>
-          </sc-for>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 10px; min-height: 150px">
-          <span class="kick">{{act.name}} · {{act.langLabel}}</span>
-          <div style="display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap"><span class="disp" style="font-size: clamp(34px,5vw, 72px); line-height: 1.1; color: var(--acc)">{{act.stat}}</span><span style="font-size: 16px; color: var(--ink3)">{{act.statLabel}}</span></div>
-          <p class="lead" style="margin: 0; max-width: 520px">{{act.flex}}</p>
-        </div>
-      </div>
+    <div class="wmap reveal" role="img" aria-label="World map with the six markets: United States, United Kingdom, Australia, Mexico, Canada, Hong Kong">
+      <svg viewBox="0 0 1000 375" aria-hidden="true"><path d="M158.3 0.0h0M233.3 0.0h0M241.7 0.0h0M250.0 0.0h0M266.7 0.0h0M275.0 0.0h0M283.3 0.0h0M291.7 0.0h0M300.0 0.0h0M308.3 0.0h0M316.7 0.0h0M325.0 0.0h0M333.3 0.0h0M341.7 0.0h0M350.0 0.0h0M358.3 0.0h0M366.7 0.0h0M375.0 0.0h0M383.3 0.0h0M391.7 0.0h0M400.0 0.0h0M408.3 0.0h0M508.3 0.0h0M516.7 0.0h0M158.3 8.3h0M166.7 8.3h0M191.7 8.3h0M200.0 8.3h0M216.7 8.3h0M225.0 8.3h0M233.3 8.3h0M241.7 8.3h0M308.3 8.3h0M316.7 8.3h0M325.0 8.3h0M333.3 8.3h0M341.7 8.3h0M350.0 8.3h0M358.3 8.3h0M366.7 8.3h0M375.0 8.3h0M383.3 8.3h0M391.7 8.3h0M400.0 8.3h0M408.3 8.3h0M625.0 8.3h0M633.3 8.3h0M708.3 8.3h0M716.7 8.3h0M725.0 8.3h0M733.3 8.3h0M741.7 8.3h0M750.0 8.3h0M758.3 8.3h0M766.7 8.3h0M775.0 8.3h0M850.0 8.3h0M858.3 8.3h0M866.7 8.3h0M875.0 8.3h0M883.3 8.3h0M125.0 16.7h0M141.7 16.7h0M150.0 16.7h0M158.3 16.7h0M175.0 16.7h0M191.7 16.7h0M216.7 16.7h0M225.0 16.7h0M233.3 16.7h0M241.7 16.7h0M250.0 16.7h0M258.3 16.7h0M316.7 16.7h0M325.0 16.7h0M333.3 16.7h0M341.7 16.7h0M350.0 16.7h0M358.3 16.7h0M366.7 16.7h0M375.0 16.7h0M383.3 16.7h0M391.7 16.7h0M400.0 16.7h0M616.7 16.7h0M658.3 16.7h0M666.7 16.7h0M675.0 16.7h0M683.3 16.7h0M700.0 16.7h0M708.3 16.7h0M716.7 16.7h0M725.0 16.7h0M733.3 16.7h0M741.7 16.7h0M750.0 16.7h0M758.3 16.7h0M766.7 16.7h0M775.0 16.7h0M783.3 16.7h0M791.7 16.7h0M800.0 16.7h0M808.3 16.7h0M816.7 16.7h0M858.3 16.7h0M866.7 16.7h0M875.0 16.7h0M16.7 25.0h0M25.0 25.0h0M33.3 25.0h0M41.7 25.0h0M50.0 25.0h0M58.3 25.0h0M66.7 25.0h0M75.0 25.0h0M83.3 25.0h0M91.7 25.0h0M100.0 25.0h0M108.3 25.0h0M116.7 25.0h0M125.0 25.0h0M133.3 25.0h0M158.3 25.0h0M166.7 25.0h0M200.0 25.0h0M208.3 25.0h0M233.3 25.0h0M258.3 25.0h0M266.7 25.0h0M275.0 25.0h0M325.0 25.0h0M333.3 25.0h0M341.7 25.0h0M350.0 25.0h0M358.3 25.0h0M366.7 25.0h0M375.0 25.0h0M383.3 25.0h0M391.7 25.0h0M516.7 25.0h0M525.0 25.0h0M533.3 25.0h0M541.7 25.0h0M550.0 25.0h0M558.3 25.0h0M566.7 25.0h0M641.7 25.0h0M658.3 25.0h0M666.7 25.0h0M675.0 25.0h0M683.3 25.0h0M691.7 25.0h0M700.0 25.0h0M708.3 25.0h0M716.7 25.0h0M725.0 25.0h0M733.3 25.0h0M741.7 25.0h0M750.0 25.0h0M758.3 25.0h0M766.7 25.0h0M775.0 25.0h0M783.3 25.0h0M791.7 25.0h0M800.0 25.0h0M808.3 25.0h0M816.7 25.0h0M825.0 25.0h0M833.3 25.0h0M841.7 25.0h0M850.0 25.0h0M858.3 25.0h0M866.7 25.0h0M875.0 25.0h0M883.3 25.0h0M891.7 25.0h0M900.0 25.0h0M908.3 25.0h0M916.7 25.0h0M925.0 25.0h0M933.3 25.0h0M941.7 25.0h0M950.0 25.0h0M958.3 25.0h0M8.3 33.3h0M16.7 33.3h0M25.0 33.3h0M33.3 33.3h0M41.7 33.3h0M50.0 33.3h0M58.3 33.3h0M66.7 33.3h0M75.0 33.3h0M83.3 33.3h0M91.7 33.3h0M100.0 33.3h0M108.3 33.3h0M116.7 33.3h0M125.0 33.3h0M133.3 33.3h0M141.7 33.3h0M150.0 33.3h0M158.3 33.3h0M166.7 33.3h0M175.0 33.3h0M183.3 33.3h0M191.7 33.3h0M200.0 33.3h0M208.3 33.3h0M216.7 33.3h0M225.0 33.3h0M266.7 33.3h0M275.0 33.3h0M283.3 33.3h0M291.7 33.3h0M325.0 33.3h0M333.3 33.3h0M341.7 33.3h0M350.0 33.3h0M358.3 33.3h0M416.7 33.3h0M425.0 33.3h0M508.3 33.3h0M516.7 33.3h0M525.0 33.3h0M533.3 33.3h0M541.7 33.3h0M550.0 33.3h0M558.3 33.3h0M583.3 33.3h0M591.7 33.3h0M600.0 33.3h0M608.3 33.3h0M616.7 33.3h0M625.0 33.3h0M633.3 33.3h0M641.7 33.3h0M650.0 33.3h0M658.3 33.3h0M666.7 33.3h0M675.0 33.3h0M683.3 33.3h0M691.7 33.3h0M700.0 33.3h0M708.3 33.3h0M716.7 33.3h0M725.0 33.3h0M733.3 33.3h0M741.7 33.3h0M750.0 33.3h0M758.3 33.3h0M766.7 33.3h0M775.0 33.3h0M783.3 33.3h0M791.7 33.3h0M800.0 33.3h0M808.3 33.3h0M816.7 33.3h0M825.0 33.3h0M833.3 33.3h0M841.7 33.3h0M850.0 33.3h0M858.3 33.3h0M866.7 33.3h0M875.0 33.3h0M883.3 33.3h0M891.7 33.3h0M900.0 33.3h0M908.3 33.3h0M916.7 33.3h0M925.0 33.3h0M933.3 33.3h0M941.7 33.3h0M950.0 33.3h0M958.3 33.3h0M966.7 33.3h0M975.0 33.3h0M983.3 33.3h0M991.7 33.3h0M16.7 41.7h0M25.0 41.7h0M33.3 41.7h0M41.7 41.7h0M50.0 41.7h0M58.3 41.7h0M66.7 41.7h0M75.0 41.7h0M83.3 41.7h0M91.7 41.7h0M100.0 41.7h0M108.3 41.7h0M116.7 41.7h0M125.0 41.7h0M133.3 41.7h0M141.7 41.7h0M150.0 41.7h0M158.3 41.7h0M166.7 41.7h0M175.0 41.7h0M183.3 41.7h0M191.7 41.7h0M200.0 41.7h0M208.3 41.7h0M275.0 41.7h0M283.3 41.7h0M333.3 41.7h0M341.7 41.7h0M491.7 41.7h0M500.0 41.7h0M508.3 41.7h0M516.7 41.7h0M533.3 41.7h0M541.7 41.7h0M550.0 41.7h0M558.3 41.7h0M566.7 41.7h0M575.0 41.7h0M583.3 41.7h0M591.7 41.7h0M600.0 41.7h0M608.3 41.7h0M616.7 41.7h0M625.0 41.7h0M633.3 41.7h0M641.7 41.7h0M650.0 41.7h0M658.3 41.7h0M666.7 41.7h0M675.0 41.7h0M683.3 41.7h0M691.7 41.7h0M700.0 41.7h0M708.3 41.7h0M716.7 41.7h0M725.0 41.7h0M733.3 41.7h0M741.7 41.7h0M750.0 41.7h0M758.3 41.7h0M766.7 41.7h0M775.0 41.7h0M783.3 41.7h0M791.7 41.7h0M800.0 41.7h0M808.3 41.7h0M816.7 41.7h0M825.0 41.7h0M833.3 41.7h0M841.7 41.7h0M850.0 41.7h0M858.3 41.7h0M866.7 41.7h0M875.0 41.7h0M883.3 41.7h0M891.7 41.7h0M900.0 41.7h0M908.3 41.7h0M916.7 41.7h0M925.0 41.7h0M933.3 41.7h0M941.7 41.7h0M950.0 41.7h0M958.3 41.7h0M16.7 50.0h0M25.0 50.0h0M33.3 50.0h0M41.7 50.0h0M50.0 50.0h0M75.0 50.0h0M83.3 50.0h0M91.7 50.0h0M100.0 50.0h0M108.3 50.0h0M116.7 50.0h0M125.0 50.0h0M133.3 50.0h0M141.7 50.0h0M150.0 50.0h0M158.3 50.0h0M166.7 50.0h0M175.0 50.0h0M183.3 50.0h0M191.7 50.0h0M200.0 50.0h0M258.3 50.0h0M266.7 50.0h0M483.3 50.0h0M491.7 50.0h0M500.0 50.0h0M508.3 50.0h0M516.7 50.0h0M533.3 50.0h0M550.0 50.0h0M558.3 50.0h0M566.7 50.0h0M575.0 50.0h0M583.3 50.0h0M591.7 50.0h0M600.0 50.0h0M608.3 50.0h0M616.7 50.0h0M625.0 50.0h0M633.3 50.0h0M641.7 50.0h0M650.0 50.0h0M658.3 50.0h0M666.7 50.0h0M675.0 50.0h0M683.3 50.0h0M691.7 50.0h0M700.0 50.0h0M708.3 50.0h0M716.7 50.0h0M725.0 50.0h0M733.3 50.0h0M741.7 50.0h0M750.0 50.0h0M758.3 50.0h0M766.7 50.0h0M775.0 50.0h0M783.3 50.0h0M791.7 50.0h0M800.0 50.0h0M808.3 50.0h0M816.7 50.0h0M825.0 50.0h0M833.3 50.0h0M841.7 50.0h0M850.0 50.0h0M858.3 50.0h0M866.7 50.0h0M875.0 50.0h0M883.3 50.0h0M891.7 50.0h0M916.7 50.0h0M925.0 50.0h0M100.0 58.3h0M108.3 58.3h0M116.7 58.3h0M125.0 58.3h0M133.3 58.3h0M141.7 58.3h0M150.0 58.3h0M158.3 58.3h0M166.7 58.3h0M175.0 58.3h0M183.3 58.3h0M191.7 58.3h0M200.0 58.3h0M208.3 58.3h0M216.7 58.3h0M258.3 58.3h0M266.7 58.3h0M275.0 58.3h0M283.3 58.3h0M291.7 58.3h0M450.0 58.3h0M458.3 58.3h0M491.7 58.3h0M508.3 58.3h0M533.3 58.3h0M541.7 58.3h0M550.0 58.3h0M558.3 58.3h0M566.7 58.3h0M575.0 58.3h0M583.3 58.3h0M591.7 58.3h0M600.0 58.3h0M608.3 58.3h0M616.7 58.3h0M625.0 58.3h0M633.3 58.3h0M641.7 58.3h0M650.0 58.3h0M658.3 58.3h0M666.7 58.3h0M675.0 58.3h0M683.3 58.3h0M691.7 58.3h0M700.0 58.3h0M708.3 58.3h0M716.7 58.3h0M725.0 58.3h0M733.3 58.3h0M741.7 58.3h0M750.0 58.3h0M758.3 58.3h0M766.7 58.3h0M775.0 58.3h0M783.3 58.3h0M791.7 58.3h0M800.0 58.3h0M808.3 58.3h0M816.7 58.3h0M825.0 58.3h0M833.3 58.3h0M841.7 58.3h0M850.0 58.3h0M908.3 58.3h0M916.7 58.3h0M100.0 66.7h0M108.3 66.7h0M116.7 66.7h0M125.0 66.7h0M133.3 66.7h0M141.7 66.7h0M150.0 66.7h0M158.3 66.7h0M166.7 66.7h0M175.0 66.7h0M183.3 66.7h0M191.7 66.7h0M200.0 66.7h0M208.3 66.7h0M216.7 66.7h0M225.0 66.7h0M233.3 66.7h0M250.0 66.7h0M258.3 66.7h0M266.7 66.7h0M275.0 66.7h0M283.3 66.7h0M291.7 66.7h0M300.0 66.7h0M441.7 66.7h0M491.7 66.7h0M500.0 66.7h0M508.3 66.7h0M516.7 66.7h0M525.0 66.7h0M533.3 66.7h0M541.7 66.7h0M550.0 66.7h0M558.3 66.7h0M566.7 66.7h0M575.0 66.7h0M583.3 66.7h0M591.7 66.7h0M600.0 66.7h0M608.3 66.7h0M616.7 66.7h0M625.0 66.7h0M633.3 66.7h0M641.7 66.7h0M650.0 66.7h0M658.3 66.7h0M666.7 66.7h0M675.0 66.7h0M683.3 66.7h0M691.7 66.7h0M700.0 66.7h0M708.3 66.7h0M716.7 66.7h0M725.0 66.7h0M733.3 66.7h0M741.7 66.7h0M750.0 66.7h0M758.3 66.7h0M766.7 66.7h0M775.0 66.7h0M783.3 66.7h0M791.7 66.7h0M800.0 66.7h0M808.3 66.7h0M816.7 66.7h0M825.0 66.7h0M833.3 66.7h0M841.7 66.7h0M900.0 66.7h0M908.3 66.7h0M116.7 75.0h0M125.0 75.0h0M133.3 75.0h0M141.7 75.0h0M150.0 75.0h0M158.3 75.0h0M166.7 75.0h0M175.0 75.0h0M183.3 75.0h0M191.7 75.0h0M200.0 75.0h0M208.3 75.0h0M216.7 75.0h0M225.0 75.0h0M233.3 75.0h0M241.7 75.0h0M250.0 75.0h0M258.3 75.0h0M266.7 75.0h0M275.0 75.0h0M283.3 75.0h0M291.7 75.0h0M300.0 75.0h0M308.3 75.0h0M458.3 75.0h0M466.7 75.0h0M475.0 75.0h0M483.3 75.0h0M491.7 75.0h0M500.0 75.0h0M508.3 75.0h0M516.7 75.0h0M525.0 75.0h0M533.3 75.0h0M541.7 75.0h0M550.0 75.0h0M558.3 75.0h0M566.7 75.0h0M575.0 75.0h0M583.3 75.0h0M591.7 75.0h0M600.0 75.0h0M608.3 75.0h0M616.7 75.0h0M625.0 75.0h0M633.3 75.0h0M641.7 75.0h0M650.0 75.0h0M658.3 75.0h0M666.7 75.0h0M675.0 75.0h0M683.3 75.0h0M691.7 75.0h0M700.0 75.0h0M708.3 75.0h0M716.7 75.0h0M725.0 75.0h0M733.3 75.0h0M741.7 75.0h0M750.0 75.0h0M758.3 75.0h0M766.7 75.0h0M775.0 75.0h0M783.3 75.0h0M791.7 75.0h0M800.0 75.0h0M808.3 75.0h0M816.7 75.0h0M825.0 75.0h0M833.3 75.0h0M841.7 75.0h0M850.0 75.0h0M133.3 83.3h0M141.7 83.3h0M150.0 83.3h0M158.3 83.3h0M166.7 83.3h0M175.0 83.3h0M183.3 83.3h0M191.7 83.3h0M200.0 83.3h0M208.3 83.3h0M216.7 83.3h0M225.0 83.3h0M233.3 83.3h0M241.7 83.3h0M250.0 83.3h0M258.3 83.3h0M266.7 83.3h0M275.0 83.3h0M283.3 83.3h0M308.3 83.3h0M316.7 83.3h0M458.3 83.3h0M466.7 83.3h0M475.0 83.3h0M483.3 83.3h0M491.7 83.3h0M500.0 83.3h0M508.3 83.3h0M516.7 83.3h0M525.0 83.3h0M533.3 83.3h0M541.7 83.3h0M550.0 83.3h0M558.3 83.3h0M566.7 83.3h0M575.0 83.3h0M583.3 83.3h0M591.7 83.3h0M600.0 83.3h0M608.3 83.3h0M616.7 83.3h0M625.0 83.3h0M633.3 83.3h0M641.7 83.3h0M650.0 83.3h0M658.3 83.3h0M666.7 83.3h0M675.0 83.3h0M683.3 83.3h0M691.7 83.3h0M700.0 83.3h0M708.3 83.3h0M716.7 83.3h0M725.0 83.3h0M733.3 83.3h0M741.7 83.3h0M750.0 83.3h0M758.3 83.3h0M766.7 83.3h0M775.0 83.3h0M783.3 83.3h0M791.7 83.3h0M800.0 83.3h0M808.3 83.3h0M816.7 83.3h0M825.0 83.3h0M833.3 83.3h0M841.7 83.3h0M850.0 83.3h0M125.0 91.7h0M133.3 91.7h0M141.7 91.7h0M150.0 91.7h0M158.3 91.7h0M166.7 91.7h0M175.0 91.7h0M183.3 91.7h0M191.7 91.7h0M200.0 91.7h0M208.3 91.7h0M216.7 91.7h0M225.0 91.7h0M233.3 91.7h0M241.7 91.7h0M250.0 91.7h0M258.3 91.7h0M266.7 91.7h0M275.0 91.7h0M291.7 91.7h0M466.7 91.7h0M475.0 91.7h0M483.3 91.7h0M491.7 91.7h0M500.0 91.7h0M508.3 91.7h0M516.7 91.7h0M525.0 91.7h0M533.3 91.7h0M541.7 91.7h0M575.0 91.7h0M583.3 91.7h0M591.7 91.7h0M616.7 91.7h0M625.0 91.7h0M633.3 91.7h0M641.7 91.7h0M650.0 91.7h0M658.3 91.7h0M666.7 91.7h0M675.0 91.7h0M683.3 91.7h0M691.7 91.7h0M700.0 91.7h0M708.3 91.7h0M716.7 91.7h0M725.0 91.7h0M733.3 91.7h0M741.7 91.7h0M750.0 91.7h0M758.3 91.7h0M766.7 91.7h0M775.0 91.7h0M783.3 91.7h0M791.7 91.7h0M800.0 91.7h0M808.3 91.7h0M816.7 91.7h0M825.0 91.7h0M833.3 91.7h0M841.7 91.7h0M125.0 100.0h0M133.3 100.0h0M141.7 100.0h0M150.0 100.0h0M158.3 100.0h0M166.7 100.0h0M175.0 100.0h0M183.3 100.0h0M191.7 100.0h0M200.0 100.0h0M208.3 100.0h0M216.7 100.0h0M225.0 100.0h0M233.3 100.0h0M241.7 100.0h0M250.0 100.0h0M258.3 100.0h0M266.7 100.0h0M441.7 100.0h0M450.0 100.0h0M458.3 100.0h0M466.7 100.0h0M475.0 100.0h0M491.7 100.0h0M500.0 100.0h0M508.3 100.0h0M525.0 100.0h0M533.3 100.0h0M541.7 100.0h0M583.3 100.0h0M591.7 100.0h0M600.0 100.0h0M616.7 100.0h0M625.0 100.0h0M633.3 100.0h0M641.7 100.0h0M650.0 100.0h0M658.3 100.0h0M666.7 100.0h0M675.0 100.0h0M683.3 100.0h0M691.7 100.0h0M700.0 100.0h0M708.3 100.0h0M716.7 100.0h0M725.0 100.0h0M733.3 100.0h0M741.7 100.0h0M750.0 100.0h0M758.3 100.0h0M766.7 100.0h0M775.0 100.0h0M783.3 100.0h0M791.7 100.0h0M800.0 100.0h0M808.3 100.0h0M816.7 100.0h0M825.0 100.0h0M858.3 100.0h0M125.0 108.3h0M133.3 108.3h0M141.7 108.3h0M150.0 108.3h0M158.3 108.3h0M166.7 108.3h0M175.0 108.3h0M183.3 108.3h0M191.7 108.3h0M200.0 108.3h0M208.3 108.3h0M216.7 108.3h0M225.0 108.3h0M233.3 108.3h0M241.7 108.3h0M250.0 108.3h0M441.7 108.3h0M450.0 108.3h0M458.3 108.3h0M525.0 108.3h0M541.7 108.3h0M550.0 108.3h0M558.3 108.3h0M566.7 108.3h0M575.0 108.3h0M583.3 108.3h0M591.7 108.3h0M600.0 108.3h0M616.7 108.3h0M625.0 108.3h0M633.3 108.3h0M641.7 108.3h0M650.0 108.3h0M658.3 108.3h0M666.7 108.3h0M675.0 108.3h0M683.3 108.3h0M691.7 108.3h0M700.0 108.3h0M708.3 108.3h0M716.7 108.3h0M725.0 108.3h0M733.3 108.3h0M741.7 108.3h0M750.0 108.3h0M758.3 108.3h0M766.7 108.3h0M775.0 108.3h0M783.3 108.3h0M791.7 108.3h0M816.7 108.3h0M858.3 108.3h0M133.3 116.7h0M141.7 116.7h0M150.0 116.7h0M158.3 116.7h0M166.7 116.7h0M175.0 116.7h0M183.3 116.7h0M191.7 116.7h0M200.0 116.7h0M208.3 116.7h0M216.7 116.7h0M225.0 116.7h0M233.3 116.7h0M241.7 116.7h0M250.0 116.7h0M475.0 116.7h0M483.3 116.7h0M491.7 116.7h0M575.0 116.7h0M583.3 116.7h0M591.7 116.7h0M600.0 116.7h0M608.3 116.7h0M616.7 116.7h0M625.0 116.7h0M633.3 116.7h0M641.7 116.7h0M650.0 116.7h0M658.3 116.7h0M666.7 116.7h0M675.0 116.7h0M683.3 116.7h0M691.7 116.7h0M700.0 116.7h0M708.3 116.7h0M716.7 116.7h0M725.0 116.7h0M733.3 116.7h0M741.7 116.7h0M750.0 116.7h0M758.3 116.7h0M766.7 116.7h0M775.0 116.7h0M783.3 116.7h0M791.7 116.7h0M800.0 116.7h0M825.0 116.7h0M850.0 116.7h0M141.7 125.0h0M150.0 125.0h0M158.3 125.0h0M166.7 125.0h0M175.0 125.0h0M183.3 125.0h0M191.7 125.0h0M200.0 125.0h0M208.3 125.0h0M216.7 125.0h0M225.0 125.0h0M233.3 125.0h0M241.7 125.0h0M450.0 125.0h0M458.3 125.0h0M466.7 125.0h0M475.0 125.0h0M483.3 125.0h0M491.7 125.0h0M566.7 125.0h0M575.0 125.0h0M583.3 125.0h0M591.7 125.0h0M600.0 125.0h0M608.3 125.0h0M616.7 125.0h0M625.0 125.0h0M633.3 125.0h0M641.7 125.0h0M650.0 125.0h0M658.3 125.0h0M666.7 125.0h0M675.0 125.0h0M683.3 125.0h0M691.7 125.0h0M700.0 125.0h0M708.3 125.0h0M716.7 125.0h0M725.0 125.0h0M733.3 125.0h0M741.7 125.0h0M750.0 125.0h0M758.3 125.0h0M766.7 125.0h0M775.0 125.0h0M783.3 125.0h0M791.7 125.0h0M800.0 125.0h0M158.3 133.3h0M166.7 133.3h0M175.0 133.3h0M183.3 133.3h0M191.7 133.3h0M200.0 133.3h0M208.3 133.3h0M216.7 133.3h0M441.7 133.3h0M450.0 133.3h0M458.3 133.3h0M466.7 133.3h0M475.0 133.3h0M483.3 133.3h0M491.7 133.3h0M500.0 133.3h0M508.3 133.3h0M516.7 133.3h0M525.0 133.3h0M533.3 133.3h0M541.7 133.3h0M550.0 133.3h0M558.3 133.3h0M566.7 133.3h0M575.0 133.3h0M583.3 133.3h0M591.7 133.3h0M600.0 133.3h0M608.3 133.3h0M616.7 133.3h0M625.0 133.3h0M633.3 133.3h0M641.7 133.3h0M650.0 133.3h0M658.3 133.3h0M666.7 133.3h0M675.0 133.3h0M683.3 133.3h0M691.7 133.3h0M700.0 133.3h0M708.3 133.3h0M716.7 133.3h0M725.0 133.3h0M733.3 133.3h0M741.7 133.3h0M750.0 133.3h0M758.3 133.3h0M766.7 133.3h0M775.0 133.3h0M783.3 133.3h0M791.7 133.3h0M800.0 133.3h0M150.0 141.7h0M166.7 141.7h0M175.0 141.7h0M183.3 141.7h0M191.7 141.7h0M241.7 141.7h0M433.3 141.7h0M441.7 141.7h0M450.0 141.7h0M458.3 141.7h0M466.7 141.7h0M475.0 141.7h0M483.3 141.7h0M491.7 141.7h0M500.0 141.7h0M508.3 141.7h0M516.7 141.7h0M525.0 141.7h0M533.3 141.7h0M541.7 141.7h0M550.0 141.7h0M558.3 141.7h0M566.7 141.7h0M575.0 141.7h0M583.3 141.7h0M591.7 141.7h0M600.0 141.7h0M616.7 141.7h0M625.0 141.7h0M633.3 141.7h0M641.7 141.7h0M650.0 141.7h0M658.3 141.7h0M666.7 141.7h0M675.0 141.7h0M683.3 141.7h0M691.7 141.7h0M700.0 141.7h0M708.3 141.7h0M716.7 141.7h0M725.0 141.7h0M733.3 141.7h0M741.7 141.7h0M750.0 141.7h0M758.3 141.7h0M766.7 141.7h0M775.0 141.7h0M783.3 141.7h0M791.7 141.7h0M800.0 141.7h0M175.0 150.0h0M183.3 150.0h0M191.7 150.0h0M425.0 150.0h0M433.3 150.0h0M441.7 150.0h0M450.0 150.0h0M458.3 150.0h0M466.7 150.0h0M475.0 150.0h0M483.3 150.0h0M491.7 150.0h0M500.0 150.0h0M508.3 150.0h0M516.7 150.0h0M525.0 150.0h0M533.3 150.0h0M541.7 150.0h0M550.0 150.0h0M558.3 150.0h0M575.0 150.0h0M583.3 150.0h0M591.7 150.0h0M600.0 150.0h0M608.3 150.0h0M616.7 150.0h0M625.0 150.0h0M658.3 150.0h0M666.7 150.0h0M675.0 150.0h0M683.3 150.0h0M691.7 150.0h0M700.0 150.0h0M708.3 150.0h0M716.7 150.0h0M725.0 150.0h0M733.3 150.0h0M741.7 150.0h0M750.0 150.0h0M758.3 150.0h0M766.7 150.0h0M775.0 150.0h0M783.3 150.0h0M791.7 150.0h0M175.0 158.3h0M183.3 158.3h0M191.7 158.3h0M216.7 158.3h0M225.0 158.3h0M250.0 158.3h0M425.0 158.3h0M433.3 158.3h0M441.7 158.3h0M450.0 158.3h0M458.3 158.3h0M466.7 158.3h0M475.0 158.3h0M483.3 158.3h0M491.7 158.3h0M500.0 158.3h0M508.3 158.3h0M516.7 158.3h0M525.0 158.3h0M533.3 158.3h0M541.7 158.3h0M550.0 158.3h0M558.3 158.3h0M566.7 158.3h0M583.3 158.3h0M591.7 158.3h0M600.0 158.3h0M608.3 158.3h0M616.7 158.3h0M625.0 158.3h0M675.0 158.3h0M683.3 158.3h0M691.7 158.3h0M700.0 158.3h0M708.3 158.3h0M725.0 158.3h0M733.3 158.3h0M741.7 158.3h0M750.0 158.3h0M758.3 158.3h0M183.3 166.7h0M191.7 166.7h0M200.0 166.7h0M208.3 166.7h0M216.7 166.7h0M283.3 166.7h0M425.0 166.7h0M433.3 166.7h0M441.7 166.7h0M450.0 166.7h0M458.3 166.7h0M466.7 166.7h0M475.0 166.7h0M483.3 166.7h0M491.7 166.7h0M500.0 166.7h0M508.3 166.7h0M516.7 166.7h0M525.0 166.7h0M533.3 166.7h0M541.7 166.7h0M550.0 166.7h0M558.3 166.7h0M566.7 166.7h0M583.3 166.7h0M591.7 166.7h0M600.0 166.7h0M608.3 166.7h0M616.7 166.7h0M675.0 166.7h0M683.3 166.7h0M691.7 166.7h0M733.3 166.7h0M741.7 166.7h0M750.0 166.7h0M758.3 166.7h0M216.7 175.0h0M225.0 175.0h0M233.3 175.0h0M425.0 175.0h0M433.3 175.0h0M441.7 175.0h0M450.0 175.0h0M458.3 175.0h0M466.7 175.0h0M475.0 175.0h0M483.3 175.0h0M491.7 175.0h0M500.0 175.0h0M508.3 175.0h0M516.7 175.0h0M525.0 175.0h0M533.3 175.0h0M541.7 175.0h0M550.0 175.0h0M558.3 175.0h0M566.7 175.0h0M575.0 175.0h0M591.7 175.0h0M600.0 175.0h0M675.0 175.0h0M683.3 175.0h0M741.7 175.0h0M750.0 175.0h0M758.3 175.0h0M766.7 175.0h0M233.3 183.3h0M266.7 183.3h0M425.0 183.3h0M433.3 183.3h0M441.7 183.3h0M450.0 183.3h0M458.3 183.3h0M466.7 183.3h0M475.0 183.3h0M483.3 183.3h0M491.7 183.3h0M500.0 183.3h0M508.3 183.3h0M516.7 183.3h0M525.0 183.3h0M533.3 183.3h0M541.7 183.3h0M550.0 183.3h0M558.3 183.3h0M566.7 183.3h0M575.0 183.3h0M583.3 183.3h0M608.3 183.3h0M683.3 183.3h0M741.7 183.3h0M758.3 183.3h0M766.7 183.3h0M250.0 191.7h0M258.3 191.7h0M266.7 191.7h0M275.0 191.7h0M283.3 191.7h0M291.7 191.7h0M433.3 191.7h0M441.7 191.7h0M450.0 191.7h0M458.3 191.7h0M466.7 191.7h0M475.0 191.7h0M483.3 191.7h0M491.7 191.7h0M500.0 191.7h0M508.3 191.7h0M516.7 191.7h0M525.0 191.7h0M533.3 191.7h0M541.7 191.7h0M550.0 191.7h0M558.3 191.7h0M566.7 191.7h0M575.0 191.7h0M583.3 191.7h0M591.7 191.7h0M600.0 191.7h0M683.3 191.7h0M691.7 191.7h0M741.7 191.7h0M758.3 191.7h0M816.7 191.7h0M258.3 200.0h0M266.7 200.0h0M275.0 200.0h0M283.3 200.0h0M291.7 200.0h0M300.0 200.0h0M441.7 200.0h0M450.0 200.0h0M458.3 200.0h0M466.7 200.0h0M483.3 200.0h0M491.7 200.0h0M500.0 200.0h0M508.3 200.0h0M516.7 200.0h0M525.0 200.0h0M533.3 200.0h0M541.7 200.0h0M550.0 200.0h0M558.3 200.0h0M566.7 200.0h0M575.0 200.0h0M583.3 200.0h0M591.7 200.0h0M600.0 200.0h0M750.0 200.0h0M791.7 200.0h0M258.3 208.3h0M266.7 208.3h0M275.0 208.3h0M283.3 208.3h0M291.7 208.3h0M300.0 208.3h0M308.3 208.3h0M316.7 208.3h0M325.0 208.3h0M500.0 208.3h0M508.3 208.3h0M516.7 208.3h0M525.0 208.3h0M533.3 208.3h0M541.7 208.3h0M550.0 208.3h0M558.3 208.3h0M566.7 208.3h0M575.0 208.3h0M583.3 208.3h0M591.7 208.3h0M741.7 208.3h0M750.0 208.3h0M783.3 208.3h0M791.7 208.3h0M250.0 216.7h0M258.3 216.7h0M266.7 216.7h0M275.0 216.7h0M283.3 216.7h0M291.7 216.7h0M300.0 216.7h0M308.3 216.7h0M316.7 216.7h0M325.0 216.7h0M500.0 216.7h0M508.3 216.7h0M516.7 216.7h0M525.0 216.7h0M533.3 216.7h0M541.7 216.7h0M550.0 216.7h0M558.3 216.7h0M566.7 216.7h0M575.0 216.7h0M583.3 216.7h0M750.0 216.7h0M775.0 216.7h0M783.3 216.7h0M791.7 216.7h0M800.0 216.7h0M250.0 225.0h0M258.3 225.0h0M266.7 225.0h0M275.0 225.0h0M283.3 225.0h0M291.7 225.0h0M300.0 225.0h0M308.3 225.0h0M316.7 225.0h0M325.0 225.0h0M333.3 225.0h0M341.7 225.0h0M350.0 225.0h0M500.0 225.0h0M508.3 225.0h0M516.7 225.0h0M525.0 225.0h0M533.3 225.0h0M541.7 225.0h0M550.0 225.0h0M558.3 225.0h0M566.7 225.0h0M575.0 225.0h0M750.0 225.0h0M758.3 225.0h0M775.0 225.0h0M783.3 225.0h0M800.0 225.0h0M825.0 225.0h0M850.0 225.0h0M858.3 225.0h0M241.7 233.3h0M250.0 233.3h0M258.3 233.3h0M266.7 233.3h0M275.0 233.3h0M283.3 233.3h0M291.7 233.3h0M300.0 233.3h0M308.3 233.3h0M316.7 233.3h0M325.0 233.3h0M333.3 233.3h0M341.7 233.3h0M350.0 233.3h0M358.3 233.3h0M366.7 233.3h0M508.3 233.3h0M516.7 233.3h0M525.0 233.3h0M533.3 233.3h0M541.7 233.3h0M550.0 233.3h0M558.3 233.3h0M566.7 233.3h0M858.3 233.3h0M866.7 233.3h0M875.0 233.3h0M883.3 233.3h0M250.0 241.7h0M258.3 241.7h0M266.7 241.7h0M275.0 241.7h0M283.3 241.7h0M291.7 241.7h0M300.0 241.7h0M308.3 241.7h0M316.7 241.7h0M325.0 241.7h0M333.3 241.7h0M341.7 241.7h0M350.0 241.7h0M358.3 241.7h0M366.7 241.7h0M508.3 241.7h0M516.7 241.7h0M525.0 241.7h0M533.3 241.7h0M541.7 241.7h0M550.0 241.7h0M558.3 241.7h0M566.7 241.7h0M575.0 241.7h0M791.7 241.7h0M816.7 241.7h0M858.3 241.7h0M875.0 241.7h0M258.3 250.0h0M266.7 250.0h0M275.0 250.0h0M283.3 250.0h0M291.7 250.0h0M300.0 250.0h0M308.3 250.0h0M316.7 250.0h0M325.0 250.0h0M333.3 250.0h0M341.7 250.0h0M350.0 250.0h0M358.3 250.0h0M508.3 250.0h0M516.7 250.0h0M525.0 250.0h0M533.3 250.0h0M541.7 250.0h0M550.0 250.0h0M558.3 250.0h0M566.7 250.0h0M575.0 250.0h0M258.3 258.3h0M266.7 258.3h0M275.0 258.3h0M283.3 258.3h0M291.7 258.3h0M300.0 258.3h0M308.3 258.3h0M316.7 258.3h0M325.0 258.3h0M333.3 258.3h0M341.7 258.3h0M350.0 258.3h0M358.3 258.3h0M508.3 258.3h0M516.7 258.3h0M525.0 258.3h0M533.3 258.3h0M541.7 258.3h0M550.0 258.3h0M558.3 258.3h0M566.7 258.3h0M575.0 258.3h0M600.0 258.3h0M816.7 258.3h0M825.0 258.3h0M833.3 258.3h0M841.7 258.3h0M866.7 258.3h0M275.0 266.7h0M283.3 266.7h0M291.7 266.7h0M300.0 266.7h0M308.3 266.7h0M316.7 266.7h0M325.0 266.7h0M333.3 266.7h0M341.7 266.7h0M350.0 266.7h0M500.0 266.7h0M508.3 266.7h0M516.7 266.7h0M525.0 266.7h0M533.3 266.7h0M541.7 266.7h0M550.0 266.7h0M558.3 266.7h0M566.7 266.7h0M591.7 266.7h0M600.0 266.7h0M808.3 266.7h0M816.7 266.7h0M825.0 266.7h0M833.3 266.7h0M841.7 266.7h0M850.0 266.7h0M858.3 266.7h0M866.7 266.7h0M275.0 275.0h0M283.3 275.0h0M291.7 275.0h0M300.0 275.0h0M308.3 275.0h0M316.7 275.0h0M325.0 275.0h0M333.3 275.0h0M341.7 275.0h0M350.0 275.0h0M508.3 275.0h0M516.7 275.0h0M525.0 275.0h0M533.3 275.0h0M541.7 275.0h0M550.0 275.0h0M558.3 275.0h0M591.7 275.0h0M600.0 275.0h0M791.7 275.0h0M800.0 275.0h0M808.3 275.0h0M816.7 275.0h0M825.0 275.0h0M833.3 275.0h0M841.7 275.0h0M850.0 275.0h0M858.3 275.0h0M866.7 275.0h0M875.0 275.0h0M925.0 275.0h0M275.0 283.3h0M283.3 283.3h0M291.7 283.3h0M300.0 283.3h0M308.3 283.3h0M316.7 283.3h0M325.0 283.3h0M333.3 283.3h0M508.3 283.3h0M516.7 283.3h0M525.0 283.3h0M533.3 283.3h0M541.7 283.3h0M550.0 283.3h0M558.3 283.3h0M591.7 283.3h0M783.3 283.3h0M791.7 283.3h0M800.0 283.3h0M808.3 283.3h0M816.7 283.3h0M825.0 283.3h0M833.3 283.3h0M841.7 283.3h0M850.0 283.3h0M858.3 283.3h0M866.7 283.3h0M875.0 283.3h0M883.3 283.3h0M275.0 291.7h0M283.3 291.7h0M291.7 291.7h0M300.0 291.7h0M308.3 291.7h0M316.7 291.7h0M325.0 291.7h0M516.7 291.7h0M525.0 291.7h0M533.3 291.7h0M541.7 291.7h0M550.0 291.7h0M783.3 291.7h0M791.7 291.7h0M800.0 291.7h0M808.3 291.7h0M816.7 291.7h0M825.0 291.7h0M833.3 291.7h0M841.7 291.7h0M850.0 291.7h0M858.3 291.7h0M866.7 291.7h0M875.0 291.7h0M883.3 291.7h0M891.7 291.7h0M275.0 300.0h0M283.3 300.0h0M291.7 300.0h0M300.0 300.0h0M308.3 300.0h0M316.7 300.0h0M325.0 300.0h0M516.7 300.0h0M525.0 300.0h0M533.3 300.0h0M541.7 300.0h0M550.0 300.0h0M791.7 300.0h0M800.0 300.0h0M808.3 300.0h0M816.7 300.0h0M825.0 300.0h0M833.3 300.0h0M841.7 300.0h0M850.0 300.0h0M858.3 300.0h0M866.7 300.0h0M875.0 300.0h0M883.3 300.0h0M891.7 300.0h0M275.0 308.3h0M283.3 308.3h0M291.7 308.3h0M300.0 308.3h0M308.3 308.3h0M316.7 308.3h0M525.0 308.3h0M533.3 308.3h0M541.7 308.3h0M791.7 308.3h0M800.0 308.3h0M808.3 308.3h0M841.7 308.3h0M850.0 308.3h0M858.3 308.3h0M866.7 308.3h0M875.0 308.3h0M883.3 308.3h0M266.7 316.7h0M275.0 316.7h0M283.3 316.7h0M291.7 316.7h0M300.0 316.7h0M858.3 316.7h0M866.7 316.7h0M875.0 316.7h0M883.3 316.7h0M950.0 316.7h0M266.7 325.0h0M275.0 325.0h0M283.3 325.0h0M291.7 325.0h0M958.3 325.0h0M266.7 333.3h0M275.0 333.3h0M283.3 333.3h0M875.0 333.3h0M950.0 333.3h0M266.7 341.7h0M275.0 341.7h0M283.3 341.7h0M933.3 341.7h0M941.7 341.7h0M258.3 350.0h0M266.7 350.0h0M275.0 350.0h0M283.3 350.0h0M258.3 358.3h0M266.7 358.3h0M266.7 366.7h0M275.0 366.7h0"></path></svg>
+      <span class="pin" style="left:19.44%;top:28.89%"><i class="fl rd fl-US"></i><b>US</b></span><span class="pin" style="left:46.11%;top:17.78%"><i class="fl rd fl-UK"></i><b>UK</b></span><span class="pin" style="left:83.89%;top:76.3%"><i class="fl rd fl-AU"></i><b>AU</b></span><span class="pin" style="left:18.33%;top:40.74%"><i class="fl rd fl-MX"></i><b>MX</b></span><span class="pin" style="left:17.22%;top:15.56%"><i class="fl rd fl-CA"></i><b>CA</b></span><span class="pin" style="left:78.39%;top:41.26%"><i class="fl rd fl-HK"></i><b>HK</b></span>
     </div>
-
-    <!-- Localization table -->
-    <div class="apbox {{vw.lvl}}" ref="{{lvlRef}}" onMouseEnter="{{lvlIn}}" onMouseLeave="{{lvlOut}}" onFocus="{{lvlIn}}" onBlur="{{lvlOut}}" style="--per: 3.6s; display: flex; flex-direction: column; gap: 16px">
-      <div style="display: flex; align-items: center; gap: 10px"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 256 256" fill="currentColor" style="color: var(--acc)"><path d="{{ic.compass}}"></path></svg><h3 class="disp" style="margin: 0; font-size: clamp(21px,calc(21px + (100vw - 390px) * 0.00864), 28px)">Four levels of localization</h3><a href="/work/localization-automation" class="btn btn-s" data-cur="Open" style="margin-left: auto; min-height: 44px; padding: 0 18px; font-size: 15px">Read the proposal<svg aria-hidden="true" width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><path d="{{ic.arrowRight}}"></path></svg></a></div>
-      <div role="table" aria-label="Localization levels" class="card" style="overflow: hidden">
-        <div role="row" class="ltr" style="display: grid; grid-template-columns: 1.1fr 2fr 1.5fr 1.5fr; gap: 16px; padding: 14px 24px; background: var(--card2); border-bottom: 1px solid var(--line)">
-          <span role="columnheader" class="kick" style="font-size: 12px">Level</span><span role="columnheader" class="kick" style="font-size: 12px">What changes</span><span role="columnheader" class="kick" style="font-size: 12px">Example</span><span role="columnheader" class="kick" style="font-size: 12px">Where it showed up</span>
-        </div>
-        <sc-for list="{{levels}}" as="l" hint-placeholder-count="4">
-          <div role="row" class="ltr seg {{l.segCls}}" style="display: grid; grid-template-columns: 1.1fr 2fr 1.5fr 1.5fr; gap: 16px; padding: 20px 24px; align-items: center; border-bottom: 1px solid var(--line2); background: {{l.bgc}}; transition: background .4s">
-            <div role="cell"><button type="button" onClick="{{l.pick}}" class="chip" style="min-height: 44px; border: 0; background: transparent; color: var(--ink); padding: 0; text-align: left; font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 18px; font-weight: 600"><span style="color: var(--acc)">{{l.n}}</span> {{l.t}}</button></div>
-            <div role="cell" style="font-size: 15px; color: var(--ink2); line-height: 1.5">{{l.d}}</div>
-            <div role="cell" style="display: flex; flex-direction: column; gap: 6px; font-size: 14px"><span><span class="kick" style="font-size: 12px">{{l.aLabel}}</span> {{l.a}}</span><span lang="{{l.bLang}}" style="color: var(--acc); font-weight: 600"><span class="kick" style="font-size: 12px; color: var(--ink3)">{{l.bLabel}}</span> {{l.b}}</span></div>
-            <div role="cell" style="font-size: 14px; color: var(--ink2); line-height: 1.5">{{l.where}}</div>
-            <i></i>
-          </div>
-        </sc-for>
-      </div>
-    </div>
-
-    <!-- Ambassador flow -->
-    <div class="card reveal" style="padding: 32px; display: flex; flex-direction: column; gap: 22px; background: var(--elev)">
-      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 256 256" fill="currentColor" style="color: var(--acc)"><path d="{{ic.medal}}"></path></svg><h3 class="disp" style="margin: 0; font-size: clamp(21px,calc(21px + (100vw - 390px) * 0.00864), 28px)">Design System Ambassador: one system, many markets</h3></div>
-      <div class="flow" style="display: grid; grid-template-columns: 1fr 28px 1fr 28px 1fr 28px 1fr; gap: 8px; align-items: stretch">
-        <div class="nd"><span class="kick" style="font-size: 12px">Before</span><span style="font-size: 15px; color: var(--ink2)">Copy pasted into each screen, one market at a time.</span></div>
-        <div class="cn"><b></b></div>
-        <div class="nd"><span class="kick" style="font-size: 12px">Now</span><span style="font-size: 15px; color: var(--ink2)">Market strings live as variables inside the system.</span></div>
-        <div class="cn"><b></b></div>
-        <div class="nd"><span class="kick" style="font-size: 12px">Effect</span><span style="font-size: 15px; color: var(--ink2)">A new market is a small change, not a rebuild.</span></div>
-        <div class="cn"><b></b></div>
-        <div class="nd hi"><span class="kick" style="font-size: 12px; color: var(--acc)">Target</span><span class="disp" style="font-size: clamp(23px,calc(23px + (100vw - 390px) * 0.00864), 30px); color: var(--acc); line-height: 1.1">80%</span><span style="font-size: 14px; color: var(--ink2)">less designer dependency. A goal for the system, not a result yet.</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CAD / CRAFT -->
-<section id="craft" style="position: relative; background: var(--bg2); border-top: 1px solid var(--line2); border-bottom: 1px solid var(--line2)">
-  <div class="grid-bg" aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none"></div>
-  <div class="wrap" style="position: relative; padding-top: 112px; padding-bottom: 112px; display: flex; flex-direction: column; gap: 48px">
-    <div style="display: flex; flex-direction: column; gap: 16px">
-      <span class="kick">Chapter 07 · Beyond the screen</span>
-      <h2 class="h2 hd" style="max-width: 900px">I also design things you can <span class="em">hold.</span></h2>
-      <p class="lead" style="margin: 0; max-width: 680px">CAD for automotive and aerospace, and 3D printing to bring models onto the bench. The same habit as UI work: make it, test it, fix what is wrong.</p>
-    </div>
-
-    <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: stretch">
-      <div class="card reveal" style="flex: 1 1 min(520px, 100%); min-width: 0; padding: 24px; display: flex; flex-direction: column; gap: 10px; box-shadow: var(--e3)">
-        <svg viewBox="0 0 560 340" role="img" aria-label="Animated blueprint sketch: a wheel with spokes and dimension line, and an airfoil profile" style="width: 100%; height: auto; color: var(--acc)">
-          <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle class="draw" pathLength="600" style="--len: 600" cx="170" cy="160" r="120"></circle>
-            <circle class="draw" pathLength="600" style="--len: 600" cx="170" cy="160" r="88"></circle>
-            <circle class="draw" pathLength="600" style="--len: 600" cx="170" cy="160" r="30"></circle>
-            <line class="draw" pathLength="600" style="--len: 600" x1="170" y1="40" x2="170" y2="280"></line>
-            <line class="draw" pathLength="600" style="--len: 600" x1="50" y1="160" x2="290" y2="160"></line>
-            <line class="draw" pathLength="600" style="--len: 600" x1="85" y1="75" x2="255" y2="245"></line>
-            <line class="draw" pathLength="600" style="--len: 600" x1="255" y1="75" x2="85" y2="245"></line>
-            <path class="draw" pathLength="600" style="--len: 600" d="M330 230 C 370 160, 470 150, 530 205 C 470 228, 390 246, 330 230 Z"></path>
-            <line class="draw" pathLength="600" style="--len: 600" x1="330" y1="262" x2="530" y2="262"></line>
-            <line class="draw" pathLength="600" style="--len: 600" x1="330" y1="254" x2="330" y2="270"></line>
-            <line class="draw" pathLength="600" style="--len: 600" x1="530" y1="254" x2="530" y2="270"></line>
-            <line class="draw" pathLength="600" style="--len: 600" x1="50" y1="304" x2="290" y2="304"></line>
-            <line class="draw" pathLength="600" style="--len: 600" x1="50" y1="296" x2="50" y2="312"></line>
-            <line class="draw" pathLength="600" style="--len: 600" x1="290" y1="296" x2="290" y2="312"></line>
-          </g>
-          <g font-family="Space Grotesk, sans-serif" font-size="13" fill="currentColor" text-anchor="middle"><text x="170" y="326">Ø 240 · illustrative</text><text x="430" y="284">chord · illustrative</text></g>
-        </svg>
-        <span style="font-size: 12px; color: var(--ink3)">Illustrative blueprint sketch · not a client or employer drawing</span>
-      </div>
-      <div style="flex: 1 1 min(380px, 100%); min-width: 0; display: flex; flex-direction: column; gap: 14px">
-        <sc-for list="{{caps}}" as="c" hint-placeholder-count="3">
-          <div class="reveal" style="flex: 1"><div class="tile" style="display: flex; gap: 18px; align-items: flex-start; height: 100%; box-sizing: border-box">
-            <span class="tile-ic" style="flex: none; width: 52px; height: 52px; border-radius: 14px; background: var(--card2); color: var(--acc); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 256 256" fill="currentColor"><path d="{{c.icon}}"></path></svg></span>
-            <div style="display: flex; flex-direction: column; gap: 6px"><h3 class="disp" style="margin: 0; font-size: clamp(21px,calc(21px + (100vw - 390px) * 0.0037), 24px)">{{c.t}}</h3><p style="margin: 0; font-size: 16px; color: var(--ink2)">{{c.d}}</p></div>
-          </div></div>
-        </sc-for>
-      </div>
-    </div>
-
-    <div class="apbox {{vw.cad}}" ref="{{cadRef}}" onMouseEnter="{{cadIn}}" onMouseLeave="{{cadOut}}" onFocus="{{cadIn}}" onBlur="{{cadOut}}" style="--per: 2.8s; display: flex; flex-direction: column; gap: 14px">
-      <span class="kick">From idea to object</span>
-      <div class="flow" style="display: grid; grid-template-columns: 1fr 28px 1fr 28px 1fr 28px 1fr; gap: 8px; align-items: stretch">
-        <sc-for list="{{cadSteps}}" as="s" hint-placeholder-count="4"><div style="display: contents">
-          <div class="nd {{s.cls}} seg {{s.segCls}}" style="transition: background .4s, border-color .4s, box-shadow .4s"><span class="kick" style="font-size: 12px; color: var(--acc)">{{s.n}}</span><span class="disp" style="font-size: clamp(19px,calc(19px + (100vw - 390px) * 0.0037), 22px); line-height: 1.2">{{s.t}}</span><span style="font-size: 14px; color: var(--ink2); line-height: 1.5">{{s.d}}</span><i></i></div>
-          <div class="cn {{s.cnCls}}" style="{{s.cnStyle}}"><b></b></div></div>
-        </sc-for>
-      </div>
-    </div>
-
-    <div style="display: flex; flex-direction: column; gap: 14px">
-      <span class="kick">Gallery · photos coming soon</span>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 16px">
-        <sc-for list="{{slots}}" as="p" hint-placeholder-count="4">
-          <div class="reveal"><div role="img" aria-label="Photo placeholder: {{p.t}}" style="aspect-ratio: 4 / 3; border: 2px dashed var(--line); border-radius: 20px; background: var(--card); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: var(--ink3); text-align: center; padding: 16px">
-            <svg aria-hidden="true" width="34" height="34" viewBox="0 0 256 256" fill="currentColor" style="color: var(--acc)"><path d="{{ic.cube}}"></path></svg>
-            <span style="font-weight: 600; color: var(--ink2); font-size: 15px">{{p.t}}</span><span style="font-size: 13px">Photo to be added</span>
-          </div></div>
-        </sc-for>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BEYOND -->
-<section id="beyond" style="position: relative">
-  <div class="wrap" style="padding-top: 112px; padding-bottom: 112px; display: flex; flex-direction: column; gap: 44px">
-    <div style="display: flex; flex-direction: column; gap: 16px">
-      <span class="kick">Chapter 08 · How I show up</span>
-      <h2 class="h2 hd" style="max-width: 860px">Beyond the screens: the <span class="em">craft around</span> the craft.</h2>
-    </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 18px">
-      <sc-for list="{{beyond}}" as="b" hint-placeholder-count="9">
-        <div class="stag" style="--i: {{b.i}}"><div class="tile" style="display: flex; flex-direction: column; gap: 14px; height: 100%; box-sizing: border-box">
-          <span class="tile-ic" style="width: 48px; height: 48px; border-radius: 14px; background: var(--card2); color: var(--acc); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 256 256" fill="currentColor"><path d="{{b.icon}}"></path></svg></span>
-          <h3 class="disp" style="margin: 0; font-size: clamp(19px,calc(19px + (100vw - 390px) * 0.0037), 22px); line-height: 1.2">{{b.t}}</h3>
-          <p style="margin: 0; font-size: 15px; color: var(--ink2); line-height: 1.55">{{b.d}}</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr)); gap: 14px">
+      <sc-for list="{{mkt}}" as="m" hint-placeholder-count="6">
+        <div class="stag" style="--i: {{m.i}}"><div class="tile" style="display: flex; flex-direction: column; gap: 6px; padding: 20px; height: 100%; box-sizing: border-box">
+          <span class="kick" style="font-size: 12px; display: flex; align-items: center; gap: 8px"><i class="fl fl-{{m.code}}"></i>{{m.code}} · {{m.lang}}</span>
+          <span class="disp" style="font-size: clamp(28px,calc(28px + (100vw - 390px) * 0.0074), 34px); line-height: 1.1; color: var(--acc)">{{m.stat}}</span>
+          <span style="font-size: 14px; color: var(--ink2); line-height: 1.4">{{m.name}} · {{m.label}}</span>
         </div></div>
       </sc-for>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 18px">
+      <a href="/work/manage-credit-limit" class="tile lift" data-cur="Open" style="display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: var(--ink)">
+        <span class="kick" style="font-size: 12px; color: var(--acc)">Flagship case</span>
+        <h3 class="disp" style="margin: 0; font-size: clamp(22px,calc(22px + (100vw - 390px) * 0.0037), 26px); line-height: 1.15">One credit-limit experience, six market realities</h3>
+        <p style="margin: 0; font-size: 16px; color: var(--ink2); line-height: 1.5">The same flow, localized from pure translation to a different journey in Australia.</p>
+        <span style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600; margin-top: auto">Read the case<svg aria-hidden="true" width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><path d="{{ic.upRight}}"></path></svg></span>
+      </a>
+      <a href="/work/localization-automation" class="tile lift" data-cur="Open" style="display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: var(--ink)">
+        <span class="kick" style="font-size: 12px; color: var(--acc)">The system behind it</span>
+        <h3 class="disp" style="margin: 0; font-size: clamp(22px,calc(22px + (100vw - 390px) * 0.0037), 26px); line-height: 1.15">Localize once. Launch everywhere.</h3>
+        <p style="margin: 0; font-size: 16px; color: var(--ink2); line-height: 1.5">Market strings as Figma Variables, linked to Applanga. A new market becomes a small change.</p>
+        <span style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600; margin-top: auto">See the system<svg aria-hidden="true" width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><path d="{{ic.upRight}}"></path></svg></span>
+      </a>
     </div>
   </div>
 </section>
@@ -722,9 +592,12 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
 <section id="ai" style="position: relative; background: var(--bg2); border-top: 1px solid var(--line2); border-bottom: 1px solid var(--line2)">
   <div class="aur" aria-hidden="true" style="position: absolute; left: 0; bottom: 0; width: 50%; height: 60%; background: radial-gradient(closest-side, var(--glow2), transparent); pointer-events: none"></div>
   <div class="wrap" style="position: relative; padding-top: 112px; padding-bottom: 112px; display: flex; flex-direction: column; gap: 48px">
-    <div style="display: flex; flex-direction: column; gap: 16px">
-      <span class="kick">Chapter 09 · Designing with AI, and for it</span>
-      <h2 class="h2 hd" style="max-width: 900px">AI is a tool in my process and a <span class="em">material</span> in my products.</h2>
+    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 32px 56px">
+      <div style="flex: 1 1 min(480px, 100%); min-width: 0; display: flex; flex-direction: column; gap: 18px">
+        <span class="kick">Chapter 05 · Designing with AI, and for it</span>
+        <h2 class="h2 hd" style="max-width: 760px; font-size: clamp(34px,5vw, 72px)">AI is a tool in my process and a <span class="em">material</span> in my products.</h2>
+      </div>
+      <div style="flex: 0 1 300px; width: 100%; max-width: 300px; margin: 0 auto"><svg class="il" viewBox="0 0 260 260" role="img" aria-label="Three orbits around a designer: AI in my process, AI evaluated at work, AI in the product"><circle class="dash" cx="130" cy="130" r="106"></circle><circle cx="130" cy="130" r="66" fill="none" stroke="var(--line)" stroke-width="1.5"></circle><circle class="fs" cx="130" cy="130" r="30"></circle><g transform="translate(112 112) scale(.14)" fill="var(--fillink)"><path d="{{ic.sparkle}}"></path></g><g class="orbit"><g transform="translate(130 24)"><g class="nn"><circle class="fc" r="22" fill="var(--card)"></circle><g transform="translate(-13 -13) scale(.102)" fill="var(--acc)"><path d="{{ic.robot}}"></path></g><text class="tx" y="38" text-anchor="middle">Process</text></g></g><g transform="translate(222 184)"><g class="nn"><circle class="fc" r="22" fill="var(--card)"></circle><g transform="translate(-13 -13) scale(.102)" fill="var(--acc)"><path d="{{ic.shield}}"></path></g><text class="tx" y="38" text-anchor="middle">Evaluate</text></g></g><g transform="translate(38 184)"><g class="nn"><circle class="fc" r="22" fill="var(--card)"></circle><g transform="translate(-13 -13) scale(.102)" fill="var(--acc)"><path d="{{ic.sparkle}}"></path></g><text class="tx" y="38" text-anchor="middle">Product</text></g></g></g></svg></div>
     </div>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 18px">
       <sc-for list="{{aiSteps}}" as="a" hint-placeholder-count="3">
@@ -794,41 +667,109 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
         </article></div>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="card reveal apbox {{vw.ai}}" ref="{{aiRef}}" onMouseEnter="{{aiIn}}" onMouseLeave="{{aiOut}}" onFocus="{{aiIn}}" onBlur="{{aiOut}}" style="--per: 5.2s; padding: 34px; display: flex; flex-direction: column; gap: 28px; box-shadow: var(--e3)">
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 14px">
-        <h3 class="disp" style="margin: 0; font-size: clamp(26px,2.6vw, 36px)">The Canada lesson, applied to an <span class="em">assistant.</span></h3>
-        <div role="tablist" aria-label="Request types" style="display: flex; flex-wrap: wrap; gap: 8px">
-          <sc-for list="{{modes}}" as="m" hint-placeholder-count="3">
-            <button type="button" role="tab" aria-selected="{{m.sel}}" onClick="{{m.pick}}" class="chip seg {{m.segCls}}" style="min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid {{m.bd}}; background: {{m.bgc}}; color: var(--ink); font-size: 14px; font-weight: 600; font-family: 'Space Grotesk', system-ui, sans-serif">{{m.label}}<i></i></button>
-          </sc-for>
-        </div>
+<!-- BEYOND -->
+<section id="beyond" style="position: relative">
+  <div class="wrap" style="padding-top: 112px; padding-bottom: 112px; display: flex; flex-direction: column; gap: 44px">
+    <div style="display: flex; flex-direction: column; gap: 16px">
+      <span class="kick">Chapter 06 · How I work</span>
+      <h2 class="h2 hd" style="max-width: 860px">How I work, and the <span class="em">craft around</span> it.</h2>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 20px">
+      <div style="display: flex; align-items: center; gap: 12px"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 256 256" fill="currentColor" class="spin" style="color: var(--acc)"><path d="{{ic.cycle}}"></path></svg><h3 class="disp" style="margin: 0; font-size: clamp(24px,2.6vw, 34px); line-height: 1.1">Observe. Reflect. Make. <span class="em">Repeat.</span></h3></div>
+      <div class="hw">
+        <div class="stag" style="--i: 0"><div class="tile hwc"><div class="ilb"><svg class="il" viewBox="0 0 240 150" role="img" aria-label="Observe: a magnifier scanning a bar chart"><rect class="fc" x="6" y="8" width="228" height="134" rx="14"></rect><line x1="26" y1="116" x2="214" y2="116" stroke="var(--line)" stroke-width="2" stroke-linecap="round"></line><rect class="fb" x="34" y="78" width="22" height="38" rx="4"></rect><rect class="fb" x="68" y="58" width="22" height="58" rx="4"></rect><rect class="fa" x="102" y="92" width="22" height="24" rx="4"></rect><rect class="fb" x="136" y="50" width="22" height="66" rx="4"></rect><rect class="fb" x="170" y="68" width="22" height="48" rx="4"></rect><g class="scan"><circle class="ac" cx="150" cy="70" r="28"></circle><line class="ac" x1="170" y1="91" x2="190" y2="112"></line></g></svg></div><span class="kick" style="font-size: 12px; color: var(--acc)">01 · Observe</span><p style="margin: 0; font-size: 15px; color: var(--ink2); line-height: 1.5">Funnel data, user tests, competitor teardown, what market teams know.</p></div></div>
+        <div class="stag" style="--i: 1"><div class="tile hwc"><div class="ilb"><svg class="il" viewBox="0 0 240 150" role="img" aria-label="Reflect: sticky notes grouped into themes above a journey line"><rect class="fc" x="6" y="8" width="228" height="134" rx="14"></rect><g transform="rotate(-6 40 38)"><rect class="note" x="22" y="22" width="34" height="28" rx="5"></rect></g><g transform="rotate(5 86 44)"><rect class="note" x="68" y="30" width="34" height="28" rx="5"></rect></g><g transform="rotate(-3 54 62)"><rect class="note" x="38" y="52" width="34" height="28" rx="5"></rect></g><g class="pls"><ellipse class="dash" cx="172" cy="44" rx="52" ry="30"></ellipse></g><g transform="rotate(4 140 38)"><rect class="note" x="124" y="26" width="34" height="28" rx="5"></rect></g><g transform="rotate(-5 186 38)"><rect class="note" x="168" y="24" width="34" height="28" rx="5"></rect></g><g transform="rotate(3 164 60)"><rect class="note" x="148" y="46" width="34" height="28" rx="5"></rect></g><path class="ac" d="M22 118 C54 118 62 98 92 102 S140 128 168 108 S208 92 220 88"></path><circle class="fa pls" cx="128" cy="116" r="6"></circle></svg></div><span class="kick" style="font-size: 12px; color: var(--acc)">02 · Reflect</span><p style="margin: 0; font-size: 15px; color: var(--ink2); line-height: 1.5">Competing hypotheses, journey maps, synthesis with Product, Risk and Business.</p></div></div>
+        <div class="stag" style="--i: 2"><div class="tile hwc"><div class="ilb"><svg class="il" viewBox="0 0 240 150" role="img" aria-label="Make: a sketch becomes a wireframe, then a finished screen"><rect class="fc" x="6" y="8" width="228" height="134" rx="14"></rect><g class="st1"><rect x="16" y="42" width="56" height="66" rx="8" fill="none" stroke="var(--ink3)" stroke-width="2" stroke-dasharray="5 5"></rect><path class="ln" d="M26 56h28M26 70h36M26 84h20"></path></g><path class="ln" d="M76 75h12m-5-5 5 5-5 5"></path><g class="st2"><rect class="note" x="92" y="42" width="56" height="66" rx="8"></rect><rect class="fb" x="100" y="52" width="40" height="22" rx="4"></rect><path class="ln" d="M100 84h40M100 94h26"></path></g><path class="ln" d="M152 75h12m-5-5 5 5-5 5"></path><g class="st3"><rect class="note" x="168" y="42" width="56" height="66" rx="8"></rect><rect class="fb" x="176" y="50" width="40" height="8" rx="3"></rect><rect class="fb" x="176" y="62" width="40" height="18" rx="4"></rect><rect class="fa" x="176" y="88" width="40" height="12" rx="6"></rect></g><g class="bob"><path class="fa" d="M214 22l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"></path></g></svg></div><span class="kick" style="font-size: 12px; color: var(--acc)">03 · Make</span><p style="margin: 0; font-size: 15px; color: var(--ink2); line-height: 1.5">Several directions, AI-assisted MVPs, critiques, then tests in production.</p></div></div>
       </div>
-      <div style="display: flex; flex-wrap: wrap; gap: 36px; align-items: stretch">
-        <div style="flex: 1 1 min(440px, 100%); min-width: 0; display: grid">
-          <sc-for list="{{modes}}" as="m" hint-placeholder-count="3">
-            <div class="sl {{m.cls}}" aria-hidden="{{m.hidden}}" style="display: flex; flex-direction: column; gap: 14px; min-height: 330px">
-              <div style="align-self: flex-end; max-width: 80%; background: var(--btn); color: var(--btnink); border-radius: 20px 20px 4px 20px; padding: 14px 18px; font-size: 17px"><span class="type" style="display: inline-block">{{m.ask}}</span></div>
-              <span class="kick r1" style="font-size: 12px; color: var(--acc)">{{m.state}}</span>
-              <div class="r2" style="max-width: 88%; background: var(--card2); border: 1px solid var(--line); border-radius: 20px 20px 20px 4px; padding: 16px 20px; font-size: 17px; line-height: 1.5">{{m.reply}}</div>
-              <div class="r3" style="display: flex; flex-wrap: wrap; gap: 10px">
-                <span class="pick" style="display: inline-block; min-height: 44px; line-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid var(--acc); font-weight: 600; font-size: 15px">{{m.c1}}</span>
-                <span style="display: inline-block; min-height: 44px; line-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid var(--line); font-size: 15px; color: var(--ink2)">{{m.c2}}</span>
-              </div>
-              <p class="r3" style="margin: auto 0 0; font-size: 15px; color: var(--ink2); border-left: 3px solid var(--fill); padding-left: 14px"><strong style="color: var(--ink)">Rule.</strong> {{m.rule}}</p>
-            </div>
-          </sc-for>
+    </div>
+    <span class="kick" style="margin-bottom: -20px">Beyond the screens</span>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 18px">
+      <sc-for list="{{beyond}}" as="b" hint-placeholder-count="9">
+        <div class="stag" style="--i: {{b.i}}"><div class="tile" style="display: flex; flex-direction: column; gap: 14px; height: 100%; box-sizing: border-box">
+          <span class="tile-ic" style="width: 48px; height: 48px; border-radius: 14px; background: var(--card2); color: var(--acc); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 256 256" fill="currentColor"><path d="{{b.icon}}"></path></svg></span>
+          <h3 class="disp" style="margin: 0; font-size: clamp(19px,calc(19px + (100vw - 390px) * 0.0037), 22px); line-height: 1.2">{{b.t}}</h3>
+          <p style="margin: 0; font-size: 15px; color: var(--ink2); line-height: 1.55">{{b.d}}</p>
+        </div></div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- CAD / CRAFT -->
+<section id="craft" style="position: relative; background: var(--bg2); border-top: 1px solid var(--line2); border-bottom: 1px solid var(--line2)">
+  <div class="wrap" style="position: relative; padding-top: 112px; padding-bottom: 112px; display: flex; flex-direction: column; gap: 48px">
+    <div style="display: flex; flex-direction: column; gap: 16px">
+      <span class="kick">Chapter 07 · Mechanical Design Engineer</span>
+      <h2 class="h2 hd" style="max-width: 900px">The other half of the craft: things you can <span class="em">hold.</span></h2>
+      <p class="lead" style="margin: 0; max-width: 680px">CAD for automotive and aerospace, and 3D printing to bring models onto the bench. The same habit as UI work: make it, test it, fix what is wrong.</p>
+    </div>
+
+    <div class="sheet reveal">
+      <i class="crn ca" aria-hidden="true"></i><i class="crn cb" aria-hidden="true"></i><i class="crn cc" aria-hidden="true"></i><i class="crn cd" aria-hidden="true"></i>
+      <div class="sheet-in">
+        <div class="sheet-dr">
+          <svg viewBox="0 0 560 340" role="img" aria-label="Animated blueprint sketch: a wheel with spokes and dimension line, and an airfoil profile" style="width: 100%; height: auto; color: var(--acc)">
+            <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle class="draw" pathLength="600" style="--len: 600" cx="170" cy="160" r="120"></circle>
+              <circle class="draw" pathLength="600" style="--len: 600" cx="170" cy="160" r="88"></circle>
+              <circle class="draw" pathLength="600" style="--len: 600" cx="170" cy="160" r="30"></circle>
+              <line class="draw" pathLength="600" style="--len: 600" x1="170" y1="40" x2="170" y2="280"></line>
+              <line class="draw" pathLength="600" style="--len: 600" x1="50" y1="160" x2="290" y2="160"></line>
+              <line class="draw" pathLength="600" style="--len: 600" x1="85" y1="75" x2="255" y2="245"></line>
+              <line class="draw" pathLength="600" style="--len: 600" x1="255" y1="75" x2="85" y2="245"></line>
+              <path class="draw" pathLength="600" style="--len: 600" d="M330 230 C 370 160, 470 150, 530 205 C 470 228, 390 246, 330 230 Z"></path>
+              <line class="draw" pathLength="600" style="--len: 600" x1="330" y1="262" x2="530" y2="262"></line>
+              <line class="draw" pathLength="600" style="--len: 600" x1="330" y1="254" x2="330" y2="270"></line>
+              <line class="draw" pathLength="600" style="--len: 600" x1="530" y1="254" x2="530" y2="270"></line>
+              <line class="draw" pathLength="600" style="--len: 600" x1="50" y1="304" x2="290" y2="304"></line>
+              <line class="draw" pathLength="600" style="--len: 600" x1="50" y1="296" x2="50" y2="312"></line>
+              <line class="draw" pathLength="600" style="--len: 600" x1="290" y1="296" x2="290" y2="312"></line>
+            </g>
+            <g font-family="Space Grotesk, sans-serif" font-size="13" fill="currentColor" text-anchor="middle"><text x="170" y="326">Ø 240 · illustrative</text><text x="430" y="284">chord · illustrative</text></g>
+          </svg>
+          <span style="display: block; margin-top: 8px; font-size: 12px; color: var(--ink3)">Illustrative blueprint sketch · not a client or employer drawing</span>
         </div>
-        <div style="flex: 0 1 400px; display: flex; flex-direction: column; align-items: stretch; gap: 0; margin: 0 auto; width: 100%; max-width: 400px">
-          <span class="kick" style="margin-bottom: 10px">User flow</span>
-          <div class="nd">Request</div><div class="cv"></div>
-          <div class="nd">Interpret intent</div><div class="cv"></div>
-          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px">
-            <sc-for list="{{modes}}" as="m" hint-placeholder-count="3"><div class="nd {{m.nodeCls}}" style="text-align: center; font-size: 13px; font-weight: 600; transition: background .4s, border-color .4s, box-shadow .4s">{{m.short}}</div></sc-for>
-          </div><div class="cv"></div>
-          <div class="nd">Show consequence · ask for a clear yes</div><div class="cv"></div>
-          <div class="nd hi" style="color: var(--acc); font-weight: 600">Act, with an easy undo</div>
-        </div>
+        <dl class="tb">
+          <div><dt>Discipline</dt><dd>Mechanical design</dd></div>
+          <div><dt>Domains</dt><dd>Automotive · Aerospace</dd></div>
+          <div><dt>Method</dt><dd>Parametric CAD · 3D printing</dd></div>
+          <div><dt>Habit</dt><dd>Make it, test it, fix it</dd></div>
+          <div><dt>Sheet</dt><dd>01 of 02 · plates below</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 18px">
+      <sc-for list="{{caps}}" as="c" hint-placeholder-count="3">
+        <div class="reveal"><div class="tile" style="display: flex; gap: 18px; align-items: flex-start; height: 100%; box-sizing: border-box">
+          <span class="tile-ic" style="flex: none; width: 52px; height: 52px; border-radius: 14px; background: var(--card2); color: var(--acc); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 256 256" fill="currentColor"><path d="{{c.icon}}"></path></svg></span>
+          <div style="display: flex; flex-direction: column; gap: 6px"><h3 class="disp" style="margin: 0; font-size: clamp(21px,calc(21px + (100vw - 390px) * 0.0037), 24px)">{{c.t}}</h3><p style="margin: 0; font-size: 16px; color: var(--ink2)">{{c.d}}</p></div>
+        </div></div>
+      </sc-for>
+    </div>
+
+    <div class="apbox {{vw.cad}}" ref="{{cadRef}}" onMouseEnter="{{cadIn}}" onMouseLeave="{{cadOut}}" onFocus="{{cadIn}}" onBlur="{{cadOut}}" style="--per: 2.8s; display: flex; flex-direction: column; gap: 14px">
+      <span class="kick">From idea to object</span>
+      <div class="flow" style="display: grid; grid-template-columns: 1fr 28px 1fr 28px 1fr 28px 1fr; gap: 8px; align-items: stretch">
+        <sc-for list="{{cadSteps}}" as="s" hint-placeholder-count="4"><div style="display: contents">
+          <div class="nd {{s.cls}} seg {{s.segCls}}" style="transition: background .4s, border-color .4s, box-shadow .4s"><span class="kick" style="font-size: 12px; color: var(--acc)">{{s.n}}</span><span class="disp" style="font-size: clamp(19px,calc(19px + (100vw - 390px) * 0.0037), 22px); line-height: 1.2">{{s.t}}</span><span style="font-size: 14px; color: var(--ink2); line-height: 1.5">{{s.d}}</span><i></i></div>
+          <div class="cn {{s.cnCls}}" style="{{s.cnStyle}}"><b></b></div></div>
+        </sc-for>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 14px">
+      <span class="kick">Plates · photos to be added</span>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 16px">
+        <sc-for list="{{slots}}" as="p" hint-placeholder-count="4">
+          <div class="reveal"><div class="plate" role="img" aria-label="Photo placeholder: {{p.t}}">
+            <svg aria-hidden="true" width="40" height="40" viewBox="0 0 256 256" fill="currentColor" style="color: var(--acc)"><path d="{{ic.cube}}"></path></svg>
+            <span class="plt"><span class="kick" style="font-size: 12px">Plate {{p.n}}</span><span style="font-weight: 600; font-size: 15px; color: var(--ink)">{{p.t}}</span></span>
+          </div></div>
+        </sc-for>
       </div>
     </div>
   </div>
@@ -838,7 +779,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
 <section id="next" style="position: relative">
   <div class="wrap" style="padding-top: 112px; padding-bottom: 112px; display: flex; flex-direction: column; gap: 40px">
     <div style="display: flex; flex-direction: column; gap: 16px">
-      <span class="kick">Chapter 10 · What is next</span>
+      <span class="kick">Chapter 08 · What is next</span>
       <h2 class="h2 hd" style="max-width: 860px">Where the work <span class="em">goes from here.</span></h2>
     </div>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 18px">
@@ -869,7 +810,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
     </div>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 32px; border-top: 1px solid var(--line); padding-top: 36px">
       <div style="display: flex; flex-direction: column; gap: 4px"><span class="kick" style="margin-bottom: 8px">Navigate</span>
-        <a href="#work" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">Work</a><a href="#impact" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">Impact</a><a href="#decisions" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">Decisions</a><a href="#global" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">Global</a><a href="#craft" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">CAD and 3D printing</a></div>
+        <a href="#work" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">Work</a><a href="#impact" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">Impact</a><a href="#global" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">Global</a><a href="#ai" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">AI products</a><a href="#craft" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">CAD and 3D printing</a></div>
       <div style="display: flex; flex-direction: column; gap: 4px"><span class="kick" style="margin-bottom: 8px">Elsewhere</span>
         <a href="https://www.behance.net/rakheshkarnati" target="_blank" rel="noopener" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">Behance</a><a href="https://rakheshkarnati.framer.website" target="_blank" rel="noopener" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">Framer portfolio</a><a href="mailto:rakhesh.design@gmail.com" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">Email</a></div>
       <div style="display: flex; flex-direction: column; gap: 8px"><span class="kick" style="margin-bottom: 8px">Availability</span>
@@ -878,7 +819,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
       <div style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start"><span class="kick">Back to top</span>
         <a href="#top" class="ib" aria-label="Back to top" style="text-decoration: none"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 256 256" fill="currentColor"><path d="{{ic.arrowUp}}"></path></svg></a></div>
     </div>
-    <p style="margin: 0; font-size: 13px; color: var(--ink3); max-width: 760px">Amex screens are illustrative designs because the real ones are confidential. Confidential details are withheld. Targets are labelled as targets. Concept work is labelled as concept. © 2026 Rakhesh Karnati.</p>
+    <p style="margin: 0; font-size: 13px; color: var(--ink3); max-width: 760px">Confidential details are withheld. Targets are labelled as targets. Concept work is labelled as concept. © 2026 Rakhesh Karnati.</p>
   </div>
 </footer>
 
@@ -888,9 +829,9 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
 class Component extends DCLogic {
   constructor(props) {
     super(props);
-    this.state = { theme: 'light', hero: 0, show: 0, dec: 0, mk: 0, lvl: 0, cad: 0, ai: 0, paused: false, clock: '--:--', vis: {}, curLab: '', curHov: false };
+    this.state = { theme: 'light', hero: 0, show: 0, dec: 0, mk: 0, lvl: 0, cad: 0, paused: false, clock: '--:--', vis: {}, curLab: '', curHov: false };
     this.ap = {};
-    var cfg = { hero: [3, 60], show: [8, 70], dec: [5, 50], mk: [6, 28], lvl: [4, 36], cad: [4, 28], ai: [3, 52] };
+    var cfg = { hero: [1, 60], show: [8, 70], dec: [5, 50], mk: [6, 28], lvl: [4, 36], cad: [4, 28] };
     for (var k in cfg) { this.ap[k] = { n: cfg[k][0], per: cfg[k][1], e: 0, hov: false, el: null, vis: false }; }
     this.cel = []; this.cval = []; this.cdone = []; this.frame = 0;
     this.mx = -200; this.my = -200; this.dx = -200; this.dy = -200; this.rx = -200; this.ry = -200;
@@ -899,6 +840,7 @@ class Component extends DCLogic {
     this.autoTick = this.autoTick.bind(this);
   }
   componentDidMount() {
+    try { document.addEventListener('click', function (e) { var d = document.querySelector('details.mnav[open]'); if (d && !d.contains(e.target)) d.removeAttribute('open'); }); document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { var d = document.querySelector('details.mnav[open]'); if (d) d.removeAttribute('open'); } }); } catch (x) {}
     var self = this;
     try {
       var saved = localStorage.getItem('rk-theme');
@@ -982,16 +924,14 @@ class Component extends DCLogic {
     var segOf = function (k, i) { return i === s[k] ? 'on' : (i < s[k] ? 'done' : ''); };
 
 var range = [
-      { i: 0, cls: '', badge: 'Started 2020', badgeCls: 'yr', icp: ic.mega, t: 'Advertising & marketing', org: 'Strategic Innovative Ads', aud: 'Client work', yrs: '2020 – 2021', lineCls: '' },
-      { i: 1, cls: '', badge: '2021', badgeCls: 'yr', icp: ic.leaf, t: 'Herbal & consumer e-commerce', org: 'Bommu Herbals', aud: 'Consumer · B2C', yrs: '2021 – 2022', lineCls: '' },
-      { i: 2, cls: '', badge: '2022', badgeCls: 'yr', icp: ic.heart, t: 'HealthTech', org: 'Saveo HealthTech', aud: 'B2B + B2C', yrs: '2022 – 2024', lineCls: 'go' },
-      { i: 3, cls: 'now', badge: 'Now', badgeCls: 'nowb', icp: ic.bank, t: 'Fintech', org: 'American Express', aud: 'Consumer · B2C', yrs: '2024 – now', lineCls: '' }
+      { i: 0, cls: 'now', badge: 'Now · since 2024', badgeCls: 'nowb', icp: ic.bank, t: 'Fintech', org: 'American Express', aud: 'Consumer · B2C', yrs: '2024 – now', lineCls: '' },
+      { i: 1, cls: '', badge: '2022 – 2024', badgeCls: 'yr', icp: ic.heart, t: 'HealthTech', org: 'Saveo HealthTech', aud: 'B2B + B2C', yrs: '2022 – 2024', lineCls: '' },
+      { i: 2, cls: '', badge: '2021 – 2022', badgeCls: 'yr', icp: ic.leaf, t: 'Herbal & consumer e-commerce', org: 'Bommu Herbals', aud: 'Consumer · B2C', yrs: '2021 – 2022', lineCls: '' },
+      { i: 3, cls: '', badge: '2020 – 2021', badgeCls: 'yr', icp: ic.mega, t: 'Advertising & marketing', org: 'Strategic Innovative Ads', aud: 'Client work', yrs: '2020 – 2021', lineCls: '' }
     ];
     // ---- Hero briefs
     var SC = [
-      { label: 'Canada · Credit limit', ask: 'Bump my limit by 5k.', reads: 'Set the limit to $5,000.', really: 'Raise it by $5,000, to $15,000.', move: 'A calculated message shows current, change and new limit. Validated in Rapid Lab.', stat: 'Validated', statLabel: 'users asked for it on increases too' },
-      { label: 'US · Credit limit', ask: 'Drop the landing page. It’s friction.', reads: 'Drop-off means friction.', really: 'People were learning, not stuck.', move: 'Test it. 50% split over 45–60 days.', stat: '−6%', statLabel: 'completion if the page was removed' },
-      { label: 'Fraud · Verification', ask: 'Confirm your recent transactions.', reads: 'A simple yes or no.', really: 'A scared person skimming for “me or fraud”.', move: 'Calm, plain wording. Narrow to 2–3 directions and test with real users.', stat: 'Tested', statLabel: 'direction chosen with users' }
+      { label: 'Canada · Credit limit', ask: 'Bump my limit by 5k.', reads: 'Set the limit to $5,000.', really: 'Raise it by $5,000, to $15,000.', move: 'A calculated message shows current, change and new limit. Validated in Rapid Lab.', stat: 'Validated', statLabel: 'users asked for it on increases too' }
     ];
     var scns = SC.map(function (x, i) {
       var on = i === s.hero;
@@ -1031,14 +971,14 @@ var range = [
     // ---- Work showreel
     var fr = 'https://rakheshkarnati.framer.website/projects/';
     var CS = [
-      { short: 'Manage Credit Limit', href: '/work/manage-credit-limit', local: true, meta: 'Lead Designer · Mobile · 6 markets', title: 'Manage Credit Limit', ask: 'Remove the landing page. It looks like friction.', real: 'The page was teaching people. A 50% production test showed removing it cost ~6% completion and added ~5% more support calls.', metric: '+44%', metricLabel: 'completion · 2× better than web · 85% in the UK', scr: { head: 'Manage Credit Limit', big: '$10,000', rows: [{ a: 'How it works', b: '›' }, { a: 'Key account details', b: '›' }, { a: 'Request history', b: '›' }], cta: 'Request an increase' } },
-      { short: 'Digital Charge Verification', href: '/work/digital-charge-verification', local: true, meta: 'Fraud · Mobile', title: 'Digital Charge Verification', ask: 'Get Card Members to confirm their recent transactions.', real: 'A scared person skims for “me or fraud”. Calm wording mattered as much as the screens.', metric: '4 → 3', metricLabel: 'alert entry points to three outcomes', scr: { head: 'Recent transactions', big: 'Was this you?', rows: [{ a: 'Coffee shop', b: 'Me' }, { a: 'Online store', b: 'Not me' }, { a: 'Transfer', b: 'Not sure' }], cta: 'Review 3 charges' } },
-      { short: 'Financial Relief', href: '/work/financial-relief-program', local: true, meta: 'Relief · Web', title: 'Financial Relief Program', ask: 'Redesign the whole enrollment journey, on a budget for part of it.', real: 'Spend where the funnel bleeds. The biggest win was deleting a screen nobody needed.', metric: '+13%', metricLabel: 'enrollment conversion · plans page +14.9%', scr: { head: 'Choose your plan', big: 'Two plans, side by side', rows: [{ a: 'Plan A', b: 'Lower payment' }, { a: 'Plan B', b: 'Shorter term' }], cta: 'Enroll' } },
-      { short: 'Canada Experience Gap', href: '/work/canada-experience-gap', local: true, meta: 'Canada · Mobile', title: 'Canada Experience Gap', ask: 'Fix the copy so people stop lowering their limit by mistake.', real: 'A mental-model clash, not a copy problem. A calculated message does the math for people. In Rapid Lab it ended the mental math and the dilemma.', metric: 'Validated', metricLabel: 'in Rapid Lab · users asked for the increase version too', scr: { head: 'Confirm your new limit', big: '$5,000', rows: [{ a: 'Current limit', b: '$10,000' }, { a: 'Decrease', b: '−$5,000' }, { a: 'New limit', b: '$5,000' }], hasChip: true, chip: 'Calculated for you', cta: 'Yes, lower my limit' } },
-      { short: 'Financial Verification', href: '/work/financial-verification', local: true, meta: 'Underwriting · Mobile · US + intl', title: 'Financial Verification', ask: 'Customers must upload bank statements before a limit increase.', real: 'People needed a faster way to prove income. Connect to Bank became the recommended path. Upload stays as the fallback.', metric: '~15 min', metricLabel: 'to use a higher limit, for eligible instant approvals', scr: { head: 'Verify your income', big: 'Connect to Bank', rows: [{ a: 'Recommended', b: 'Fastest' }, { a: 'Upload statements', b: 'Fallback' }], cta: 'Connect' } },
-      { short: 'Plan It® Promo Pricing', href: '/work/plan-it-promo-pricing', local: true, meta: 'Lending · Web + Mobile · 5 markets', title: 'Plan It® Promo Pricing', ask: 'Design promotional pricing for more international markets.', real: 'It needed a system, not more screens. Localization variables turned each new market into a small change.', metric: '4 markets', metricLabel: 'plus Mexico mobile and the payment path', scr: { head: 'Plan It®', big: 'Market terms', rows: [{ a: 'Currency', b: 'Variable' }, { a: 'Promo copy', b: 'Variable' }, { a: 'Legal notes', b: 'Variable' }], cta: 'Choose a plan' } },
-      { short: 'Payments, Mexico', href: '/work/payments-mexico', local: true, meta: 'Payments · Mobile · Mexico', title: 'International Payments, Mexico', ask: 'Move an outdated payment flow to the modern pattern.', real: 'Compliance needed disclaimers at the right moment, so they now change with each selection.', metric: 'Dynamic', metricLabel: 'disclaimers that follow each selection', scr: { head: 'Pago internacional', big: 'Total a pagar', rows: [{ a: 'Tipo de cambio', b: '—' }, { a: 'Comisión', b: '—' }, { a: 'Aviso legal', b: 'Visible' }], cta: 'Continuar' } },
-      { short: 'Localization Automation', href: '/work/localization-automation', local: true, meta: 'Proposal · EDR vertical · Design ops', title: 'Localization Automation', ask: 'Enable more international markets without more copy and paste.', real: 'Strings became Figma Variables, connected to Applanga. Approved market copy reaches the designs in one click.', metric: '~80%', metricLabel: 'less copy-paste grunt work · my estimate', scr: { head: 'Localization', big: '1 click', rows: [{ a: 'Figma Variables', b: 'Linked' }, { a: 'Applanga strings', b: 'Approved' }, { a: 'Figma designs', b: 'Synced' }], cta: 'Sync approved copy' } }
+      { short: 'Manage Credit Limit', call: 'Keep the landing page, backed by a production test.', href: '/work/manage-credit-limit', local: true, meta: 'Lead Designer · Mobile · 6 markets', title: 'Manage Credit Limit', ask: 'Remove the landing page. It looks like friction.', real: 'The page was teaching people. A 50% production test: removing it cost ~6% completion and added ~5% support calls.', metric: '+44%', metricLabel: 'completion · 2× better than web · 85% in the UK', scr: { head: 'Manage Credit Limit', big: '$10,000', rows: [{ a: 'How it works', b: '›' }, { a: 'Key account details', b: '›' }, { a: 'Request history', b: '›' }], cta: 'Request an increase' } },
+      { short: 'Digital Charge Verification', call: 'Soft tone, simple choices, careful words.', href: '/work/digital-charge-verification', local: true, meta: 'Fraud · Mobile', title: 'Digital Charge Verification', ask: 'Get Card Members to confirm their recent transactions.', real: 'A scared person skims for “me or fraud”. Calm wording mattered as much as the screens.', metric: '4 → 3', metricLabel: 'alert entry points to three outcomes', scr: { head: 'Recent transactions', big: 'Was this you?', rows: [{ a: 'Coffee shop', b: 'Me' }, { a: 'Online store', b: 'Not me' }, { a: 'Transfer', b: 'Not sure' }], cta: 'Review 3 charges' } },
+      { short: 'Financial Relief', call: 'Target the worst friction, even if that means removing a screen.', href: '/work/financial-relief-program', local: true, meta: 'Relief · Web', title: 'Financial Relief Program', ask: 'Redesign the whole enrollment journey, on a budget for part of it.', real: 'Spend where the funnel bleeds. The biggest win was deleting a screen nobody needed.', metric: '+13%', metricLabel: 'enrollment conversion · plans page +14.9%', scr: { head: 'Choose your plan', big: 'Two plans, side by side', rows: [{ a: 'Plan A', b: 'Lower payment' }, { a: 'Plan B', b: 'Shorter term' }], cta: 'Enroll' } },
+      { short: 'Canada Experience Gap', call: 'Show the math. Do not ask people to do it.', href: '/work/canada-experience-gap', local: true, meta: 'Canada · Mobile', title: 'Canada Experience Gap', ask: 'Fix the copy so people stop lowering their limit by mistake.', real: 'A mental-model clash, not a copy problem. In Rapid Lab, a calculated message ended the mental math.', metric: 'Validated', metricLabel: 'in Rapid Lab · users asked for the increase version too', scr: { head: 'Confirm your new limit', big: '$5,000', rows: [{ a: 'Current limit', b: '$10,000' }, { a: 'Decrease', b: '−$5,000' }, { a: 'New limit', b: '$5,000' }], hasChip: true, chip: 'Calculated for you', cta: 'Yes, lower my limit' } },
+      { short: 'Financial Verification', call: 'Recommend Connect to Bank. Keep upload as the fallback.', href: '/work/financial-verification', local: true, meta: 'Underwriting · Mobile · US + intl', title: 'Financial Verification', ask: 'Customers must upload bank statements before a limit increase.', real: 'People needed a faster way to prove income. Connect to Bank leads; upload stays as the fallback.', metric: '~15 min', metricLabel: 'to use a higher limit, for eligible instant approvals', scr: { head: 'Verify your income', big: 'Connect to Bank', rows: [{ a: 'Recommended', b: 'Fastest' }, { a: 'Upload statements', b: 'Fallback' }], cta: 'Connect' } },
+      { short: 'Plan It® Promo Pricing', call: 'Build a system: market strings as variables.', href: '/work/plan-it-promo-pricing', local: true, meta: 'Lending · Web + Mobile · 5 markets', title: 'Plan It® Promo Pricing', ask: 'Design promotional pricing for more international markets.', real: 'It needed a system, not more screens. Localization variables turned each new market into a small change.', metric: '4 markets', metricLabel: 'plus Mexico mobile and the payment path', scr: { head: 'Plan It®', big: 'Market terms', rows: [{ a: 'Currency', b: 'Variable' }, { a: 'Promo copy', b: 'Variable' }, { a: 'Legal notes', b: 'Variable' }], cta: 'Choose a plan' } },
+      { short: 'Payments, Mexico', call: 'Let the disclaimers change with each selection.', href: '/work/payments-mexico', local: true, meta: 'Payments · Mobile · Mexico', title: 'International Payments, Mexico', ask: 'Move an outdated payment flow to the modern pattern.', real: 'Compliance needed disclaimers at the right moment, so they now change with each selection.', metric: 'Dynamic', metricLabel: 'disclaimers that follow each selection', scr: { head: 'Pago internacional', big: 'Total a pagar', rows: [{ a: 'Tipo de cambio', b: '—' }, { a: 'Comisión', b: '—' }, { a: 'Aviso legal', b: 'Visible' }], cta: 'Continuar' } },
+      { short: 'Localization Automation', call: 'Make market strings Figma Variables, linked to Applanga.', href: '/work/localization-automation', local: true, meta: 'Proposal · EDR vertical · Design ops', title: 'Localization Automation', ask: 'Enable more international markets without more copy and paste.', real: 'Strings became Figma Variables linked to Applanga. Approved copy reaches the designs in one click.', metric: '~80%', metricLabel: 'less copy-paste grunt work · my estimate', scr: { head: 'Localization', big: '1 click', rows: [{ a: 'Figma Variables', b: 'Linked' }, { a: 'Applanga strings', b: 'Approved' }, { a: 'Figma designs', b: 'Synced' }], cta: 'Sync approved copy' } }
     ];
     var cases = CS.map(function (c, i) {
       var on = i === s.show;
@@ -1073,6 +1013,14 @@ var range = [
       { code: 'CA', name: 'Canada', lang: 'fr-CA', langLabel: 'FR', title: 'Gérer votre limite de crédit', current: 'Limite de crédit actuelle', amount: '10 000 $', row1: 'Augmenter la limite', row2: 'Réduire la limite', row3: 'Transférer le crédit disponible', cta: 'Continuer', stat: 'EN/FR', statLabel: '4 journeys, VQA in both', flex: 'Bilingual copy and four line-management paths.' },
       { code: 'HK', name: 'Hong Kong', lang: 'zh-Hant-HK', langLabel: '中文', title: '管理信用額度', current: '現有信用額度', amount: 'HK$80,000', row1: '運作方式', row2: '主要帳戶資料', row3: '申請紀錄', cta: '申請提高額度', stat: '67%', statLabel: 'completion', flex: 'English and Chinese without breaking the pattern.' }
     ];
+    var mkt = [
+      { i: 0, code: 'UK', lang: 'EN', name: 'United Kingdom', stat: '85%', label: 'completion' },
+      { i: 1, code: 'MX', lang: 'ES', name: 'México', stat: '75%', label: 'completion' },
+      { i: 2, code: 'HK', lang: '中文', name: 'Hong Kong', stat: '67%', label: 'completion' },
+      { i: 3, code: 'US', lang: 'EN', name: 'United States', stat: '63%', label: 'completion' },
+      { i: 4, code: 'CA', lang: 'EN/FR', name: 'Canada', stat: '4', label: 'journeys, VQA in both' },
+      { i: 5, code: 'AU', lang: 'EN', name: 'Australia', stat: '1 ask', label: 'per screen' }
+    ];
     var markets = M.map(function (m, i) {
       var on = i === s.mk;
       return Object.assign({}, m, { cls: on ? 'on' : '', hidden: !on, sel: on, segCls: segOf('mk', i), bd: on ? 'var(--acc)' : 'var(--line)', bgc: on ? 'var(--elev)' : 'var(--card)', pick: pickFn('mk', i) });
@@ -1104,40 +1052,31 @@ var range = [
       var on = i === s.cad;
       return Object.assign({}, c, { cls: on ? 'hi' : '', segCls: on ? 'on' : '', cnCls: '', cnStyle: i === 3 ? 'display: none' : '' });
     });
-    var slots = [{ t: 'Automotive CAD render' }, { t: 'Aerospace CAD render' }, { t: '3D print on the bench' }, { t: 'Prototype detail' }];
+    var slots = [{ n: '01', t: 'Automotive CAD render' }, { n: '02', t: 'Aerospace CAD render' }, { n: '03', t: '3D print on the bench' }, { n: '04', t: 'Prototype detail' }];
 
     // ---- Beyond
     var beyond = [
-      { icon: ic.layers, t: 'DLS v7 upliftments', d: 'Moved Canada decrease, Mexico payments and bank verification from legacy patterns to the latest system.' },
-      { icon: ic.bug, t: 'Bug bashes', d: 'Ran DLS and NDL bug bashes so system quality ships as designed.' },
-      { icon: ic.crit, t: 'Design critiques', d: 'Took explorations through crits for Financial Relief, Australia and fraud verification, narrowing many options to two or three.' },
-      { icon: ic.workshop, t: 'Workshops', d: 'Financial Relief workshops on budget, delivery and success metrics. Fraud verification synthesis with Product, Business and Risk.' },
-      { icon: ic.idea, t: 'Ideathons and growth', d: 'Took part in the Lending Ideathon and a Growth Hack, testing bets beyond the roadmap.' },
-      { icon: ic.devices, t: 'Adaptive layouts', d: 'Breakpoint-proof comparison layouts for web, plus ongoing exploration of foldable-screen and motion patterns.' },
-      { icon: ic.a11y, t: 'Accessibility', d: 'Journeys that pass accessibility checks while still following global patterns, such as Australia’s long verification flow.' },
-      { icon: ic.mentor, t: 'Mentoring and contributions', d: 'Coached designers on Auto Layout, Variables and conditionals. Proposed components, a domain library and analytics-tagging fixes.' },
-      { icon: ic.medal, t: 'Design System Ambassador', d: 'The link between product designers and the system team: libraries, patterns, fixes, interaction standards.' }
+      { icon: ic.layers, t: 'DLS v7 upliftments', d: 'Moved Canada, Mexico payments and bank verification onto the latest design system.' },
+      { icon: ic.bug, t: 'Bug bashes', d: 'Ran DLS and NDL bug bashes so quality ships as designed.' },
+      { icon: ic.crit, t: 'Design critiques', d: 'Took Financial Relief, Australia and fraud explorations through crits, from many options to two or three.' },
+      { icon: ic.workshop, t: 'Workshops', d: 'Financial Relief and fraud-verification workshops with Product, Business and Risk.' },
+      { icon: ic.idea, t: 'Ideathons and growth', d: 'Lending Ideathon and a Growth Hack, testing bets beyond the roadmap.' },
+      { icon: ic.devices, t: 'Adaptive layouts', d: 'Breakpoint-proof comparison layouts; exploring foldable screens and motion.' },
+      { icon: ic.a11y, t: 'Accessibility', d: 'Journeys that pass accessibility checks and still follow global patterns.' },
+      { icon: ic.mentor, t: 'Mentoring and contributions', d: 'Coached designers on Auto Layout, Variables and conditionals; proposed components and a domain library.' },
+      { icon: ic.medal, t: 'Design System Ambassador', d: 'The link between product designers and the system team.' }
     ].map(function (b, i) { return Object.assign({}, b, { i: i % 3 }); });
 
     // ---- AI
     var aiSteps = [
-      { icon: ic.robot, tag: 'In my process', t: 'Exploring with AI', d: 'Used Figma Make and Replit to generate MVP directions for fraud verification, then took the strongest into critique and user research.' },
-      { icon: ic.shield, tag: 'At Amex', t: 'Stress-testing AI tools', d: 'Selected to evaluate AI-assisted design workflows: where they speed us up, where they break, and how to use them responsibly.' },
-      { icon: ic.sparkle, tag: 'In product', t: 'Designing AI experiences', d: 'Designed the Capsi AI Bot at Saveo in 2022 itself, for better engagement with pharma retailers and customers. Now exploring agentic interfaces.' }
+      { icon: ic.robot, tag: 'In my process', t: 'Exploring with AI', d: 'Figma Make and Replit for fraud-verification MVP directions, then critique and user research.' },
+      { icon: ic.shield, tag: 'At Amex', t: 'Stress-testing AI tools', d: 'Evaluating AI-assisted design workflows: where they speed us up, and where they break.' },
+      { icon: ic.sparkle, tag: 'In product', t: 'Designing AI experiences', d: 'Capsi AI Bot at Saveo in 2022. Now exploring agentic interfaces.' }
     ];
-    var MD = [
-      { label: 'Clear request', short: 'Clear', ask: 'Raise my credit limit to $15,000.', state: 'UNDERSTOOD · STILL CONFIRMS', reply: 'I’ll request a new limit of $15,000. That’s $5,000 more than today.', c1: 'Review and send', c2: 'Change amount', rule: 'A limit change has consequences. Even a clear request gets a confirmation.' },
-      { label: 'Ambiguous', short: 'Ambiguous', ask: 'Bump my limit by 5k.', state: 'TWO POSSIBLE MEANINGS', reply: 'Did you mean raise it to $15,000, or set it to $5,000?', c1: 'Raise to $15,000', c2: 'Set to $5,000', rule: 'When unsure, ask. Never guess with someone’s money.' },
-      { label: 'Costly', short: 'Costly', ask: 'Set my limit to 5,000.', state: 'HIGH IMPACT · NEEDS A CLEAR YES', reply: 'That lowers your limit by $5,000, from $10,000 to $5,000. Is that what you want?', c1: 'Yes, lower it', c2: 'No, I meant increase', rule: 'Spell out the consequence, offer the likely alternative, make undoing easy.' }
-    ];
-    var modes = MD.map(function (m, i) {
-      var on = i === s.ai;
-      return Object.assign({}, m, { cls: on ? 'on' : '', hidden: !on, sel: on, segCls: segOf('ai', i), bd: on ? 'var(--acc)' : 'var(--line)', bgc: on ? 'var(--elev)' : 'var(--card2)', nodeCls: on ? 'hi' : '', pick: pickFn('ai', i) });
-    });
     var nexts = [
       { tag: 'Requested by users', t: 'The incremental calculated message', d: 'Rapid Lab users asked for the same calculated message when raising a limit, not only when lowering it. Designing it next.' },
       { tag: 'Target', t: 'Localization at scale', d: 'Move toward the 80% target with the variable system, then measure the designer time it frees.' },
-      { tag: 'Concept', t: 'Confirm-before-act for agents', d: 'Take the Canada lesson into agentic interfaces: interpret, show the consequence, ask for a clear yes.' }
+      { tag: 'Concept', t: 'Confirm-before-act for agents', d: 'Carry show-the-math into agentic interfaces: interpret the request, show the consequence, ask for a clear yes.' }
     ];
 
     return Object.assign(vals, {
@@ -1154,6 +1093,8 @@ var range = [
       motionIcon: s.paused ? ic.play : ic.pause,
       motionLabel: 'Pause animations',
       motionPressed: s.paused,
+      motionTipT: s.paused ? 'Resume motion' : 'Pause motion',
+      motionTipD: s.paused ? 'Carousels, counters and demos are frozen. Press to play them again.' : 'Stops auto-playing carousels, counters and animated demos. Press again to resume.',
       toggleMotion: function () { self.setState({ paused: !self.state.paused }); },
       clock: s.clock,
       ic: ic, vw: vw,
@@ -1175,13 +1116,13 @@ var range = [
       crHov: (s.curHov && !s.curLab) ? 'hov' : '',
       curLabel: s.curLab,
       scns: scns, words: words, metrics: metrics, mkBars: mkBars, funnel: funnel,
-      range: range, cases: cases, saveo: saveo, showNum: '0' + (s.show + 1) + ' / 07',
+      range: range, mkt: mkt, cases: cases, saveo: saveo, showNum: '0' + (s.show + 1) + ' / 08',
       showPrev: function () { self.ap.show.e = 0; self.setState({ show: (s.show + 7) % 8 }); },
       showNext: function () { self.ap.show.e = 0; self.setState({ show: (s.show + 1) % 8 }); },
       loop: loop, decisions: decisions,
       markets: markets, act: M[s.mk], levels: levels,
       caps: caps, cadSteps: cadSteps, slots: slots,
-      beyond: beyond, aiSteps: aiSteps, modes: modes, nexts: nexts
+      beyond: beyond, aiSteps: aiSteps, nexts: nexts
     });
   }
 }
