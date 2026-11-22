@@ -97,6 +97,28 @@ a{color:var(--ink)}
 .sl.on .in2{animation:pop .7s cubic-bezier(.2,.7,.2,1) .45s both}
 .sl.on .in3{animation:pop .7s cubic-bezier(.2,.7,.2,1) .75s both}
 .x{text-decoration:line-through;text-decoration-color:var(--acc);text-decoration-thickness:3px;text-decoration-skip-ink:none}
+.hs{overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scrollbar-width:thin;max-width:100%}
+.hc-chip{font-size:12px;font-weight:600;color:var(--ink2);border:1px solid var(--line);border-radius:999px;padding:4px 10px;background:var(--card)}
+.hc-bub{display:flex;gap:10px;align-items:flex-end}
+.hc-av{flex:none;width:34px;height:34px;border-radius:50%;background:var(--bg2);border:1px solid var(--line);display:grid;place-items:center;color:var(--ink3)}
+.hc-msg{min-width:0;background:var(--bg2);border:1px solid var(--line2);border-radius:18px 18px 18px 6px;padding:12px 16px}
+.hc-chart{position:relative;display:flex;flex-direction:column;gap:16px}
+.hc-axis{position:relative;height:20px;margin-top:-6px}
+.hc-tl{position:absolute;top:2px;left:66.667%;transform:translateX(-50%);white-space:nowrap;font-size:12px;font-weight:600;color:var(--ink2)}
+.hc-tl::before{content:"";position:absolute;left:50%;top:-6px;margin-left:-4px;border:4px solid transparent;border-top:0;border-bottom:5px solid var(--ink3)}
+.hc-row{display:flex;flex-direction:column;gap:8px}
+.hc-rh{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.hc-v{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;text-align:right}
+.hc-track{position:relative;height:42px;border-radius:12px;background:var(--bg2);display:flex;overflow:hidden}
+.hc-track::after{content:"";position:absolute;left:66.667%;top:0;bottom:0;margin-left:-1px;border-left:2px dashed var(--ink3);pointer-events:none}
+.hc-b{box-sizing:border-box;flex:none;height:100%;display:flex;align-items:center;padding:0 12px;font-size:14px;font-weight:700;white-space:nowrap;overflow:hidden}
+.hc-b.g{background:color-mix(in srgb,var(--ink3) 32%,var(--card));color:var(--ink)}
+.hc-b.a{background:var(--fill);color:var(--fillink)}
+.hc-ok{display:inline-flex;align-items:center;gap:6px;background:var(--fill);color:var(--fillink);font-size:14px;font-weight:600;border-radius:999px;padding:6px 12px}
+.sl.on .hc-axis{animation:pop .6s cubic-bezier(.2,.7,.2,1) 3.4s both}
+.sl.on .r1 .hc-b{animation:typing .8s cubic-bezier(.2,.7,.2,1) 1.9s both}
+.sl.on .r2 .hc-b.g{animation:typing .8s cubic-bezier(.2,.7,.2,1) 2.5s both}
+.sl.on .r2 .hc-b.a{animation:typing .6s cubic-bezier(.2,.7,.2,1) 3.2s both}
 .caret{display:inline-block;width:3px;height:.9em;background:var(--acc);margin-left:4px;vertical-align:-.08em;animation:caret 1s step-end infinite}
 .seg{position:relative;overflow:hidden}
 .seg i{position:absolute;left:0;bottom:0;height:3px;width:100%;background:var(--fill);transform:scaleX(0);transform-origin:left;display:block}
@@ -214,6 +236,8 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
 .flr{display:inline-flex;align-items:center}
 .flr .fl{font-size:16px;margin-left:-3px;box-shadow:0 0 0 2px var(--bg)}
 .flr .fl:first-child{margin-left:0}
+.flr.sm .fl{font-size:14px;margin-left:-4px;box-shadow:0 0 0 2px var(--bg)}.flr.sm .fl:first-child{margin-left:0}
+@media (min-width:760px){.hstats{grid-template-columns:minmax(176px,1.25fr) repeat(3,minmax(0,1fr))!important;max-width:700px!important}}
 .fl{display:inline-block;flex:none;width:1.5em;height:1.125em;border-radius:3px;background-size:cover;background-position:center;box-shadow:0 0 0 1px var(--line);vertical-align:-.2em}.fl.rd{width:1.25em;height:1.25em;border-radius:50%}
 .fl-US{background-image:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 id=%22flag-icons-us%22 viewBox=%220 0 640 480%22%3E  %3Cpath fill=%22%23bd3d44%22 d=%22M0 0h640v480H0%22/%3E  %3Cpath stroke=%22%23fff%22 stroke-width=%2237%22 d=%22M0 55.3h640M0 129h640M0 203h640M0 277h640M0 351h640M0 425h640%22/%3E  %3Cpath fill=%22%23192f5d%22 d=%22M0 0h364.8v258.5H0%22/%3E  %3Cmarker id=%22us-a%22 markerHeight=%2230%22 markerWidth=%2230%22%3E    %3Cpath fill=%22%23fff%22 d=%22m14 0 9 27L0 10h28L5 27z%22/%3E  %3C/marker%3E  %3Cpath fill=%22none%22 marker-mid=%22url(%23us-a)%22 d=%22m0 0 16 11h61 61 61 61 60L47 37h61 61 60 61L16 63h61 61 61 61 60L47 89h61 61 60 61L16 115h61 61 61 61 60L47 141h61 61 60 61L16 166h61 61 61 61 60L47 192h61 61 60 61L16 218h61 61 61 61 60z%22/%3E%3C/svg%3E")}
 .fl-UK{background-image:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 id=%22flag-icons-gb%22 viewBox=%220 0 640 480%22%3E  %3Cpath fill=%22%23012169%22 d=%22M0 0h640v480H0z%22/%3E  %3Cpath fill=%22%23FFF%22 d=%22m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0z%22/%3E  %3Cpath fill=%22%23C8102E%22 d=%22m424 281 216 159v40L369 281zm-184 20 6 35L54 480H0zM640 0v3L391 191l2-44L590 0zM0 0l239 176h-60L0 42z%22/%3E  %3Cpath fill=%22%23FFF%22 d=%22M241 0v480h160V0zM0 160v160h640V160z%22/%3E  %3Cpath fill=%22%23C8102E%22 d=%22M0 193v96h640v-96zM273 0v480h96V0z%22/%3E%3C/svg%3E")}
@@ -363,7 +387,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
 .wbb{display:flex;align-items:center;gap:8px;height:42px;padding:0 14px;background:#ECEDEF;border-bottom:1px solid #D6D8DC}
 .wbb i{width:12px;height:12px;border-radius:50%;display:block;flex:none}
 .wbb .u{flex:1;max-width:420px;margin:0 auto;text-align:center;font-size:12px;color:#5B5F66;background:#fff;border-radius:7px;padding:5px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.wbh{display:flex;align-items:center;gap:24px;height:54px;padding:0 32px;background:var(--navy);color:#fff;font-size:14px;overflow:hidden;white-space:nowrap}
+.wbh{display:flex;align-items:center;gap:24px;height:54px;padding:0 32px;background:var(--navy);color:#fff;font-size:14px;overflow-x:auto;overflow-y:hidden;white-space:nowrap;scrollbar-width:none}.wbh::-webkit-scrollbar{display:none}.wbh>*{flex:none}
 .wbh b{font-weight:700;letter-spacing:.02em;font-size:15px}
 .wbh span{opacity:.75}.wbh span.on{opacity:1;box-shadow:0 3px 0 #fff;padding:6px 0}
 .wbg{display:grid;background:#F7F8FA;min-height:470px}
@@ -433,13 +457,13 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
       <a href="#impact" class="pill" style="text-decoration: none; font-size: 15px; font-weight: 500; padding: 11px 14px; border-radius: 999px">Impact</a>
       <a href="#global" class="pill" style="text-decoration: none; font-size: 15px; font-weight: 500; padding: 11px 14px; border-radius: 999px">Global</a>
       <a href="#ai" class="pill" style="text-decoration: none; font-size: 15px; font-weight: 500; padding: 11px 14px; border-radius: 999px">AI</a>
-      <a href="/mechanical-design" class="pill" style="text-decoration: none; font-size: 15px; font-weight: 500; padding: 11px 14px; border-radius: 999px">Mechanical Design</a>
+      <a href="/mechanical-design" class="pill" style="text-decoration: none; font-size: 15px; font-weight: 500; padding: 11px 14px; border-radius: 999px">Beyond Product Design</a>
     </nav>
     <div style="display: flex; align-items: center; gap: 8px">
       <span class="tipw"><button type="button" class="ib" onClick="{{toggleMotion}}" aria-pressed="{{motionPressed}}" aria-label="{{motionTipT}}"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 256 256" fill="currentColor"><path d="{{motionIcon}}"></path></svg></button><span class="tipc" role="tooltip"><b>{{motionTipT}}</b>{{motionTipD}}</span></span>
       <button type="button" class="ib" onClick="{{toggleTheme}}" aria-label="{{themeLabel}}" title="{{themeLabel}}"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 256 256" fill="currentColor"><path d="{{themeIcon}}"></path></svg></button>
       <a href="mailto:rakhesh.design@gmail.com" aria-label="Say hello" class="btn btn-p" style="min-height: 44px; padding: 0 20px; font-size: 15px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><path d="{{ic.mail}}"></path></svg><span>Say hello</span></a>
-      <details class="mnav"><summary class="ib" aria-label="Open menu"><svg class="mo" aria-hidden="true" width="22" height="22" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path></svg><svg class="mc" aria-hidden="true" width="22" height="22" viewBox="0 0 256 256" fill="currentColor"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg></summary><nav class="mpanel" aria-label="Site menu"><a href="/" class="mi" aria-current="page" onClick="{{closeMenu}}">Home</a><a href="/work" class="mi" onClick="{{closeMenu}}">All work</a><span class="mk">On this page</span><div class="mrow"><a href="#impact" class="mi" onClick="{{closeMenu}}">Impact</a><a href="#global" class="mi" onClick="{{closeMenu}}">Global</a><a href="#ai" class="mi" onClick="{{closeMenu}}">AI</a><a href="/mechanical-design" class="mi" onClick="{{closeMenu}}">Mechanical Design</a></div><span class="mk">American Express</span><a href="/work/manage-credit-limit" class="mi" onClick="{{closeMenu}}">Manage Credit Limit</a><a href="/work/digital-charge-verification" class="mi" onClick="{{closeMenu}}">Digital Charge Verification</a><a href="/work/financial-relief-program" class="mi" onClick="{{closeMenu}}">Financial Relief Program</a><a href="/work/canada-experience-gap" class="mi" onClick="{{closeMenu}}">Canada Experience Gap</a><a href="/work/financial-verification" class="mi" onClick="{{closeMenu}}">Financial Verification</a><a href="/work/plan-it-promo-pricing" class="mi" onClick="{{closeMenu}}">Plan It® Promo Pricing</a><a href="/work/payments-mexico" class="mi" onClick="{{closeMenu}}">International Payments, Mexico</a><a href="/work/localization-automation" class="mi" onClick="{{closeMenu}}">Localization Automation</a><span class="mk">AI builds</span><a href="/work/sourcx" class="mi" onClick="{{closeMenu}}">SourcX</a><a href="/work/shubhviva" class="mi" onClick="{{closeMenu}}">ShubhViva</a><a href="/work/gravity-deck" class="mi" onClick="{{closeMenu}}">Gravity</a><span class="mk">Beyond screens</span><a href="/mechanical-design" class="mi" onClick="{{closeMenu}}">Mechanical Design</a><span class="mk">Say hello</span><a href="mailto:rakhesh.design@gmail.com" class="mi" onClick="{{closeMenu}}">rakhesh.design@gmail.com</a></nav></details>
+      <details class="mnav"><summary class="ib" aria-label="Open menu"><svg class="mo" aria-hidden="true" width="22" height="22" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path></svg><svg class="mc" aria-hidden="true" width="22" height="22" viewBox="0 0 256 256" fill="currentColor"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg></summary><nav class="mpanel" aria-label="Site menu"><a href="/" class="mi" aria-current="page" onClick="{{closeMenu}}">Home</a><a href="/work" class="mi" onClick="{{closeMenu}}">All work</a><span class="mk">On this page</span><div class="mrow"><a href="#impact" class="mi" onClick="{{closeMenu}}">Impact</a><a href="#global" class="mi" onClick="{{closeMenu}}">Global</a><a href="#ai" class="mi" onClick="{{closeMenu}}">AI</a><a href="/mechanical-design" class="mi" onClick="{{closeMenu}}">Beyond Product Design</a></div><span class="mk">American Express</span><a href="/work/manage-credit-limit" class="mi" onClick="{{closeMenu}}">Manage Credit Limit</a><a href="/work/digital-charge-verification" class="mi" onClick="{{closeMenu}}">Digital Charge Verification</a><a href="/work/financial-relief-program" class="mi" onClick="{{closeMenu}}">Financial Relief Program</a><a href="/work/canada-experience-gap" class="mi" onClick="{{closeMenu}}">Canada Experience Gap</a><a href="/work/financial-verification" class="mi" onClick="{{closeMenu}}">Financial Verification</a><a href="/work/plan-it-promo-pricing" class="mi" onClick="{{closeMenu}}">Plan It® Promo Pricing</a><a href="/work/payments-mexico" class="mi" onClick="{{closeMenu}}">International Payments, Mexico</a><a href="/work/localization-automation" class="mi" onClick="{{closeMenu}}">Localization Automation</a><span class="mk">AI builds</span><a href="/work/sourcx" class="mi" onClick="{{closeMenu}}">SourcX</a><a href="/work/shubhviva" class="mi" onClick="{{closeMenu}}">ShubhViva</a><a href="/work/gravity-deck" class="mi" onClick="{{closeMenu}}">Gravity</a><span class="mk">More</span><a href="/mechanical-design" class="mi" onClick="{{closeMenu}}">Beyond Product Design</a><span class="mk">Say hello</span><a href="mailto:rakhesh.design@gmail.com" class="mi" onClick="{{closeMenu}}">rakhesh.design@gmail.com</a></nav></details>
     </div>
   </div>
 </header>
@@ -467,8 +491,8 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
         <a href="/work/manage-credit-limit" class="btn btn-s" data-cur="Open">Read the flagship case<svg aria-hidden="true" width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><path d="{{ic.upRight}}"></path></svg></a>
       </div>
       <a href="#ai" class="rise d4 aichip" data-cur="Open"><span class="aic"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><path d="{{ic.sparkle}}"></path></svg></span><span><strong>Also building AI products</strong> SourcX, ShubhViva, Gravity</span><svg aria-hidden="true" width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><path d="{{ic.arrowRight}}"></path></svg></a>
-      <dl class="rise d4" style="margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(120px, 100%), 1fr)); gap: 12px; max-width: 620px">
-        <div style="border-top: 2px solid var(--fill); padding-top: 12px"><dt class="kick" style="font-size: 12px">Markets</dt><dd class="disp" style="margin: 4px 0 0; font-size: clamp(23px,calc(23px + (100vw - 390px) * 0.00864), 30px); display: flex; align-items: center; gap: 10px">10+<span class="flr" aria-hidden="true"><i class="fl rd fl-US"></i><i class="fl rd fl-UK"></i><i class="fl rd fl-MX"></i><i class="fl rd fl-CA"></i><i class="fl rd fl-HK"></i><i class="fl rd fl-AU"></i></span></dd></div>
+      <dl class="rise d4 hstats" style="margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(120px, 100%), 1fr)); gap: 12px; max-width: 620px">
+        <div style="border-top: 2px solid var(--fill); padding-top: 12px"><dt class="kick" style="font-size: 12px">Markets</dt><dd class="disp" style="margin: 4px 0 0; font-size: clamp(23px,calc(23px + (100vw - 390px) * 0.00864), 30px); display: flex; align-items: center; flex-wrap: wrap; gap: 4px 8px">10+<span class="flr sm" aria-hidden="true"><i class="fl rd fl-US"></i><i class="fl rd fl-UK"></i><i class="fl rd fl-MX"></i><i class="fl rd fl-CA"></i><i class="fl rd fl-HK"></i><i class="fl rd fl-AU"></i></span></dd></div>
         <div style="border-top: 2px solid var(--fill); padding-top: 12px"><dt class="kick" style="font-size: 12px">Mobile completion</dt><dd class="disp" style="margin: 4px 0 0; font-size: clamp(23px,calc(23px + (100vw - 390px) * 0.00864), 30px)">+44%</dd></div>
         <div style="border-top: 2px solid var(--fill); padding-top: 12px"><dt class="kick" style="font-size: 12px">Industries</dt><dd class="disp" style="margin: 4px 0 0; font-size: clamp(23px,calc(23px + (100vw - 390px) * 0.00864), 30px)">4</dd></div>
         <div style="border-top: 2px solid var(--fill); padding-top: 12px"><dt class="kick" style="font-size: 12px">Audiences</dt><dd class="disp" style="margin: 4px 0 0; font-size: clamp(20px,calc(20px + (100vw - 390px) * 0.00741), 26px); line-height: 1.4; white-space: nowrap">B2B + B2C</dd></div>
@@ -478,25 +502,31 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
     <!-- Meant / Heard stage -->
     <div class="apbox {{vw.hero}}" ref="{{heroRef}}" onMouseEnter="{{heroIn}}" onMouseLeave="{{heroOut}}" onFocus="{{heroIn}}" onBlur="{{heroOut}}" style="flex: 1 1 min(460px, 100%); min-width: 0; max-width: 600px; --per: 6s">
       <div class="card rise d2" style="padding: 22px; box-shadow: var(--e3)">
-        <span class="kick" style="display: block; margin-bottom: 18px; font-size: 12px">Meant ≠ heard · Canada credit limit</span>
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 12px; margin-bottom: 18px">
+          <span class="kick" style="font-size: 12px">Meant ≠ heard</span>
+          <span class="hc-chip">Canada · credit limit</span>
+        </div>
         <div style="display: grid">
           <sc-for list="{{scns}}" as="sc" hint-placeholder-count="3">
-            <div class="sl {{sc.cls}}" aria-hidden="{{sc.hidden}}" style="display: flex; flex-direction: column; gap: 16px">
-              <div style="background: var(--bg2); border: 1px solid var(--line2); border-radius: 18px; padding: 18px">
-                <span class="kick" style="font-size: 12px">The brief</span>
-                <div class="disp" style="font-size: clamp(21px,calc(21px + (100vw - 390px) * 0.00741), 27px); line-height: 1.2; margin-top: 6px"><span class="type" style="display: inline-block">“{{sc.ask}}”</span></div>
+            <div class="sl {{sc.cls}}" aria-hidden="{{sc.hidden}}" style="display: flex; flex-direction: column; gap: 20px">
+              <div class="hc-bub">
+                <span class="hc-av"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"/></svg></span>
+                <div class="hc-msg"><div class="disp" style="font-size: clamp(20px,calc(20px + (100vw - 390px) * 0.00741), 26px); line-height: 1.2"><span class="type" style="display: inline-block">“{{sc.ask}}”</span></div></div>
               </div>
-              <div class="r1" style="display: flex; gap: 14px; align-items: flex-start">
-                <span class="kick" style="width: 64px; flex: none; padding-top: 4px; font-size: 12px">Heard</span>
-                <span class="x" style="font-size: 19px; color: var(--ink3)">{{sc.reads}}</span>
+              <div class="hc-chart">
+                <div class="r1 hc-row">
+                  <div class="hc-rh"><span class="kick" style="font-size: 12px">Heard</span><span class="hc-v" style="color: var(--ink3)"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 256 256" fill="currentColor"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg>{{sc.heardNote}}</span></div>
+                  <div class="hc-track"><div class="hc-b g" style="width: {{sc.wHeard}}"><span>{{sc.heardAmt}}</span></div></div>
+                </div>
+                <div class="r2 hc-row">
+                  <div class="hc-rh"><span class="kick" style="font-size: 12px; color: var(--acc)">Meant</span><span class="hc-v" style="color: var(--acc)"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 256 256" fill="currentColor"><path d="{{ic.check}}"/></svg>{{sc.newAmt}} new limit</span></div>
+                  <div class="hc-track"><div class="hc-b g" style="width: {{sc.wToday}}"><span>{{sc.todayAmt}}</span></div><div class="hc-b a" style="width: {{sc.wAdd}}"><span>{{sc.addAmt}}</span></div></div>
+                </div>
+                <div class="hc-axis"><span class="hc-tl">Today · {{sc.todayAmt}}</span></div>
               </div>
-              <div class="r2" style="display: flex; gap: 14px; align-items: flex-start">
-                <span class="kick" style="width: 64px; flex: none; padding-top: 4px; font-size: 12px; color: var(--acc)">Meant</span>
-                <span class="disp" style="font-size: clamp(20px,calc(20px + (100vw - 390px) * 0.0037), 23px); line-height: 1.25; color: var(--acc)">{{sc.really}}</span>
-              </div>
-              <div class="r3" style="display: flex; flex-direction: column; gap: 14px; border-top: 1px dashed var(--line); padding-top: 16px; margin-top: auto">
+              <div class="r3" style="display: flex; flex-direction: column; gap: 12px; border-top: 1px dashed var(--line); padding-top: 16px; margin-top: auto">
                 <p style="margin: 0; font-size: 16px; color: var(--ink2)"><strong style="color: var(--ink)">The move.</strong> {{sc.move}}</p>
-                <div style="display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap"><span class="disp" style="font-size: clamp(24px,calc(24px + (100vw - 390px) * 0.01728), 38px); color: var(--acc)">{{sc.stat}}</span><span style="font-size: 14px; color: var(--ink3)">{{sc.statLabel}}</span></div>
+                <div style="display: flex; align-items: center; gap: 8px 12px; flex-wrap: wrap"><span class="hc-ok"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 256 256" fill="currentColor"><path d="{{ic.check}}"/></svg>{{sc.stat}} in Rapid Lab</span><span style="font-size: 14px; color: var(--ink3)">{{sc.statLabel}}</span></div>
               </div>
             </div>
           </sc-for>
@@ -546,7 +576,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
       <!-- FRP funnel -->
       <div class="card reveal" style="flex: 1 1 min(560px, 100%); min-width: 0; padding: 30px; display: flex; flex-direction: column; gap: 18px">
         <div style="display: flex; align-items: center; gap: 10px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 256 256" fill="currentColor" style="color: var(--acc)"><path d="{{ic.target}}"></path></svg><h3 class="disp" style="margin: 0; font-size: clamp(21px,calc(21px + (100vw - 390px) * 0.0037), 24px)">Financial Relief: where people dropped</h3></div>
-        <div style="display: flex; align-items: flex-end; gap: 8px; height: 230px; padding-top: 28px" role="img" aria-label="Enrollment funnel by step: 100, 76, 47, 30, 27, 21, 13, 7 and 6 percent. The largest drop is between steps 2 and 3, minus 29 points.">
+        <div class="hs"><div style="min-width: 480px; display: flex; align-items: flex-end; gap: 8px; height: 230px; padding-top: 28px" role="img" aria-label="Enrollment funnel by step: 100, 76, 47, 30, 27, 21, 13, 7 and 6 percent. The largest drop is between steps 2 and 3, minus 29 points.">
           <sc-for list="{{funnel}}" as="f" hint-placeholder-count="9">
             <div style="flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 6px; position: relative">
               <span style="font-size: 13px; font-weight: 600; color: {{f.tc}}">{{f.v}}%</span>
@@ -554,7 +584,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
               <span style="font-size: 12px; color: var(--ink3)">{{f.s}}</span>
             </div>
           </sc-for>
-        </div>
+        </div></div>
         <div style="display: flex; flex-wrap: wrap; gap: 10px">
           <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 14px; border: 1px solid var(--warn); color: var(--ink); border-radius: 999px; padding: 6px 14px"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 256 256" fill="currentColor" style="color: var(--warn)"><path d="{{ic.warn}}"></path></svg>Biggest drop: −29 pts, steps 2 to 3</span>
           <span style="font-size: 14px; border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; color: var(--ink2)">~40% of T&amp;C simplified</span>
@@ -795,13 +825,13 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
   <div class="aur" aria-hidden="true" style="position: absolute; right: -8%; top: 0; width: 50%; height: 90%; background: radial-gradient(closest-side, var(--glow2), transparent); pointer-events: none"></div>
   <div class="wrap" style="position: relative; padding-top: 112px; padding-bottom: 112px">
     <div class="apbox {{vw.cad}}" ref="{{cadRef}}" onMouseEnter="{{cadIn}}" onMouseLeave="{{cadOut}}" onFocus="{{cadIn}}" onBlur="{{cadOut}}" style="--per: 2.8s">
-      <a href="/mechanical-design" class="tz reveal" data-cur="Open" aria-label="Open Mechanical Design: generative design studies, 3D printing and gallery">
+      <a href="/mechanical-design" class="tz reveal" data-cur="Open" aria-label="Open Beyond Product Design: generative design studies, 3D printing and gallery">
         <div class="tz-l">
-          <span class="kick" style="color: var(--acc)">Chapter 07 · Mechanical Design</span>
+          <span class="kick" style="color: var(--acc)">Chapter 07 · Beyond Product Design</span>
           <h2 class="h2" style="font-size: clamp(32px,4.2vw,60px)">Before AI, I let the solver <span class="em">cut the metal.</span></h2>
           <p style="margin: 0; font-size: 19px; line-height: 1.55; color: var(--ink2); max-width: 520px">Same brake pedal, same load, less than half the mass in simulation. Found by generative design in Fusion 360.</p>
           <div class="tz-n"><b>−59%</b><span>pedal mass, standard to generative</span></div>
-          <span class="btn btn-p" style="align-self: flex-start">Open Mechanical Design<svg aria-hidden="true" width="20" height="20" viewBox="0 0 256 256" fill="currentColor" ><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg></span>
+          <span class="btn btn-p" style="align-self: flex-start">Open the full story<svg aria-hidden="true" width="20" height="20" viewBox="0 0 256 256" fill="currentColor" ><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg></span>
         </div>
         <div class="tz-r">
           <div class="tz-st">
@@ -861,7 +891,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
     </div>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 32px; border-top: 1px solid var(--line); padding-top: 36px">
       <div style="display: flex; flex-direction: column; gap: 4px"><span class="kick" style="margin-bottom: 8px">Navigate</span>
-        <a href="#work" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">Work</a><a href="#impact" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">Impact</a><a href="#global" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">Global</a><a href="#ai" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">AI products</a><a href="/mechanical-design" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">Mechanical Design</a></div>
+        <a href="#work" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">Work</a><a href="#impact" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">Impact</a><a href="#global" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">Global</a><a href="#ai" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">AI products</a><a href="/mechanical-design" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">Beyond Product Design</a></div>
       <div style="display: flex; flex-direction: column; gap: 4px"><span class="kick" style="margin-bottom: 8px">Elsewhere</span>
         <a href="https://www.behance.net/rakheshkarnati" target="_blank" rel="noopener" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">Behance</a><a href="https://rakheshkarnati.framer.website" target="_blank" rel="noopener" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">Framer portfolio</a><a href="mailto:rakhesh.design@gmail.com" class="pill" style="text-decoration: none; padding: 10px 0; border-radius: 8px">Email</a></div>
       <div style="display: flex; flex-direction: column; gap: 8px"><span class="kick" style="margin-bottom: 8px">Availability</span>
@@ -982,7 +1012,7 @@ var range = [
     ];
     // ---- Hero briefs
     var SC = [
-      { label: 'Canada · Credit limit', ask: 'Bump my limit by 5k.', reads: 'Set the limit to $5,000.', really: 'Raise it by $5,000, to $15,000.', move: 'A calculated message shows current, change and new limit. Validated in Rapid Lab.', stat: 'Validated', statLabel: 'users asked for it on increases too' }
+      { label: 'Canada · Credit limit', ask: 'Bump my limit by 5k.', reads: 'Set the limit to $5,000.', really: 'Raise it by $5,000, to $15,000.', move: 'A calculated message shows the current limit, the change and the new limit.', stat: 'Validated', statLabel: 'users asked for it on increases too', heardAmt: '$5,000', heardNote: '$5K lower than today', todayAmt: '$10,000', addAmt: '+$5,000', newAmt: '$15,000', wHeard: '33.333%', wToday: '66.667%', wAdd: '33.333%' }
     ];
     var scns = SC.map(function (x, i) {
       var on = i === s.hero;
@@ -1107,7 +1137,7 @@ var range = [
       { icon: ic.idea, t: 'Ideathons and growth', d: 'Lending Ideathon and a Growth Hack, testing bets beyond the roadmap.' },
       { icon: ic.devices, t: 'Adaptive layouts', d: 'Breakpoint-proof comparison layouts; exploring foldable screens and motion.' },
       { icon: ic.a11y, t: 'Accessibility', d: 'Journeys that pass accessibility checks and still follow global patterns.' },
-      { icon: ic.mentor, t: 'Mentoring and contributions', d: 'Coached designers on Auto Layout, Variables and conditionals; proposed components and a domain library.' },
+      { icon: ic.mentor, t: 'Mentoring and contributions', d: 'Guide designers to the right approach per project and crack the solution direction through critiques and research tests. I also propose and contribute to the Design System and Domain Library.' },
       { icon: ic.medal, t: 'Design System Ambassador', d: 'The link between product designers and the system team.' }
     ].map(function (b, i) { return Object.assign({}, b, { i: i % 3 }); });
 
