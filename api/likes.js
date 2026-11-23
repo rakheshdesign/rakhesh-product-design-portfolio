@@ -1,7 +1,7 @@
 // Like counter for the portfolio. Stores one integer in Redis (Upstash / Vercel KV REST API).
 // Needs two env vars on the Vercel project (either naming works):
 //   UPSTASH_REDIS_REST_URL + UPSTASH_REDIS_REST_TOKEN   or   KV_REST_API_URL + KV_REST_API_TOKEN
-// GET  /api/likes            -> { count, liked }   (count is null until the store is connected)
+// GET  /api/likes            -> { count, liked }   (?c=1 returns the count only, for the live poll)   (count is null until the store is connected)
 // POST /api/likes {action}   -> { count, liked }   action: "like" | "unlike"
 // One like per visitor (hashed IP + user agent, kept 90 days) so refreshing cannot inflate the count.
 const crypto = require('crypto');
@@ -39,22 +39,32 @@ module.exports = async (req, res) => {
     const ip = String(req.headers['x-forwarded-for'] || req.socket.remoteAddress || '').split(',')[0].trim();
     const who = 'portfolio:liker:' + crypto.createHash('sha256').update(ip + '|' + (req.headers['user-agent'] || '')).digest('hex').slice(0, 32);
 
+    const light = req.method === 'GET' && req.query && req.query.c;
+    if (light) {
+      // count-only read used by the live poll: one Redis command
+      const c = await redis(['GET', KEY]);
+      return res.status(200).json({ count: Math.max(0, parseInt(c || '0', 10)), configured: true });
+    }
+
     if (req.method === 'POST') {
       let body = req.body;
       if (typeof body === 'string') { try { body = JSON.parse(body); } catch (e) { body = {}; } }
       const action = body && body.action;
+      let count = null, liked;
       if (action === 'like') {
         const fresh = await redis(['SET', who, '1', 'NX', 'EX', 7776000]);
-        if (fresh === 'OK') await redis(['INCR', KEY]);
+        count = fresh === 'OK' ? await redis(['INCR', KEY]) : await redis(['GET', KEY]);
+        liked = true;
       } else if (action === 'unlike') {
         const removed = await redis(['DEL', who]);
-        if (removed === 1) await redis(['DECR', KEY]);
+        count = removed === 1 ? await redis(['DECR', KEY]) : await redis(['GET', KEY]);
+        liked = false;
       } else {
         return res.status(400).json({ error: 'action must be like or unlike' });
       }
-    } else if (req.method !== 'GET') {
-      return res.status(405).json({ error: 'method not allowed' });
+      return res.status(200).json({ count: Math.max(0, parseInt(count || '0', 10)), liked, configured: true });
     }
+    if (req.method !== 'GET') return res.status(405).json({ error: 'method not allowed' });
 
     const [count, liked] = await Promise.all([redis(['GET', KEY]), redis(['EXISTS', who])]);
     return res.status(200).json({ count: Math.max(0, parseInt(count || '0', 10)), liked: liked === 1, configured: true });

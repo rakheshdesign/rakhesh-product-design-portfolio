@@ -234,12 +234,11 @@ Results are labelled as results, targets as targets and concepts as concepts. <a
 <b>−59%</b>
 pedal mass, standard to generative Open the full story Standard 138 g Optimized −25% 104 g Generative −59% 56 g</a></section>
 <section><b>Enjoyed the portfolio?</b>
-A like tells me it landed. <b>–</b>
-likes</section>
+A like tells me it landed. likes</section>
 </main>
 <footer>Let’s talk <h2>Have a good problem to solve?</h2>
 <p>Happy to talk product design, emerging technology or something you’re building, new or already live.</p>
-<a href="mailto:rakhesh.design@gmail.com">rakhesh.design@gmail.com</a><a href="/work/manage-credit-limit">Read the featured case</a>Navigate <a href="#work">Work</a><a href="#impact">Impact</a><a href="#global">Global</a><a href="#proposal">Proposal</a><a href="#ai">AI products</a><a href="#leadership">Leadership</a><a href="#about">About</a><a href="/mechanical-design">Beyond Product Design</a>Elsewhere <a href="https://in.linkedin.com/in/rakheshkarnati"></a><a href="https://www.behance.net/rakheshkarnati"></a><a href="mailto:rakhesh.design@gmail.com">Email</a><a href="https://rakhesh-design.vercel.app/RK-Product_Designer.pdf">View résumé</a>Availability Open to new opportunities India and global 10:02 IST Back to top <a href="#top"></a><p>Confidential details are withheld. Targets are labelled as targets. Concept work is labelled as concept. © 2026 Rakhesh Karnati.</p>
+<a href="mailto:rakhesh.design@gmail.com">rakhesh.design@gmail.com</a><a href="/work/manage-credit-limit">Read the featured case</a>Navigate <a href="#work">Work</a><a href="#impact">Impact</a><a href="#global">Global</a><a href="#proposal">Proposal</a><a href="#ai">AI products</a><a href="#leadership">Leadership</a><a href="#about">About</a><a href="/mechanical-design">Beyond Product Design</a>Elsewhere <a href="https://in.linkedin.com/in/rakheshkarnati"></a><a href="https://www.behance.net/rakheshkarnati"></a><a href="mailto:rakhesh.design@gmail.com">Email</a><a href="https://rakhesh-design.vercel.app/RK-Product_Designer.pdf">View résumé</a>Availability Open to new opportunities India and global 10:58 IST Back to top <a href="#top"></a><p>Confidential details are withheld. Targets are labelled as targets. Concept work is labelled as concept. © 2026 Rakhesh Karnati.</p>
 </footer>
 <p>The interactive parts of this site need JavaScript. Everything above is the same content in plain text.</p></div></noscript>
 <x-dc><template>
@@ -788,9 +787,9 @@ footer a.pill:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
 .lk-h{font-family:'Space Grotesk',system-ui,sans-serif;font-size:clamp(18px, calc(18px + (100vw - 390px) * 0.00247), 20px);line-height:1.2}
 .lk-s{font-size:15px;color:var(--ink2)}
 .lk-c{display:flex;flex-direction:column;align-items:center;padding:6px 16px;border-radius:16px;background:var(--card2);min-width:64px}
-.lk-n{font-family:'Space Grotesk',system-ui,sans-serif;font-size:clamp(21px, calc(21px + (100vw - 390px) * 0.00864), 28px);line-height:1.1;color:var(--acc)}
-.lk-c span{font-size:12px;color:var(--ink3);letter-spacing:.06em;text-transform:uppercase;font-weight:600}
-@media (prefers-reduced-motion:reduce){.lk-b.go .lk-burst i,.lk-b[aria-pressed="true"] .h1{animation:none}}
+.lk-n{font-family:'Space Grotesk',system-ui,sans-serif;font-size:clamp(21px, calc(21px + (100vw - 390px) * 0.00864), 28px);line-height:1.1;color:var(--acc);display:inline-flex;height:1.1em;overflow:hidden;font-variant-numeric:tabular-nums;align-items:flex-start}.od-c{position:relative;display:inline-block;height:1.1em;overflow:hidden;text-align:center}.od-d{display:block;height:1.1em;line-height:1.1}.od-c .od-o{position:absolute;left:0;right:0;top:0}.od-up .od-n{animation:odUp .5s cubic-bezier(.2,.9,.25,1) both}.od-up .od-o{animation:odUpO .5s cubic-bezier(.2,.9,.25,1) both}.od-dn .od-n{animation:odDn .5s cubic-bezier(.2,.9,.25,1) both}.od-dn .od-o{animation:odDnO .5s cubic-bezier(.2,.9,.25,1) both}@keyframes odUp{from{transform:translateY(100%)}to{transform:none}}@keyframes odUpO{from{transform:none}to{transform:translateY(-100%)}}@keyframes odDn{from{transform:translateY(-100%)}to{transform:none}}@keyframes odDnO{from{transform:none}to{transform:translateY(100%)}}.lk-c.bump{animation:lkBump .45s cubic-bezier(.2,1.5,.4,1)}@keyframes lkBump{0%{transform:scale(1)}35%{transform:scale(1.12)}100%{transform:scale(1)}}
+.lk-c>span{font-size:12px;color:var(--ink3);letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+@media (prefers-reduced-motion:reduce){.lk-b.go .lk-burst i,.lk-b[aria-pressed="true"] .h1,.od-up .od-n,.od-up .od-o,.od-dn .od-n,.od-dn .od-o,.lk-c.bump{animation:none}.od-o{display:none}}
 /* subtle micro-animations for the flat sketches */
 @keyframes ilFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-1.6px)}}
 @keyframes ilNudge{0%,100%{transform:translateX(0)}50%{transform:translateX(3px)}}
@@ -1571,26 +1570,63 @@ class Component extends DCLogic {
       function like(n) {
         var box = document.querySelector('[data-like]');
         if (!box) { if (n < 60) setTimeout(function () { like(n + 1); }, 150); return; }
-        var btn = box.querySelector('.lk-b'), cw = box.querySelector('.lk-c'), cn = box.querySelector('.lk-n'), sub = box.querySelector('.lk-s'), hd = box.querySelector('.lk-h');
-        var liked = false, count = null, busy = false;
+        var btn = box.querySelector('.lk-b'), cw = box.querySelector('.lk-c'), cn = box.querySelector('.lk-n'), cl = cw.querySelector(':scope > span'), sub = box.querySelector('.lk-s'), hd = box.querySelector('.lk-h');
+        var liked = false, count = null, busy = false, quietUntil = 0, configured = true, shown = '';
+        var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         try { liked = localStorage.getItem('rk-liked') === '1'; } catch (x) {}
-        function paint() {
+        // odometer: only the digits that change roll; up pushes in from the bottom, down from the top
+        function roll(n, animate) {
+          var str = typeof n === 'number' ? n.toLocaleString('en-US') : '–';
+          if (str === shown) return;
+          var dir = (typeof n === 'number' && shown && shown !== '–' && parseInt(shown.replace(/,/g, ''), 10) > n) ? 'od-dn' : 'od-up';
+          var prev = shown, off = str.length - prev.length; shown = str;
+          cn.setAttribute('aria-hidden', 'true'); cw.setAttribute('aria-label', typeof n === 'number' ? n.toLocaleString('en-US') + (n === 1 ? ' like' : ' likes') : 'Total likes');
+          var html = '';
+          for (var i = 0; i < str.length; i++) {
+            var ch = str.charAt(i), pc = prev.charAt(i - off), moved = animate && !still && prev && prev !== '–' && (i - off < 0 || pc !== ch);
+            html += '<span class="od-c' + (moved ? ' ' + dir : '') + '"><span class="od-d od-n">' + ch + '</span>' + (moved && i - off >= 0 ? '<span class="od-d od-o">' + pc + '</span>' : '') + '</span>';
+          }
+          cn.innerHTML = html;
+          if (animate && !still && prev && prev !== '–') { cw.classList.remove('bump'); void cw.offsetWidth; cw.classList.add('bump'); }
+        }
+        function paint(animate) {
           btn.setAttribute('aria-pressed', liked ? 'true' : 'false'); btn.setAttribute('aria-label', liked ? 'Remove your like' : 'Like this portfolio');
           hd.textContent = liked ? 'Thank you.' : 'Enjoyed the portfolio?';
-          if (typeof count === 'number') { cn.textContent = count.toLocaleString('en-US'); cw.querySelector('span').textContent = count === 1 ? 'like' : 'likes'; }
+          roll(count, animate); cl.textContent = count === 1 ? 'like' : 'likes';
           sub.textContent = liked ? 'It means a lot. Tap again to undo.' : (typeof count === 'number' && count > 0 ? 'Join the people who liked it.' : 'A like tells me it landed.');
         }
-        function api(method, body) {
-          return fetch(API, { method: method, cache: 'no-store', headers: body ? { 'Content-Type': 'application/json' } : undefined, body: body ? JSON.stringify(body) : undefined }).then(function (r) { return r.ok ? r.json() : Promise.reject(); });
+        function api(method, body, q) {
+          return fetch(API + (q || ''), { method: method, cache: 'no-store', headers: body ? { 'Content-Type': 'application/json' } : undefined, body: body ? JSON.stringify(body) : undefined }).then(function (r) { return r.ok ? r.json() : Promise.reject(); });
         }
-        paint();
-        api('GET').then(function (d) { if (d && typeof d.count === 'number') count = d.count; if (d && typeof d.liked === 'boolean') { liked = d.liked; try { localStorage.setItem('rk-liked', liked ? '1' : '0'); } catch (x) {} } paint(); }).catch(function () {});
+        function store() { try { localStorage.setItem('rk-liked', liked ? '1' : '0'); } catch (x) {} }
+        paint(false);
+        api('GET').then(function (d) {
+          if (!d) return; configured = d.configured !== false;
+          if (typeof d.count === 'number') count = d.count;
+          if (configured && typeof d.liked === 'boolean') { liked = d.liked; store(); }
+          paint(false);
+        }).catch(function () {});
+        // live: while the section is on screen and the tab is visible, read the count every 2.5s (one Redis command)
+        var onScreen = false, timer = 0;
+        function poll() {
+          if (!configured || busy || Date.now() < quietUntil || document.hidden) return;
+          api('GET', null, '?c=1').then(function (d) {
+            if (busy || Date.now() < quietUntil || !d) return;
+            if (d.configured === false) { configured = false; return; }
+            if (typeof d.count === 'number' && d.count !== count) { count = d.count; paint(true); }
+          }).catch(function () {});
+        }
+        function loop() { clearInterval(timer); timer = 0; if (onScreen && !document.hidden && configured) { timer = setInterval(poll, 2500); poll(); } }
+        if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { onScreen = es[0].isIntersecting; loop(); }, { rootMargin: '200px' }).observe(box);
+        else { onScreen = true; loop(); }
+        document.addEventListener('visibilitychange', loop);
         btn.addEventListener('click', function () {
           if (busy) return; busy = true; liked = !liked;
           if (typeof count === 'number') count = Math.max(0, count + (liked ? 1 : -1));
-          try { localStorage.setItem('rk-liked', liked ? '1' : '0'); } catch (x) {}
-          btn.classList.remove('go'); void btn.offsetWidth; if (liked) btn.classList.add('go'); paint();
-          api('POST', { action: liked ? 'like' : 'unlike' }).then(function (d) { if (d && typeof d.count === 'number') { count = d.count; paint(); } }).catch(function () {}).then(function () { busy = false; });
+          store(); btn.classList.remove('go'); void btn.offsetWidth; if (liked) btn.classList.add('go'); paint(true);
+          api('POST', { action: liked ? 'like' : 'unlike' }).then(function (d) {
+            if (d && typeof d.count === 'number') { count = d.count; if (typeof d.liked === 'boolean') { liked = d.liked; store(); } paint(true); }
+          }).catch(function () {}).then(function () { busy = false; quietUntil = Date.now() + 1200; });
         });
       }
       spy(); like(0);
