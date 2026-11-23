@@ -22,13 +22,8 @@ async function redis(cmd) {
 }
 
 module.exports = async (req, res) => {
-  const origin = req.headers.origin;
-  let host = '';
-  try { host = new URL(origin).hostname; } catch (e) {}
-  if (host && (ORIGINS.includes(origin) || /^(localhost|127\.0\.0\.1)$/.test(host) || /\.vercel\.app$/.test(host) || /(^|\.)claude\.(ai|com)$/.test(host))) {
-    res.setHeader('Access-Control-Allow-Origin', origin);
-    res.setHeader('Vary', 'Origin');
-  }
+  // Public counter: no cookies or credentials, so any origin (site, canvas preview, previews) may read and like.
+  res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   res.setHeader('Cache-Control', 'no-store');
