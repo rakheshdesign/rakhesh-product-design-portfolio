@@ -89,6 +89,12 @@
 <section>
 <a href="/work/shubhviva">← PREVIOUS PROJECT ShubhViva AI build · every celebration, brought together</a>
 <a href="/mechanical-design">NEXT PROJECT → Mechanical Design The other half of the craft: things you can hold</a>
+<a href="/work/manage-credit-limit">Manage Credit Limit</a>
+<a href="/work/digital-charge-verification">Digital Charge Verification</a>
+<a href="/work/generic-medicine">Generic Medicine</a>
+<a href="/#leadership">How I lead</a>
+<a href="/#impact">Impact at a glance</a>
+<a href="/#about">About me</a>
 <a href="/work">All projects</a>
 </section>
 </main>
@@ -107,6 +113,37 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
 <style>
+
+.hnav .pill[aria-current="true"],.hpills .pill[aria-current="true"]{background:color-mix(in srgb,var(--acc) 14%,transparent);color:var(--acc);font-weight:600}
+.cdock{position:fixed;left:50%;bottom:16px;transform:translate(-50%,28px);opacity:0;pointer-events:none;z-index:36;display:flex;align-items:center;gap:2px;padding:6px;border-radius:999px;background:var(--navbg);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);border:1px solid var(--line);box-shadow:var(--e3);max-width:calc(100vw - 20px);transition:opacity .25s ease,transform .25s ease;font-family:'Space Grotesk',system-ui,sans-serif;color:var(--ink)}
+.cdock.on{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+.cd-b{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;min-width:44px;padding:0 12px;border-radius:999px;border:0;background:transparent;color:var(--ink);font:500 14px 'Space Grotesk',system-ui,sans-serif;cursor:pointer;text-decoration:none;white-space:nowrap;min-width:0}
+.cd-b:hover{background:var(--card2)}
+.cd-b:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.cd-ix b{font-weight:700}.cd-ix span{color:var(--ink3)}.cd-ix .cd-all{color:var(--ink)}
+.cd-nx{background:var(--fill);color:var(--fillink);font-weight:600;max-width:min(300px,46vw)}
+.cd-nx:hover{background:var(--fill);filter:brightness(1.08)}
+.cd-nx .cd-t{overflow:hidden;text-overflow:ellipsis}.cd-nx .cd-l{opacity:.8;font-weight:500}
+.cd-pop{position:absolute;left:50%;bottom:calc(100% + 10px);transform:translateX(-50%);width:min(400px,calc(100vw - 20px));max-height:min(62vh,540px);overflow:auto;background:var(--elev);border:1px solid var(--line);border-radius:22px;box-shadow:var(--e3);padding:8px;display:none;flex-direction:column;gap:6px;text-align:left}
+.cdock.open .cd-pop{display:flex}
+.cd-g{display:flex;flex-direction:column}
+.cd-k{font:600 12px 'Space Grotesk',system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);padding:8px 12px 4px}
+.cd-i{display:flex;align-items:center;gap:12px;min-height:44px;padding:6px 12px;border-radius:14px;text-decoration:none;color:var(--ink);font-size:15px}
+.cd-i:hover{background:var(--card2)}
+.cd-i i{font-style:normal;width:24px;height:24px;border-radius:50%;background:var(--card2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font:600 12px 'Space Grotesk',system-ui,sans-serif;color:var(--ink2);flex:none}
+.cd-i span{flex:1;min-width:0}
+.cd-i em{font:700 11px 'Space Grotesk',system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;font-style:normal;color:var(--acc);border:1px solid var(--line);border-radius:999px;padding:3px 8px}
+.cd-i[aria-current="page"]{background:color-mix(in srgb,var(--acc) 12%,transparent);font-weight:600}
+.cd-i[aria-current="page"] i{background:var(--fill);color:var(--fillink);border-color:var(--fill)}
+.cd-all{justify-content:center}
+.cd-i.cd-all{border-top:1px solid var(--line2);border-radius:0 0 14px 14px;margin-top:4px;color:var(--acc);font-weight:600}
+.dm-w{display:flex;flex-direction:column;gap:12px}
+.dm-r{display:flex;flex-wrap:wrap;gap:10px}
+.dm-r a{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);text-decoration:none;font:500 15px 'Space Grotesk',system-ui,sans-serif}
+.dm-r a:hover{border-color:var(--acc);color:var(--acc)}
+@media (max-width:640px){.cd-nx .cd-t,.cd-ix .cd-all{display:none}.cd-b{padding:0 10px}.cdock{bottom:12px}}
+@media (prefers-reduced-motion:reduce){.cdock{transition:none}}
+
 body{margin:0;background:#F7F9FC}
 .th{--bg:#F7F9FC;--bg2:#EEF2F7;--card:#FFFFFF;--card2:#F1F4F8;--elev:#FFFFFF;--ink:#101318;--ink2:#44505F;--ink3:#5B6879;--line:#D9E0E8;--line2:#E4E9F0;--acc:#0F7A4D;--fill:#0B8450;--fillink:#FFFFFF;--acc2:#4B54D6;--warn:#8A5F00;--bad:#C22F2F;--btn:#101318;--btnink:#F7F9FC;--navbg:rgba(255,255,255,.8);--glow:rgba(34,201,131,.2);--glow2:rgba(94,103,230,.14);--grid:rgba(16,19,24,.055);--e1:0 1px 2px rgba(16,19,24,.06),0 1px 1px rgba(16,19,24,.04);--e2:0 2px 4px rgba(16,19,24,.05),0 12px 26px -10px rgba(16,19,24,.14);--e3:0 4px 8px rgba(16,19,24,.06),0 30px 64px -22px rgba(16,19,24,.26)}
 .th[data-theme="dark"]{--bg:#07090D;--bg2:#0B0F16;--card:#0F131B;--card2:#151A22;--elev:#141A2E;--ink:#F5F7FA;--ink2:#A9B4C3;--ink3:#8491A3;--line:#1F2733;--line2:#1A212C;--acc:#66F5B2;--fill:#0B8450;--fillink:#FFFFFF;--acc2:#9E9EFF;--warn:#F5C451;--bad:#FF7B7B;--btn:#F5F7FA;--btnink:#07090D;--navbg:rgba(15,19,27,.72);--glow:rgba(102,245,178,.14);--glow2:rgba(158,158,255,.14);--grid:rgba(245,247,250,.045);--e1:0 1px 0 rgba(255,255,255,.04) inset,0 1px 2px rgba(0,0,0,.5);--e2:0 1px 0 rgba(255,255,255,.06) inset,0 14px 30px -12px rgba(0,0,0,.75);--e3:0 1px 0 rgba(255,255,255,.07) inset,0 34px 72px -26px rgba(0,0,0,.9),0 0 0 1px rgba(102,245,178,.05)}
@@ -980,10 +1017,10 @@ img.q-fg[src^="data:image/gif"]{display:none}
 @keyframes bbIn{from{opacity:0;scale:.55;translate:0 10px}to{opacity:1;scale:1;translate:none}}
 .rv-on .q-ty{display:flex}
 .rv-on .q-grp .q-bb:not(.q-ty){opacity:0}
-.rv-on .q-grp[data-in] .q-ty{animation:tyOut .22s ease .4s both}
-.rv-on .q-grp[data-in] .q-bb:not(.q-ty){animation:bbIn .34s cubic-bezier(.2,1.25,.3,1) calc(.45s + var(--k,0) * .2s) both;transform-origin:0 100%}
+.rv-on .q-grp[data-in] .q-ty{animation:tyOut .12s ease .1s both}
+.rv-on .q-grp[data-in] .q-bb:not(.q-ty){animation:bbIn .24s cubic-bezier(.2,1.25,.3,1) calc(.1s + var(--k,0) * .1s) both;transform-origin:0 100%}
 .rv-on .q-grp.me[data-in] .q-bb:not(.q-ty){transform-origin:100% 100%}
-.rv-on .q-grp[data-in] .q-rs{animation:bbIn .34s ease calc(.7s + var(--n,3) * .2s) both}
+.rv-on .q-grp[data-in] .q-rs{animation:bbIn .24s ease calc(.2s + var(--n,3) * .1s) both}
 .rv-on .q-grp:not([data-in]) .q-rs{opacity:0}
 .rv-on .q-grp:not(.me):not([data-in]){translate:-14px 10px}
 .rv-on .q-grp.me:not([data-in]){translate:14px 10px}
@@ -1926,7 +1963,7 @@ html.q-measuring .reveal,html.q-measuring [data-rv],html.q-measuring .q-fl,html.
         </div>
       </div>
       <p style="margin: 0; font-size: 14px; color: var(--ink3)">Slide content in the screens is sample text from the live product. Roadmap items are not shipped.</p>
-    </div></div></section><section id="owner" style="background: var(--bg2); border-top: 1px solid var(--line2); border-bottom: 1px solid var(--line2)"><div class="wrap cs-w"><div class="q-ch dv-hd"><div class="dv-hdt"><span class="kick">04 · My part</span><h2 class="h2 hd" style="max-width: 900px">I owned the idea. <span class="em">AI helped build it.</span></h2></div></div><div class="q-own"><div class="q-ownh" data-rv=""><span class="q-ownt q-me">I owned</span><span class="q-owns">What I owned</span></div><div class="q-ocs"><div class="q-oc" data-rv=""><div class="q-ocn">1</div><span class="kick" style="color: var(--acc)">Concept</span><b class="q-och">One building block</b><p>Every element is a ball</p></div><div class="q-oc" data-rv=""><div class="q-ocn">2</div><span class="kick" style="color: var(--acc)">Motion</span><b class="q-och">Interaction and motion</b><p>Five named transitions</p></div><div class="q-oc" data-rv=""><div class="q-ocn">3</div><span class="kick" style="color: var(--acc)">Product</span><b class="q-och">Editor and presenting</b><p>From a prompt to the stage</p></div><div class="q-oc" data-rv=""><div class="q-ocn">4</div><span class="kick" style="color: var(--acc)">Build</span><b class="q-och">Built with AI</b><p>Decisions and review mine</p></div></div><div class="q-bridge" data-rv=""><span>Made real with</span></div><div class="q-tms"><div class="q-tmt" data-rv=""><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.500 6l-3 12"/></svg></i><b>AI tools</b><span>A build partner. The decisions and the review stayed mine.</span></div></div></div></div></section><section id="takeaways"><div class="wrap" style="padding-top: 112px; padding-bottom: 112px; display: flex; flex-direction: column; gap: 40px"><div style="display: flex; flex-direction: column; gap: 16px"><span class="kick">05 · Takeaways</span><h2 class="h2 hd">Four rules from <span class="em">one building block.</span></h2></div><div class="q-tkg"><div class="q-tkw" data-rv=""><div class="q-tkr"><i class="q-tkn"></i><span class="q-tkk">Rule 01</span></div><div class="q-tkc"><h3>One material beats many parts</h3><div class="q-tkl"><div class="q-tkh"><span class="lb">What I saw</span></div><span class="q-tkv">Making everything from balls let any slide morph into any other.</span></div><div class="q-tkl nt"><div class="q-tkh"><span class="lb">Next time</span></div><span class="q-tkv">Pick a single building block before adding features.</span></div></div></div><div class="q-tkw" data-rv=""><div class="q-tkr"><i class="q-tkn"></i><span class="q-tkk">Rule 02</span></div><div class="q-tkc"><h3>Remove the first hurdle</h3><div class="q-tkl"><div class="q-tkh"><span class="lb">What I saw</span></div><span class="q-tkv">No install and no sign-up got people to the stage in one visit.</span></div><div class="q-tkl nt"><div class="q-tkh"><span class="lb">Next time</span></div><span class="q-tkv">Ask what stands between the idea and the first result.</span></div></div></div><div class="q-tkw" data-rv=""><div class="q-tkr"><i class="q-tkn"></i><span class="q-tkk">Rule 03</span></div><div class="q-tkc"><h3>Offer more than one way in</h3><div class="q-tkl"><div class="q-tkh"><span class="lb">What I saw</span></div><span class="q-tkv">Describe, import or pick a layout. People start in different places.</span></div><div class="q-tkl nt"><div class="q-tkh"><span class="lb">Next time</span></div><span class="q-tkv">Design the on-ramps, not just the road.</span></div></div></div><div class="q-tkw" data-rv=""><div class="q-tkr"><i class="q-tkn"></i><span class="q-tkk">Rule 04</span></div><div class="q-tkc"><h3>Keep the decisions</h3><div class="q-tkl"><div class="q-tkh"><span class="lb">What I saw</span></div><span class="q-tkv">AI built fast. The concept and the calls stayed mine.</span></div><div class="q-tkl nt"><div class="q-tkh"><span class="lb">Next time</span></div><span class="q-tkv">Let AI build fast. Own the concept and the final calls.</span></div></div></div></div></div></section><section aria-label="More projects" style="background: var(--bg2); border-top: 1px solid var(--line2); border-bottom: 1px solid var(--line2)"><div class="wrap" style="padding-top: 80px; padding-bottom: 80px; display: flex; flex-direction: column; gap: 28px"><span class="kick">Keep exploring</span><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr)); gap: 18px"><a href="/work/shubhviva" class="navcard pv" data-cur="Previous"><span class="kick" style="display: flex; align-items: center; gap: 10px"><span class="arr" style="display:inline-flex">←</span>Previous project</span><span class="disp" style="font-size: clamp(23px,calc(23px + (100vw - 390px) * 0.00864), 30px); line-height: 1.15">ShubhViva</span><span style="color: var(--ink2); font-size: 15px">AI build · every celebration, brought together</span></a><a href="/mechanical-design" class="navcard nx" data-cur="Next" style="align-items: flex-end; text-align: right"><span class="kick" style="display: flex; align-items: center; gap: 10px">Next project<span class="arr" style="display:inline-flex">→</span></span><span class="disp" style="font-size: clamp(23px,calc(23px + (100vw - 390px) * 0.00864), 30px); line-height: 1.15">Mechanical Design</span><span style="color: var(--ink2); font-size: 15px">The other half of the craft: things you can hold</span></a></div><div style="display: flex; justify-content: center"><a href="/work" class="btn btn-s" style="min-height: 52px">All projects</a></div></div></section>
+    </div></div></section><section id="owner" style="background: var(--bg2); border-top: 1px solid var(--line2); border-bottom: 1px solid var(--line2)"><div class="wrap cs-w"><div class="q-ch dv-hd"><div class="dv-hdt"><span class="kick">04 · My part</span><h2 class="h2 hd" style="max-width: 900px">I owned the idea. <span class="em">AI helped build it.</span></h2></div></div><div class="q-own"><div class="q-ownh" data-rv=""><span class="q-ownt q-me">I owned</span><span class="q-owns">What I owned</span></div><div class="q-ocs"><div class="q-oc" data-rv=""><div class="q-ocn">1</div><span class="kick" style="color: var(--acc)">Concept</span><b class="q-och">One building block</b><p>Every element is a ball</p></div><div class="q-oc" data-rv=""><div class="q-ocn">2</div><span class="kick" style="color: var(--acc)">Motion</span><b class="q-och">Interaction and motion</b><p>Five named transitions</p></div><div class="q-oc" data-rv=""><div class="q-ocn">3</div><span class="kick" style="color: var(--acc)">Product</span><b class="q-och">Editor and presenting</b><p>From a prompt to the stage</p></div><div class="q-oc" data-rv=""><div class="q-ocn">4</div><span class="kick" style="color: var(--acc)">Build</span><b class="q-och">Built with AI</b><p>Decisions and review mine</p></div></div><div class="q-bridge" data-rv=""><span>Made real with</span></div><div class="q-tms"><div class="q-tmt" data-rv=""><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.500 6l-3 12"/></svg></i><b>AI tools</b><span>A build partner. The decisions and the review stayed mine.</span></div></div></div></div></section><section id="takeaways"><div class="wrap" style="padding-top: 112px; padding-bottom: 112px; display: flex; flex-direction: column; gap: 40px"><div style="display: flex; flex-direction: column; gap: 16px"><span class="kick">05 · Takeaways</span><h2 class="h2 hd">Four rules from <span class="em">one building block.</span></h2></div><div class="q-tkg"><div class="q-tkw" data-rv=""><div class="q-tkr"><i class="q-tkn"></i><span class="q-tkk">Rule 01</span></div><div class="q-tkc"><h3>One material beats many parts</h3><div class="q-tkl"><div class="q-tkh"><span class="lb">What I saw</span></div><span class="q-tkv">Making everything from balls let any slide morph into any other.</span></div><div class="q-tkl nt"><div class="q-tkh"><span class="lb">Next time</span></div><span class="q-tkv">Pick a single building block before adding features.</span></div></div></div><div class="q-tkw" data-rv=""><div class="q-tkr"><i class="q-tkn"></i><span class="q-tkk">Rule 02</span></div><div class="q-tkc"><h3>Remove the first hurdle</h3><div class="q-tkl"><div class="q-tkh"><span class="lb">What I saw</span></div><span class="q-tkv">No install and no sign-up got people to the stage in one visit.</span></div><div class="q-tkl nt"><div class="q-tkh"><span class="lb">Next time</span></div><span class="q-tkv">Ask what stands between the idea and the first result.</span></div></div></div><div class="q-tkw" data-rv=""><div class="q-tkr"><i class="q-tkn"></i><span class="q-tkk">Rule 03</span></div><div class="q-tkc"><h3>Offer more than one way in</h3><div class="q-tkl"><div class="q-tkh"><span class="lb">What I saw</span></div><span class="q-tkv">Describe, import or pick a layout. People start in different places.</span></div><div class="q-tkl nt"><div class="q-tkh"><span class="lb">Next time</span></div><span class="q-tkv">Design the on-ramps, not just the road.</span></div></div></div><div class="q-tkw" data-rv=""><div class="q-tkr"><i class="q-tkn"></i><span class="q-tkk">Rule 04</span></div><div class="q-tkc"><h3>Keep the decisions</h3><div class="q-tkl"><div class="q-tkh"><span class="lb">What I saw</span></div><span class="q-tkv">AI built fast. The concept and the calls stayed mine.</span></div><div class="q-tkl nt"><div class="q-tkh"><span class="lb">Next time</span></div><span class="q-tkv">Let AI build fast. Own the concept and the final calls.</span></div></div></div></div></div></section><section aria-label="More projects" style="background: var(--bg2); border-top: 1px solid var(--line2); border-bottom: 1px solid var(--line2)"><div class="wrap" style="padding-top: 80px; padding-bottom: 80px; display: flex; flex-direction: column; gap: 28px"><span class="kick">Keep exploring</span><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr)); gap: 18px"><a href="/work/shubhviva" class="navcard pv" data-cur="Previous"><span class="kick" style="display: flex; align-items: center; gap: 10px"><span class="arr" style="display:inline-flex">←</span>Previous project</span><span class="disp" style="font-size: clamp(23px,calc(23px + (100vw - 390px) * 0.00864), 30px); line-height: 1.15">ShubhViva</span><span style="color: var(--ink2); font-size: 15px">AI build · every celebration, brought together</span></a><a href="/mechanical-design" class="navcard nx" data-cur="Next" style="align-items: flex-end; text-align: right"><span class="kick" style="display: flex; align-items: center; gap: 10px">Next project<span class="arr" style="display:inline-flex">→</span></span><span class="disp" style="font-size: clamp(23px,calc(23px + (100vw - 390px) * 0.00864), 30px); line-height: 1.15">Mechanical Design</span><span style="color: var(--ink2); font-size: 15px">The other half of the craft: things you can hold</span></a></div><div class="dm-w"><span class="kick">Worth your time</span><div class="dm-r"><a href="/work/manage-credit-limit">Manage Credit Limit</a><a href="/work/digital-charge-verification">Digital Charge Verification</a><a href="/work/generic-medicine">Generic Medicine</a><a href="/#leadership">How I lead</a><a href="/#impact">Impact at a glance</a><a href="/#about">About me</a></div></div><div style="display: flex; justify-content: center"><a href="/work" class="btn btn-s" style="min-height: 52px">All projects</a></div></div></section>
 </main>
 
 <!-- CLOSING -->
@@ -1960,7 +1997,82 @@ class Component extends DCLogic {
     this.tick = this.tick.bind(this);
     this.autoTick = this.autoTick.bind(this);
   }
+  navFx() {
+    var CASES = [['/work/manage-credit-limit','Manage Credit Limit','Flagship'],['/work/digital-charge-verification','Digital Charge Verification','Flagship'],['/work/generic-medicine','Generic Medicine','Flagship'],['/work/financial-relief-program','Financial Relief Program','Case'],['/work/canada-experience-gap','Canada Experience Gap','Case'],['/work/financial-verification','Financial Verification','Case'],['/work/plan-it-promo-pricing','Plan It® Promo Pricing','Case'],['/work/payments-mexico','International Payments, Mexico','Case'],['/work/bulk-payment','Bulk Payment Dashboard','Case'],['/work/onboarding','Onboarding','Case'],['/work/localization-automation','Localization automation','Proposal'],['/work/design-system-usage','Design system usage','Proposal'],['/work/sourcx','SourcX','AI build'],['/work/shubhviva','ShubhViva','AI build'],['/work/gravity-deck','Gravity','AI build'],['/mechanical-design','Mechanical design','Engineering']];
+    var HERE = '/work/gravity-deck';
+    var rm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var self = this;
+    /* scroll-spy for in-page section links in the sticky header */
+    var links = [], tg = [];
+    var collect = function () {
+      links = [].slice.call(document.querySelectorAll('.hnav a[href^="#"]'));
+      tg = links.map(function (a) { var id = a.getAttribute('href').slice(1); return id ? document.getElementById(id) : null; });
+    };
+    var spy = function () {
+      if (!links.length) collect();
+      if (!links.length) return;
+      var mark = window.innerHeight * 0.34, cur = -1, i;
+      for (i = 0; i < tg.length; i++) { if (tg[i] && tg[i].getBoundingClientRect().top <= mark) cur = i; }
+      links.forEach(function (a, k) { if (k === cur) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
+    };
+    /* case dock: previous, all cases, next */
+    var idx = -1, i;
+    for (i = 0; i < CASES.length; i++) { if (CASES[i][0] === HERE) idx = i; }
+    var dock = null, endEl = null;
+    if (idx >= 0) {
+      var prev = idx > 0 ? CASES[idx - 1] : ['/', 'Home', ''];
+      var next = idx < CASES.length - 1 ? CASES[idx + 1] : ['/', 'Home', ''];
+      var arrow = function (d) { return '<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="' + d + '"/></svg>'; };
+      var esc = function (t) { return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;'); };
+      var groups = [], seen = {};
+      CASES.forEach(function (c, k) { var g = c[2] === 'Flagship' || c[2] === 'Case' ? 'Product cases' : c[2] === 'Proposal' ? 'Proposals' : c[2] === 'AI build' ? 'AI builds' : 'Engineering'; if (!seen[g]) { seen[g] = []; groups.push([g, seen[g]]); } seen[g].push([c, k]); });
+      var pop = groups.map(function (g) {
+        return '<div class="cd-g"><span class="cd-k">' + g[0] + '</span>' + g[1].map(function (e) {
+          var c = e[0], k = e[1];
+          return '<a class="cd-i" href="' + c[0] + '"' + (k === idx ? ' aria-current="page"' : '') + '><i>' + (k + 1) + '</i><span>' + esc(c[1]) + '</span>' + (c[2] === 'Flagship' ? '<em>Flagship</em>' : '') + '</a>';
+        }).join('') + '</div>';
+      }).join('') + '<a class="cd-i cd-all" href="/work"><span>All work</span></a>';
+      dock = document.createElement('nav');
+      dock.className = 'cdock';
+      dock.setAttribute('aria-label', 'Case navigation');
+      dock.innerHTML = '<a class="cd-b cd-pv" href="' + prev[0] + '" aria-label="Previous: ' + esc(prev[1]) + '" title="' + esc(prev[1]) + '">' + arrow('M15 5l-7 7 7 7') + '</a>' +
+        '<button type="button" class="cd-b cd-ix" aria-expanded="false" aria-haspopup="true"><b>' + (idx + 1) + '</b><span>of ' + CASES.length + '</span><span class="cd-all">All cases</span>' + arrow('M6 15l6-6 6 6') + '</button>' +
+        '<a class="cd-b cd-nx" href="' + next[0] + '" aria-label="Next: ' + esc(next[1]) + '"><span class="cd-l">Next</span><span class="cd-t">' + esc(next[1]) + '</span>' + arrow('M9 5l7 7-7 7') + '</a>' +
+        '<button type="button" class="cd-b cd-up" aria-label="Back to top">' + arrow('M12 19V5M5 12l7-7 7 7') + '</button>' +
+        '<div class="cd-pop" role="menu">' + pop + '</div>';
+      document.body.appendChild(dock);
+      var vars = ['--navbg', '--line', '--line2', '--ink', '--ink2', '--ink3', '--card', '--card2', '--elev', '--fill', '--fillink', '--acc', '--e3'];
+      var sync = function () {
+        var th = document.querySelector('.th'); if (!th) return;
+        var cs = getComputedStyle(th);
+        vars.forEach(function (v) { dock.style.setProperty(v, cs.getPropertyValue(v)); });
+      };
+      sync();
+      try { var th0 = document.querySelector('.th'); if (th0) new MutationObserver(sync).observe(th0, { attributes: true, attributeFilter: ['data-theme', 'class'] }); } catch (x) {}
+      var ix = dock.querySelector('.cd-ix');
+      var setOpen = function (o) { dock.classList.toggle('open', o); ix.setAttribute('aria-expanded', o ? 'true' : 'false'); };
+      ix.addEventListener('click', function (e) { e.stopPropagation(); setOpen(!dock.classList.contains('open')); });
+      document.addEventListener('click', function (e) { if (dock.classList.contains('open') && !dock.contains(e.target)) setOpen(false); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+      dock.querySelector('.cd-up').addEventListener('click', function () { window.scrollTo({ top: 0, behavior: rm ? 'auto' : 'smooth' }); });
+    }
+    var raf = 0;
+    var upd = function () {
+      raf = 0; spy();
+      if (!dock) return;
+      if (!endEl) endEl = document.querySelector('section[aria-label="More projects"]');
+      var y = window.scrollY || document.documentElement.scrollTop, vh = window.innerHeight;
+      var atEnd = endEl ? endEl.getBoundingClientRect().top < vh * 0.82 : false;
+      var show = y > vh * 0.7 && !atEnd;
+      dock.classList.toggle('on', show);
+      if (!show) { dock.classList.remove('open'); }
+    };
+    window.addEventListener('scroll', function () { if (!raf) raf = requestAnimationFrame(upd); }, { passive: true });
+    window.addEventListener('resize', function () { if (!raf) raf = requestAnimationFrame(upd); });
+    setTimeout(function () { collect(); upd(); }, 400); setTimeout(function () { collect(); upd(); }, 1500);
+  }
   componentDidMount() {
+    try { this.navFx(); } catch (x) {}
     try { document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a'); var h = a && a.getAttribute('href'); if (!h || h.charAt(0) !== '#') return; var id = h.slice(1); var t = id ? document.getElementById(id) : document.body; if (!t) return; e.preventDefault(); var rm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches; /*hashScroll*/ t.scrollIntoView({ behavior: rm ? 'auto' : 'smooth', block: 'start' }); try { history.replaceState(null, '', '#' + id); } catch (x) {} }); } catch (x) {}
     try { document.addEventListener('click', function (e) { var d = document.querySelector('details.mnav[open]'); if (d && !d.contains(e.target)) d.removeAttribute('open'); }); document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { var d = document.querySelector('details.mnav[open]'); if (d) d.removeAttribute('open'); } }); } catch (x) {}
     var self = this;
@@ -2109,10 +2221,10 @@ class Component extends DCLogic {
             var el = en.target; io.unobserve(el);
             el.setAttribute('data-in', '');
             var kids = [].slice.call(el.querySelectorAll('[data-rv]'));
-            kids.forEach(function (k, i) { k.style.setProperty('--d', (0.1 + Math.min(i, 10) * 0.09) + 's'); k.setAttribute('data-in', ''); });
+            kids.forEach(function (k, i) { k.style.setProperty('--d', (0.02 + Math.min(i, 10) * 0.04) + 's'); k.setAttribute('data-in', ''); });
             countUp(el);
           });
-        }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+        }, { threshold: 0.01, rootMargin: '0px 0px 18% 0px' });
         all.forEach(function (el) { if (!el.parentElement.closest('[data-rv]')) io.observe(el); });
         setTimeout(function () { self.cxLayout(); }, 700); setTimeout(function () { self.cxLayout(); }, 1800);
         try { if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { self.cxLayout(); }); } catch (e) {}

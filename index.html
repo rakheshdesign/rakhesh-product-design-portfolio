@@ -88,9 +88,9 @@
 <h2>Three proposals to make design scale.</h2>
 <p>Pitched to the Design and Research org. My estimates are labeled as estimates.</p>
 <a href="/work/design-system-usage">Read the proposals</a>
-<a href="/work/localization-automation">MARKET MODE Localize once, launch everywhere</a>
-<a href="/work/design-system-usage#type">BREAKPOINT MODE Type that fits the screen</a>
-<a href="/work/design-system-usage#platform">PLATFORM MODE Build iOS, switch to Android</a>
+<a href="/work/localization-automation">US UK MARKET MODE Localize once, launch everywhere</a>
+<a href="/work/design-system-usage#type">A A A BREAKPOINT MODE Type that fits the screen</a>
+<a href="/work/design-system-usage#platform">iOS Android PLATFORM MODE Build iOS, switch to Android</a>
 </section>
 <section>
 <h2>Learning by building and testing.</h2>
@@ -121,19 +121,23 @@
 <h2>Helping teams build better experiences together.</h2>
 <p>Design leadership shows in the quality of decisions, the systems we improve and the people we help grow.</p>
 <p>WORKSHOP Whiteboarding journeys with the team</p>
+<h3>Leaders wanted the landing page removed. I asked for a test.</h3>
+<p>1 The ask Remove the page</p>
+<p>2 The test 35 days, 50/50</p>
+<p>3 The call The page stayed</p>
+<a href="/work/manage-credit-limit#us">Read the case</a>
 <h3>Design system</h3>
-<p>Design System Ambassador The link between product designers and the system team.</p>
-<p>Design system uplift Moved Canada, Mexico payments and bank verification from the older legacy UI to v7 of the design system.</p>
-<h3>Cross-functional influence</h3>
-<p>Pushed back with a test Leaders wanted the landing page removed. I proposed a 35-day 50/50 test instead. Removal cost about 6% of completion, so it stayed. Read the case</p>
-<p>Workshops Financial Relief Program and fraud-verification workshops with Product, Business and Risk.</p>
-<p>Markets Market teams shape copy, rules and promotions with design, through one variable system. See the markets</p>
-<h3>Quality and standards</h3>
-<p>Bug bashes Ran design-system bug bashes so quality ships as designed.</p>
-<p>Accessibility Journeys that pass accessibility checks and still follow global patterns.</p>
-<h3>Mentoring and knowledge sharing</h3>
-<p>Guiding designers Helping designers choose an approach and reach a direction through critiques and research tests.</p>
-<p>Design critiques Took Financial Relief, Australia and fraud explorations from many options to two or three.</p>
+<p>Design System Ambassador, linking product and system teams</p>
+<p>Moved Canada, Mexico payments and bank verification to v7 of the system</p>
+<h3>Cross-functional</h3>
+<p>Workshops with Product, Business and Risk</p>
+<p>Market teams shape copy and rules with design See the markets</p>
+<h3>Quality</h3>
+<p>Design-system bug bashes, so it ships as designed</p>
+<p>Accessibility checks that still follow global patterns</p>
+<h3>Mentoring</h3>
+<p>Guiding designers to a direction through critiques and research tests</p>
+<p>Took explorations from many options to two or three</p>
 <h3>Research shapes the question. Making answers it.</h3>
 <h4>Observe</h4>
 <p>Funnel data, user tests, competitor teardown, what market teams know.</p>
@@ -187,6 +191,42 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
 <style>
+.sv-cv{flex:1 1 100%;display:flex;justify-content:center;background:var(--card2);border-radius:16px;padding:14px 12px 6px;margin:-6px 0 2px;overflow:hidden}.sv-cv img{height:clamp(190px,22vw,270px);width:auto;max-width:100%;object-fit:contain;transition:transform .5s cubic-bezier(.2,.7,.2,1)}.lift:hover .sv-cv img{transform:translateY(-4px) scale(1.03)}
+
+.pnum{display:none!important}
+.pcm-b .nd{border:0!important;background:color-mix(in srgb,var(--acc) 6%,var(--card))!important}
+
+
+.hnav .pill[aria-current="true"],.hpills .pill[aria-current="true"]{background:color-mix(in srgb,var(--acc) 14%,transparent);color:var(--acc);font-weight:600}
+.cdock{position:fixed;left:50%;bottom:16px;transform:translate(-50%,28px);opacity:0;pointer-events:none;z-index:36;display:flex;align-items:center;gap:2px;padding:6px;border-radius:999px;background:var(--navbg);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);border:1px solid var(--line);box-shadow:var(--e3);max-width:calc(100vw - 20px);transition:opacity .25s ease,transform .25s ease;font-family:'Space Grotesk',system-ui,sans-serif;color:var(--ink)}
+.cdock.on{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+.cd-b{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;min-width:44px;padding:0 12px;border-radius:999px;border:0;background:transparent;color:var(--ink);font:500 14px 'Space Grotesk',system-ui,sans-serif;cursor:pointer;text-decoration:none;white-space:nowrap;min-width:0}
+.cd-b:hover{background:var(--card2)}
+.cd-b:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.cd-ix b{font-weight:700}.cd-ix span{color:var(--ink3)}.cd-ix .cd-all{color:var(--ink)}
+.cd-nx{background:var(--fill);color:var(--fillink);font-weight:600;max-width:min(300px,46vw)}
+.cd-nx:hover{background:var(--fill);filter:brightness(1.08)}
+.cd-nx .cd-t{overflow:hidden;text-overflow:ellipsis}.cd-nx .cd-l{opacity:.8;font-weight:500}
+.cd-pop{position:absolute;left:50%;bottom:calc(100% + 10px);transform:translateX(-50%);width:min(400px,calc(100vw - 20px));max-height:min(62vh,540px);overflow:auto;background:var(--elev);border:1px solid var(--line);border-radius:22px;box-shadow:var(--e3);padding:8px;display:none;flex-direction:column;gap:6px;text-align:left}
+.cdock.open .cd-pop{display:flex}
+.cd-g{display:flex;flex-direction:column}
+.cd-k{font:600 12px 'Space Grotesk',system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);padding:8px 12px 4px}
+.cd-i{display:flex;align-items:center;gap:12px;min-height:44px;padding:6px 12px;border-radius:14px;text-decoration:none;color:var(--ink);font-size:15px}
+.cd-i:hover{background:var(--card2)}
+.cd-i i{font-style:normal;width:24px;height:24px;border-radius:50%;background:var(--card2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font:600 12px 'Space Grotesk',system-ui,sans-serif;color:var(--ink2);flex:none}
+.cd-i span{flex:1;min-width:0}
+.cd-i em{font:700 11px 'Space Grotesk',system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;font-style:normal;color:var(--acc);border:1px solid var(--line);border-radius:999px;padding:3px 8px}
+.cd-i[aria-current="page"]{background:color-mix(in srgb,var(--acc) 12%,transparent);font-weight:600}
+.cd-i[aria-current="page"] i{background:var(--fill);color:var(--fillink);border-color:var(--fill)}
+.cd-all{justify-content:center}
+.cd-i.cd-all{border-top:1px solid var(--line2);border-radius:0 0 14px 14px;margin-top:4px;color:var(--acc);font-weight:600}
+.dm-w{display:flex;flex-direction:column;gap:12px}
+.dm-r{display:flex;flex-wrap:wrap;gap:10px}
+.dm-r a{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);text-decoration:none;font:500 15px 'Space Grotesk',system-ui,sans-serif}
+.dm-r a:hover{border-color:var(--acc);color:var(--acc)}
+@media (max-width:640px){.cd-nx .cd-t,.cd-ix .cd-all{display:none}.cd-b{padding:0 10px}.cdock{bottom:12px}}
+@media (prefers-reduced-motion:reduce){.cdock{transition:none}}
+
 body{margin:0;background:#F7F9FC}
 .th{--bg:#F7F9FC;--bg2:#EEF2F7;--card:#FFFFFF;--card2:#F1F4F8;--elev:#FFFFFF;--ink:#101318;--ink2:#44505F;--ink3:#5B6879;--line:#D9E0E8;--line2:#E4E9F0;--acc:#0F7A4D;--fill:#0B8450;--fillink:#FFFFFF;--acc2:#4B54D6;--warn:#8A5F00;--bad:#C22F2F;--btn:#101318;--btnink:#F7F9FC;--navbg:rgba(255,255,255,.8);--glow:rgba(34,201,131,.2);--glow2:rgba(94,103,230,.14);--grid:rgba(16,19,24,.055);--e1:0 1px 2px rgba(16,19,24,.06),0 1px 1px rgba(16,19,24,.04);--e2:0 2px 4px rgba(16,19,24,.05),0 12px 26px -10px rgba(16,19,24,.14);--e3:0 4px 8px rgba(16,19,24,.06),0 30px 64px -22px rgba(16,19,24,.26)}
 .th[data-theme="dark"]{--bg:#07090D;--bg2:#0B0F16;--card:#0F131B;--card2:#151A22;--elev:#141A2E;--ink:#F5F7FA;--ink2:#A9B4C3;--ink3:#8491A3;--line:#1F2733;--line2:#1A212C;--acc:#66F5B2;--fill:#0B8450;--fillink:#FFFFFF;--acc2:#9E9EFF;--warn:#F5C451;--bad:#FF7B7B;--btn:#F5F7FA;--btnink:#07090D;--navbg:rgba(15,19,27,.72);--glow:rgba(102,245,178,.14);--glow2:rgba(158,158,255,.14);--grid:rgba(245,247,250,.045);--e1:0 1px 0 rgba(255,255,255,.04) inset,0 1px 2px rgba(0,0,0,.5);--e2:0 1px 0 rgba(255,255,255,.06) inset,0 14px 30px -12px rgba(0,0,0,.75);--e3:0 1px 0 rgba(255,255,255,.07) inset,0 34px 72px -26px rgba(0,0,0,.9),0 0 0 1px rgba(102,245,178,.05)}
@@ -1128,6 +1168,91 @@ html:has(#pf-sv:checked) .pf-g-more,html:has(#pf-ft:checked) .pf-g-more,html:has
 @media(max-width:640px){.pf-bar{top:64px;padding:22px 16px 10px}}
 #projectsCm{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
 @media(max-width:900px){#projectsCm{grid-template-columns:minmax(0,1fr)}}
+.pb-list .pb-r{grid-template-columns:auto minmax(0,1fr) auto;gap:6px 20px;padding:12px 22px 12px 12px}
+.pb-list .pb-k{grid-column:auto;min-width:0}
+.pb-x{display:flex;flex-direction:column;gap:4px;min-width:0}
+.pb-il{width:124px;height:76px;border-radius:12px;background:var(--card2);border:1px solid var(--line2);display:flex;align-items:center;justify-content:center;overflow:hidden;flex:none}
+.pb-sw{position:relative;display:grid;grid-template-columns:1fr 1fr;width:88px;height:36px;border-radius:99px;background:var(--card);border:1px solid var(--line);box-shadow:var(--e1)}
+.pb-sw b{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;font:700 12px 'Space Grotesk',system-ui,sans-serif;letter-spacing:.04em}
+.pb-kb{position:absolute;left:3px;top:3px;bottom:3px;width:calc(50% - 3px);border-radius:99px;background:var(--fill);animation:pbSw 4.4s cubic-bezier(.6,0,.3,1) infinite}
+.pb-s1{animation:pbS1 4.4s ease infinite}.pb-s2{animation:pbS2 4.4s ease infinite}
+@keyframes pbSw{0%,38%{transform:translateX(0)}50%,88%{transform:translateX(calc(100% + 0px))}100%{transform:translateX(0)}}
+@keyframes pbS1{0%,38%{color:var(--fillink)}46%,88%{color:var(--ink3)}100%{color:var(--fillink)}}
+@keyframes pbS2{0%,38%{color:var(--ink3)}46%,88%{color:var(--fillink)}96%,100%{color:var(--ink3)}}
+.pb-ab{display:flex;align-items:flex-end;gap:7px;height:52px}
+.pb-ab i{font:700 18px/1 'Space Grotesk',system-ui,sans-serif;font-style:normal;color:var(--ink3);animation:pbA 3.6s ease-in-out infinite;transform-origin:50% 100%}
+.pb-ab i:nth-child(2){font-size:30px;animation-delay:1.2s}.pb-ab i:nth-child(3){font-size:46px;animation-delay:2.4s}
+@keyframes pbA{0%,28%{color:var(--acc);transform:scale(1.14)}38%,100%{color:var(--ink3);transform:scale(1)}}
+.pb-pm{display:flex;align-items:center;gap:12px}
+.pb-ph{position:relative;width:34px;height:58px;border:2.5px solid var(--ink3);border-radius:12px;background:var(--card);display:flex;justify-content:center;padding-top:5px;box-sizing:border-box;animation:pbPh 4.4s cubic-bezier(.6,0,.3,1) infinite}
+.pb-nt{display:block;height:5px;width:14px;border-radius:4px;background:var(--ink3);animation:pbNt 4.4s cubic-bezier(.6,0,.3,1) infinite}
+.pb-pl{position:relative;display:block;width:50px;height:16px}
+.pb-pl b{position:absolute;left:0;top:0;font:700 12px/16px 'Space Grotesk',system-ui,sans-serif;letter-spacing:.04em;color:var(--ink2)}
+.pb-pl b:first-child{animation:pbL1 4.4s ease infinite}.pb-pl b:last-child{color:var(--acc);animation:pbL2 4.4s ease infinite}
+@keyframes pbPh{0%,38%{border-radius:12px;border-color:var(--ink3)}50%,88%{border-radius:5px;border-color:var(--acc)}100%{border-radius:12px;border-color:var(--ink3)}}
+@keyframes pbNt{0%,38%{width:14px;border-radius:4px;background:var(--ink3)}50%,88%{width:5px;border-radius:50%;background:var(--acc)}100%{width:14px;border-radius:4px;background:var(--ink3)}}
+@keyframes pbL1{0%,38%{opacity:1}46%,90%{opacity:0}98%,100%{opacity:1}}
+@keyframes pbL2{0%,38%{opacity:0}46%,90%{opacity:1}98%,100%{opacity:0}}
+@media (max-width:700px){.pb-il{width:92px;height:64px}.pb-sw{width:76px;height:32px}.pb-ab{height:44px}.pb-ab i{font-size:14px}.pb-ab i:nth-child(2){font-size:24px}.pb-ab i:nth-child(3){font-size:36px}.pb-ph{width:28px;height:48px}.pb-pm{gap:6px}.pb-pl{width:34px}.pb-list .pb-r{gap:6px 14px;padding-right:14px}.pb-t{font-size:16px}}
+@media (prefers-reduced-motion:reduce){.pb-kb,.pb-s1,.pb-s2,.pb-ab i,.pb-ph,.pb-nt,.pb-pl b{animation:none!important}.pb-pl b:last-child{opacity:0}}
+.ld-ft{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:28px 48px;align-items:center;padding:clamp(22px,3vw,36px);margin-bottom:18px;box-shadow:var(--e1)}
+.ld-fl{display:flex;flex-direction:column;gap:18px;align-items:flex-start;min-width:0}
+.ld-fh{margin:0;font-size:clamp(26px,3vw,40px);line-height:1.12}
+.ld-st{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.ld-st li{display:flex;align-items:center;gap:10px;padding:8px 16px 8px 8px;border:1px solid var(--line);border-radius:999px;background:var(--card2)}
+.ld-st i{width:28px;height:28px;border-radius:50%;background:var(--fill);color:var(--fillink);font:700 13px 'Space Grotesk',system-ui,sans-serif;font-style:normal;display:flex;align-items:center;justify-content:center;flex:none}
+.ld-st span{display:flex;flex-direction:column;font:600 14px/1.2 'Space Grotesk',system-ui,sans-serif;color:var(--ink)}
+.ld-st small{font:500 13px 'Inter',system-ui,sans-serif;color:var(--ink2);margin-top:2px}
+.ld-fr{display:flex;flex-direction:column;gap:12px;align-items:center;background:var(--card2);border:1px solid var(--line2);border-radius:20px;padding:22px 20px 16px}
+.ld-bars{display:flex;gap:28px;align-items:flex-end;justify-content:center;width:100%}
+.ld-bc{position:relative;display:flex;flex-direction:column;align-items:center;gap:10px;flex:0 1 150px}
+.ld-bt{width:100%;height:150px;display:flex;align-items:flex-end;border-radius:14px;background:var(--card);border:1px solid var(--line)}
+.ld-b{display:block;width:100%;border-radius:12px 12px 10px 10px;transform-origin:bottom}
+.ld-b.k{height:100%;background:var(--fill)}.ld-b.r{height:94%;background:var(--ink3)}
+.ld-bl{order:2;font:600 13px 'Space Grotesk',system-ui,sans-serif;color:var(--ink2)}
+.ld-dl{position:absolute;top:-4px;right:-10px;font:700 14px 'Space Grotesk',system-ui,sans-serif;background:var(--bad);color:#fff;border-radius:999px;padding:5px 12px;}
+@supports (animation-timeline:view()){.ld-b{animation:ldGrow linear both;animation-timeline:view();animation-range:entry 15% cover 42%}.ld-dl{animation:ldPop linear both;animation-timeline:view();animation-range:cover 30% cover 46%}}
+@keyframes ldGrow{from{transform:scaleY(.12)}to{transform:none}}
+@keyframes ldPop{from{opacity:0;transform:translateY(8px) scale(.9)}to{opacity:1;transform:none}}
+.ld-cap{font-size:13px;color:var(--ink3)}
+.ld{gap:18px}
+.ld-h{flex-direction:column;align-items:flex-start;gap:14px}
+.ld-h .tile-ic{width:56px;height:56px;border-radius:50%;background:var(--fill);color:var(--fillink);transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.ld:hover .tile-ic{transform:rotate(-8deg) scale(1.08)}
+.ld ul{gap:10px}
+.ld li{flex-direction:row;align-items:flex-start;gap:10px;padding:10px 12px;border:0;border-radius:12px;background:var(--card2)}
+.ld li i{flex:none;width:18px;height:18px;margin-top:1px;border-radius:50%;background:color-mix(in srgb,var(--acc) 16%,transparent);position:relative}
+.ld li i::after{content:"";position:absolute;left:5px;top:3px;width:5px;height:9px;border:solid var(--acc);border-width:0 2px 2px 0;transform:rotate(40deg)}
+.ld li span{font-size:15px;line-height:1.4;color:var(--ink)}
+.ld li{flex-wrap:wrap}.ld li span{flex:1 1 0;min-width:0}.ld li a{flex:1 1 100%;padding-left:28px;font-size:14px;color:var(--acc)!important}
+@media (max-width:900px){.ld-ft{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.ld-b,.ld-dl{animation:none!important}}
+.vn{display:grid;grid-template-columns:minmax(0,460px) minmax(0,1fr);gap:28px clamp(28px,5vw,72px);align-items:center}
+.vn-st{width:100%;max-width:460px;justify-self:center}
+.vn-svg{width:100%;height:auto;display:block;overflow:visible}
+.vn-ring{fill:none;stroke:var(--ink3);stroke-width:1.5;stroke-dasharray:3 7;opacity:.55;stroke-linecap:round}
+.vn-c{transform-box:fill-box;transform-origin:center;fill-opacity:.12;stroke-width:2;animation:vnA 9s ease-in-out infinite}
+.vn-c.c1{fill:var(--acc);stroke:var(--acc)}.vn-c.c2{fill:var(--acc2);stroke:var(--acc2);animation-delay:3s}.vn-c.c3{fill:var(--warn);stroke:var(--warn);animation-delay:6s}
+.vn-t{font:700 19px 'Space Grotesk',system-ui,sans-serif;fill:var(--ink);text-anchor:middle}
+.vn-s{font:500 13.5px 'Inter',system-ui,sans-serif;fill:var(--ink2);text-anchor:middle}
+.vn-ct{color:var(--ink)}.vn-cy{transform-box:fill-box;transform-origin:center;animation:vnSp 9s linear infinite}
+.vn-dot{fill:var(--ink);stroke:var(--card);stroke-width:3;offset-path:path('M230,131 A84,84 0 0 1 302.7,257 A84,84 0 0 1 157.3,257 A84,84 0 0 1 230,131');offset-distance:0%;offset-rotate:0deg;animation:vnGo 9s linear infinite}
+@keyframes vnA{0%,30%{fill-opacity:.36;stroke-width:3.4;transform:scale(1.045)}38%,94%{fill-opacity:.1;stroke-width:2;transform:none}100%{fill-opacity:.36;stroke-width:3.4;transform:scale(1.045)}}
+@keyframes vnGo{from{offset-distance:0%}to{offset-distance:100%}}
+@keyframes vnSp{to{transform:rotate(360deg)}}
+.vn-rt{display:flex;flex-direction:column;gap:18px;min-width:0}
+.vn-l{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.vn-r{display:flex;align-items:flex-start;gap:16px;padding:16px 20px;border-radius:18px;border:1.5px solid var(--line);background:var(--card);animation:vnR 9s ease-in-out infinite}
+.vn-r i{flex:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:700 16px 'Space Grotesk',system-ui,sans-serif;font-style:normal;color:#fff}
+.vn-r.r1 i{background:var(--acc)}.vn-r.r2 i{background:var(--acc2)}.vn-r.r3 i{background:var(--warn)}
+.vn-r.r2{animation-delay:3s}.vn-r.r3{animation-delay:6s}
+.vn-r h4{margin:0 0 4px;font-size:clamp(21px,2vw,26px);line-height:1.1}
+.vn-r p{margin:0;font-size:15px;line-height:1.5;color:var(--ink2)}
+@keyframes vnR{0%,30%{border-color:var(--ink);box-shadow:var(--e2);transform:translateX(6px)}38%,94%{border-color:var(--line);box-shadow:none;transform:none}100%{border-color:var(--ink);box-shadow:var(--e2);transform:translateX(6px)}}
+.vn-lp{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;padding:8px 16px;border-radius:999px;background:var(--card2);border:1px solid var(--line);color:var(--acc);font:600 13px 'Space Grotesk',system-ui,sans-serif}
+.gp .vn *{animation-play-state:paused!important}
+@media (max-width:899px){.vn{grid-template-columns:1fr}.vn-st{max-width:380px}.vn-r{animation:none}}
+@media (prefers-reduced-motion:reduce){.vn-c,.vn-cy,.vn-dot,.vn-r{animation:none!important}.vn-c{fill-opacity:.2}.vn-dot{display:none}}
 /*pf-end*/
 </style>
 </helmet>
@@ -1252,7 +1377,7 @@ html:has(#pf-sv:checked) .pf-g-more,html:has(#pf-ft:checked) .pf-g-more,html:has
         <div class="pl" style="display: flex; flex-direction: column; gap: 18px; min-width: 0">
           <div style="display: flex; align-items: center; gap: 14px">
             <span style="width: 48px; height: 48px; border-radius: 14px; background: var(--card2); border: 1px solid var(--line); color: var(--acc); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 256 256" fill="currentColor"><path d="{{p.icp}}"></path></svg></span>
-            <span class="kick" style="color: var(--acc)">{{p.n}} · {{p.meta}}</span>
+            <span class="kick" style="color: var(--acc)">{{p.meta}}</span>
           </div>
           <h3 class="disp" style="margin: 0; font-size: clamp(30px,3.4vw, 48px); line-height: 1.1">{{p.title}}</h3>
           <div class="mtr" style="display: flex; flex-direction: column; align-items: flex-start; gap: 8px"><span class="disp" style="font-size: clamp(34px,4.4vw, 64px); line-height: 1; color: var(--acc)">{{p.metric}}</span><span style="font-size: 16px; line-height: 1.45; color: var(--ink2); max-width: 360px">{{p.metricLabel}}</span></div>
@@ -1279,7 +1404,7 @@ html:has(#pf-sv:checked) .pf-g-more,html:has(#pf-ft:checked) .pf-g-more,html:has
           <div class="reveal" data-co="{{p.co}}" data-ft="{{p.ft}}" data-im="{{p.im}}"><details class="card pcm-d">
             <summary>
               <img class="pcm-th" src="{{p.cover}}" alt="{{p.coverAlt}}" width="96" height="68" loading="lazy" decoding="async">
-              <span class="pcm-tx"><span class="kick" style="color: var(--acc); font-size: 12px">{{p.n}} · {{p.meta}}</span><span class="disp pcm-t">{{p.title}}</span><span class="pcm-m2">{{p.metric}}</span></span>
+              <span class="pcm-tx"><span class="kick" style="color: var(--acc); font-size: 12px">{{p.meta}}</span><span class="disp pcm-t">{{p.title}}</span><span class="pcm-m2">{{p.metric}}</span></span>
               <span class="disp pcm-m">{{p.metric}}</span>
               <svg class="pcm-ch" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
             </summary>
@@ -1298,7 +1423,7 @@ html:has(#pf-sv:checked) .pf-g-more,html:has(#pf-ft:checked) .pf-g-more,html:has
       <span class="kick">Before American Express · Saveo HealthTech</span>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: 18px">
         <sc-for list="{{saveo}}" as="v" hint-placeholder-count="2">
-          <div class="reveal" data-co="saveo" data-ft="0" data-im="1" style="height: 100%"><a href="{{v.href}}" class="card lift" data-cur="Open" aria-label="View project: {{v.title}}" style="padding: 28px; display: flex; flex-wrap: wrap; align-items: center; gap: 18px; height: 100%; box-sizing: border-box; text-decoration: none; color: var(--ink)">
+          <div class="reveal" data-co="saveo" data-ft="0" data-im="1" style="height: 100%"><a href="{{v.href}}" class="card lift" data-cur="Open" aria-label="View project: {{v.title}}" style="padding: 28px; display: flex; flex-wrap: wrap; align-items: center; gap: 18px; height: 100%; box-sizing: border-box; text-decoration: none; color: var(--ink)"><div class="sv-cv"><img src="{{v.cover}}" alt="{{v.coverAlt}}" width="{{v.cw}}" height="{{v.ch}}" loading="lazy" decoding="async"></div>
             <div style="flex: 1 1 min(240px, 100%); min-width: 0; display: flex; flex-direction: column; gap: 8px"><span class="kick" style="font-size: 12px">{{v.meta}}</span><h3 class="disp" style="margin: 0; font-size: clamp(21px,calc(21px + (100vw - 390px) * 0.00864), 28px); line-height: 1.15">{{v.title}}</h3><p style="margin: 0; font-size: 16px; color: var(--ink2)">{{v.d}}</p><span style="font: 600 14px 'Space Grotesk',system-ui,sans-serif; color: var(--acc)">View project →</span></div>
             <div style="display: flex; flex-direction: column"><span class="disp" style="font-size: clamp(27px,calc(27px + (100vw - 390px) * 0.02099), 44px); color: var(--acc); line-height: 1.1">{{v.metric}}</span><span style="font-size: 13px; color: var(--ink3); max-width: 160px">{{v.ml}}</span></div>
           </a></div>
@@ -1320,15 +1445,15 @@ html:has(#pf-sv:checked) .pf-g-more,html:has(#pf-ft:checked) .pf-g-more,html:has
       <div class="gl reveal">
         <div class="gl-stage" data-globe role="img" aria-label="Interactive 3D globe with pins for ten markets. Drag to rotate; dots follow the cursor.">
           <canvas class="gl-cv" aria-hidden="true"></canvas>
-          <div class="gl-pins"><button type="button" class="gpin" data-code="UK" data-lat="54" data-lon="-2" aria-label="United Kingdom. Show on the globe"><i class="fl rd fl-UK"></i></button><button type="button" class="gpin" data-code="MX" data-lat="23" data-lon="-102" aria-label="México. Show on the globe"><i class="fl rd fl-MX"></i></button><button type="button" class="gpin" data-code="HK" data-lat="22.3" data-lon="114.2" aria-label="Hong Kong. Show on the globe"><i class="fl rd fl-HK"></i></button><button type="button" class="gpin" data-code="US" data-lat="39" data-lon="-98" aria-label="United States. Show on the globe"><i class="fl rd fl-US"></i></button><button type="button" class="gpin" data-code="CA" data-lat="57" data-lon="-106" aria-label="Canada. Show on the globe"><i class="fl rd fl-CA"></i></button><button type="button" class="gpin" data-code="AU" data-lat="-25" data-lon="134" aria-label="Australia. Show on the globe"><i class="fl rd fl-AU"></i></button><button type="button" class="gpin alt" data-code="IN" data-lat="21" data-lon="78" aria-label="India, also designed for. Show on the globe"><i class="fl rd fl-IN"></i></button><button type="button" class="gpin alt" data-code="JP" data-lat="36" data-lon="138" aria-label="Japan, also designed for. Show on the globe"><i class="fl rd fl-JP"></i></button><button type="button" class="gpin alt" data-code="SG" data-lat="1.35" data-lon="103.8" aria-label="Singapore, also designed for. Show on the globe"><i class="fl rd fl-SG"></i></button><button type="button" class="gpin alt" data-code="NZ" data-lat="-41" data-lon="174" aria-label="New Zealand, planned for the Digital Charge Verification launch. Show on the globe"><i class="fl rd fl-NZ"></i></button></div>
+          <div class="gl-pins"><button type="button" class="gpin" data-code="UK" data-lat="54" data-lon="-2" aria-label="United Kingdom. Show on the globe"><i class="fl rd fl-UK"></i></button><button type="button" class="gpin" data-code="MX" data-lat="23" data-lon="-102" aria-label="México. Show on the globe"><i class="fl rd fl-MX"></i></button><button type="button" class="gpin" data-code="HK" data-lat="22.3" data-lon="114.2" aria-label="Hong Kong. Show on the globe"><i class="fl rd fl-HK"></i></button><button type="button" class="gpin" data-code="US" data-lat="39" data-lon="-98" aria-label="United States. Show on the globe"><i class="fl rd fl-US"></i></button><button type="button" class="gpin" data-code="CA" data-lat="57" data-lon="-106" aria-label="Canada. Show on the globe"><i class="fl rd fl-CA"></i></button><button type="button" class="gpin" data-code="AU" data-lat="-25" data-lon="134" aria-label="Australia. Show on the globe"><i class="fl rd fl-AU"></i></button><button type="button" class="gpin alt" data-code="IN" data-lat="21" data-lon="78" aria-label="India, also designed for. Show on the globe"><i class="fl rd fl-IN"></i></button><button type="button" class="gpin" data-code="JP" data-lat="36" data-lon="138" aria-label="Japan. Show on the globe"><i class="fl rd fl-JP"></i></button><button type="button" class="gpin alt" data-code="SG" data-lat="1.35" data-lon="103.8" aria-label="Singapore, also designed for. Show on the globe"><i class="fl rd fl-SG"></i></button><button type="button" class="gpin" data-code="NZ" data-lat="-41" data-lon="174" aria-label="New Zealand. Show on the globe"><i class="fl rd fl-NZ"></i></button></div>
         </div>
         <p class="gl-hint"><span class="gl-rd" aria-live="polite">Drag to rotate. Hover to play with the dots. Tap a market to fly there.</span></p>
       </div>
       <div class="card gl-card reveal">
         <div style="display: flex; align-items: center; gap: 10px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 256 256" fill="currentColor" style="color: var(--acc)"><path d="{{ic.globe}}"></path></svg><h3 class="disp" style="margin: 0; font-size: clamp(21px,calc(21px + (100vw - 390px) * 0.0037), 24px)">What flexed in each market</h3></div>
-        <div class="gl-rows"><button type="button" class="gl-row" data-mk="UK" aria-label="United Kingdom. Show on the globe"><span class="nm"><i class="fl rd fl-UK"></i>United Kingdom</span><span class="ds">Broader line management</span></button><button type="button" class="gl-row" data-mk="MX" aria-label="México. Show on the globe"><span class="nm"><i class="fl rd fl-MX"></i>México</span><span class="ds">Local launch on the global pattern</span></button><button type="button" class="gl-row" data-mk="HK" aria-label="Hong Kong. Show on the globe"><span class="nm"><i class="fl rd fl-HK"></i>Hong Kong</span><span class="ds">English and Chinese</span></button><button type="button" class="gl-row" data-mk="US" aria-label="United States. Show on the globe"><span class="nm"><i class="fl rd fl-US"></i>United States</span><span class="ds">Landing-page test, kept</span></button><button type="button" class="gl-row" data-mk="CA" aria-label="Canada. Show on the globe"><span class="nm"><i class="fl rd fl-CA"></i>Canada</span><span class="ds">English and French, four journeys</span></button><button type="button" class="gl-row" data-mk="AU" aria-label="Australia. Show on the globe"><span class="nm"><i class="fl rd fl-AU"></i>Australia</span><span class="ds">Fuller profile, one ask per screen</span></button></div>
-        <div class="gl-also"><span class="kick" style="font-size: 12px">Also designed for</span><div class="gl-chips"><button type="button" class="gl-chip" data-mk="IN" aria-label="India. Show on the globe"><i class="fl rd fl-IN"></i>India</button><button type="button" class="gl-chip" data-mk="JP" aria-label="Japan. Show on the globe"><i class="fl rd fl-JP"></i>Japan</button><button type="button" class="gl-chip" data-mk="SG" aria-label="Singapore. Show on the globe"><i class="fl rd fl-SG"></i>Singapore</button></div></div>
-        <div class="gl-also gl-plan"><span class="kick" style="font-size: 12px">Digital Charge Verification<span class="pl">Planned</span>Global Markets launch</span><div class="gl-chips"><button type="button" class="gl-chip" data-mk="UK" aria-label="United Kingdom. Show on the globe"><i class="fl rd fl-UK"></i>United Kingdom</button><button type="button" class="gl-chip" data-mk="JP" aria-label="Japan. Show on the globe"><i class="fl rd fl-JP"></i>Japan</button><button type="button" class="gl-chip" data-mk="AU" aria-label="Australia. Show on the globe"><i class="fl rd fl-AU"></i>Australia</button><button type="button" class="gl-chip" data-mk="NZ" aria-label="New Zealand. Show on the globe"><i class="fl rd fl-NZ"></i>New Zealand</button><button type="button" class="gl-chip" data-mk="MX" aria-label="México. Show on the globe"><i class="fl rd fl-MX"></i>México</button></div></div>
+        <div class="gl-rows"><button type="button" class="gl-row" data-mk="UK" aria-label="United Kingdom. Show on the globe"><span class="nm"><i class="fl rd fl-UK"></i>United Kingdom</span><span class="ds">Broader line management</span></button><button type="button" class="gl-row" data-mk="MX" aria-label="México. Show on the globe"><span class="nm"><i class="fl rd fl-MX"></i>México</span><span class="ds">Local launch on the global pattern</span></button><button type="button" class="gl-row" data-mk="HK" aria-label="Hong Kong. Show on the globe"><span class="nm"><i class="fl rd fl-HK"></i>Hong Kong</span><span class="ds">English and Chinese</span></button><button type="button" class="gl-row" data-mk="US" aria-label="United States. Show on the globe"><span class="nm"><i class="fl rd fl-US"></i>United States</span><span class="ds">Landing-page test, kept</span></button><button type="button" class="gl-row" data-mk="CA" aria-label="Canada. Show on the globe"><span class="nm"><i class="fl rd fl-CA"></i>Canada</span><span class="ds">English and French, four journeys</span></button><button type="button" class="gl-row" data-mk="AU" aria-label="Australia. Show on the globe"><span class="nm"><i class="fl rd fl-AU"></i>Australia</span><span class="ds">Fuller profile, one ask per screen</span></button><button type="button" class="gl-row" data-mk="JP" aria-label="Japan. Show on the globe"><span class="nm"><i class="fl rd fl-JP"></i>Japan</span><span class="ds">Plan It promo pricing, English and Japanese</span></button><button type="button" class="gl-row" data-mk="NZ" aria-label="New Zealand. Show on the globe"><span class="nm"><i class="fl rd fl-NZ"></i>New Zealand</span><span class="ds">Planned for launch</span></button></div>
+        <div class="gl-also"><span class="kick" style="font-size: 12px">Also designed for</span><div class="gl-chips"><button type="button" class="gl-chip" data-mk="IN" aria-label="India. Show on the globe"><i class="fl rd fl-IN"></i>India</button><button type="button" class="gl-chip" data-mk="SG" aria-label="Singapore. Show on the globe"><i class="fl rd fl-SG"></i>Singapore</button></div></div>
+        
         
       </div>
     </div>
@@ -1339,7 +1464,7 @@ html:has(#pf-sv:checked) .pf-g-more,html:has(#pf-ft:checked) .pf-g-more,html:has
 <section id="proposal" style="position: relative">
   <div class="wrap pb-w">
     <div class="pb-l"><span class="kick">Proposals</span><h2 class="h2 hd" style="font-size: clamp(30px,3.4vw,48px)">Three proposals to make design <span class="em">scale.</span></h2><p class="lead" style="margin: 0; max-width: 520px">Pitched to the Design and Research org. My estimates are labeled as estimates.</p><div><a href="/work/design-system-usage" class="btn btn-s" data-cur="Open" aria-label="Read the proposals in full">Read the proposals<svg aria-hidden="true" width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path></svg></a></div></div>
-    <div class="pb-list"><a href="/work/localization-automation" class="pb-r lift" data-cur="Open"><span class="pb-k">Market mode</span><span class="pb-t">Localize once, launch everywhere</span><span class="pb-a"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a href="/work/design-system-usage#type" class="pb-r lift" data-cur="Open"><span class="pb-k">Breakpoint mode</span><span class="pb-t">Type that fits the screen</span><span class="pb-a"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a href="/work/design-system-usage#platform" class="pb-r lift" data-cur="Open"><span class="pb-k">Platform mode</span><span class="pb-t">Build iOS, switch to Android</span><span class="pb-a"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
+    <div class="pb-list"><a href="/work/localization-automation" class="pb-r lift" data-cur="Open"><span class="pb-il" aria-hidden="true"><span class="pb-sw"><i class="pb-kb"></i><b class="pb-s1">US</b><b class="pb-s2">UK</b></span></span><span class="pb-x"><span class="pb-k">Market mode</span><span class="pb-t">Localize once, launch everywhere</span></span><span class="pb-a"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a href="/work/design-system-usage#type" class="pb-r lift" data-cur="Open"><span class="pb-il" aria-hidden="true"><span class="pb-ab"><i>A</i><i>A</i><i>A</i></span></span><span class="pb-x"><span class="pb-k">Breakpoint mode</span><span class="pb-t">Type that fits the screen</span></span><span class="pb-a"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a href="/work/design-system-usage#platform" class="pb-r lift" data-cur="Open"><span class="pb-il" aria-hidden="true"><span class="pb-pm"><span class="pb-ph"><i class="pb-nt"></i></span><span class="pb-pl"><b>iOS</b><b>Android</b></span></span></span><span class="pb-x"><span class="pb-k">Platform mode</span><span class="pb-t">Build iOS, switch to Android</span></span><span class="pb-a"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
   </div>
 </section>
 
@@ -1427,15 +1552,15 @@ html:has(#pf-sv:checked) .pf-g-more,html:has(#pf-ft:checked) .pf-g-more,html:has
       <h2 class="h2 hd" style="max-width: 880px">Helping teams <span class="em">build better experiences together.</span></h2>
       <p class="lead" style="margin: 0; max-width: 700px">Design leadership shows in the quality of decisions, the systems we improve and the people we help grow.</p>
     </div>
-    <div class="ld-sc reveal" aria-label="Scope"><div><b>Markets</b><span>10+ markets, US and international design</span></div><div><b>Partners</b><span>Product, Business, Risk, Legal, Content, Engineering</span></div><div><b>Portfolio</b><span>Core Portfolio at American Express</span></div></div>
+    <div class="ld-sc reveal" aria-label="Scope"><div><b>Markets</b><span>10+ markets, US and international design</span></div><div><b>Works with</b><span>Engineering, Product and Design teams, every day</span></div><div><b>Discovery</b><span>Business and Leadership teams, to shape which projects to take on</span></div></div>
     <!--ph-ws--><figure class="ph ph-ws reveal" data-px><div class="ph-fr"><img src="/img/f104642114fc.webp" alt="Colleagues around a conference table on laptops during a whiteboarding workshop, with the shared board on the wall screen." loading="lazy" decoding="async"></div><figcaption class="ph-cap"><span class="ph-tag">Workshop</span><span>Whiteboarding journeys with the team</span></figcaption></figure><!--/ph-ws-->
-    <div class="ld-grid">
+    <article class="card ld-ft" data-rv aria-label="A decision I pushed back on"><div class="ld-fl"><span class="kick" style="color: var(--acc)">A decision I pushed back on</span><h3 class="disp ld-fh">Leaders wanted the landing page removed. <span class="em">I asked for a test.</span></h3><ol class="ld-st"><li><i>1</i><span>The ask<small>Remove the page</small></span></li><li><i>2</i><span>The test<small>35 days, 50/50</small></span></li><li><i>3</i><span>The call<small>The page stayed</small></span></li></ol><div><a href="/work/manage-credit-limit#us" class="btn btn-s" data-cur="Open">Read the case<svg aria-hidden="true" width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path></svg></a></div></div><div class="ld-fr" aria-hidden="true"><div class="ld-bars"><div class="ld-bc"><span class="ld-bl">Page kept</span><div class="ld-bt"><i class="ld-b k"></i></div></div><div class="ld-bc"><span class="ld-bl">Page removed</span><div class="ld-bt"><i class="ld-b r"></i></div><b class="ld-dl">about −6%</b></div></div><span class="ld-cap">completion in the 50/50 test</span></div></article> <div class="ld-grid">
       <sc-for list="{{lead}}" as="g" hint-placeholder-count="4">
         <div class="stag" style="--i: {{g.i}}"><section class="card ld" aria-label="{{g.t}}">
           <div class="ld-h"><span class="tile-ic"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 256 256" fill="currentColor"><path d="{{g.icon}}"></path></svg></span><h3 class="disp" style="margin: 0; font-size: clamp(21px,calc(21px + (100vw - 390px) * 0.0037), 24px); line-height: 1.2">{{g.t}}</h3></div>
           <ul>
             <sc-for list="{{g.items}}" as="it" hint-placeholder-count="3">
-              <li><b>{{it.t}}</b><span>{{it.d}}</span><sc-if value="{{it.hasLink}}" hint-placeholder-val="{{ false }}"><a href="{{it.href}}">{{it.link}}</a></sc-if></li>
+              <li><i aria-hidden="true"></i><span>{{it.t}}</span><sc-if value="{{it.hasLink}}" hint-placeholder-val="{{ false }}"><a href="{{it.href}}">{{it.link}}</a></sc-if></li>
             </sc-for>
           </ul>
         </section></div>
@@ -1445,15 +1570,15 @@ html:has(#pf-sv:checked) .pf-g-more,html:has(#pf-ft:checked) .pf-g-more,html:has
       <span class="kick">Working method</span>
       <div style="display: flex; flex-direction: column; gap: 20px">
       <div style="display: flex; align-items: center; gap: 12px"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 256 256" fill="currentColor" class="spin" style="color: var(--acc)"><path d="{{ic.cycle}}"></path></svg><h3 class="disp" style="margin: 0; font-size: clamp(24px,2.6vw, 34px); line-height: 1.1">Research shapes the question. <span class="em">Making answers it.</span></h3></div>
-      <!--wf--><div class="wf" data-wf>
-      <svg class="wf-svg" aria-hidden="true"><defs><marker id="wfar" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker></defs><g class="wf-g"></g></svg>
-      <ol class="wf-nodes" aria-label="Working method: observe, reflect, make, then back to observe">
-      <li class="stag" style="--i: 0"><div class="wf-n" style="--k:0"><div class="wf-m wf-m1"><svg class="wf-i" viewBox="0 0 48 48" aria-hidden="true"><g class="wf-eye"><path d="M4 24C11 12 37 12 44 24C37 36 11 36 4 24Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><g class="wf-iris"><circle cx="24" cy="24" r="7.5" fill="currentColor"/><circle cx="24" cy="24" r="3" fill="var(--card)"/></g></g></svg></div><span class="wf-k">Step 01</span><h4 class="disp wf-h">Observe</h4><p>Funnel data, user tests, competitor teardown, what market teams know.</p></div></li>
-      <li class="stag" style="--i: 1"><div class="wf-n" style="--k:1"><div class="wf-m wf-m2"><svg class="wf-i" viewBox="0 0 48 48" aria-hidden="true"><circle class="wf-d" style="--dx:12px;--dy:10px" cx="12" cy="14" r="3.4" fill="currentColor"/><circle class="wf-d" style="--dx:-12px;--dy:12px;animation-delay:.15s" cx="36" cy="12" r="3.4" fill="currentColor"/><circle class="wf-d" style="--dx:12px;--dy:-11px;animation-delay:.3s" cx="12" cy="36" r="3.4" fill="currentColor"/><circle class="wf-d" style="--dx:-12px;--dy:-10px;animation-delay:.45s" cx="36" cy="34" r="3.4" fill="currentColor"/><g class="wf-core"><circle cx="24" cy="24" r="9" fill="currentColor"/><path d="M19.5 24.5l3.3 3.3 6.2-6.6" fill="none" stroke="var(--card)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g></svg></div><span class="wf-k">Step 02</span><h4 class="disp wf-h">Learn</h4><p>Competing hypotheses, journey maps, synthesis with Product, Risk and Business.</p></div></li>
-      <li class="stag" style="--i: 2"><div class="wf-n" style="--k:2"><div class="wf-m wf-m3"><svg class="wf-i" viewBox="0 0 48 48" aria-hidden="true"><rect class="wf-fr" x="7" y="9" width="34" height="30" rx="6" fill="none" stroke="currentColor" stroke-width="2.4"/><rect class="wf-b1" x="13" y="16" width="22" height="4" rx="2" fill="currentColor"/><rect class="wf-b2" x="13" y="24" width="14" height="4" rx="2" fill="currentColor" opacity=".55"/><rect class="wf-b3" x="13" y="31" width="10" height="4" rx="2" fill="currentColor"/></svg></div><span class="wf-k">Step 03</span><h4 class="disp wf-h">Make</h4><p>Several directions, AI-assisted MVPs, critiques, then tests in production.</p></div></li>
-      </ol>
-      <span class="wf-lp"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 256 256" fill="currentColor"><path d="M224,48V96a8,8,0,0,1-8,8H168a8,8,0,0,1,0-16h28.69L182.06,73.37a79.56,79.56,0,0,0-56.13-23.43h-.45A79.52,79.52,0,0,0,69.59,72.71,8,8,0,0,1,58.41,61.27,96,96,0,0,1,192,60.7l18.36,17.6V48a8,8,0,0,1,16,0ZM186.41,183.29A80,80,0,0,1,73.94,182.06L59.31,168H88a8,8,0,0,0,0-16H40a8,8,0,0,0-8,8v48a8,8,0,0,0,16,0V177.3l18.36,17.6a96,96,0,0,0,134.05-1.57,8,8,0,1,0-11.18-11.43Z"/></svg>Test results become the next question</span>
-    </div><!--/wf-->
+      <!--wf--><div class="vn"><div class="vn-st"><svg class="vn-svg" viewBox="0 0 460 400" role="img" aria-label="Three overlapping circles, Observe, Learn and Make, with a dot cycling through them">
+<path class="vn-ring" d="M230,131 A84,84 0 0 1 302.7,257 A84,84 0 0 1 157.3,257 A84,84 0 0 1 230,131"/>
+<circle class="vn-c c1" cx="230" cy="131" r="104"/><circle class="vn-c c2" cx="302.7" cy="257" r="104"/><circle class="vn-c c3" cx="157.3" cy="257" r="104"/>
+<g class="vn-tx"><text x="230" y="78" class="vn-t">Observe</text><text x="230" y="99" class="vn-s">Funnel data,</text><text x="230" y="115" class="vn-s">user tests</text>
+<text x="352" y="252" class="vn-t">Learn</text><text x="352" y="273" class="vn-s">Hypotheses,</text><text x="352" y="289" class="vn-s">synthesis</text>
+<text x="108" y="252" class="vn-t">Make</text><text x="108" y="273" class="vn-s">MVPs and</text><text x="108" y="289" class="vn-s">critiques</text></g>
+<g class="vn-ct"><g class="vn-cy"><path d="M222 212a9 9 0 0 1 15-6.5M238 218a9 9 0 0 1-15 6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M237 202v4.5h-4.5M223 228v-4.5h4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+<circle class="vn-dot" r="8"/>
+</svg></div><div class="vn-rt"><ol class="vn-l" aria-label="Working method: observe, learn, make, then back to observe"><li class="vn-r r1"><i>1</i><div><h4 class="disp">Observe</h4><p>Funnel data, user tests, competitor teardown, what market teams know.</p></div></li><li class="vn-r r2"><i>2</i><div><h4 class="disp">Learn</h4><p>Competing hypotheses, journey maps, synthesis with Product, Risk and Business.</p></div></li><li class="vn-r r3"><i>3</i><div><h4 class="disp">Make</h4><p>Several directions, AI-assisted MVPs, critiques, then tests in production.</p></div></li></ol><span class="vn-lp"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 256 256" fill="currentColor"><path d="M224,48V96a8,8,0,0,1-8,8H168a8,8,0,0,1,0-16h28.69L182.06,73.37a79.56,79.56,0,0,0-56.13-23.43h-.45A79.52,79.52,0,0,0,69.59,72.71,8,8,0,0,1,58.41,61.27,96,96,0,0,1,192,60.7l18.36,17.6V48a8,8,0,0,1,16,0ZM186.41,183.29A80,80,0,0,1,73.94,182.06L59.31,168H88a8,8,0,0,0,0-16H40a8,8,0,0,0-8,8v48a8,8,0,0,0,16,0V177.3l18.36,17.6a96,96,0,0,0,134.05-1.57,8,8,0,1,0-11.18-11.43Z"/></svg>Test results become the next question</span></div></div><!--/wf-->
     </div>
     </div>
   </div>
@@ -1564,7 +1689,82 @@ class Component extends DCLogic {
     this.tick = this.tick.bind(this);
     this.autoTick = this.autoTick.bind(this);
   }
+  navFx() {
+    var CASES = [];
+    var HERE = '';
+    var rm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var self = this;
+    /* scroll-spy for in-page section links in the sticky header */
+    var links = [], tg = [];
+    var collect = function () {
+      links = [].slice.call(document.querySelectorAll('.hnav a[href^="#"]'));
+      tg = links.map(function (a) { var id = a.getAttribute('href').slice(1); return id ? document.getElementById(id) : null; });
+    };
+    var spy = function () {
+      if (!links.length) collect();
+      if (!links.length) return;
+      var mark = window.innerHeight * 0.34, cur = -1, i;
+      for (i = 0; i < tg.length; i++) { if (tg[i] && tg[i].getBoundingClientRect().top <= mark) cur = i; }
+      links.forEach(function (a, k) { if (k === cur) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
+    };
+    /* case dock: previous, all cases, next */
+    var idx = -1, i;
+    for (i = 0; i < CASES.length; i++) { if (CASES[i][0] === HERE) idx = i; }
+    var dock = null, endEl = null;
+    if (idx >= 0) {
+      var prev = idx > 0 ? CASES[idx - 1] : ['/', 'Home', ''];
+      var next = idx < CASES.length - 1 ? CASES[idx + 1] : ['/', 'Home', ''];
+      var arrow = function (d) { return '<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="' + d + '"/></svg>'; };
+      var esc = function (t) { return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;'); };
+      var groups = [], seen = {};
+      CASES.forEach(function (c, k) { var g = c[2] === 'Flagship' || c[2] === 'Case' ? 'Product cases' : c[2] === 'Proposal' ? 'Proposals' : c[2] === 'AI build' ? 'AI builds' : 'Engineering'; if (!seen[g]) { seen[g] = []; groups.push([g, seen[g]]); } seen[g].push([c, k]); });
+      var pop = groups.map(function (g) {
+        return '<div class="cd-g"><span class="cd-k">' + g[0] + '</span>' + g[1].map(function (e) {
+          var c = e[0], k = e[1];
+          return '<a class="cd-i" href="' + c[0] + '"' + (k === idx ? ' aria-current="page"' : '') + '><i>' + (k + 1) + '</i><span>' + esc(c[1]) + '</span>' + (c[2] === 'Flagship' ? '<em>Flagship</em>' : '') + '</a>';
+        }).join('') + '</div>';
+      }).join('') + '<a class="cd-i cd-all" href="/work"><span>All work</span></a>';
+      dock = document.createElement('nav');
+      dock.className = 'cdock';
+      dock.setAttribute('aria-label', 'Case navigation');
+      dock.innerHTML = '<a class="cd-b cd-pv" href="' + prev[0] + '" aria-label="Previous: ' + esc(prev[1]) + '" title="' + esc(prev[1]) + '">' + arrow('M15 5l-7 7 7 7') + '</a>' +
+        '<button type="button" class="cd-b cd-ix" aria-expanded="false" aria-haspopup="true"><b>' + (idx + 1) + '</b><span>of ' + CASES.length + '</span><span class="cd-all">All cases</span>' + arrow('M6 15l6-6 6 6') + '</button>' +
+        '<a class="cd-b cd-nx" href="' + next[0] + '" aria-label="Next: ' + esc(next[1]) + '"><span class="cd-l">Next</span><span class="cd-t">' + esc(next[1]) + '</span>' + arrow('M9 5l7 7-7 7') + '</a>' +
+        '<button type="button" class="cd-b cd-up" aria-label="Back to top">' + arrow('M12 19V5M5 12l7-7 7 7') + '</button>' +
+        '<div class="cd-pop" role="menu">' + pop + '</div>';
+      document.body.appendChild(dock);
+      var vars = ['--navbg', '--line', '--line2', '--ink', '--ink2', '--ink3', '--card', '--card2', '--elev', '--fill', '--fillink', '--acc', '--e3'];
+      var sync = function () {
+        var th = document.querySelector('.th'); if (!th) return;
+        var cs = getComputedStyle(th);
+        vars.forEach(function (v) { dock.style.setProperty(v, cs.getPropertyValue(v)); });
+      };
+      sync();
+      try { var th0 = document.querySelector('.th'); if (th0) new MutationObserver(sync).observe(th0, { attributes: true, attributeFilter: ['data-theme', 'class'] }); } catch (x) {}
+      var ix = dock.querySelector('.cd-ix');
+      var setOpen = function (o) { dock.classList.toggle('open', o); ix.setAttribute('aria-expanded', o ? 'true' : 'false'); };
+      ix.addEventListener('click', function (e) { e.stopPropagation(); setOpen(!dock.classList.contains('open')); });
+      document.addEventListener('click', function (e) { if (dock.classList.contains('open') && !dock.contains(e.target)) setOpen(false); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+      dock.querySelector('.cd-up').addEventListener('click', function () { window.scrollTo({ top: 0, behavior: rm ? 'auto' : 'smooth' }); });
+    }
+    var raf = 0;
+    var upd = function () {
+      raf = 0; spy();
+      if (!dock) return;
+      if (!endEl) endEl = document.querySelector('section[aria-label="More projects"]');
+      var y = window.scrollY || document.documentElement.scrollTop, vh = window.innerHeight;
+      var atEnd = endEl ? endEl.getBoundingClientRect().top < vh * 0.82 : false;
+      var show = y > vh * 0.7 && !atEnd;
+      dock.classList.toggle('on', show);
+      if (!show) { dock.classList.remove('open'); }
+    };
+    window.addEventListener('scroll', function () { if (!raf) raf = requestAnimationFrame(upd); }, { passive: true });
+    window.addEventListener('resize', function () { if (!raf) raf = requestAnimationFrame(upd); });
+    setTimeout(function () { collect(); upd(); }, 400); setTimeout(function () { collect(); upd(); }, 1500);
+  }
   componentDidMount() {
+    try { this.navFx(); } catch (x) {}
     /*wf*/ try { (function () {
       var NS = 'http://www.w3.org/2000/svg', reduce = false;
       try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (x) {}
@@ -2217,15 +2417,15 @@ var range = [
 
     // ---- Work showreel
     // PROJ-START
-    var PROJ = [{"cover": "/img/baab602de3fa.webp", "coverAlt": "Manage Your Credit Limit screen shown in English, Spanish and Traditional Chinese", "cw": 1012, "ch": 876, "title": "Manage Credit Limit", "meta": "Lead Designer · Mobile · 6 markets", "file": "/work/manage-credit-limit", "real": "The page was teaching people. A 50% production test showed removing it cost completion and raised support calls.", "metric": "+44%", "metricLabel": "mobile completion · 2× better than web", "icon": "globe", "tags": ["Fintech", "B2C", "Global"], "dev": "ios", "head": "Manage Credit Limit", "big": "$10,000", "chip": "", "cta": "Request an increase", "rows": [["How it works", "›"], ["Key account details", "›"], ["Request history", "›"]]}, {"cover": "/img/33cc9f2e2ce8.webp", "coverAlt": "Three phone screens: replace your card, verify recent purchases, and purchases verified", "cw": 991, "ch": 838, "title": "Digital Charge Verification", "meta": "Lead Designer · Mobile · Fraud", "file": "/work/digital-charge-verification", "real": "A scared person skims for “me or fraud”. Calm wording mattered as much as the screens.", "metric": "4 → 1", "metricLabel": "alert entry points, one journey", "icon": "siren", "tags": ["Fintech", "B2C", "Fraud"], "dev": "ios", "head": "Recent transactions", "big": "Was this you?", "chip": "", "cta": "Review 3 charges", "rows": [["Coffee shop", "Me"], ["Online store", "Not me"], ["Transfer", "Not sure"]]}, {"cover": "/img/6db80230e84e.webp", "coverAlt": "Three phone screens: search by name or composition, generic alternatives under a brand, and a cart badge to replace", "cw": 991, "ch": 838, "title": "Generic Medicine", "meta": "Saveo · Mobile · B2B", "file": "/work/generic-medicine", "real": "Retailers buy the brand they search for. Showing the same salt, and its margin, right there changed what they bought.", "metric": "~20%", "metricLabel": "incremental revenue from generic medicine recommendations (reported)", "icon": "tag", "tags": ["HealthTech", "B2B", "Mobile"], "dev": "ios", "head": "Search results", "big": "Same salt. Better margin.", "chip": "", "cta": "Add", "rows": [["Brand", "12% margin"], ["Generic", "94% margin"], ["Cart", "Replace"]]}, {"cover": "/img/8b6abbc0e51a.webp", "coverAlt": "Short-term and long-term relief plan cards with monthly amounts and card breakdowns", "cw": 996, "ch": 697, "title": "Financial Relief Program", "meta": "Lead Designer · Web · Enrollment", "file": "/work/financial-relief-program", "real": "Spend where the funnel bleeds. The biggest win was deleting a screen nobody needed.", "metric": "+13%", "metricLabel": "enrollment conversion · plans page +14.9%", "icon": "funnel", "tags": ["Fintech", "B2C", "Web"], "dev": "web", "head": "Choose your plan", "big": "Two plans, side by side", "chip": "", "cta": "Enroll", "rows": [["Short-term", "Lower total"], ["Long-term", "Lower monthly"]]}, {"cover": "/img/a3ea8474c22f.webp", "coverAlt": "Credit limit entry field with a reduction warning, leading to a Credit Limit Decrease confirmation sheet", "cw": 990, "ch": 700, "title": "Canada Experience Gap", "meta": "Lead Designer · Mobile · Canada", "file": "/work/canada-experience-gap", "real": "A mental-model clash, not a Canada-only copy fix. I designed a scalable calculated message that does the math for people.", "metric": "Validated", "metricLabel": "in UAT. A scalable pattern, planned for every global market.", "icon": "calc", "tags": ["Fintech", "B2C", "Canada"], "dev": "ios", "head": "Confirm your new limit", "big": "$5,000", "chip": "Calculated for you", "cta": "Yes, lower my limit", "rows": [["Current limit", "$10,000"], ["Decrease", "−$5,000"], ["New limit", "$5,000"]]}, {"cover": "/img/d16df720ec6f.webp", "coverAlt": "Connect Bank and Upload Documents option cards for verifying income", "cw": 975, "ch": 714, "title": "Financial Verification", "meta": "Lead Designer · Web · US + international", "file": "/work/financial-verification", "real": "People needed a faster way to prove income. Connect to Bank became the recommended path. Upload stays as the fallback.", "metric": "~15 min", "metricLabel": "to use a higher limit, for eligible instant approvals", "icon": "bank", "tags": ["Fintech", "B2C", "Underwriting"], "dev": "web", "head": "Verify your income", "big": "Connect to Bank", "chip": "", "cta": "Connect", "rows": [["Recommended", "Fastest"], ["Upload statements", "Fallback"]]}, {"cover": "/img/a9f583ebc553.webp", "coverAlt": "Create a Plan screens in English, French and Japanese with 3, 6 and 12 month instalments", "cw": 987, "ch": 948, "title": "Plan It® Promo Pricing", "meta": "Lead Designer · Mobile · International", "file": "/work/plan-it-promo-pricing", "real": "It needed a system, not more screens. Variables turn each new market into a small change.", "metric": "4 markets", "metricLabel": "plus Mexico mobile and the payment path", "icon": "tag", "tags": ["Fintech", "B2C", "Localization"], "dev": "ios", "head": "Plan It®", "big": "Promo pricing", "chip": "", "cta": "Choose a plan", "rows": [["Duration", "6 months"], ["Promo rate", "Shown"], ["Undiscounted", "Shown"]]}, {"cover": "/img/1fea9874dc91.webp", "coverAlt": "Make Payment button leading to a Select Payment Amount screen", "cw": 997, "ch": 753, "title": "International Payments, Mexico", "meta": "Lead Designer · Mobile · Mexico", "file": "/work/payments-mexico", "real": "Compliance needed disclaimers at the right moment, so they now change with each selection.", "metric": "Dynamic", "metricLabel": "disclaimers that follow each selection", "icon": "dollar", "tags": ["Fintech", "B2C", "Compliance"], "dev": "ios", "head": "Pago internacional", "big": "Total a pagar", "chip": "", "cta": "Continuar", "rows": [["Tipo de cambio", "Visible"], ["Comisión", "Visible"], ["Aviso legal", "Visible"]]}];
+    var PROJ = [{"cover": "/img/baab602de3fa.webp", "coverAlt": "Manage Your Credit Limit screen shown in English, Spanish and Traditional Chinese", "cw": 1012, "ch": 876, "title": "Manage Credit Limit", "meta": "Lead Designer · Mobile · 6 markets", "file": "/work/manage-credit-limit", "real": "The page was teaching people. A 50% production test showed removing it cost completion and raised support calls.", "metric": "+44%", "metricLabel": "mobile completion · 2× better than web", "icon": "globe", "tags": ["Fintech", "B2C", "Global"], "dev": "ios", "head": "Manage Credit Limit", "big": "$10,000", "chip": "", "cta": "Request an increase", "rows": [["How it works", "›"], ["Key account details", "›"], ["Request history", "›"]]}, {"cover": "/img/33cc9f2e2ce8.webp", "coverAlt": "Three phone screens: replace your card, verify recent purchases, and purchases verified", "cw": 991, "ch": 838, "title": "Digital Charge Verification", "meta": "Lead Designer · Mobile · Fraud", "file": "/work/digital-charge-verification", "real": "A scared person skims for “me or fraud”. Calm wording mattered as much as the screens.", "metric": "4 → 1", "metricLabel": "alert entry points, one journey", "icon": "siren", "tags": ["Fintech", "B2C", "Fraud"], "dev": "ios", "head": "Recent transactions", "big": "Was this you?", "chip": "", "cta": "Review 3 charges", "rows": [["Coffee shop", "Me"], ["Online store", "Not me"], ["Transfer", "Not sure"]]}, {"cover": "/img/6db80230e84e.webp", "coverAlt": "Three phone screens: search by name or composition, generic alternatives under a brand, and a cart badge to replace", "cw": 991, "ch": 838, "title": "Generic Medicine", "meta": "Saveo · Mobile · B2B", "file": "/work/generic-medicine", "real": "Retailers buy the brand they search for. Showing the same salt, and its margin, right there changed what they bought.", "metric": "~20%", "metricLabel": "incremental revenue from generic medicine recommendations (reported)", "icon": "tag", "tags": ["HealthTech", "B2B", "Mobile"], "dev": "ios", "head": "Search results", "big": "Same salt. Better margin.", "chip": "", "cta": "Add", "rows": [["Brand", "12% margin"], ["Generic", "94% margin"], ["Cart", "Replace"]]}, {"cover": "/img/8b6abbc0e51a.webp", "coverAlt": "Short-term and long-term relief plan cards with monthly amounts and card breakdowns", "cw": 996, "ch": 697, "title": "Financial Relief Program", "meta": "Lead Designer · Web · Enrollment", "file": "/work/financial-relief-program", "real": "Spend where the funnel bleeds. The biggest win was deleting a screen nobody needed.", "metric": "+13%", "metricLabel": "enrollment conversion · plans page +14.9%", "icon": "funnel", "tags": ["Fintech", "B2C", "Web"], "dev": "web", "head": "Choose your plan", "big": "Two plans, side by side", "chip": "", "cta": "Enroll", "rows": [["Short-term", "Lower total"], ["Long-term", "Lower monthly"]]}, {"cover": "/img/a3ea8474c22f.webp", "coverAlt": "Credit limit entry field with a reduction warning, leading to a Credit Limit Decrease confirmation sheet", "cw": 990, "ch": 700, "title": "Canada Experience Gap", "meta": "Lead Designer · Mobile · Canada", "file": "/work/canada-experience-gap", "real": "A mental-model clash, not a Canada-only copy fix. I designed a scalable calculated message that does the math for people.", "metric": "Validated", "metricLabel": "in UAT. A scalable pattern, planned for every global market.", "icon": "calc", "tags": ["Fintech", "B2C", "Canada"], "dev": "ios", "head": "Confirm your new limit", "big": "$5,000", "chip": "Calculated for you", "cta": "Yes, lower my limit", "rows": [["Current limit", "$10,000"], ["Decrease", "−$5,000"], ["New limit", "$5,000"]]}, {"cover": "/img/d16df720ec6f.webp", "coverAlt": "Connect Bank and Upload Documents option cards for verifying income", "cw": 975, "ch": 714, "title": "Financial Verification", "meta": "Lead Designer · Web · US + international", "file": "/work/financial-verification", "real": "People needed a faster way to prove income. Connect to Bank became the recommended path. Upload stays as the fallback.", "metric": "Live", "metricLabel": "just launched, impact being measured", "icon": "bank", "tags": ["Fintech", "B2C", "Underwriting"], "dev": "web", "head": "Verify your income", "big": "Connect to Bank", "chip": "", "cta": "Connect", "rows": [["Recommended", "Fastest"], ["Upload statements", "Fallback"]]}, {"cover": "/img/a9f583ebc553.webp", "coverAlt": "Create a Plan screens in English, French and Japanese with 3, 6 and 12 month instalments", "cw": 987, "ch": 948, "title": "Plan It® Promo Pricing", "meta": "Lead Designer · Mobile · International", "file": "/work/plan-it-promo-pricing", "real": "It needed a system, not more screens. Variables turn each new market into a small change.", "metric": "~60%", "metricLabel": "less designer time per market, under 4 days to enable (reported)", "icon": "tag", "tags": ["Fintech", "B2C", "Localization"], "dev": "ios", "head": "Plan It®", "big": "Promo pricing", "chip": "", "cta": "Choose a plan", "rows": [["Duration", "6 months"], ["Promo rate", "Shown"], ["Undiscounted", "Shown"]]}, {"cover": "/img/1fea9874dc91.webp", "coverAlt": "Make Payment button leading to a Select Payment Amount screen", "cw": 997, "ch": 753, "title": "International Payments, Mexico", "meta": "Lead Designer · Mobile · Mexico", "file": "/work/payments-mexico", "real": "Compliance needed disclaimers at the right moment, so they now change with each selection.", "metric": "Live", "metricLabel": "disclaimers that follow each selection, impact being measured", "icon": "dollar", "tags": ["Fintech", "B2C", "Compliance"], "dev": "ios", "head": "Pago internacional", "big": "Total a pagar", "chip": "", "cta": "Continuar", "rows": [["Tipo de cambio", "Visible"], ["Comisión", "Visible"], ["Aviso legal", "Visible"]]}];
     var allProj = PROJ.map(function (p, j) {
-      return { co: p.title === 'Generic Medicine' ? 'saveo' : 'amex', ft: ['Manage Credit Limit','Digital Charge Verification','Generic Medicine','Financial Relief Program'].indexOf(p.title) > -1 ? '1' : '0', im: ['Manage Credit Limit','Financial Relief Program','Generic Medicine','Financial Verification'].indexOf(p.title) > -1 ? '1' : '0', n: '0' + (j + 1), title: p.title, meta: p.meta, href: p.file, real: p.real, metric: p.metric, metricLabel: p.metricLabel, icp: ic[p.icon], tags: p.tags.map(function (t) { return { t: t }; }), sh: p.head, sbig: p.big, chip: p.chip || '', hasChip: !!p.chip, cta: p.cta, isIos: p.dev === 'ios', isWeb: p.dev === 'web', isFlow: p.dev === 'flow', cover: p.cover, coverAlt: p.coverAlt, cw: p.cw, ch: p.ch, rows: p.rows.map(function (r) { return { a: r[0], b: r[1] }; }), cur: 'Open' };
+      return { co: p.title === 'Generic Medicine' ? 'saveo' : 'amex', ft: ['Manage Credit Limit','Digital Charge Verification','Generic Medicine','Financial Relief Program'].indexOf(p.title) > -1 ? '1' : '0', im: ['Manage Credit Limit','Financial Relief Program','Generic Medicine','Financial Verification'].indexOf(p.title) > -1 ? '1' : '0', n: '0' + (j + 1), title: p.title, meta: String(p.meta).replace(/^Lead Designer · /, ''), href: p.file, real: p.real, metric: p.metric, metricLabel: p.metricLabel, icp: ic[p.icon], tags: p.tags.map(function (t) { return { t: t }; }), sh: p.head, sbig: p.big, chip: p.chip || '', hasChip: !!p.chip, cta: p.cta, isIos: p.dev === 'ios', isWeb: p.dev === 'web', isFlow: p.dev === 'flow', cover: p.cover, coverAlt: p.coverAlt, cw: p.cw, ch: p.ch, rows: p.rows.map(function (r) { return { a: r[0], b: r[1] }; }), cur: 'Open' };
     });
     var projects = allProj.slice(0, 4), projectsCm = allProj.slice(4);
     // PROJ-END
     var saveo = [
-      { meta: 'Saveo · Dashboard · Finance', title: 'Bulk Payment Dashboard', d: 'Four payment sources, one settlement flow.', metric: '5×', ml: 'daily work efficiency, reported', href: '/work/bulk-payment' },
-      { meta: 'Saveo · Mobile · Onboarding', title: 'Three steps to a verified pharmacy', d: 'Sign-up, three short steps and a clear verification state.', metric: '−30%', ml: 'onboarding friction, reported', href: '/work/onboarding' }
+      { meta: 'Saveo · Dashboard · Finance', title: 'Bulk Payment Dashboard', d: 'Four payment sources, one settlement flow.', metric: '5×', ml: 'daily work efficiency, reported', href: '/work/bulk-payment', cover: '/img/3b9c887f3d35.webp', coverAlt: 'Bulk settlement and invoice mapping cards', cw: 920, ch: 724 },
+      { meta: 'Saveo · Mobile · Onboarding', title: 'Three steps to a verified pharmacy', d: 'Sign-up, three short steps and a clear verification state.', metric: '−30%', ml: 'onboarding friction, reported', href: '/work/onboarding', cover: '/img/b0bc5e035fef.webp', coverAlt: 'Sign-up and verification screens of the pharmacy onboarding', cw: 835, ch: 715 }
     ];
 
     // ---- Decisions
@@ -2238,7 +2438,7 @@ var range = [
       { t: 'Show the math', p: 'Canada Experience Gap', status: 'Validated in UAT', href: '/work/canada-experience-gap', context: 'People typed a top-up. The system read a lower total.', tension: 'People typed a top-up. The system read a lower total.', options: 'More copy, separate paths, a picker, or a calculated message.', call: 'Show the math. Do not ask people to do it.', metric: 'No mental math', result: 'UAT users also asked for it on increases.' },
       { t: 'The words are the product', p: 'Digital Charge Verification', status: 'Validated with users', href: '/work/digital-charge-verification', tension: 'A scared person skims for “me or fraud”.', options: 'Urgent alerts, or calm, guided steps.', call: 'Soft tone, simple choices, careful words.', metric: 'Calm', result: 'A direction chosen with users, then refined with Compliance.' },
       { t: 'Spend where it hurts', p: 'Financial Relief Program', status: 'Shipped · measured', href: '/work/financial-relief-program', tension: 'Budget for part of a nine-step journey.', options: 'Touch every step lightly, or fix the worst friction.', call: 'Target the worst friction, even if that means removing a screen.', metric: '+13%', result: 'enrollment conversion. Plans page converted 14.9% better.' },
-      { t: 'Recommend, don’t remove', p: 'Financial Verification', status: 'Shipped', href: '/work/financial-verification', tension: 'Document upload was slow and error-prone.', options: 'Replace upload, or lead with a faster path.', call: 'Recommend Connect to Bank. Keep upload as the fallback.', metric: '~15 min', result: 'to a usable higher limit, for eligible instant approvals.' },
+      { t: 'Recommend, don’t remove', p: 'Financial Verification', status: 'Shipped', href: '/work/financial-verification', tension: 'Document upload was slow and error-prone.', options: 'Replace upload, or lead with a faster path.', call: 'Recommend Connect to Bank. Keep upload as the fallback.', metric: 'Live', result: 'just launched, impact being measured.' },
       { t: 'One ask per screen', p: 'Manage Credit Limit · Australia', status: 'Shipped', href: '/work/manage-credit-limit', tension: 'A full financial profile, in one flow.', options: 'Dense screens, sections, or one ask per screen.', call: 'One ask per screen, with live progress.', metric: '1 ask', result: 'per screen, with status updates during long waits.' }
     ];
     var decisions = D.map(function (d, i) { return Object.assign({}, d, { n: '0' + (i + 1), cls: i === s.dec ? 'on' : '', segCls: '' }); });
@@ -2327,21 +2527,20 @@ var range = [
     // ---- Leadership
     var lead = [
       { i: 0, icon: ic.layers, t: 'Design system', items: [
-        { t: 'Design System Ambassador', d: 'The link between product designers and the system team.' },
-        { t: 'Design system uplift', d: 'Moved Canada, Mexico payments and bank verification from the older legacy UI to v7 of the design system.' }
+        { t: 'Design System Ambassador, linking product and system teams' },
+        { t: 'Moved Canada, Mexico payments and bank verification to v7 of the system' }
       ] },
-      { i: 1, icon: ic.workshop, t: 'Cross-functional influence', items: [
-        { t: 'Pushed back with a test', d: 'Leaders wanted the landing page removed. I proposed a 35-day 50/50 test instead. Removal cost about 6% of completion, so it stayed.', href: '/work/manage-credit-limit#us', link: 'Read the case' },
-        { t: 'Workshops', d: 'Financial Relief Program and fraud-verification workshops with Product, Business and Risk.' },
-        { t: 'Markets', d: 'Market teams shape copy, rules and promotions with design, through one variable system.', href: '#global', link: 'See the markets' }
+      { i: 1, icon: ic.workshop, t: 'Cross-functional', items: [
+        { t: 'Workshops with Product, Business and Risk' },
+        { t: 'Market teams shape copy and rules with design', href: '#global', link: 'See the markets' }
       ] },
-      { i: 2, icon: ic.bug, t: 'Quality and standards', items: [
-        { t: 'Bug bashes', d: 'Ran design-system bug bashes so quality ships as designed.' },
-        { t: 'Accessibility', d: 'Journeys that pass accessibility checks and still follow global patterns.' }
+      { i: 2, icon: ic.bug, t: 'Quality', items: [
+        { t: 'Design-system bug bashes, so it ships as designed' },
+        { t: 'Accessibility checks that still follow global patterns' }
       ] },
-      { i: 3, icon: ic.mentor, t: 'Mentoring and knowledge sharing', items: [
-        { t: 'Guiding designers', d: 'Helping designers choose an approach and reach a direction through critiques and research tests.' },
-        { t: 'Design critiques', d: 'Took Financial Relief, Australia and fraud explorations from many options to two or three.' }
+      { i: 3, icon: ic.mentor, t: 'Mentoring', items: [
+        { t: 'Guiding designers to a direction through critiques and research tests' },
+        { t: 'Took explorations from many options to two or three' }
       ] }
     ].map(function (g) { return Object.assign({}, g, { items: g.items.map(function (it) { return Object.assign({ href: '', link: '' }, it, { hasLink: !!it.link }); }) }); });
 
