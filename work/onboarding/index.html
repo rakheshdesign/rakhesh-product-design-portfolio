@@ -88,7 +88,7 @@
 </section>
 <section>
 <a href="/work/bulk-payment">← PREVIOUS PROJECT Bulk Payment Dashboard 5× · daily work efficiency (reported)</a>
-<a href="/work/localization-automation">NEXT PROJECT → Localization Automation Proposal · localize once, launch everywhere</a>
+<a href="/mechanical-design">NEXT PROJECT → Mechanical Design The other half of the craft: things you can hold</a>
 <a href="/work/manage-credit-limit">Manage Credit Limit</a>
 <a href="/work/digital-charge-verification">Digital Charge Verification</a>
 <a href="/work/generic-medicine">Generic Medicine</a>
@@ -1187,7 +1187,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
     <span class="kick">Keep exploring</span>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(380px,100%),1fr));gap:18px">
       <a href="/work/bulk-payment" class="navcard pv" data-cur="Previous"><span class="kick" style="display:flex;align-items:center;gap:10px"><span class="arr" style="display:inline-flex">←</span>Previous project</span><span class="disp" style="font-size:clamp(23px,calc(23px + (100vw - 390px) * 0.00864),30px);line-height:1.15">Bulk Payment Dashboard</span><span style="color:var(--ink2);font-size:15px">5× · daily work efficiency (reported)</span></a>
-      <a href="/work/localization-automation" class="navcard nx" data-cur="Next" style="align-items:flex-end;text-align:right"><span class="kick" style="display:flex;align-items:center;gap:10px">Next project<span class="arr" style="display:inline-flex">→</span></span><span class="disp" style="font-size:clamp(23px,calc(23px + (100vw - 390px) * 0.00864),30px);line-height:1.15">Localization Automation</span><span style="color:var(--ink2);font-size:15px">Proposal · localize once, launch everywhere</span></a>
+      <a href="/mechanical-design" class="navcard nx" data-cur="Next" style="align-items:flex-end;text-align:right"><span class="kick" style="display:flex;align-items:center;gap:10px">Next project<span class="arr" style="display:inline-flex">→</span></span><span class="disp" style="font-size:clamp(23px,calc(23px + (100vw - 390px) * 0.00864),30px);line-height:1.15">Mechanical Design</span><span style="color:var(--ink2);font-size:15px">The other half of the craft: things you can hold</span></a>
     </div>
     <div class="dm-w"><span class="kick">Worth your time</span><div class="dm-r"><a href="/work/manage-credit-limit">Manage Credit Limit</a><a href="/work/digital-charge-verification">Digital Charge Verification</a><a href="/work/generic-medicine">Generic Medicine</a><a href="/#leadership">How I lead</a><a href="/#impact">Impact at a glance</a><a href="/#about">About me</a></div></div><div style="display:flex;justify-content:center"><a href="/work" class="btn btn-s" style="min-height:52px">All projects</a></div>
   </div>
@@ -1237,7 +1237,7 @@ class Component extends DCLogic {
     this.autoTick = this.autoTick.bind(this);
   }
   navFx() {
-    var CASES = [['/work/manage-credit-limit','Manage Credit Limit','Flagship'],['/work/digital-charge-verification','Digital Charge Verification','Flagship'],['/work/generic-medicine','Generic Medicine','Flagship'],['/work/financial-relief-program','Financial Relief Program','Case'],['/work/canada-experience-gap','Canada Experience Gap','Case'],['/work/financial-verification','Financial Verification','Case'],['/work/plan-it-promo-pricing','Plan It® Promo Pricing','Case'],['/work/payments-mexico','International Payments, Mexico','Case'],['/work/bulk-payment','Bulk Payment Dashboard','Case'],['/work/onboarding','Onboarding','Case'],['/work/localization-automation','Localization automation','Proposal'],['/work/design-system-usage','Design system usage','Proposal'],['/work/sourcx','SourcX','AI build'],['/work/shubhviva','ShubhViva','AI build'],['/work/gravity-deck','Gravity','AI build'],['/mechanical-design','Mechanical design','Engineering']];
+    var CASES = [['/work/manage-credit-limit','Manage Credit Limit','Flagship'],['/work/digital-charge-verification','Digital Charge Verification','Flagship'],['/work/generic-medicine','Generic Medicine','Flagship'],['/work/localization-automation','Localization automation','Proposal'],['/work/design-system-usage','Design system usage','Proposal'],['/work/sourcx','SourcX','AI build'],['/work/shubhviva','ShubhViva','AI build'],['/work/gravity-deck','Gravity','AI build'],['/work/financial-relief-program','Financial Relief Program','Case'],['/work/canada-experience-gap','Canada Experience Gap','Case'],['/work/financial-verification','Financial Verification','Case'],['/work/plan-it-promo-pricing','Plan It® Promo Pricing','Case'],['/work/payments-mexico','International Payments, Mexico','Case'],['/work/bulk-payment','Bulk Payment Dashboard','Case'],['/work/onboarding','Onboarding','Case'],['/mechanical-design','Mechanical design','Engineering']];
     var HERE = '/work/onboarding';
     var rm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var self = this;
@@ -1263,8 +1263,8 @@ class Component extends DCLogic {
       var next = idx < CASES.length - 1 ? CASES[idx + 1] : ['/', 'Home', ''];
       var arrow = function (d) { return '<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="' + d + '"/></svg>'; };
       var esc = function (t) { return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;'); };
-      var groups = [], seen = {};
-      CASES.forEach(function (c, k) { var g = c[2] === 'Flagship' || c[2] === 'Case' ? 'Product cases' : c[2] === 'Proposal' ? 'Proposals' : c[2] === 'AI build' ? 'AI builds' : 'Engineering'; if (!seen[g]) { seen[g] = []; groups.push([g, seen[g]]); } seen[g].push([c, k]); });
+      var groups = [], used = {}, lastG = null, curG = null;
+      CASES.forEach(function (c, k) { var g = c[2] === 'Flagship' || c[2] === 'Case' ? 'Product cases' : c[2] === 'Proposal' ? 'Proposals' : c[2] === 'AI build' ? 'AI builds' : 'Engineering'; if (g !== lastG) { var lab = used[g] ? 'More ' + g.toLowerCase() : g; used[g] = 1; curG = []; groups.push([lab, curG]); lastG = g; } curG.push([c, k]); });
       var pop = groups.map(function (g) {
         return '<div class="cd-g"><span class="cd-k">' + g[0] + '</span>' + g[1].map(function (e) {
           var c = e[0], k = e[1];

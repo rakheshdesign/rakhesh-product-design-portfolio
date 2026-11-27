@@ -1253,6 +1253,17 @@ html:has(#pf-sv:checked) .pf-g-more,html:has(#pf-ft:checked) .pf-g-more,html:has
 .gp .vn *{animation-play-state:paused!important}
 @media (max-width:899px){.vn{grid-template-columns:1fr}.vn-st{max-width:380px}.vn-r{animation:none}}
 @media (prefers-reduced-motion:reduce){.vn-c,.vn-cy,.vn-dot,.vn-r{animation:none!important}.vn-c{fill-opacity:.2}.vn-dot{display:none}}
+#craft{overflow:hidden;padding:26px 0}.cb-w{position:relative;z-index:1}#craft .btn-s{background:var(--card);box-shadow:var(--e1)}
+.cb-g{position:absolute;inset:0;pointer-events:none;opacity:.55;-webkit-mask-image:linear-gradient(90deg,transparent 30%,#000 62%);mask-image:linear-gradient(90deg,transparent 30%,#000 62%);transition:opacity .5s}
+.th[data-theme="dark"] .cb-g{opacity:.4}
+.cb-p{position:absolute;left:var(--x);top:var(--y);width:clamp(120px,11.5vw,168px);aspect-ratio:4/3;rotate:var(--r);border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--e2);background:var(--card);transition:rotate .7s cubic-bezier(.2,.8,.2,1),scale .7s cubic-bezier(.2,.8,.2,1)}
+.cb-p img{width:100%;height:100%;object-fit:cover;display:block}
+#craft:hover .cb-g,#craft:focus-within .cb-g{opacity:.95}
+#craft:hover .cb-p,#craft:focus-within .cb-p{rotate:0deg;scale:1.04}
+@supports (animation-timeline:view()){.cb-p{animation:cbDr linear both;animation-timeline:view();animation-range:entry 0% exit 100%}.cb-p:nth-child(even){animation-name:cbDr2}}
+@keyframes cbDr{from{translate:0 22px}to{translate:0 -22px}}@keyframes cbDr2{from{translate:0 -18px}to{translate:0 18px}}
+@media (max-width:760px){#craft{padding-top:118px}.cb-g{-webkit-mask-image:linear-gradient(180deg,#000 30%,transparent 92%);mask-image:linear-gradient(180deg,#000 30%,transparent 92%);opacity:.6}.cb-p{width:104px;top:calc(var(--y) * .25 + 6px);left:calc(var(--x) * .9 - 6%)}}
+@media (prefers-reduced-motion:reduce){.cb-p{animation:none!important;transition:none}}
 /*pf-end*/
 </style>
 </helmet>
@@ -1624,6 +1635,7 @@ html:has(#pf-sv:checked) .pf-g-more,html:has(#pf-ft:checked) .pf-g-more,html:has
 
 <!-- MECHANICAL DESIGN TEASER -->
 <section id="craft" style="position: relative; background: var(--bg2); border-top: 1px solid var(--line2); border-bottom: 1px solid var(--line2)">
+  <div class="cb-g" aria-hidden="true"><i class="cb-p" style="--x:43%;--y:56%;--r:-7deg;--d:0"><img alt="" src="/img/8a2a51aedf15.webp"></i><i class="cb-p" style="--x:50%;--y:8%;--r:5deg;--d:1"><img alt="" src="/img/4df9254ae28f.webp"></i><i class="cb-p" style="--x:57%;--y:54%;--r:-4deg;--d:2"><img alt="" src="/img/aa40e535781e.webp"></i><i class="cb-p" style="--x:60%;--y:6%;--r:7deg;--d:3"><img alt="" src="/img/51679e16da2e.webp"></i><i class="cb-p" style="--x:70%;--y:48%;--r:-6deg;--d:4"><img alt="" src="/img/248cc5518136.webp"></i><i class="cb-p" style="--x:80%;--y:8%;--r:4deg;--d:5"><img alt="" src="/img/43fc46be6f30.webp"></i><i class="cb-p" style="--x:90%;--y:46%;--r:-5deg;--d:6"><img alt="" src="/img/50655eff49ff.webp"></i><i class="cb-p" style="--x:93%;--y:2%;--r:6deg;--d:7"><img alt="" src="/img/9ad4dd5b89cb.webp"></i></div>
   <div class="wrap cb-w">
     <div class="cb-t"><span class="kick" style="color: var(--acc)">Beyond Product Design</span><p style="margin: 0; font-size: 19px; line-height: 1.5; color: var(--ink2)">Mechanical engineering gave me a feel for form and function. Generative design, 3D printing and CAD live on their own page.</p></div>
     <a href="/mechanical-design" class="btn btn-s" data-cur="Open" aria-label="See the engineering side: generative design, 3D printing and gallery">See the engineering side<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -2424,8 +2436,8 @@ var range = [
     var projects = allProj.slice(0, 4), projectsCm = allProj.slice(4);
     // PROJ-END
     var saveo = [
-      { meta: 'Saveo · Dashboard · Finance', title: 'Bulk Payment Dashboard', d: 'Four payment sources, one settlement flow.', metric: '5×', ml: 'daily work efficiency, reported', href: '/work/bulk-payment', cover: '/img/3b9c887f3d35.webp', coverAlt: 'Bulk settlement and invoice mapping cards', cw: 920, ch: 724 },
-      { meta: 'Saveo · Mobile · Onboarding', title: 'Three steps to a verified pharmacy', d: 'Sign-up, three short steps and a clear verification state.', metric: '−30%', ml: 'onboarding friction, reported', href: '/work/onboarding', cover: '/img/b0bc5e035fef.webp', coverAlt: 'Sign-up and verification screens of the pharmacy onboarding', cw: 835, ch: 715 }
+      { meta: 'Saveo · Dashboard · Finance', title: 'Bulk Payment Dashboard', d: 'Four payment sources, one settlement flow.', metric: '5×', ml: 'daily work efficiency, reported', href: '/work/bulk-payment', cover: '/img/e0fb6e8b9154.webp', coverAlt: 'The Bulk Settlement dashboard from the case study', cw: 892, ch: 573 },
+      { meta: 'Saveo · Mobile · Onboarding', title: 'Three steps to a verified pharmacy', d: 'Sign-up, three short steps and a clear verification state.', metric: '−30%', ml: 'onboarding friction, reported', href: '/work/onboarding', cover: '/img/b71711f9206e.webp', coverAlt: 'Sign-up, business details and verification screens from the case study', cw: 977, ch: 610 }
     ];
 
     // ---- Decisions

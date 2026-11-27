@@ -1903,7 +1903,7 @@ class Component extends DCLogic {
     this.autoTick = this.autoTick.bind(this);
   }
   navFx() {
-    var CASES = [['/work/manage-credit-limit','Manage Credit Limit','Flagship'],['/work/digital-charge-verification','Digital Charge Verification','Flagship'],['/work/generic-medicine','Generic Medicine','Flagship'],['/work/financial-relief-program','Financial Relief Program','Case'],['/work/canada-experience-gap','Canada Experience Gap','Case'],['/work/financial-verification','Financial Verification','Case'],['/work/plan-it-promo-pricing','Plan It® Promo Pricing','Case'],['/work/payments-mexico','International Payments, Mexico','Case'],['/work/bulk-payment','Bulk Payment Dashboard','Case'],['/work/onboarding','Onboarding','Case'],['/work/localization-automation','Localization automation','Proposal'],['/work/design-system-usage','Design system usage','Proposal'],['/work/sourcx','SourcX','AI build'],['/work/shubhviva','ShubhViva','AI build'],['/work/gravity-deck','Gravity','AI build'],['/mechanical-design','Mechanical design','Engineering']];
+    var CASES = [['/work/manage-credit-limit','Manage Credit Limit','Flagship'],['/work/digital-charge-verification','Digital Charge Verification','Flagship'],['/work/generic-medicine','Generic Medicine','Flagship'],['/work/localization-automation','Localization automation','Proposal'],['/work/design-system-usage','Design system usage','Proposal'],['/work/sourcx','SourcX','AI build'],['/work/shubhviva','ShubhViva','AI build'],['/work/gravity-deck','Gravity','AI build'],['/work/financial-relief-program','Financial Relief Program','Case'],['/work/canada-experience-gap','Canada Experience Gap','Case'],['/work/financial-verification','Financial Verification','Case'],['/work/plan-it-promo-pricing','Plan It® Promo Pricing','Case'],['/work/payments-mexico','International Payments, Mexico','Case'],['/work/bulk-payment','Bulk Payment Dashboard','Case'],['/work/onboarding','Onboarding','Case'],['/mechanical-design','Mechanical design','Engineering']];
     var HERE = '/work/plan-it-promo-pricing';
     var rm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var self = this;
@@ -1929,8 +1929,8 @@ class Component extends DCLogic {
       var next = idx < CASES.length - 1 ? CASES[idx + 1] : ['/', 'Home', ''];
       var arrow = function (d) { return '<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="' + d + '"/></svg>'; };
       var esc = function (t) { return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;'); };
-      var groups = [], seen = {};
-      CASES.forEach(function (c, k) { var g = c[2] === 'Flagship' || c[2] === 'Case' ? 'Product cases' : c[2] === 'Proposal' ? 'Proposals' : c[2] === 'AI build' ? 'AI builds' : 'Engineering'; if (!seen[g]) { seen[g] = []; groups.push([g, seen[g]]); } seen[g].push([c, k]); });
+      var groups = [], used = {}, lastG = null, curG = null;
+      CASES.forEach(function (c, k) { var g = c[2] === 'Flagship' || c[2] === 'Case' ? 'Product cases' : c[2] === 'Proposal' ? 'Proposals' : c[2] === 'AI build' ? 'AI builds' : 'Engineering'; if (g !== lastG) { var lab = used[g] ? 'More ' + g.toLowerCase() : g; used[g] = 1; curG = []; groups.push([lab, curG]); lastG = g; } curG.push([c, k]); });
       var pop = groups.map(function (g) {
         return '<div class="cd-g"><span class="cd-k">' + g[0] + '</span>' + g[1].map(function (e) {
           var c = e[0], k = e[1];
