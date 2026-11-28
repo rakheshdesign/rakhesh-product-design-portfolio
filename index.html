@@ -1260,6 +1260,9 @@ html:has(#pf-sv:checked) .pf-g-more,html:has(#pf-ft:checked) .pf-g-more,html:has
 @supports (animation-timeline:view()){.ld-db{animation:ldGrow linear both;animation-timeline:view();animation-range:entry 15% cover 42%}}
 @keyframes ldGrow{from{transform:scaleX(.08)}to{transform:none}}
 /*pf-end*/
+
+.hprog{position:fixed;top:0;left:0;right:0;height:3px;z-index:60;pointer-events:none}
+.hprog i{display:block;height:100%;background:var(--acc);transform-origin:0 50%;transform:scaleX(0)}
 </style>
 </helmet>
 
@@ -1274,11 +1277,12 @@ html:has(#pf-sv:checked) .pf-g-more,html:has(#pf-ft:checked) .pf-g-more,html:has
 
 <!-- HEADER -->
 <header class="wrap" style="position: sticky; top: 0; z-index: 30; padding-top: 14px">
+  <div class="hprog" aria-hidden="true"><i></i></div>
   <div class="hbar hb2" style="display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 8px; background: var(--navbg); backdrop-filter: blur(18px) saturate(1.4); -webkit-backdrop-filter: blur(18px) saturate(1.4); border: 1px solid var(--line); border-radius: 999px; padding: 8px 8px 8px 24px; box-shadow: var(--e2)">
     <div style="display: flex; align-items: center; gap: 18px">
       <a href="#top" class="disp" aria-label="Rakhesh Karnati, home" style="text-decoration: none; font-size: clamp(19px,calc(19px + (100vw - 390px) * 0.0037), 22px); font-weight: 700">RK<span style="color: var(--acc)">.</span></a>
     </div>
-    <nav aria-label="Primary" class="hnav" style="display: flex; gap: 2px"><a href="#impact" class="hn" data-sec="impact">Impact</a><a href="/work" class="hn">Work</a><a href="/work/design-system-usage" class="hn">Proposals</a><a href="/work#ai" class="hn">AI builds</a><a href="#about" class="hn" data-sec="about">About</a></nav>
+    <nav aria-label="Primary" class="hnav" style="display: flex; gap: 2px"><a href="#impact" class="hn" data-sec="impact">Impact</a><a href="/work" class="hn" data-sec="work global">Work</a><a href="/work/design-system-usage" class="hn" data-sec="proposal">Proposals</a><a href="/work#ai" class="hn" data-sec="ai">AI builds</a><a href="#about" class="hn" data-sec="about">About</a></nav>
     <div style="display: flex; align-items: center; gap: 8px">
       
       <button type="button" class="ib" onClick="{{toggleTheme}}" aria-label="{{themeLabel}}" title="{{themeLabel}}"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 256 256" fill="currentColor"><path d="{{themeIcon}}"></path></svg></button>
@@ -1702,7 +1706,7 @@ class Component extends DCLogic {
     /* scroll-spy for in-page section links in the sticky header */
     var links = [], tg = [];
     var collect = function () {
-      links = [].slice.call(document.querySelectorAll('.hnav a[href^="#"]'));
+      links = [].slice.call(document.querySelectorAll('.hnav a[href^="#"]:not([data-sec])'));
       tg = links.map(function (a) { var id = a.getAttribute('href').slice(1); return id ? document.getElementById(id) : null; });
     };
     var spy = function () {
@@ -1753,9 +1757,11 @@ class Component extends DCLogic {
       document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
       dock.querySelector('.cd-up').addEventListener('click', function () { window.scrollTo({ top: 0, behavior: rm ? 'auto' : 'smooth' }); });
     }
+    var hpgEl = null;
+    var hProg = function () { if (!hpgEl) hpgEl = document.querySelector('.hprog i'); if (!hpgEl) return; var d = document.documentElement, h = d.scrollHeight - window.innerHeight, p = h > 0 ? Math.min(1, Math.max(0, (window.scrollY || d.scrollTop) / h)) : 0; hpgEl.style.transform = 'scaleX(' + p + ')'; };
     var raf = 0;
     var upd = function () {
-      raf = 0; spy();
+      raf = 0; spy(); hProg();
       if (!dock) return;
       if (!endEl) endEl = document.querySelector('section[aria-label="More projects"]');
       var y = window.scrollY || document.documentElement.scrollTop, vh = window.innerHeight;
@@ -2082,10 +2088,10 @@ class Component extends DCLogic {
       var API = 'https://rakhesh-design.vercel.app/api/likes';
       function spy() {
         var links = [].slice.call(document.querySelectorAll('.hnav a[data-sec]')); if (!links.length) return;
-        var secs = links.map(function (a) { return document.getElementById(a.getAttribute('data-sec')); }), tick = false, cur = -2;
+        var secs = links.map(function (a) { return a.getAttribute('data-sec').split(' ').map(function (id) { return document.getElementById(id); }); }), tick = false, cur = -2;
         function run() {
           tick = false; var line = window.innerHeight * 0.38, idx = -1;
-          for (var i = 0; i < secs.length; i++) { var r = secs[i] && secs[i].getBoundingClientRect(); if (r && r.top <= line && r.bottom > line) idx = i; }
+          for (var i = 0; i < secs.length; i++) { for (var k = 0; k < secs[i].length; k++) { var r = secs[i][k] && secs[i][k].getBoundingClientRect(); if (r && r.top <= line && r.bottom > line) idx = i; } }
           if (idx === cur) return; cur = idx;
           links.forEach(function (a, j) { if (j === idx) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
         }
