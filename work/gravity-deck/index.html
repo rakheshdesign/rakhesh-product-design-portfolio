@@ -1193,7 +1193,6 @@ html.q-measuring .reveal,html.q-measuring [data-rv],html.q-measuring .q-fl,html.
 .rv-on .q-cxo:not([data-in]) .ln:not(.ds){stroke-dashoffset:1}
 .rv-on .q-cxo:not([data-in]) .ah,.rv-on .q-cxo:not([data-in]) .sd,.rv-on .q-cxo:not([data-in]) .q-cxp{opacity:0}
 .q-cxj .q-cx>*,.q-cxj .mc-cx>*{visibility:hidden}
-@media (max-width:700px){.q-cxo.fl{display:none}.q-cxj .q-cx>*,.q-cxj .mc-cx>*{visibility:visible}}
 @media (max-width:980px){.q-cxo.tree{display:none}}
 @media (prefers-reduced-motion:reduce){.q-cxo .sr,.q-cxo .fw,.q-wb i{animation:none!important}.q-cxo .ln{transition:none}}
 
@@ -2132,7 +2131,12 @@ class Component extends DCLogic {
             var sx, sy;
             if (trig) { var tr = R(trig); sx = Math.min(tr.r + 10, a.r - 6); sy = (tr.t + tr.b) / 2; }
             else { sx = a.r; sy = (a.t + a.b) / 2; }
+            if (!(b.l > a.r - 4) && b.t > a.b - 4) {
+              var bcx = (b.l + b.r) / 2, acx = (a.l + a.r) / 2;
+              items.push({ kind: 'v', ar: a.r, ab: a.b, bt: b.t, bcx: bcx, acx: acx, sx: trig ? sx : acx, sy: trig ? sy : a.b, tg: !!trig, ex: bcx, ey: b.t, lab: lab, dash: cx.classList.contains('dsh'), ok: true, trig: !!trig });
+            } else {
             items.push({ kind: 'h', ar: a.r, bl: b.l, sx: sx, sy: sy, ex: b.l + 1, ey: (b.t + b.b) / 2, lab: lab, dash: cx.classList.contains('dsh'), ok: b.l > a.r - 4, trig: !!trig });
+            }
           });
         }
         jobs.push({ c: c, items: items, tree: tree, w: Math.max(c.scrollWidth, c.clientWidth), h: Math.max(c.scrollHeight, c.clientHeight) });
@@ -2148,7 +2152,7 @@ class Component extends DCLogic {
         ov.style.width = j.w + 'px'; ov.style.height = j.h + 'px';
         var out = '', pills = '';
         j.items.forEach(function (it) {
-          if (it.kind === 'h' && !it.ok) return;
+          if (it.kind !== 'tree' && !it.ok) return;
           var d, ar, mx, my, ds = it.dash ? ' ds' : '', pl = it.dash ? '' : ' pathLength="1"';
           var P;
           if (it.kind === 'tree') {
@@ -2156,6 +2160,12 @@ class Component extends DCLogic {
             P = Math.abs(it.ex - it.sx) < 3 ? [[it.sx, it.sy], [it.ex, it.ey - 8]] : [[it.sx, it.sy], [it.sx, jy], [it.ex, jy], [it.ex, it.ey - 8]];
             ar = 'translate(' + f(it.ex) + ' ' + f(it.ey) + ') rotate(90)';
             mx = (it.sx + it.ex) / 2; my = jy;
+          } else if (it.kind === 'v') {
+            var rx = Math.min(it.ar + 16, j.w - 8), my2 = (it.ab + it.bt) / 2, ey2 = it.ey - 8;
+            if (it.tg) { P = [[it.sx, it.sy], [rx, it.sy], [rx, my2], [it.ex, my2], [it.ex, ey2]]; mx = (rx + it.ex) / 2; }
+            else { P = Math.abs(it.sx - it.ex) < 3 ? [[it.sx, it.sy], [it.ex, ey2]] : [[it.sx, it.sy], [it.sx, my2], [it.ex, my2], [it.ex, ey2]]; mx = (it.sx + it.ex) / 2; }
+            ar = 'translate(' + f(it.ex) + ' ' + f(it.ey) + ') rotate(90)';
+            my = my2;
           } else {
             var ex2 = it.ex - 8, mxx = Math.max(it.sx + 40, Math.min((it.ar + it.bl) / 2, ex2 - 40));
             P = Math.abs(it.ey - it.sy) < 4 ? [[it.sx, it.sy], [ex2, it.ey]] : [[it.sx, it.sy], [mxx, it.sy], [mxx, it.ey], [ex2, it.ey]];

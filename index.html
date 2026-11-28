@@ -228,7 +228,7 @@
 @media (prefers-reduced-motion:reduce){.cdock{transition:none}}
 
 body{margin:0;background:#F7F9FC}
-.th{--bg:#F7F9FC;--bg2:#EEF2F7;--card:#FFFFFF;--card2:#F1F4F8;--elev:#FFFFFF;--ink:#101318;--ink2:#44505F;--ink3:#5B6879;--line:#D9E0E8;--line2:#E4E9F0;--acc:#0F7A4D;--fill:#0B8450;--fillink:#FFFFFF;--acc2:#4B54D6;--warn:#8A5F00;--bad:#C22F2F;--btn:#101318;--btnink:#F7F9FC;--navbg:rgba(255,255,255,.8);--glow:rgba(34,201,131,.2);--glow2:rgba(94,103,230,.14);--grid:rgba(16,19,24,.055);--e1:0 1px 2px rgba(16,19,24,.06),0 1px 1px rgba(16,19,24,.04);--e2:0 2px 4px rgba(16,19,24,.05),0 12px 26px -10px rgba(16,19,24,.14);--e3:0 4px 8px rgba(16,19,24,.06),0 30px 64px -22px rgba(16,19,24,.26)}
+.th{--bg:#F7F9FC;--bg2:#EEF2F7;--card:#FFFFFF;--card2:#F1F4F8;--elev:#FFFFFF;--ink:#101318;--ink2:#44505F;--ink3:#5B6879;--line:#D9E0E8;--line2:#E4E9F0;--acc:#0F7A4D;--fill:#0B8450;--fillink:#FFFFFF;--acc2:#4B54D6;--warn:#8A5F00;--bad:#C22F2F;--btn:#101318;--btnink:#F7F9FC;--navbg:rgba(255,255,255,.8);--glow:rgba(34,201,131,.12);--glow2:rgba(94,103,230,.14);--grid:rgba(16,19,24,.055);--e1:0 1px 2px rgba(16,19,24,.06),0 1px 1px rgba(16,19,24,.04);--e2:0 2px 4px rgba(16,19,24,.05),0 12px 26px -10px rgba(16,19,24,.14);--e3:0 4px 8px rgba(16,19,24,.06),0 30px 64px -22px rgba(16,19,24,.26)}
 .th[data-theme="dark"]{--bg:#07090D;--bg2:#0B0F16;--card:#0F131B;--card2:#151A22;--elev:#141A2E;--ink:#F5F7FA;--ink2:#A9B4C3;--ink3:#8491A3;--line:#1F2733;--line2:#1A212C;--acc:#66F5B2;--fill:#0B8450;--fillink:#FFFFFF;--acc2:#9E9EFF;--warn:#F5C451;--bad:#FF7B7B;--btn:#F5F7FA;--btnink:#07090D;--navbg:rgba(15,19,27,.72);--glow:rgba(102,245,178,.14);--glow2:rgba(158,158,255,.14);--grid:rgba(245,247,250,.045);--e1:0 1px 0 rgba(255,255,255,.04) inset,0 1px 2px rgba(0,0,0,.5);--e2:0 1px 0 rgba(255,255,255,.06) inset,0 14px 30px -12px rgba(0,0,0,.75);--e3:0 1px 0 rgba(255,255,255,.07) inset,0 34px 72px -26px rgba(0,0,0,.9),0 0 0 1px rgba(102,245,178,.05)}
 a{color:var(--ink)}
 ::selection{background:#66F5B2;color:#07090D}
@@ -358,7 +358,7 @@ a{color:var(--ink)}
 .tr.on .cn b{animation-duration:1.4s}
 .grid-bg{background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse at 50% 30%,#000 30%,transparent 80%);mask-image:radial-gradient(ellipse at 50% 30%,#000 30%,transparent 80%)}
 .noise{position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.05;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");mix-blend-mode:overlay}
-.cur{position:fixed;left:0;top:0;pointer-events:none;z-index:60;display:none}
+.cur{position:fixed;left:0;top:0;pointer-events:none;z-index:60;display:none;transform:translate(-200px,-200px)}
 .cd .in{width:8px;height:8px;margin:-4px 0 0 -4px;border-radius:50%;background:#FFFFFF;transition:opacity .2s,transform .3s}
 .cd.lab .in{opacity:0;transform:scale(0)}
 .cr,.cd{mix-blend-mode:difference}
@@ -680,7 +680,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
 .pt{display:flex;flex-wrap:wrap;gap:8px}
 .pf .btn svg{transition:transform .35s cubic-bezier(.2,.7,.2,1)}
 .card:hover .pf .btn svg{transform:translateX(5px)}
-@media (max-width:760px){.pgrid{gap:20px!important}.pl{display:contents!important}.pd{order:2}.pf{order:3;flex-direction:column;align-items:stretch;border-top:0;padding-top:0;gap:14px}.pf .pt{order:1}.pf .btn{order:2;align-self:flex-end}}
+@media (max-width:760px){.pgrid{gap:20px!important}.pl{display:contents!important}.pf{display:contents}.pf .pt{order:1}.pd{order:2}.pf .btn{order:3;justify-self:end}}
 footer a.pill{display:inline-flex;align-items:center;transition:color .25s,transform .25s,text-decoration-color .25s;text-decoration:underline!important;text-decoration-color:transparent!important;text-underline-offset:6px}
 footer a.pill:hover,footer a.pill:focus-visible{background:none!important;color:var(--acc);text-decoration-color:var(--acc)!important;transform:translateX(4px)}
 footer a.pill:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
@@ -724,8 +724,9 @@ footer a.pill:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
 .fl-IN{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 480'%3E%3Cpath fill='%23f93' d='M0 0h640v160H0z'/%3E%3Cpath fill='%23fff' d='M0 160h640v160H0z'/%3E%3Cpath fill='%23128807' d='M0 320h640v160H0z'/%3E%3Ccircle cx='320' cy='240' r='56' fill='none' stroke='%23008' stroke-width='14'/%3E%3Ccircle cx='320' cy='240' r='12' fill='%23008'/%3E%3C/svg%3E")}
 .fl-JP{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 480'%3E%3Cpath fill='%23fff' d='M0 0h640v480H0z'/%3E%3Ccircle cx='320' cy='240' r='144' fill='%23bc002d'/%3E%3C/svg%3E")}
 .fl-SG{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 480'%3E%3Cpath fill='%23fff' d='M0 0h640v480H0z'/%3E%3Cpath fill='%23ef3340' d='M0 0h640v240H0z'/%3E%3Ccircle cx='150' cy='120' r='78' fill='%23fff'/%3E%3Ccircle cx='182' cy='120' r='78' fill='%23ef3340'/%3E%3Cg fill='%23fff'%3E%3Ccircle cx='250' cy='64' r='15'/%3E%3Ccircle cx='296' cy='100' r='15'/%3E%3Ccircle cx='278' cy='154' r='15'/%3E%3Ccircle cx='222' cy='154' r='15'/%3E%3Ccircle cx='204' cy='100' r='15'/%3E%3C/g%3E%3C/svg%3E")}
-@media (max-width:900px){.gl-wrap{grid-template-columns:minmax(0,1fr)}.gl-row{grid-template-columns:minmax(0,130px) minmax(0,1fr) 50px}}
-@media (max-width:480px){.gl-row{grid-template-columns:minmax(0,1fr) 46px;grid-template-rows:auto auto}.gl-row .tr{grid-column:1 / -1;grid-row:2}.gpin{padding:2px}.gpin .fl{font-size:13px}}
+@media (max-width:900px){.gl-wrap{grid-template-columns:minmax(0,1fr)}.gl-row{grid-template-columns:minmax(0,130px) minmax(0,1fr)}}
+@media (max-width:640px){.gl-row{grid-template-columns:minmax(0,1fr);gap:2px;align-items:start}.gl-row .nm{white-space:normal}.gl-row .ds{padding-left:29px}}
+@media (max-width:480px){.gpin{padding:2px}.gpin .fl{font-size:13px}}
 @media (prefers-reduced-motion:reduce){.gpin.on::after{animation:none}}
 .fl-NZ{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 480'%3E%3Crect width='640' height='480' fill='%23012169'/%3E%3Cpath d='M0 0l320 240M320 0L0 240' stroke='%23fff' stroke-width='48'/%3E%3Cpath d='M0 0l320 240M320 0L0 240' stroke='%23c8102e' stroke-width='16'/%3E%3Cpath d='M160 0v240M0 120h320' stroke='%23fff' stroke-width='80'/%3E%3Cpath d='M160 0v240M0 120h320' stroke='%23c8102e' stroke-width='48'/%3E%3Cg fill='%23c8102e' stroke='%23fff' stroke-width='6'%3E%3Ccircle cx='480' cy='110' r='30'/%3E%3Ccircle cx='400' cy='250' r='24'/%3E%3Ccircle cx='560' cy='240' r='24'/%3E%3Ccircle cx='480' cy='390' r='30'/%3E%3C/g%3E%3C/svg%3E")}
 .gl-plan .kick{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.gl-plan .pl{font:700 11px/1 Inter,system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:5px 9px;color:var(--ink2)}
@@ -849,6 +850,8 @@ footer a.pill:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
 .pcm-b .nd{flex:1 1 min(320px,100%)}
 .pcm-b .pcm-ml{flex:1 1 100%;margin:0;font-size:15px;color:var(--ink2)}
 .pcm-b .pcm-act{display:flex;flex-wrap:wrap;align-items:center;gap:12px 14px}
+.pcm-tg{display:contents}
+@media (max-width:700px){.pcm-b .pcm-act{display:contents}.pcm-tg{display:flex;flex-wrap:wrap;gap:8px;order:1;flex:1 1 100%}.pcm-b .pcm-ml{order:2}.pcm-b .pcm-act .btn{order:3;margin-left:auto}}
 @keyframes pcmIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
 #projectsCm>.reveal{--stk:0}
 @media (max-width:700px){.pcm-d summary{grid-template-columns:72px minmax(0,1fr) auto;padding:12px}.pcm-th{width:72px;height:56px}.pcm-m{display:none}.pcm-m2{display:block}}
@@ -1372,7 +1375,7 @@ html:has(#pf-sv:checked) .pf-g-more,html:has(#pf-ft:checked) .pf-g-more,html:has
     </div>
     <div role="note" style="display: flex; gap: 12px; align-items: flex-start; padding: 14px 18px; border: 1px solid var(--line); border-left: 4px solid var(--acc); border-radius: 14px; background: var(--card2); max-width: 760px; text-align: left"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 256 256" fill="currentColor" style="flex: none; color: var(--acc); margin-top: 2px"><path d="M208,80H176V56a48,48,0,0,0-96,0V80H48A16,16,0,0,0,32,96V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V96A16,16,0,0,0,208,80ZM96,56a32,32,0,0,1,64,0V80H96ZM208,208H48V96H208V208Zm-68-56a12,12,0,1,1-12-12A12,12,0,0,1,140,152Z"></path></svg><p style="margin: 0; font-size: 15px; line-height: 1.5; color: var(--ink2)"><strong style="color: var(--ink)">Illustrative designs.</strong> Real American Express screens are confidential, so these recreate the flow and decisions without revealing them.</p></div>
 
-    <div role="radiogroup" aria-label="Filter projects" class="pf-bar"><input class="pf-in" type="radio" name="pf" id="pf-all" checked><label class="pf-chip" for="pf-all">All works<i>10</i></label><input class="pf-in" type="radio" name="pf" id="pf-ft"><label class="pf-chip" for="pf-ft">Featured work<i>4</i></label><input class="pf-in" type="radio" name="pf" id="pf-ax"><label class="pf-chip" for="pf-ax">American Express<i>7</i></label><input class="pf-in" type="radio" name="pf" id="pf-sv"><label class="pf-chip" for="pf-sv">Saveo<i>3</i></label><input class="pf-in" type="radio" name="pf" id="pf-im"><label class="pf-chip" for="pf-im">Impactful<i>6</i></label></div>
+    <div role="radiogroup" aria-label="Filter projects" style="display: contents"><input class="pf-in" type="radio" name="pf" id="pf-all" checked><input class="pf-in" type="radio" name="pf" id="pf-ft"><input class="pf-in" type="radio" name="pf" id="pf-ax"><input class="pf-in" type="radio" name="pf" id="pf-sv"><input class="pf-in" type="radio" name="pf" id="pf-im"><div class="pf-bar"><label class="pf-chip" for="pf-all">All works<i>10</i></label><label class="pf-chip" for="pf-ft">Featured work<i>4</i></label><label class="pf-chip" for="pf-ax">American Express<i>7</i></label><label class="pf-chip" for="pf-sv">Saveo<i>3</i></label><label class="pf-chip" for="pf-im">Impactful<i>6</i></label></div></div>
     <div id="projects" style="display: flex; flex-direction: column; gap: 22px">
       <sc-for list="{{projects}}" as="p" hint-placeholder-count="7">
       <div class="reveal" data-co="{{p.co}}" data-ft="{{p.ft}}" data-im="{{p.im}}"><article class="card lift pgrid" style="padding: clamp(22px, 3vw, 40px); display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: center; position: relative">
@@ -1413,7 +1416,7 @@ html:has(#pf-sv:checked) .pf-g-more,html:has(#pf-ft:checked) .pf-g-more,html:has
             </summary>
             <div class="pcm-b">
               <div class="nd" style="border-color: var(--acc)"><span class="kick" style="font-size: 12px; color: var(--acc)">What it really was</span><span style="font-size: 15px">{{p.real}}</span></div>
-              <div class="pcm-act"><a href="{{p.href}}" class="btn btn-p" data-cur="{{p.cur}}" aria-label="View project: {{p.title}}">View project<svg aria-hidden="true" width="20" height="20" viewBox="0 0 256 256" fill="currentColor"><path d="{{ic.arrowRight}}"></path></svg></a><sc-for list="{{p.tags}}" as="t" hint-placeholder-count="3"><span class="tag">{{t.t}}</span></sc-for></div>
+              <div class="pcm-act"><a href="{{p.href}}" class="btn btn-p" data-cur="{{p.cur}}" aria-label="View project: {{p.title}}">View project<svg aria-hidden="true" width="20" height="20" viewBox="0 0 256 256" fill="currentColor"><path d="{{ic.arrowRight}}"></path></svg></a><span class="pcm-tg"><sc-for list="{{p.tags}}" as="t" hint-placeholder-count="3"><span class="tag">{{t.t}}</span></sc-for></span></div>
               <span class="pcm-ml"><b>{{p.metric}}</b> {{p.metricLabel}}</span>
             </div>
           </details></div>

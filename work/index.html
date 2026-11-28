@@ -396,7 +396,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
 .pt{display:flex;flex-wrap:wrap;gap:8px}
 .pf .btn svg{transition:transform .35s cubic-bezier(.2,.7,.2,1)}
 .card:hover .pf .btn svg{transform:translateX(5px)}
-@media (max-width:760px){.pgrid{gap:20px!important}.pl{display:contents!important}.pd{order:2}.pf{order:3;flex-direction:column;align-items:stretch;border-top:0;padding-top:0;gap:14px}.pf .pt{order:1}.pf .btn{order:2;align-self:flex-end}}
+@media (max-width:760px){.pgrid{gap:20px!important}.pl{display:contents!important}.pf{display:contents}.pf .pt{order:1}.pd{order:2}.pf .btn{order:3;justify-self:end}}
 .hs{overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scrollbar-width:thin;max-width:100%}
 @media (max-width:700px){.frow{grid-template-columns:minmax(0,1fr)!important;gap:6px!important;padding:16px 20px!important}}
 .sx{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.7fr);gap:36px;align-items:center}
@@ -599,7 +599,7 @@ html:has(#pf-sv:checked) .pf-g-more,html:has(#pf-ft:checked) .pf-g-more,html:has
 
 <section id="projects" style="padding-bottom: 96px">
   <div class="wrap" style="display: flex; flex-direction: column; gap: 22px">
-    <div role="radiogroup" aria-label="Filter projects" class="pf-bar"><input class="pf-in" type="radio" name="pf" id="pf-all" checked><label class="pf-chip" for="pf-all">All works<i>10</i></label><input class="pf-in" type="radio" name="pf" id="pf-ft"><label class="pf-chip" for="pf-ft">Featured work<i>4</i></label><input class="pf-in" type="radio" name="pf" id="pf-ax"><label class="pf-chip" for="pf-ax">American Express<i>7</i></label><input class="pf-in" type="radio" name="pf" id="pf-sv"><label class="pf-chip" for="pf-sv">Saveo<i>3</i></label><input class="pf-in" type="radio" name="pf" id="pf-im"><label class="pf-chip" for="pf-im">Impactful<i>6</i></label></div>
+    <div role="radiogroup" aria-label="Filter projects" style="display: contents"><input class="pf-in" type="radio" name="pf" id="pf-all" checked><input class="pf-in" type="radio" name="pf" id="pf-ft"><input class="pf-in" type="radio" name="pf" id="pf-ax"><input class="pf-in" type="radio" name="pf" id="pf-sv"><input class="pf-in" type="radio" name="pf" id="pf-im"><div class="pf-bar"><label class="pf-chip" for="pf-all">All works<i>10</i></label><label class="pf-chip" for="pf-ft">Featured work<i>4</i></label><label class="pf-chip" for="pf-ax">American Express<i>7</i></label><label class="pf-chip" for="pf-sv">Saveo<i>3</i></label><label class="pf-chip" for="pf-im">Impactful<i>6</i></label></div></div>
     <div class="pj-l"><sc-for list="{{projects}}" as="p" hint-placeholder-count="7">
       <div class="reveal {{p.wc}}" data-co="{{p.co}}" data-ft="{{p.ft}}" data-im="{{p.im}}"><article class="card lift pgrid" style="padding: clamp(22px, 3vw, 40px); display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: center; position: relative">
         <span class="pnum" aria-hidden="true">{{p.n}}</span>
