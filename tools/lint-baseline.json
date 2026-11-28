@@ -1,0 +1,122 @@
+{
+ "BulkPayment": {
+  "border_1px": 66,
+  "gradient_other": 5,
+  "hex_off_token": 43,
+  "thick_border": 12
+ },
+ "CanadaExperienceGap": {
+  "border_1px": 113,
+  "gradient_other": 11,
+  "hex_off_token": 269,
+  "outline": 2,
+  "thick_border": 25
+ },
+ "DesignSystemUsage": {
+  "border_1px": 81,
+  "gradient_other": 5,
+  "hex_off_token": 63,
+  "thick_border": 15
+ },
+ "DigitalChargeVerification": {
+  "border_1px": 171,
+  "gradient_other": 14,
+  "hex_off_token": 270,
+  "outline": 3,
+  "thick_border": 41
+ },
+ "FinancialReliefProgram": {
+  "border_1px": 111,
+  "gradient_other": 11,
+  "hex_off_token": 217,
+  "outline": 1,
+  "thick_border": 25
+ },
+ "FinancialVerification": {
+  "border_1px": 119,
+  "gradient_other": 11,
+  "hex_off_token": 118,
+  "outline": 1,
+  "thick_border": 26
+ },
+ "GenericMedicine": {
+  "border_1px": 123,
+  "gradient_other": 11,
+  "hex_off_token": 203,
+  "outline": 1,
+  "thick_border": 26
+ },
+ "GravityDeck": {
+  "border_1px": 121,
+  "gradient_other": 11,
+  "hex_off_token": 119,
+  "outline": 1,
+  "thick_border": 27
+ },
+ "LocalizationAutomation": {
+  "border_1px": 118,
+  "gradient_other": 11,
+  "hex_off_token": 136,
+  "outline": 1,
+  "thick_border": 26
+ },
+ "Main": {
+  "border_1px": 86,
+  "gradient_other": 13,
+  "hex_off_token": 38,
+  "thick_border": 14
+ },
+ "ManageCreditLimit": {
+  "border_1px": 94,
+  "gradient_other": 10,
+  "hex_off_token": 372,
+  "thick_border": 24
+ },
+ "MechanicalDesign": {
+  "border_1px": 134,
+  "gradient_other": 11,
+  "hex_off_token": 147,
+  "outline": 1,
+  "thick_border": 28
+ },
+ "Onboarding": {
+  "border_1px": 75,
+  "gradient_other": 5,
+  "hex_off_token": 40,
+  "thick_border": 14
+ },
+ "PaymentsMexico": {
+  "border_1px": 119,
+  "gradient_other": 11,
+  "hex_off_token": 120,
+  "outline": 1,
+  "thick_border": 26
+ },
+ "PlanItPromoPricing": {
+  "border_1px": 124,
+  "gradient_other": 11,
+  "hex_off_token": 167,
+  "outline": 1,
+  "thick_border": 27
+ },
+ "ShubhViva": {
+  "border_1px": 138,
+  "gradient_other": 11,
+  "hex_off_token": 179,
+  "outline": 1,
+  "thick_border": 32
+ },
+ "SourcX": {
+  "border_1px": 121,
+  "gradient_other": 11,
+  "hex_off_token": 116,
+  "outline": 1,
+  "thick_border": 27
+ },
+ "Work": {
+  "border_1px": 37,
+  "gradient_other": 5,
+  "hex_off_token": 25,
+  "thick_border": 6
+ }
+}

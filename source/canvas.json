@@ -1,0 +1,200 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "BulkPayment.dc.html": {
+      "expand": "fill",
+      "h": 9610,
+      "is_interactive": true,
+      "title": "Case \u2014 Bulk Payment Dashboard (Saveo)",
+      "w": 1440,
+      "x": 21280,
+      "y": 0
+    },
+    "CanadaExperienceGap.dc.html": {
+      "expand": "fill",
+      "h": 11360,
+      "is_interactive": true,
+      "title": "Case \u2014 Canada Experience Gap",
+      "w": 1440,
+      "x": 7600,
+      "y": 0
+    },
+    "DesignSystemUsage.dc.html": {
+      "expand": "fill",
+      "h": 6610,
+      "is_interactive": true,
+      "title": "Proposals \u2014 Market, type and platform",
+      "w": 1440,
+      "x": 24320,
+      "y": 0
+    },
+    "DigitalChargeVerification.dc.html": {
+      "expand": "fill",
+      "h": 19600,
+      "is_interactive": true,
+      "title": "Case \u2014 Digital Charge Verification",
+      "w": 1440,
+      "x": 4560,
+      "y": 0
+    },
+    "FinancialReliefProgram.dc.html": {
+      "expand": "fill",
+      "h": 13900,
+      "is_interactive": true,
+      "title": "Case \u2014 Financial Relief Program",
+      "w": 1440,
+      "x": 6080,
+      "y": 0
+    },
+    "FinancialVerification.dc.html": {
+      "expand": "fill",
+      "h": 10470,
+      "is_interactive": true,
+      "title": "Case \u2014 Financial Verification",
+      "w": 1440,
+      "x": 9120,
+      "y": 0
+    },
+    "GenericMedicine.dc.html": {
+      "expand": "fill",
+      "h": 9140,
+      "is_interactive": true,
+      "title": "Case \u2014 Generic Medicine (Saveo)",
+      "w": 1440,
+      "x": 25840,
+      "y": 0
+    },
+    "GravityDeck.dc.html": {
+      "expand": "fill",
+      "h": 8650,
+      "is_interactive": true,
+      "title": "AI \u2014 Gravity",
+      "w": 1440,
+      "x": 18240,
+      "y": 0
+    },
+    "LocalizationAutomation.dc.html": {
+      "expand": "fill",
+      "h": 9720,
+      "is_interactive": true,
+      "title": "Proposal \u2014 Localization Automation",
+      "w": 1440,
+      "x": 13680,
+      "y": 0
+    },
+    "Main.dc.html": {
+      "expand": "fill",
+      "h": 16330,
+      "is_interactive": true,
+      "title": "Home",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "ManageCreditLimit.dc.html": {
+      "expand": "fill",
+      "h": 13540,
+      "is_interactive": true,
+      "title": "Case \u2014 Manage Credit Limit",
+      "w": 1440,
+      "x": 3040,
+      "y": 0
+    },
+    "MechanicalDesign.dc.html": {
+      "expand": "fill",
+      "h": 10930,
+      "is_interactive": true,
+      "title": "Mechanical Design",
+      "w": 1440,
+      "x": 19760,
+      "y": 0
+    },
+    "Onboarding.dc.html": {
+      "expand": "fill",
+      "h": 7650,
+      "is_interactive": true,
+      "title": "Case \u2014 Onboarding (Saveo)",
+      "w": 1440,
+      "x": 22800,
+      "y": 0
+    },
+    "PaymentsMexico.dc.html": {
+      "expand": "fill",
+      "h": 10100,
+      "is_interactive": true,
+      "title": "Case \u2014 Payments, Mexico",
+      "w": 1440,
+      "x": 12160,
+      "y": 0
+    },
+    "PlanItPromoPricing.dc.html": {
+      "expand": "fill",
+      "h": 11120,
+      "is_interactive": true,
+      "title": "Case \u2014 Plan It Promo Pricing",
+      "w": 1440,
+      "x": 10640,
+      "y": 0
+    },
+    "ShubhViva.dc.html": {
+      "expand": "fill",
+      "h": 14200,
+      "is_interactive": true,
+      "title": "AI \u2014 ShubhViva",
+      "w": 1440,
+      "x": 16720,
+      "y": 0
+    },
+    "SourcX.dc.html": {
+      "expand": "fill",
+      "h": 8750,
+      "is_interactive": true,
+      "title": "AI \u2014 SourcX",
+      "w": 1440,
+      "x": 15200,
+      "y": 0
+    },
+    "Work.dc.html": {
+      "expand": "fill",
+      "h": 8570,
+      "is_interactive": true,
+      "title": "Work",
+      "w": 1440,
+      "x": 1520,
+      "y": 0
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-11-22T07:00:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "file": "Main.dc.html",
+    "view": "focused"
+  },
+  "notes": {},
+  "order": [
+    "Main.dc.html",
+    "Work.dc.html",
+    "ManageCreditLimit.dc.html",
+    "DigitalChargeVerification.dc.html",
+    "GenericMedicine.dc.html",
+    "FinancialReliefProgram.dc.html",
+    "CanadaExperienceGap.dc.html",
+    "FinancialVerification.dc.html",
+    "PlanItPromoPricing.dc.html",
+    "PaymentsMexico.dc.html",
+    "BulkPayment.dc.html",
+    "Onboarding.dc.html",
+    "LocalizationAutomation.dc.html",
+    "DesignSystemUsage.dc.html",
+    "SourcX.dc.html",
+    "ShubhViva.dc.html",
+    "GravityDeck.dc.html",
+    "MechanicalDesign.dc.html"
+  ],
+  "pages": [],
+  "title": "Rakhesh Karnati Portfolio"
+}

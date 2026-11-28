@@ -44,5 +44,15 @@
     }
    ]
   }
+ ],
+ "rewrites": [
+  {
+   "source": "/(tools|docs|source|resume)/:path*",
+   "destination": "/404"
+  },
+  {
+   "source": "/CLAUDE.md",
+   "destination": "/404"
+  }
  ]
 }
