@@ -2400,12 +2400,14 @@ html.q-measuring .reveal,html.q-measuring [data-rv],html.q-measuring .q-fl,html.
 .rs-r{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(20px,3.4vw,48px);align-items:start;padding:0}
 .rs-r.full{grid-template-columns:minmax(0,1fr)}
 .rs-t{display:flex;flex-direction:column;gap:18px;min-width:0}
-.rs-l{margin:0;display:flex;flex-direction:column;gap:12px}
+.rs-l{margin:0;display:flex;flex-direction:column;gap:10px}
 .rs-r.full .rs-l{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
-.rs-l dt{font:600 12px 'Space Grotesk',system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);margin:0 0 3px}
-.rs-l div:last-child dt{color:var(--acc)}
+.rs-l dt{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
 .rs-l dd{margin:0;font:400 16px/1.5 Inter,system-ui,sans-serif;color:var(--ink2)}
-.rs-l div:last-child dd{color:var(--ink)}
+.rs-l div:first-child dd{font:600 17px/1.45 'Space Grotesk',system-ui,sans-serif;color:var(--ink);letter-spacing:-.01em}
+.rs-l div:last-child dd{color:var(--ink);padding-left:16px;position:relative}
+.rs-l div:last-child dd::before{content:'';position:absolute;left:0;top:.5em;width:8px;height:8px;border-radius:50%;background:var(--acc)}
 .rs-fig{position:relative;margin:0;border:1px solid var(--line2);border-radius:20px;background-color:var(--card2);background-image:radial-gradient(var(--line) 1px,transparent 1.2px);background-size:18px 18px;box-shadow:var(--e1);padding:10px;min-width:0}
 .rs-fig.flow{padding:8px}
 .rs-svg,.dv-ufs{display:block;width:100%;height:auto}
